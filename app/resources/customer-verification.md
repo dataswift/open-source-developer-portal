@@ -12,7 +12,7 @@ This article will walk through the Customer verification workflow for white labe
 
 A “customer” represents an individual or business that you intend to transact with. In any transfer, at least one party—either the sender or the recipient—must complete the identity verification process described below. In cases where a Customer is only sending funds to or receiving funds from your full Dwolla account, the Customer does not need to complete the process set out below because you have already completed it. Note that some activities require a Customer to complete the verification process, regardless of the verification status of the other party.
 
-However, if your application will allow your Customers to transfer funds between each other, at least one party will need to be verified using the process below.
+However, if your application will allow your Customers to transfer funds between each other, at least one party will need to be verified using the process below. It’s your decision about which party completes this process, based on your business model, and you may want to have both parties complete the identity verification process. 
 
 First, you should have [an active webhook subscription](/guides/webhooks/).  Information about a Customer’s progress in the verification process is sent asynchronously to your application.
 
