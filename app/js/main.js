@@ -55,4 +55,19 @@ $(document).ready(function() {
       $('.language_select').val(this.id);
       sessionStorage.setItem('current_language', $('.language_select :selected').val());
     });
+
+
+    // Status page JS
+    var sp = new StatusPage.page({page: 'tnynfs0nwlgr'});
+    sp.summary({
+      success: function(data) {
+        // adds the text description to the dropdown
+        $('.dwolla-sp-status').text(data.status.description);
+
+        if (data.status.description.indexOf('Outage') > -1) {
+          $('.dwolla-sp-status').addClass('icon-status-partially-degraded');
+        }
+        else { $('.dwolla-sp-status').addClass('icon-status-operational'); }
+      }
+    });
 });

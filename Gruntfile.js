@@ -140,6 +140,7 @@ module.exports = function (grunt) {
     },
     jekyll: {
       options: {
+        bundleExec: true,
         config: '_config.yml,_config.build.yml',
         src: '<%= yeoman.app %>'
       },
