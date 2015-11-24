@@ -10,172 +10,77 @@ title:  "Step 5: Attach a verified funding source"
 
 # Step 5: Attach a verified funding source
 
-Next we will attach a verified funding source for Joe Buyer, and we’ll need to verify the funding source using micro-deposits. This method takes at least a day to complete, as we must wait for the user to tell us the micro-deposit amounts after they appear in their bank statement or online transaction history.
+Next you will attach a verified funding source for Joe Buyer, which will be done using Instant Account Verification (IAV). This method will give Joe Buyer the ability to add and verify his bank account in a matter of seconds by authenticating with his online banking credentials. Once Joe Buyer reaches the page in your application to add a bank account you'll ask Dwolla’s server to [generate an IAV token](http://docsv2.dwolla.com/#generate-an-iav-token-customer). 
 
-Create a funding source, as you did before:
+Generate a single-use IAV token for our Customer, Joe Buyer:
 
 ```raw
-POST https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
-{
-    "routingNumber": "222222226",
-    "accountNumber": "123456789",
-    "type": "checking",
-    "name": "Joe Buyer - Checking"
+curl -X POST 
+\ -H "Content-Type: application/vnd.dwolla.v1.hal+json"
+\ -H "Accept: application/vnd.dwolla.v1.hal+json"
+\ -H "Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q"
+\ "https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+
+HTTP/1.1 200 OK
+{  
+   "_links":{  
+      "self":{  
+         "href":"https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+      }
+   },
+   "token":"lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 }
-
-HTTP/1.1 201 Created
-Location: https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
 ```
 ```ruby
-customer = 'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'
-
-new_fs = DwollaSwagger::FundingsourcesApi.create_customer_funding_source(customer, {
-  "routingNumber" => "222222226",
-  "accountNumber" => "123456789",
-  "type" => "checking",
-  "name" => "Joe Buyer - Checking"
-})
-
-p new_fs # => https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
+# coming soon
 ```
 ```javascript
-// No example for this language yet.
+// coming soon
 ```
 ```python
-fs_api = dwollaswagger.FundingsourcesApi(client)
-
-customer = 'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'
-
-new_fs = fs_api.create_customer_funding_source(customer, {
-    "routingNumber": "222222226",
-    "accountNumber": "123456789",
-    "type": "checking",
-    "name": "Joe Buyer - Checking"
-})
-
-print(new_fs) # => https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
+# coming soon
 ```
 ```php
-<?php
-$fsApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-
-$customer = 'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'
-$new_fs = $fsApi->create_customer_funding_source($customer, array (
-  'routingNumber' => '222222226',
-  'accountNumber' => '123456789',
-  'type' => 'checking',
-  'name' => 'Joe Buyer - Checking',
-));
-
-print($new_fs); # => https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
-?>
+// coming soon
 ```
 
-Then, we’ll need to trigger micro-deposits. We will use the `new_fs` variable which holds to location of the new Funding Source and pass it over to the `micro_deposits()` function. You will know that the request was successful if no exception is thrown, as `fundingsources/micro-deposits` returns no data other than `HTTP 200` upon successful request. 
+Then, you’ll pass this single-use IAV token to the client-side of your application where it will be used in the JavaScript function `dwolla.iav.start`. This token will be used to authenticate the request asking Dwolla to render the IAV flow. Before calling this function you'll want to include `dwolla.js` in the HEAD of your page. 
 
-```raw
-POST /funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits
-Authorization: Bearer 8tJjM7iTjujLthkbVPMUcHLqMNw4uv5kG712g9j1RRBHplGpwo
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-Cache-Control: no-cache
-
-HTTP 200 OK
-```
-```ruby
-DwollaSwagger::FundingsourcesApi.micro_deposits(new_fs)
-```
-```javascript
-// No example for this language yet.
-```
-```python
-fs_api = dwollaswagger.FundingsourcesApi(client)
-fs_api.micro_deposits(new_fs)
-```
-```php
-<?php
-$fsApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-$fsApi->micro_deposits($new_fs);
-?>
+```html
+<head>
+<script src="https://cdn.dwolla.com/1/dwolla.js"></script>
+</head>
 ```
 
-In the Dwolla production environment, you’d have to wait until the micro-deposits actually post to the bank account, but for this guide we can use any amount **below** $0.10, which always work in the Sandbox environment. This operation, as the last one, is successful unless an exception is thrown:
+Next, you'll add in a container to the body of your page where you want to render the IAV flow.
 
-`amount1`: `0.03`
+```html
+<div id="mainContainer">
+  <input type="button" id="start" value="Add Bank">
+</div>  
 
-`amount2`: `0.09`
-
-```raw
-POST /funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits 
-Authorization: Bearer 8tJjM7iTjujLthkbVPMUcHLqMNw4uv5kG712g9j1RRBHplGpwo
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-
-{
-    "amount1": {
-        "value": "0.03",
-        "currency": "USD"
-    },
-    "amount2": {
-        "value": "0.09",
-        "currency": "USD"
-    }
-}
-
-HTTP 200 OK
-```
-```ruby
-DwollaSwagger::FundingsourcesApi.verify_micro_deposits_exist(new_fs, {
-    "amount1" => {
-           "value" => "0.03",
-        "currency" => "USD"
-    },
-    "amount2" => {
-           "value" => "0.09",
-        "currency" => "USD"
-    }
-})
-```
-```javascript
-// No example for this language yet.
-```
-```python
-fs_api = dwollaswagger.FundingsourcesApi(client)
-
-fs_api.verify_micro_deposits_exist(new_fs, {
-    "amount1": {
-        "value": "0.03",
-        "currency": "USD"
-    },
-    "amount2": {
-        "value": "0.09",
-        "currency": "USD"
-    }
-})
-```
-```php
-<?php
-$fsApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-
-$fsApi->verify_micro_deposits_exist($new_fs, array (
-  'amount1' => 
-  array (
-    'value' => '0.03',
-    'currency' => 'USD',
-  ),
-  'amount2' => 
-  array (
-    'value' => '0.09',
-    'currency' => 'USD',
-  ),
-));
-?>
+<div id="iavContainer"></div>
 ```
 
-Great! Joe Buyer’s funding source is now verified and ready to send money from.
+Now that you have `dwolla.js` initialized on the page and the container created where you'll render the IAV flow, you'll create a JavaScript function that responds to Joe clicking the "Add bank" button on your page. Once Joe clicks "Add Bank", your application will call `dwolla.iav.start()` passing in the following arguments: the iavContainer element where IAV will render, a string value of your single-use IAV token, and a callback function that will handle any error or response.
+
+```js
+<script type="text/javascript">
+$('#start').click(function() {
+  var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
+  dwolla.configure('uat');
+  dwolla.iav.start('iavContainer', iavToken, function(err, res) {
+    console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
+  });
+});
+</script>
+```
+
+Joe Buyer will complete the IAV flow by authenticating with his online banking credentials. You'll know his bank account was successfully added and verified if you receive a JSON response in your callback that includes a link to the newly created funding source. 
+
+* Sample response:  `{"_links":{"funding-source":{"href":"https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"}}}`
+
+Great! Joe Buyer’s funding source is now verified and ready to send money.
 
 <nav class="pager-nav">
     <a href="./04-create-unverified-customer.html">Back: Create an unverified customer</a>
