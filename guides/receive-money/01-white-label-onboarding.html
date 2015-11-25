@@ -63,137 +63,53 @@ Location: https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8A
 <span class=k>catch</span> <span class=o>(</span><span class=n>Exception</span> <span class=n>e</span><span class=o>)</span> <span class=o>{</span>
     <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>"Something's up!"</span><span class=o>);</span>
 <span class=o>}</span>
-</code></pre></div></div><p>When the customer is created, you’ll receive the customer URL in the location header. If using an SDK, the location will be returned to you upon calling <code>create()</code>.</p><p><strong>Important</strong>: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud. Sending random, hardcoded, or incorrect information in the ipAddress field will cause delays or throttling of requests.</p><h3>Step C: Attach a funding source to the customer</h3><p>The next step is to attach a bank or credit union account to the customer by providing the bank account’s routing number, account number, and account type.</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>POST https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
-{
-    "routingNumber": "222222226",
-    "accountNumber": "123456789",
-    "type": "checking",
-    "name": "Joe Buyer - Checking"
+</code></pre></div></div><p>When the customer is created, you’ll receive the customer URL in the location header. If using an SDK, the location will be returned to you upon calling <code>create()</code>.</p><p><strong>Important</strong>: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud. Sending random, hardcoded, or incorrect information in the ipAddress field will cause delays or throttling of requests.</p><h3>Step C: Attach a funding source to the customer</h3><p>Next you will attach a verified funding source to the Customer, which will be done using Instant Account Verification (IAV). This method will give the Customer the ability to add and verify their bank account in a matter of seconds by authenticating with their online banking credentials. Once the Customer reaches the page in your application to add a bank account you&rsquo;ll ask Dwolla’s server to <a href=http://docsv2.dwolla.com/#generate-an-iav-token-customer>generate an IAV token</a>.</p><p>Generate a single-use IAV token for our Customer:</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>curl -X POST 
+\ -H "Content-Type: application/vnd.dwolla.v1.hal+json"
+\ -H "Accept: application/vnd.dwolla.v1.hal+json"
+\ -H "Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q"
+\ "https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+
+HTTP/1.1 200 OK
+{  
+   "_links":{  
+      "self":{  
+         "href":"https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+      }
+   },
+   "token":"lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 }
+</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=c1># coming soon</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// coming soon</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=c># coming soon</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php>// coming soon
+</code></pre></div></div><p>Then, you’ll pass this single-use IAV token to the client-side of your application where it will be used in the JavaScript function <code>dwolla.iav.start</code>. This token will be used to authenticate the request asking Dwolla to render the IAV flow. Before calling this function you&rsquo;ll want to include <code>dwolla.js</code> in the HEAD of your page.</p><div class="code-snippet js-code-snippet language-html"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-html data-lang=html><span class=nt>&lt;head&gt;</span>
+<span class=nt>&lt;script </span><span class=na>src=</span><span class=s>"https://cdn.dwolla.com/1/dwolla.js"</span><span class=nt>&gt;&lt;/script&gt;</span>
+<span class=nt>&lt;/head&gt;</span>
+</code></pre></div></div><p>Next, you&rsquo;ll add in a container to the body of your page where you want to render the IAV flow.</p><div class="code-snippet js-code-snippet language-html"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-html data-lang=html><span class=nt>&lt;div</span> <span class=na>id=</span><span class=s>"mainContainer"</span><span class=nt>&gt;</span>
+  <span class=nt>&lt;input</span> <span class=na>type=</span><span class=s>"button"</span> <span class=na>id=</span><span class=s>"start"</span> <span class=na>value=</span><span class=s>"Add Bank"</span><span class=nt>&gt;</span>
+<span class=nt>&lt;/div&gt;</span>  
 
-HTTP/1.1 201 Created
-Location: https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
-</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>customer</span> <span class=o>=</span> <span class=s1>'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'</span>
-
-<span class=n>new_fs</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>FundingsourcesApi</span><span class=p>.</span><span class=nf>create_customer_funding_source</span><span class=p>(</span><span class=n>customer</span><span class=p>,</span> <span class=p>{</span>
-  <span class=s2>"routingNumber"</span> <span class=o>=&gt;</span> <span class=s2>"222222226"</span><span class=p>,</span>
-  <span class=s2>"accountNumber"</span> <span class=o>=&gt;</span> <span class=s2>"123456789"</span><span class=p>,</span>
-  <span class=s2>"type"</span> <span class=o>=&gt;</span> <span class=s2>"checking"</span><span class=p>,</span>
-  <span class=s2>"name"</span> <span class=o>=&gt;</span> <span class=s2>"Joe Buyer - Checking"</span>
-<span class=p>})</span>
-
-<span class=nb>p</span> <span class=n>new_fs</span> <span class=c1># =&gt; https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// No example for this language yet.</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>fs_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>FundingsourcesApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
-
-<span class=n>customer</span> <span class=o>=</span> <span class=s>'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'</span>
-
-<span class=n>new_fs</span> <span class=o>=</span> <span class=n>fs_api</span><span class=o>.</span><span class=n>create_customer_funding_source</span><span class=p>(</span><span class=n>customer</span><span class=p>,</span> <span class=p>{</span>
-    <span class=s>"routingNumber"</span><span class=p>:</span> <span class=s>"222222226"</span><span class=p>,</span>
-    <span class=s>"accountNumber"</span><span class=p>:</span> <span class=s>"123456789"</span><span class=p>,</span>
-    <span class=s>"type"</span><span class=p>:</span> <span class=s>"checking"</span><span class=p>,</span>
-    <span class=s>"name"</span><span class=p>:</span> <span class=s>"Joe Buyer - Checking"</span>
-<span class=p>})</span>
-
-<span class=k>print</span><span class=p>(</span><span class=n>new_fs</span><span class=p>)</span> <span class=c># =&gt; https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
-<span class=nv>$fsApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DwollaSwagger\FundingsourcesApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
-
-<span class=nv>$customer</span> <span class=o>=</span> <span class=s1>'https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources'</span>
-<span class=nv>$new_fs</span> <span class=o>=</span> <span class=nv>$fsApi</span><span class=o>-&gt;</span><span class=na>create_customer_funding_source</span><span class=p>(</span><span class=nv>$customer</span><span class=p>,</span> <span class=k>array</span> <span class=p>(</span>
-  <span class=s1>'routingNumber'</span> <span class=o>=&gt;</span> <span class=s1>'222222226'</span><span class=p>,</span>
-  <span class=s1>'accountNumber'</span> <span class=o>=&gt;</span> <span class=s1>'123456789'</span><span class=p>,</span>
-  <span class=s1>'type'</span> <span class=o>=&gt;</span> <span class=s1>'checking'</span><span class=p>,</span>
-  <span class=s1>'name'</span> <span class=o>=&gt;</span> <span class=s1>'Joe Buyer - Checking'</span><span class=p>,</span>
-<span class=p>));</span>
-
-<span class=k>print</span><span class=p>(</span><span class=nv>$new_fs</span><span class=p>);</span> <span class=c1># =&gt; https://api-uat.dwolla.com/funding-sources/13C38DF2-6D2C-46F6-BFD1-1E1CC7BF4377
-</span><span class=cp>?&gt;</span>
-</code></pre></div></div><p>The bank or credit union account details are securely stored with Dwolla. You’ll use the funding source ID to reference the bank account in the coming steps when you create a bank transfer from this bank account to your account. The funding source ID is found in the location header of the response, e.g. 375c6781-2a17-476c-84f7-db7d2f6ffb31.</p><h3>Step D: Verify funding source</h3><p>Then, we’ll need to trigger micro-deposits. We will use the <code>new_fs</code> variable which holds to location of the new Funding Source and pass it over to the <code>micro_deposits()</code> function. You will know that the request was successful if no exception is thrown, as <code>fundingsources/micro-deposits</code> returns no data other than <code>HTTP 200</code> upon successful request.</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>POST /funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits
-Authorization: Bearer 8tJjM7iTjujLthkbVPMUcHLqMNw4uv5kG712g9j1RRBHplGpwo
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-Cache-Control: no-cache
-
-HTTP 200 OK
-</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>FundingsourcesApi</span><span class=p>.</span><span class=nf>micro_deposits</span><span class=p>(</span><span class=n>new_fs</span><span class=p>)</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// No example for this language yet.</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>fs_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>FundingsourcesApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
-<span class=n>fs_api</span><span class=o>.</span><span class=n>micro_deposits</span><span class=p>(</span><span class=n>new_fs</span><span class=p>)</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
-<span class=nv>$fsApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DwollaSwagger\FundingsourcesApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
-<span class=nv>$fsApi</span><span class=o>-&gt;</span><span class=na>micro_deposits</span><span class=p>(</span><span class=nv>$new_fs</span><span class=p>);</span>
-<span class=cp>?&gt;</span>
-</code></pre></div></div><p>In the Dwolla production environment, you’d have to wait until the micro-deposits actually post to the bank account, but for this guide we can use any amount <strong>below</strong> $0.10, which always work in the Sandbox environment. This operation, as the last one, is successful unless an exception is thrown:</p><p><code>amount1</code>: <code>0.03</code></p><p><code>amount2</code>: <code>0.09</code></p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>POST /funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits 
-Authorization: Bearer 8tJjM7iTjujLthkbVPMUcHLqMNw4uv5kG712g9j1RRBHplGpwo
-Content-Type: application/vnd.dwolla.v1.hal+json
-Accept: application/vnd.dwolla.v1.hal+json
-
-{
-    "amount1": {
-        "value": "0.03",
-        "currency": "USD"
-    },
-    "amount2": {
-        "value": "0.09",
-        "currency": "USD"
-    }
-}
-
-HTTP 200 OK
-</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>FundingsourcesApi</span><span class=p>.</span><span class=nf>verify_micro_deposits_exist</span><span class=p>(</span><span class=n>new_fs</span><span class=p>,</span> <span class=p>{</span>
-    <span class=s2>"amount1"</span> <span class=o>=&gt;</span> <span class=p>{</span>
-           <span class=s2>"value"</span> <span class=o>=&gt;</span> <span class=s2>"0.03"</span><span class=p>,</span>
-        <span class=s2>"currency"</span> <span class=o>=&gt;</span> <span class=s2>"USD"</span>
-    <span class=p>},</span>
-    <span class=s2>"amount2"</span> <span class=o>=&gt;</span> <span class=p>{</span>
-           <span class=s2>"value"</span> <span class=o>=&gt;</span> <span class=s2>"0.09"</span><span class=p>,</span>
-        <span class=s2>"currency"</span> <span class=o>=&gt;</span> <span class=s2>"USD"</span>
-    <span class=p>}</span>
-<span class=p>})</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// No example for this language yet.</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>fs_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>FundingsourcesApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
-
-<span class=n>fs_api</span><span class=o>.</span><span class=n>verify_micro_deposits_exist</span><span class=p>(</span><span class=n>new_fs</span><span class=p>,</span> <span class=p>{</span>
-    <span class=s>"amount1"</span><span class=p>:</span> <span class=p>{</span>
-        <span class=s>"value"</span><span class=p>:</span> <span class=s>"0.03"</span><span class=p>,</span>
-        <span class=s>"currency"</span><span class=p>:</span> <span class=s>"USD"</span>
-    <span class=p>},</span>
-    <span class=s>"amount2"</span><span class=p>:</span> <span class=p>{</span>
-        <span class=s>"value"</span><span class=p>:</span> <span class=s>"0.09"</span><span class=p>,</span>
-        <span class=s>"currency"</span><span class=p>:</span> <span class=s>"USD"</span>
-    <span class=p>}</span>
-<span class=p>})</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
-<span class=nv>$fsApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DwollaSwagger\FundingsourcesApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
-
-<span class=nv>$fsApi</span><span class=o>-&gt;</span><span class=na>verify_micro_deposits_exist</span><span class=p>(</span><span class=nv>$new_fs</span><span class=p>,</span> <span class=k>array</span> <span class=p>(</span>
-  <span class=s1>'amount1'</span> <span class=o>=&gt;</span> 
-  <span class=k>array</span> <span class=p>(</span>
-    <span class=s1>'value'</span> <span class=o>=&gt;</span> <span class=s1>'0.03'</span><span class=p>,</span>
-    <span class=s1>'currency'</span> <span class=o>=&gt;</span> <span class=s1>'USD'</span><span class=p>,</span>
-  <span class=p>),</span>
-  <span class=s1>'amount2'</span> <span class=o>=&gt;</span> 
-  <span class=k>array</span> <span class=p>(</span>
-    <span class=s1>'value'</span> <span class=o>=&gt;</span> <span class=s1>'0.09'</span><span class=p>,</span>
-    <span class=s1>'currency'</span> <span class=o>=&gt;</span> <span class=s1>'USD'</span><span class=p>,</span>
-  <span class=p>),</span>
-<span class=p>));</span>
-<span class=cp>?&gt;</span>
-</code></pre></div></div><p>Great! The funding source should now be verified.</p><h3>Step E: Create a transfer</h3><p>Once the customer has verified their funding source, we can transfer funds from their bank account to your Dwolla account. You’ll need to supply your access token from step A, the customer’s ID from step B, and the customer’s funding source ID from step C:</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>POST https://api-uat.dwolla.com/transfers
+<span class=nt>&lt;div</span> <span class=na>id=</span><span class=s>"iavContainer"</span><span class=nt>&gt;&lt;/div&gt;</span>
+</code></pre></div></div><p>Now that you have <code>dwolla.js</code> initialized on the page and the container created where you&rsquo;ll render the IAV flow, you&rsquo;ll create a JavaScript function that responds to the Customer clicking the &ldquo;Add bank&rdquo; button on your page. Once the Customer clicks &ldquo;Add Bank&rdquo;, your application will call <code>dwolla.iav.start()</code> passing in the following arguments: the iavContainer element where IAV will render, a string value of your single-use IAV token, and a callback function that will handle any error or response.</p><div class="code-snippet js-code-snippet language-js"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-js data-lang=js><span class=o>&lt;</span><span class=nx>script</span> <span class=nx>type</span><span class=o>=</span><span class=s2>"text/javascript"</span><span class=o>&gt;</span>
+<span class=nx>$</span><span class=p>(</span><span class=s1>'#start'</span><span class=p>).</span><span class=nx>click</span><span class=p>(</span><span class=kd>function</span><span class=p>()</span> <span class=p>{</span>
+  <span class=kd>var</span> <span class=nx>iavToken</span> <span class=o>=</span> <span class=s1>'4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY'</span><span class=p>;</span>
+  <span class=nx>dwolla</span><span class=p>.</span><span class=nx>configure</span><span class=p>(</span><span class=s1>'uat'</span><span class=p>);</span>
+  <span class=nx>dwolla</span><span class=p>.</span><span class=nx>iav</span><span class=p>.</span><span class=nx>start</span><span class=p>(</span><span class=s1>'iavContainer'</span><span class=p>,</span> <span class=nx>iavToken</span><span class=p>,</span> <span class=kd>function</span><span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>'Error: '</span> <span class=o>+</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=o>+</span> <span class=s1>' -- Response: '</span> <span class=o>+</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>res</span><span class=p>));</span>
+  <span class=p>});</span>
+<span class=p>});</span>
+<span class=o>&lt;</span><span class=sr>/script</span><span class=err>&gt;
+</span></code></pre></div></div><p>The Customer will complete the IAV flow by authenticating with their online banking credentials. You&rsquo;ll know their bank account was successfully added and verified if you receive a JSON response in your callback that includes a link to the newly created funding source.</p><ul><li>Sample response: <code>{&quot;_links&quot;:{&quot;funding-source&quot;:{&quot;href&quot;:&quot;https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197&quot;}}}</code></li></ul><p>Great! The funding source should now be verified.</p><h3>Step E: Create a transfer</h3><p>Once the customer has verified their funding source, we can transfer funds from their bank account to your Dwolla account. You’ll need to supply your access token from step A, the customer’s ID from step B, and the customer’s funding source ID from step C:</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>POST https://api-uat.dwolla.com/transfers
 Accept: application/vnd.dwolla.v1.hal+json
 Content-Type: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 {
     "_links": {
         "source": {
-            "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
+            "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
         },
         "destination": {
-            "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
+            "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
         }
     },
     "amount": {
@@ -206,8 +122,8 @@ HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 </code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>transfer_request</span> <span class=o>=</span> <span class=p>{</span>
   <span class=ss>:_links</span> <span class=o>=&gt;</span> <span class=p>{</span>
-      <span class=ss>:destination</span> <span class=o>=&gt;</span> <span class=p>{</span><span class=ss>:href</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747'</span><span class=p>},</span>
-      <span class=ss>:source</span> <span class=o>=&gt;</span> <span class=p>{</span><span class=ss>:href</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C'</span><span class=p>}</span>
+      <span class=ss>:destination</span> <span class=o>=&gt;</span> <span class=p>{</span><span class=ss>:href</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C'</span><span class=p>},</span>
+      <span class=ss>:source</span> <span class=o>=&gt;</span> <span class=p>{</span><span class=ss>:href</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'</span><span class=p>}</span>
   <span class=p>},</span>
   <span class=ss>:amount</span> <span class=o>=&gt;</span> <span class=p>{</span><span class=ss>:currency</span> <span class=o>=&gt;</span> <span class=s1>'USD'</span><span class=p>,</span> <span class=ss>:value</span> <span class=o>=&gt;</span> <span class=mi>225</span><span class=o>.</span><span class=mo>00</span><span class=p>}</span>
 <span class=p>}</span>
@@ -218,10 +134,10 @@ Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2
 </code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>transfer_request</span> <span class=o>=</span> <span class=p>{</span>
     <span class=s>"_links"</span><span class=p>:</span> <span class=p>{</span>
         <span class=s>"source"</span><span class=p>:</span> <span class=p>{</span>
-            <span class=s>"href"</span><span class=p>:</span> <span class=s>"https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"</span>
+            <span class=s>"href"</span><span class=p>:</span> <span class=s>"https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"</span>
         <span class=p>},</span>
         <span class=s>"destination"</span><span class=p>:</span> <span class=p>{</span>
-            <span class=s>"href"</span><span class=p>:</span> <span class=s>"https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"</span>
+            <span class=s>"href"</span><span class=p>:</span> <span class=s>"https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"</span>
         <span class=p>}</span>
     <span class=p>},</span>
     <span class=s>"amount"</span><span class=p>:</span> <span class=p>{</span>
@@ -240,11 +156,11 @@ Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2
   <span class=k>array</span> <span class=p>(</span>
     <span class=s1>'source'</span> <span class=o>=&gt;</span> 
     <span class=k>array</span> <span class=p>(</span>
-      <span class=s1>'href'</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C'</span><span class=p>,</span>
+      <span class=s1>'href'</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'</span><span class=p>,</span>
     <span class=p>),</span>
     <span class=s1>'destination'</span> <span class=o>=&gt;</span> 
     <span class=k>array</span> <span class=p>(</span>
-      <span class=s1>'href'</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747'</span><span class=p>,</span>
+      <span class=s1>'href'</span> <span class=o>=&gt;</span> <span class=s1>'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C'</span><span class=p>,</span>
     <span class=p>),</span>
   <span class=p>),</span>
   <span class=s1>'amount'</span> <span class=o>=&gt;</span> 
