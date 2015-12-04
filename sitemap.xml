@@ -79,31 +79,34 @@
     <loc>/resources/customer-verification.html</loc>
   </url>
   <url>
+    <loc>/resources/dwolla.js.html</loc>
+  </url>
+  <url>
     <loc>/resources/funding-source-verification.html</loc>
   </url>
   <url>
     <loc>/</loc>
   </url>
   <url>
-    <loc>/resources/</loc>
+    <loc>/guides/sandbox-setup/</loc>
   </url>
   <url>
     <loc>/guides/transfer-money-between-users/</loc>
   </url>
   <url>
-    <loc>/guides/webhooks/</loc>
+    <loc>/guides/</loc>
   </url>
   <url>
     <loc>/guides/receive-money/</loc>
   </url>
   <url>
-    <loc>/guides/sandbox-setup/</loc>
-  </url>
-  <url>
-    <loc>/guides/</loc>
-  </url>
-  <url>
     <loc>/guides/send-money/</loc>
+  </url>
+  <url>
+    <loc>/guides/webhooks/</loc>
+  </url>
+  <url>
+    <loc>/resources/</loc>
   </url>
   <url>
     <loc>/resources/oauth-refresh-strategies.html</loc>
