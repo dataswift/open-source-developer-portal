@@ -22,6 +22,10 @@ description: "In-depth articles on Dwolla features and integration patterns."
         <p>Account verification statuses and how to respond when additional information is required.</p>
     </li>
     <li>
+        <h3><a href="/resources/dwolla.js.html">Dwolla.js</a></h3>
+        <p>Securely transmit bank information from your application using our client-side JavaScript library.</p>
+    </li>
+    <li>
         <h3><a href="/resources/funding-source-verification.html">Funding source verification</a></h3>
         <p>Methods to verify funding sources, including Instant Account Verification and micro-deposits.</p>
     </li>
