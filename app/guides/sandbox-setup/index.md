@@ -20,7 +20,7 @@ The Sandbox environment is a complete replica of the Dwolla production environme
 - The Sandbox contains only test data and is completely separate from your production account
 - Actual money is not sent or received as part of test transactions. Real financial data should never be used in the Sandbox
 - The Sandbox web interface is available at `https://uat.dwolla.com/`
-- All API endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://www.dwolla.com`
+- All API V2 endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://www.dwolla.com`
 
 ## Sandbox account
 
@@ -28,11 +28,11 @@ To get started, the first thing you need is a Sandbox account. You’ll be able 
 
 ## Overview
 
-1. Create a master Sandbox account with a valid email address belonging to you.
-2. Use your master account and the Sandbox Console interface to create a child account with funds and attached bank accounts.
-3. Create API credentials using the child Sandbox account.
+1. Create a Sandbox account with a valid email address belonging to you
+2. Generate API credentials using your Sandbox account
+2. Get an SDK and enable Sandbox mode
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-create-master-account.html">Next step: Create a master Sandbox account</a>
+<a href="01-create-sandbox-account.html">Next step: Create a Sandbox account</a>
 </nav>

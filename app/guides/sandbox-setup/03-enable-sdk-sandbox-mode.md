@@ -11,14 +11,21 @@ description: Use this guide to start sending payments from your application by u
 
 # Using an SDK? Enable Sandbox mode
 
-Now that you’ve got accounts set up in the Sandbox environment, you can enable Sandbox mode if you’re using one of our SDKs.
-
-To use the Sandbox environment with our white label SDKs, just provide `https://api-uat.dwolla.com/` as the hostname.
+To use the Sandbox environment with our API V2 SDKs, just provide `https://api-uat.dwolla.com/` as the hostname.
 
 ```raw
 not available
 ```
 ```javascript
+var client = require('swagger-client');
+
+var dwolla = new client({
+    url: 'https://api-uat.dwolla.com/swagger.json',
+    authorizations: {
+        dwollaHeaderAuth: new client.ApiKeyAuthorization('Authorization', 'Bearer your_token', 'header')
+    },
+    usePromise: true
+});
 ```
 ```ruby
 require 'dwolla_swagger'
@@ -32,6 +39,8 @@ client = dwollaswagger.ApiClient('https://api-uat.dwolla.com')
 ```
 ```php
 <?php
+require('../path/to/vendor/autoload.php');
+
 $apiClient = new DwollaSwagger\ApiClient("https://api-uat.dwolla.com/");
 ```
 
@@ -39,6 +48,6 @@ $apiClient = new DwollaSwagger\ApiClient("https://api-uat.dwolla.com/");
 You’re all set! With Sandbox mode enabled, you’re ready to start sending money in the Sandbox. 
 
 <nav class="pager-nav">
-    <a href="./03-create-application.html">Back: Create an application</a>
+    <a href="./02-create-application.html">Back: Create an application</a>
     <a href="/guides/send-money">Next guide: Send money to your users</a>
 </nav>
