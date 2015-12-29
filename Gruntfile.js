@@ -157,9 +157,6 @@ module.exports = function (grunt) {
       src: {
         configFile: 'karma.conf.js',
         singleRun: true,
-        mochaReporter: {
-          output: 'minimal'
-        },
         reporters: 'mocha'
       }
     },
@@ -410,5 +407,9 @@ module.exports = function (grunt) {
     'check',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('test', [
+    'karma'
   ]);
 };
