@@ -1,14 +1,6 @@
-// Generated on 2015-07-21 using generator-jekyllrb 1.4.1
-'use strict';
-
-// Directory reference:
-//   css: css
-//   sass: _scss
-//   javascript: js
-//   images: images
-//   fonts: fonts
-
 module.exports = function (grunt) {
+  'use strict';
+
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
@@ -159,6 +151,16 @@ module.exports = function (grunt) {
         options: {
           doctor: true
         }
+      }
+    },
+    karma: {
+      src: {
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        mochaReporter: {
+          output: 'minimal'
+        },
+        reporters: 'mocha'
       }
     },
     useminPrepare: {
