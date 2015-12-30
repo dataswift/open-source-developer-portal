@@ -25,7 +25,7 @@
             e.preventDefault();
             e.stopPropagation();
 
-            dwolla.util.googleAnalytics.trackEvent('outbound', 'click', url, function(){
+            dwolla.util.googleAnalytics.trackEvent('outbound', 'click', url, function () {
                 window.location = url;
             });
         },

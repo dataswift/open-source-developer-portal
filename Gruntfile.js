@@ -229,6 +229,38 @@ module.exports = function (grunt) {
         }
       }
     },
+    jslint: {
+      src: {
+        src: ['app/js/dwolla/**/*.js'],
+        directives: {
+          browser: true,
+          regexp: true,
+          predef: ['dwolla', '$', 'ga']
+        },
+        options: {
+          errorsOnly: true
+        }
+      },
+      test: {
+        src: ['app/js/test/**/*.js'],
+        directives: {
+          browser: true,
+          predef: ['describe',
+            'it',
+            'assert',
+            'before',
+            'afterEach',
+            'beforeEach',
+            'sinon',
+            'dwolla',
+            'helpers',
+            '$']
+        },
+        options: {
+          errorsOnly: true
+        }
+      }
+    },
     // Usemin adds files to cssmin
     cssmin: {
       dist: {
@@ -448,6 +480,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('test', [
+    'jslint',
     'karma'
   ]);
 };

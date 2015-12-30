@@ -24,7 +24,7 @@ describe('Google Analytics', function () {
 
         assert.equal(trackEvent.args[0][2], 'http://www.somewhere.com');
         dwolla.util.googleAnalytics.trackEvent.restore();
-    }); 
+    });
 
     it('should be able to track a page view', function () {
         var trackPageView = sinon.spy(dwolla.util.googleAnalytics, 'trackPageview');
