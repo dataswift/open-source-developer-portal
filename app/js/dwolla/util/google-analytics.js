@@ -18,14 +18,15 @@
         trackLink: function (e) {
             // this removes any race condition with normal link tracking
             // link structure should be
-            // <a href="http://www.somewhere.com" class="js-track-link" data-ga-label="stay in touch - twitter">
-            var targ = $(this);
+            // <a href="http://www.somewhere.com" class="js-track-link">
+            var targ = $(this),
+                url = targ.attr('href');
 
             e.preventDefault();
             e.stopPropagation();
 
-            dwolla.util.googleAnalytics.trackEvent('link', 'clicked', targ.data('ga-label'), function(){
-                window.location = targ.attr('href');
+            dwolla.util.googleAnalytics.trackEvent('outbound', 'click', url, function(){
+                window.location = url;
             });
         },
 

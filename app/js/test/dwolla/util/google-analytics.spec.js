@@ -22,7 +22,7 @@ describe('header', function () {
 
         trackLinkButton.click();
 
-        assert.equal(trackEvent.args[0][2], 'stay in touch - twitter');
+        assert.equal(trackEvent.args[0][2], 'http://www.somewhere.com');
         dwolla.util.googleAnalytics.trackEvent.restore();
     }); 
 
