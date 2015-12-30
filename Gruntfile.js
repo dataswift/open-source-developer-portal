@@ -21,6 +21,10 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['sass', 'autoprefixer:dist']
       },
+      js: {
+        files: ['<%= yeoman.app %>/js/**/*.js'],
+        tasks: ['uglify:debug']
+      },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:dist']
@@ -46,9 +50,11 @@ module.exports = function (grunt) {
           src: [
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
+            '.tmp/js/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
-            '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+            '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
+            'app/public/**/*.js'
           ]
         },
         options: {
@@ -74,6 +80,7 @@ module.exports = function (grunt) {
           src: [
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
+            '.tmp/js/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
             '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
@@ -192,7 +199,36 @@ module.exports = function (grunt) {
     // Usemin adds files to concat
     concat: {},
     // Usemin adds files to uglify
-    uglify: {},
+    uglify: {
+      debug: {
+        options: {
+          mangle: false,
+          beautify: true,
+          compress: false
+        },
+        files: {
+          '.tmp/js/developer.js': [
+            'app/_bower_components/style-tiles/dist/js/developer.js',
+            'app/js/dwolla/**/*.js'
+          ]
+        }
+      },
+      release: {
+        options: {
+          mangle: true,
+          beautify: false,
+          compress: {
+            drop_console: true
+          }
+        },
+        files: {
+          '.tmp/js/developer.js': [
+            'app/_bower_components/style-tiles/dist/js/developer.js',
+            'app/js/dwolla/**/*.js'
+          ]
+        }
+      }
+    },
     // Usemin adds files to cssmin
     cssmin: {
       dist: {
@@ -329,12 +365,14 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'sass',
+        'uglify:release',
         'copy:stageCss',
 
         'jekyll:server'
       ],
       dist: [
         'sass',
+        'uglify:release',
         'copy:dist'
       ]
     }
@@ -387,7 +425,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'autoprefixer:dist',
-    'uglify',
+    'uglify:release',
     'imagemin',
     'svgmin',
     'filerev',

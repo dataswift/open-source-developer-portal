@@ -1,10 +1,34 @@
+// this requires the ga (google analytics) object to be loaded.
 (function (dwolla) {
     'use strict';
 
     var GOOGLE_TRACK_MAX_TRIES = 3,
         GOOGLE_TRACK_RETRY_SPEED = 1000;
 
+    function addEventListeners() {
+        $('.js-track-link').on('click', dwolla.util.googleAnalytics.trackLink);
+    }
+
     dwolla.namespace('util.googleAnalytics', {
+
+        init: function () {
+            addEventListeners();
+        },
+
+        trackLink: function (e) {
+            // this removes any race condition with normal link tracking
+            // link structure should be
+            // <a href="http://www.somewhere.com" class="js-track-link" data-ga-label="stay in touch - twitter">
+            var targ = $(this);
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            dwolla.util.googleAnalytics.trackEvent('link', 'clicked', targ.data('ga-label'), function(){
+                window.location = targ.attr('href');
+            });
+        },
+
         trackPageview: function (identifier, count) {
             count = count !== undefined ? count : 0;
             count += 1;
@@ -21,14 +45,17 @@
             }
         },
 
-        trackEvent: function (cat, action, label, count) {
+        trackEvent: function (cat, action, label, callback, count) {
             count = count !== undefined ? count : 0;
             label = label !== undefined ? label : null;
+            callback = callback !== undefined ? callback : null;
             count += 1;
 
             try {
                 if (label !== null) {
-                    ga('send', 'event', cat, action, label);
+                    ga('send', 'event', cat, action, label, {
+                        'hitCallback': callback
+                    });
                 } else {
                     ga('send', 'event', cat, action);
                 }
@@ -36,11 +63,12 @@
                 //Google Analytics has not loaded yet
                 if (count <= GOOGLE_TRACK_MAX_TRIES) {
                     setTimeout(function () {
-                        dwolla.util.googleAnalytics.trackPageview.trackEvent(cat, action, label, count);
+                        dwolla.util.googleAnalytics.trackPageview.trackEvent(cat, action, label, callback, count);
                     }, GOOGLE_TRACK_RETRY_SPEED);
                 }
             }
         }
     });
 
+    $(dwolla.util.googleAnalytics.init);
 }(dwolla));

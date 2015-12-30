@@ -2,7 +2,7 @@ var selfTest = (function () {
     'use strict';
 
     function addListeners() {
-        $('#test-button').on('click', selfTest.clickHand);
+        document.getElementById('test-button').onclick = selfTest.clickHand;
     }
 
     return {
@@ -15,20 +15,21 @@ var selfTest = (function () {
         },
 
         clickHand: function () {
-            $(this).addClass('has-been-clicked');
+            this.className = 'has-been-clicked';
         }
     };
 }());
 
-describe('Self', function () {
+
+describe('self', function () {
     'use strict';
 
     beforeEach(function () {
-        $('html').html('<a id="test-button">Click me</a>');
+        document.getElementsByTagName('html')[0].innerHTML = '<a id="test-button">Click me</a>';
     });
 
     afterEach(function () {
-        $('html').html('');
+        document.getElementsByTagName('html')[0].innerHTML = '';
     });
 
     it('should be able to use chai assert', function () {
@@ -43,15 +44,14 @@ describe('Self', function () {
         assert.equal(callback.called, true);
     });
 
-    it('should allow jquery interaction', function () {
+    it('should allow DOM interaction with phantomjs', function () {
         var clickHand = sinon.spy(selfTest, 'clickHand'),
-            testButton = $('#test-button');
+            testButton = document.getElementById('test-button');
 
         selfTest.init();
-
-        testButton.click();
+        testButton.onclick();
 
         assert.equal(clickHand.called, true);
-        assert.equal($(testButton).attr('class'), 'has-been-clicked');
+        assert.equal(testButton.className, 'has-been-clicked');
     });
 });

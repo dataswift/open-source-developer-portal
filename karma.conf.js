@@ -12,6 +12,8 @@ module.exports = function(config) {
 
             'app/js/dwolla/**/*.js',
 
+            'app/js/test/helpers/helpers.js',
+            'app/js/test/helpers/*.js',
             'app/js/test/**/*.spec.js'
         ],
 
