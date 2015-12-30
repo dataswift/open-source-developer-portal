@@ -1,4 +1,4 @@
-describe('header', function () {
+describe('Google Analytics', function () {
     'use strict';
 
     before(function () {
