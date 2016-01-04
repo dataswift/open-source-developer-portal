@@ -27,5 +27,7 @@ redcarpet:
 
 highlighter: rouge
 
+# Sitemap
+url: https://developers.dwolla.com
 gems:
   - jekyll-sitemap
