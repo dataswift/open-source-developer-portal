@@ -13,7 +13,7 @@ title:  "Step 1: White label onboarding"
 In this experience, end users create their accounts entirely within your application and you prompt for their bank or credit union account information. Dwolla will securely store this sensitive information.
 
 ### Step A. Create an access token.
-Go to the <a href="http://dwolla-token.herokuapp.com" target="_blank">token generator</a>. 
+Go to the <a href="https://tokengenerator.dwolla.com" target="_blank">token generator</a>. 
 
 Use your application’s key and secret and select the following scopes: Send, Funding, Transactions, and ManageCustomers. When you get to the OAuth login log in screen, log in with your child Sandbox account. Once you agree to the permissions, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing customers. More detail is available in [API docs](https://docsv2.dwolla.com/#oauth).
 

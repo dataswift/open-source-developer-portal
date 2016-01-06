@@ -12,6 +12,8 @@ Whether you intend to create traditional test accounts, view and manage programm
 
 There are two consoles designed to support the specific needs of a developer’s application. The key distinction between each console—White Label vs. Standard—is the type of test user associated with your application.
 
+Access the Sandbox Console at: [https://sandbox-uat.dwolla.com](https://sandbox-uat.dwolla.com)
+
 <ol class="alerts">
     <li class="alert icon-alert-info">If you are new to application development with Dwolla, we recommend you review our <a href="/guides/sandbox-setup">Sandbox Setup Guide</a>.</li>
 </ol>
