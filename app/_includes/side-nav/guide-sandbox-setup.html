@@ -1,0 +1,21 @@
+<section class="steps-nav" {% unless page.url contains '/guides/sandbox-setup' %}style="display:none"{% endunless %}>
+    <h6>Follow the steps</h6>
+    <ol>
+        <li>
+            <a href="/guides/sandbox-setup" {% if page.guide.step == 'overview' %}class="active"{% endif %}>Overview: Sandbox setup</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/sandbox-setup/01-create-sandbox-account.html" {% if page.guide.step == '1' %}class="active"{% endif %}>Create a Sandbox account</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/sandbox-setup/02-create-application.html" {% if page.guide.step == '3' %}class="active"{% endif %}>Create an application</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/sandbox-setup/03-enable-sdk-sandbox-mode.html" {% if page.guide.step == '4' %}class="active"{% endif %}>Enable Sandbox mode</a>
+            <div class="dot"></div>
+        </li>
+    </ol>
+</section>
