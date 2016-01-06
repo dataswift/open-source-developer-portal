@@ -2,7 +2,7 @@
 layout: twoColumn
 section: resources
 type: article
-title:  OAuth refresh stategies
+title:  OAuth refresh strategies
 description: "Best practices for managing your access tokens."
 ---
 
