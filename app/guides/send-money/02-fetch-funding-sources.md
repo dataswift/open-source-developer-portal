@@ -37,7 +37,12 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 funding_sources = DwollaSwagger::FundingsourcesApi.get_account_funding_sources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla['funding-sources'].getAccountFundingSources()
+    .then(function(data) {
+       // See response below
+    });
+});
 ```
 ```python
 funding_api = dwollaswagger.FundingsourcesApi(client)
@@ -103,7 +108,7 @@ Response (view schema in 'raw'):
 p funding_sources._embedded # => Ruby Hash of _embedded contents in schema
 ```
 ```javascript
-// No example for this language yet.
+console.log(data.obj._embedded); 
 ```
 ```python
 # Access desired information in response object fields

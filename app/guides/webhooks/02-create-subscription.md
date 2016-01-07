@@ -36,7 +36,14 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 }
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla['webhook-subscriptions'].list({
+        "url": "http://myapplication.com/webhooks",
+        "secret": "sshhhhhh"
+    }).then(function(data) {
+        console.log(data.obj); // https://api-uat.dwolla.com/webhook-subscriptions/5af4c10a-f6de-4ac8-840d-42cb65454216
+    });
+});
 ```
 ```python
 webhook_api = dwollaswagger.WebhooksubscriptionsApi(client)
@@ -84,7 +91,13 @@ Schema:
 }
 ```
 ```javascript
-No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla['webhook-subscriptions'].id({
+      id: '5af4c10a-f6de-4ac8-840d-42cb65454216'
+    }).then(function(data) {
+        console.log(data.obj.created); // 2015-10-28T16:20:47+00:00
+    });
+});
 ```
 ```python
 webhook_api = dwollaswagger.WebhooksubscriptionsApi(client)

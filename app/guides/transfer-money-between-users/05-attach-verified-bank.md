@@ -35,7 +35,12 @@ HTTP/1.1 200 OK
 # coming soon
 ```
 ```javascript
-// coming soon
+dwolla.then(function(dwolla) {
+    dwolla.customers.getCustomerIavToken({id: '247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'})
+    .then(function(data) {
+       console.log(data.obj.token);
+    });
+});
 ```
 ```python
 # coming soon

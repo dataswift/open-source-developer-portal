@@ -39,7 +39,16 @@ new_customer = DwollaSwagger::CustomersApi.create({:body => {
 p new_customer # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.customers.create({
+      "firstName": "Joe",
+      "lastName": "Buyer",
+      "email": "jbuyer@mail.net",
+      "ipAddress": "99.99.99.99"})
+      .then(function(data) {
+          console.log(data); // https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+      });
+});
 ```
 ```python
 customers_api = dwollaswagger.CustomersApi(client)

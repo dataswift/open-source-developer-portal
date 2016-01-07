@@ -56,7 +56,28 @@ xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
 p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.transfers.create({
+      "_links": {
+          "destination": {
+              "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
+          },
+          "source": {
+              "href": "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985"
+          }
+      },
+      "amount": {
+          "currency": "USD",
+          "value": "225.00"
+      },
+      "metadata": {
+          "customerId": "8675309",
+          "notes": "For work completed on Sept. 1, 2015"
+      }
+      }).then(function(data) {
+          console.log(data.obj); // https://api.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388
+      })
+})
 ```
 ```python
 transfer_request = {
