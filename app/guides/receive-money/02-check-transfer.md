@@ -21,7 +21,12 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 transfer = DwollaSwagger::TransfersApi.by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.transfers.byId({id: 'd76265cd-0951-e511-80da-0aa34a9b2388'})
+    .then(function(data) {
+        // See response below
+    })
+});
 ```
 ```python
 transfer_api = dwollaswagger.TransfersApi(client)
@@ -65,7 +70,7 @@ Schema
 p transfer.status # => pending
 ```
 ```javascript
-// No example for this language yet.
+console.log(data.obj._embedded[0].status); // pending
 ```
 ```python
 # Access desired information in response object fields

@@ -42,7 +42,16 @@ new_fs = DwollaSwagger::FundingsourcesApi.create_customer_funding_source(custome
 p new_fs # => https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla['funding-sources'].createCustomerFundingSource({
+      "routingNumber": "222222226",
+      "accountNumber": "123456789",
+      "type": "checking",
+      "name": "Jane Merchant - Checking"
+    }).then(function(data) {
+       console.log(data); // https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31
+    });
+});
 ```
 ```python
 fs_api = dwollaswagger.FundingsourcesApi(client)

@@ -29,7 +29,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 "firstName": "Joe", 
 "lastName": "Buyer",
 "email": "jbuyer@mail.net",
-"type": "personal"
+"ipAddress": "99.99.99.99"
 }
 
 HTTP/1.1 201 Created
@@ -40,12 +40,21 @@ new_customer = DwollaSwagger::CustomersApi.create({:body => {
   :firstName => 'Joe',
   :lastName => 'Buyer',
   :email => 'jbuyer@mail.net',
-  :type => 'personal'}})
+  :ipAddress => '99.99.99.99'}})
 
 p new_customer # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.customers.create({
+      "firstName": "Joe",
+      "lastName": "Buyer",
+      "email": "jbuyer@mail.net",
+      "ipAddress": "99.99.99.99"})
+      .then(function(data) {
+          console.log(data); // https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+      });
+});
 ```
 ```python
 customers_api = dwollaswagger.CustomersApi(client)
@@ -53,7 +62,7 @@ customers_api = dwollaswagger.CustomersApi(client)
 new_customer = customers_api.create(body = {'firstName': 'Joe', 
                                             'lastName': 'Buyer',
                                             'email': 'jbuyer@mail.net',
-                                            'type': 'personal'})
+                                            'ipAddress': '99.99.99.99'})
 
 print(new_customer) # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
 ```
@@ -65,7 +74,7 @@ $new_customer = $customersApi->create([
   'firstName' => 'Joe',
   'lastName' => 'Buyer',
   'email' => 'jbuyer@mail.net',
-  'type' => 'personal'
+  'ipAddress' => '99.99.99.99'
 ]);
 
 print($new_customer); # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
@@ -79,7 +88,7 @@ CreateCustomer newCustomerData = new CreateCustomer();
 myNewCust.setFirstName("Joe");
 myNewCust.setLastName("Buyer");
 myNewCust.setEmail("jbuyer@mail.com");
-myNewCust.setType("personal");
+myNewCust.setIpAddress("99.99.99.99");
 
 try {
     Unit$ r = cApi.create(myNewCust);
@@ -122,7 +131,12 @@ HTTP/1.1 200 OK
 # coming soon
 ```
 ```javascript
-// coming soon
+dwolla.then(function(dwolla) {
+    dwolla.customers.getCustomerIavToken({id: '247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'})
+    .then(function(data) {
+       console.log(data.obj.token);
+    });
+});
 ```
 ```python
 # coming soon
@@ -133,7 +147,7 @@ HTTP/1.1 200 OK
 
 Then, you’ll pass this single-use IAV token to the client-side of your application where it will be used in the JavaScript function `dwolla.iav.start`. This token will be used to authenticate the request asking Dwolla to render the IAV flow. Before calling this function you'll want to include `dwolla.js` in the HEAD of your page. 
 
-```html
+```htmlnoselect
 <head>
 <script src="https://cdn.dwolla.com/1/dwolla.js"></script>
 </head>
@@ -141,7 +155,7 @@ Then, you’ll pass this single-use IAV token to the client-side of your applica
 
 Next, you'll add in a container to the body of your page where you want to render the IAV flow.
 
-```html
+```htmlnoselect
 <div id="mainContainer">
   <input type="button" id="start" value="Add Bank">
 </div>  
@@ -151,7 +165,7 @@ Next, you'll add in a container to the body of your page where you want to rende
 
 Now that you have `dwolla.js` initialized on the page and the container created where you'll render the IAV flow, you'll create a JavaScript function that responds to the Customer clicking the "Add bank" button on your page. Once the Customer clicks "Add Bank", your application will call `dwolla.iav.start()` passing in the following arguments: the iavContainer element where IAV will render, a string value of your single-use IAV token, and a callback function that will handle any error or response.
 
-```js
+```javascriptnoselect
 <script type="text/javascript">
 $('#start').click(function() {
   var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
@@ -209,7 +223,24 @@ xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
 p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.transfers.create({
+      "_links": {
+          "destination": {
+              "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
+          },
+          "source": {
+              "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
+          }
+      },
+      "amount": {
+          "currency": "USD",
+          "value": "225.00"
+      }
+      }).then(function(data) {
+          console.log(data.obj); // https://api.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388
+      })
+})
 ```
 ```python
 transfer_request = {

@@ -47,7 +47,16 @@ new_customer = DwollaSwagger::CustomersApi.create({:body => {
 p new_customer # => https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla.customers.create({
+      "firstName": "Bob",
+      "lastName": "Merchant",
+      "email": "bmerchant@nomail.net",
+      "ipAddress": "99.99.99.99"})
+      .then(function(data) {
+          console.log(data); // https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+      });
+});
 ```
 ```python
 customers_api = dwollaswagger.CustomersApi(client)
@@ -131,7 +140,16 @@ new_fs = DwollaSwagger::FundingsourcesApi.create_customer_funding_source \
 p new_fs # => https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31
 ```
 ```javascript
-// No example for this language yet.
+dwolla.then(function(dwolla) {
+    dwolla['funding-sources'].createCustomerFundingSource({
+      "routingNumber": "222222226",
+      "accountNumber": "123456789",
+      "type": "checking",
+      "name": "John Doe - Checking"
+    }).then(function(data) {
+       console.log(data); // https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31
+    });
+});
 ```
 ```python
 funding_api = dwollaswagger.FundingsourcesApi(client)
