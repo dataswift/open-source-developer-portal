@@ -7,7 +7,7 @@ description: "In-depth articles on Dwolla features and integration patterns."
 <h1>Tools</h1>
 <ul class="icon-links">
     <li><a href="/resources/sandbox-console.html" class="icon-tools-sandbox">Sandbox Console</a></li>
-    <li><a href="https://tokengenerator.dwolla.com" class="icon-tools-token-generator">Token generator</a></li>
+    <li><a href="https://tokengenerator.dwolla.com" class="icon-tools-token-generator js-track-link">Token generator</a></li>
     <li><a href="/resources/changelog.html" class="icon-tools-change-log">Change log</a></li>
     <li><a href="http://status.dwolla.com" target="_blank" class="icon-tools-status">Status</a></li>
 </ul>

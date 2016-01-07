@@ -1,14 +1,6 @@
-// Generated on 2015-07-21 using generator-jekyllrb 1.4.1
-'use strict';
-
-// Directory reference:
-//   css: css
-//   sass: _scss
-//   javascript: js
-//   images: images
-//   fonts: fonts
-
 module.exports = function (grunt) {
+  'use strict';
+
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
@@ -28,6 +20,10 @@ module.exports = function (grunt) {
       sass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
         tasks: ['sass', 'autoprefixer:dist']
+      },
+      js: {
+        files: ['<%= yeoman.app %>/js/**/*.js'],
+        tasks: ['uglify:debug']
       },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
@@ -54,9 +50,11 @@ module.exports = function (grunt) {
           src: [
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
+            '.tmp/js/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
-            '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+            '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
+            'app/public/**/*.js'
           ]
         },
         options: {
@@ -82,6 +80,7 @@ module.exports = function (grunt) {
           src: [
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
+            '.tmp/js/**/*.css',
             '{.tmp,<%= yeoman.app %>}/js/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
             '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
@@ -161,6 +160,13 @@ module.exports = function (grunt) {
         }
       }
     },
+    karma: {
+      src: {
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        reporters: 'mocha'
+      }
+    },
     useminPrepare: {
       options: {
         dest: '<%= yeoman.dist %>'
@@ -193,7 +199,68 @@ module.exports = function (grunt) {
     // Usemin adds files to concat
     concat: {},
     // Usemin adds files to uglify
-    uglify: {},
+    uglify: {
+      debug: {
+        options: {
+          mangle: false,
+          beautify: true,
+          compress: false
+        },
+        files: {
+          '.tmp/js/developer.js': [
+            'app/_bower_components/style-tiles/dist/js/developer.js',
+            'app/js/dwolla/**/*.js'
+          ]
+        }
+      },
+      release: {
+        options: {
+          mangle: true,
+          beautify: false,
+          compress: {
+            drop_console: true
+          }
+        },
+        files: {
+          '.tmp/js/developer.js': [
+            'app/_bower_components/style-tiles/dist/js/developer.js',
+            'app/js/dwolla/**/*.js'
+          ]
+        }
+      }
+    },
+    jslint: {
+      src: {
+        src: ['app/js/dwolla/**/*.js'],
+        directives: {
+          browser: true,
+          regexp: true,
+          predef: ['dwolla', '$', 'ga']
+        },
+        options: {
+          errorsOnly: true
+        }
+      },
+      test: {
+        src: ['app/js/test/**/*.js'],
+        directives: {
+          browser: true,
+          predef: ['describe',
+            'it',
+            'assert',
+            'before',
+            'afterEach',
+            'beforeEach',
+            'sinon',
+            'dwolla',
+            'helpers',
+            '$']
+        },
+        options: {
+          errorsOnly: true
+        }
+      }
+    },
     // Usemin adds files to cssmin
     cssmin: {
       dist: {
@@ -330,12 +397,14 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'sass',
+        'uglify:release',
         'copy:stageCss',
 
         'jekyll:server'
       ],
       dist: [
         'sass',
+        'uglify:release',
         'copy:dist'
       ]
     }
@@ -388,7 +457,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'autoprefixer:dist',
-    'uglify',
+    'uglify:release',
     'imagemin',
     'svgmin',
     'filerev',
@@ -408,5 +477,10 @@ module.exports = function (grunt) {
     'check',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('test', [
+    'jslint',
+    'karma'
   ]);
 };
