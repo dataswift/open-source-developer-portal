@@ -1,0 +1,8 @@
+dist:
+    expand: true
+    cwd: '<%= yeoman.app %>/_scss/'
+    src:
+        - '**/*.scss'
+    dest: .tmp/css/
+    ext: .css
+    extDot: last

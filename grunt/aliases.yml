@@ -1,0 +1,34 @@
+check:
+    - clean:server
+    - jekyll:check
+    - sass
+    - jshint:all
+    - csslint:check
+    - jslint
+    - karma
+
+build:
+    - clean
+    - jekyll:dist
+    - concurrent:dist
+    - bower
+    - useminPrepare
+    - concat
+    - cssmin
+    - autoprefixer:dist
+    - uglify
+    - imagemin
+    - svgmin
+    - filerev
+    - usemin
+    - htmlmin
+    - copy:distOldDevportal
+
+deploy:
+    - check
+    - build
+    - buildcontrol
+
+default:
+    - check
+    - build

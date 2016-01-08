@@ -1,0 +1,34 @@
+server:
+    bsFiles:
+    src:
+      - .jekyll/**/*.html
+      - .tmp/css/**/*.css
+      - '{.tmp,<%= yeoman.app %>}/js/**/*.js'
+      - '{<%= yeoman.app %>}/_bower_components/**/*.js'
+      - '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+    options:
+        server:
+            baseDir:
+            - .jekyll
+            - .tmp
+            - '<%= yeoman.app %>'
+        watchTask: true
+dist:
+    options:
+        server:
+            baseDir: '<%= yeoman.dist %>'
+test:
+    bsFiles:
+        src:
+            - .jekyll/**/*.html
+            - .tmp/css/**/*.css'
+            - '{.tmp,<%= yeoman.app %>}/js/**/*.js'
+            - '{<%= yeoman.app %>}/_bower_components/**/*.js'
+            - '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+    options:
+        server:
+            baseDir:
+                - .jekyll
+                - .tmp
+                - '<%= yeoman.app %>'
+        watchTask: true

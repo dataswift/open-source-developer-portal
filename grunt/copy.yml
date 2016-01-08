@@ -1,0 +1,32 @@
+dist:
+    files:
+        - expand: true
+          dot: true
+          cwd: '<%= yeoman.app %>'
+          src:
+              - 'images/**/*'
+              - 'fonts/**/*'
+              - '!**/_*{,/**}'
+              - _bower_components/jquery/jquery.min.js
+              - favicon.ico
+              - 'apple-touch*.png'
+          dest: '<%= yeoman.dist %>'
+stageCss:
+  files:
+    - expand: true
+      dot: true
+      cwd: '<%= yeoman.app %>/css'
+      src: '**/*.css'
+      dest: .tmp/css
+stageOldDevportal:
+  files:
+     - expand: true
+       cwd: old-devportal/
+       src: '**'
+       dest: .jekyll/
+distOldDevportal:
+  files:
+    - expand: true
+      cwd: old-devportal/
+      src: '**'
+      dest: dist/
