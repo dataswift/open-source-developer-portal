@@ -1,0 +1,45 @@
+$border-radius: 3px;
+
+.alerts {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding: 16px 22px 16px 44px;  
+        border-top: 1px solid #fff;
+        color: $color-black;
+        font-size: rem(16px);
+        line-height: rem(26px);
+        text-decoration: none;
+        background-position: 21px 23px;
+        text-shadow: 0 1px 0 $color-white;
+
+        &:first-child {
+            @include border-top-radius($border-radius);
+        }
+
+        &:last-child {
+            @include border-bottom-radius($border-radius);
+            margin: 0 0 20px 0;
+        }
+
+        &:only-child {
+            border-radius: $border-radius;
+        }
+
+        &.information {
+            background-color: $color-alert-yellow;
+        }
+
+        &.alert {
+            background-color: $color-alert-yellow;
+        }
+
+        &.error {
+            background-color: $color-alert-red;
+        }
+    }
+    
+}

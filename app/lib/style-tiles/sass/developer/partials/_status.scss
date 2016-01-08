@@ -1,0 +1,23 @@
+.status {
+    padding-top: 20px;
+    background: $color-grey;
+    border-bottom: 1px solid $color-grey-med;
+    text-align: center;
+
+    h5 {
+        margin: 0 15px 20px;
+        display: inline-block;
+        color: $color-black;
+    }
+
+    span {
+        margin: 0 15px 20px;
+        padding-left: 25px;
+        display: inline-block;
+        background-position: 0 3px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

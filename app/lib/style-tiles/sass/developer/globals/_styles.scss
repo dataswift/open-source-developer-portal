@@ -1,0 +1,19 @@
+//box size all the things!
+*, *:before, *:after { box-sizing: border-box; }
+
+/* ------ RESETS ------- */
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+//for use in js
+body {
+    &:before{
+        content:"desktop"; display: none;
+        @include breakpoint($SIZE_TABLET) { content:"tablet"; }
+        @include breakpoint($SIZE_TABLET_SMALL) { content:"tablet_small"; }
+        @include breakpoint($SIZE_MOBILE) { content:"mobile"; }
+        @include breakpoint-landscape($SIZE_MOBILE) { content:"mobile-landscape"; }
+    }
+}

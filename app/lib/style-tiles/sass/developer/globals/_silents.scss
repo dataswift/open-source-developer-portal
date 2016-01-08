@@ -1,0 +1,5 @@
+%clearfix {
+    zoom: 1;
+    &:before{ content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+    &:after{ content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; clear: both; }
+}

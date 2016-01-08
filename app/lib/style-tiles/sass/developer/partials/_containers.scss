@@ -1,0 +1,244 @@
+$slide-time: 0.3s;
+
+.page-wrap {
+    margin: 0 auto;
+    max-width: 1024px;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint($SIZE_DESKTOP_SMALL){
+        padding: 0 30px;
+    }
+
+
+    @include breakpoint($SIZE_MOBILE){
+        padding: 0 15px;
+    }
+
+    @include breakpoint($SIZE_MOBILE_SMALL){
+        padding: 0 10px;
+    }
+}
+
+.cnt-one-col {
+    padding-top: 30px;
+    border-bottom: 1px solid $color-grey-med;
+
+    &__banner {
+        margin-top: -85px;
+        padding-top: 118px;
+        padding-bottom: 136px;
+
+        & + .hover-box {
+            margin-top: -86px;
+        }
+    }
+
+    &__hover-box {
+
+        .code-snippet {
+            nav {
+                text-align: left;
+            }
+        }
+
+        .split-options {
+            margin: 0 -55px;
+            border-top: 1px solid $color-grey-med;
+
+            @include breakpoint($SIZE_TABLET_SMALL){
+                margin: 0 -20px;
+            }
+
+            & > div {
+                &:first-child {
+                    border-right: 1px solid $color-grey-med;
+
+                    @include breakpoint($SIZE_TABLET_SMALL){
+                        border-right: none;
+                        border-bottom: 1px solid $color-grey-med;
+                    }
+                }
+            }
+        }
+    }
+
+    .cnt-two-col__nav {
+        display: none;
+    }
+
+    .reach-out {
+        margin-bottom: 30px;
+
+        @include breakpoint($SIZE_DESKTOP_SMALL){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.cnt-two-col {
+    border-bottom: 1px solid $color-grey-med;
+
+    hr {
+        margin-left: -35px;
+        margin-right: -40px;
+    }
+
+    .page-wrap {
+        max-width: none;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        @include breakpoint($SIZE_DESKTOP_SMALL){
+            padding: 0;
+        }
+
+        @include breakpoint($SIZE_TABLET_SMALL){
+            position: static;
+        }
+    }
+
+    &__nav {
+        min-width: 300px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        z-index: 10;
+        position: relative;
+
+        @include breakpoint($SIZE_TABLET_SMALL){
+            width: 103.5%;
+            margin-top: 100vh;
+            display: none;
+            position: fixed;
+            top: -100px;
+            padding-top: 180px;
+            left: 0;
+            bottom: -100px;
+            right: 0;
+            z-index: 10;
+            overflow-y: scroll;
+            transition: margin $slide-time;
+            background: $color-grey;
+        }
+
+        .close {
+            margin-top: -200px;
+            padding: 220px 20px 20px;
+            display: none;
+            
+            @extend %clearfix;
+
+            @include breakpoint($SIZE_TABLET_SMALL){
+                height: 260px;
+                display: block;
+                top: -60px;
+                left: 0;
+                right: 0;
+                position: fixed;
+                z-index: 15;
+                background: $color-grey;
+                transition: top $slide-time;
+            }
+
+            button {
+                width: 20px;
+                height: 20px;
+                float: right;
+                border: 0;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+
+        .close + .side-nav {
+
+        }
+
+        .side-nav {
+            display: none;
+            top: 0;
+            bottom: 0;
+
+            @include breakpoint($SIZE_TABLET_SMALL){
+                height: 100%;
+                width: auto;
+                padding:  0;
+                position: static;
+                overflow-x: initial;
+                overflow-y: initial;
+
+                section:last-child {
+                    padding-bottom: 100px;
+                }
+            }
+
+            &.active {
+                display: block;
+            }
+
+            .steps-nav {
+                @include breakpoint($SIZE_TABLET_SMALL){
+                    display: none;
+                }
+
+                .twofer {
+                    a {
+                        width: auto;
+                        text-align: left;
+
+                        &:after {
+                            width: 46%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: $SIZE_MAX_CONTENT_WIDTH;
+        margin-left: -300px;
+        padding: 35px 40px 30px 335px;
+        overflow: hidden;
+        z-index: 1;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        @include breakpoint($SIZE_TABLET_SMALL){
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        img {
+            max-width: 100%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        & > ul:not([class]) {
+            //inverse normal ul usage due to the genericness of mark down.
+            @extend .bullet;
+        }
+
+        .steps-nav-interior {
+            display: none;
+            margin: 0 -20px -30px;
+            padding-right: 20px;
+            padding-left: 20px;
+            @include breakpoint($SIZE_TABLET_SMALL){
+                display: block;
+            }
+        }
+    }
+}
+
+// USER INTERACTION
+body.cnt-two-col-nav-showing {
+    overflow: hidden;
+    .cnt-two-col__nav {
+        display: block;
+    }
+}

@@ -1,0 +1,118 @@
+/* ------ MIXINS ------- */
+@mixin button($text-color, $border-color, $background-color) {
+    color: $text-color;
+    background-color: $background-color;
+
+    @if $border-color != "none" {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        border: 1px solid $border-color;
+    } @else {
+        border: none;
+    }
+
+    @if $background-color != "transparent" {
+        &:hover {
+            background-color: lighten($background-color, 5%);
+        }
+        &:active, &:focus {
+            background-color: darken($background-color, 5%);
+        }
+    }
+}
+
+/* ------ CSS ------- */
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border-radius: 3px;
+    font-size: rem(14px);
+    line-height: rem(21px);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:link:hover, &:visited:hover { text-decoration: none; }
+
+    &.small {
+        padding: 7px 12px;
+        font-size: rem(12px);
+        line-height: rem(19px);
+        &.clear, &.clear--dark {
+            padding: 6px 12px;
+        }
+    }
+
+    &.large {
+        padding: 18px 80px;
+        font-size: rem(16px);
+        line-height: rem(23px);
+
+        &.clear, &.clear--dark {
+            padding: 18px 80px;
+        }
+    }
+
+    &.primary {
+        @include button($color-white, none, rgba($color-white, 0.4));
+        text-decoration: none;
+
+        &:hover {
+            color: $color-orange;
+            background-color: rgba($color-white, 0.75);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        %inverse & {
+            text-decoration: none;
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+
+    &.alternative {
+        @include button($color-white, none, $color-blue);
+    }
+
+    &.secondary {
+        @include button($color-white, none, $color-orange);
+    }
+
+    &.clear {
+        @include button($color-white, $color-white, transparent);
+    }
+
+    &.clear--dark {
+        @include button($color-orange, $color-orange, transparent);
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-orange;
+        }
+    }
+
+    &.compact {
+        padding: 5px 7px;
+        background: $color-grey;
+        border: 1px solid $color-grey-med;
+        color: $color-grey-dark;
+        font-size: rem(10.5px);
+    }
+
+    &[disabled]{
+        background: $color-grey-med;
+        cursor: auto;
+
+        &:hover, &:active, &:focus {
+            background: $color-grey-med;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.big-grid-nav {
+    margin-bottom: -30px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+
+    text-align: center;
+    @extend %clearfix;
+
+    h3 {
+        color: $color-blue;
+    }
+
+    a {
+        width: 48%;
+        margin: 0 4% 30px 0;
+        padding: 130px 46px 60px;
+        display: block;
+        border: 1px solid $color-grey-med;
+        border-radius: 6px;
+        background-position: 50% 30px;
+        transition: all 0.5s ease 0s;
+
+        @include breakpoint($SIZE_DESKTOP_SMALL){
+            width: 100%;
+            margin-right: 0;
+            padding: 120px 30px 30px;
+            background-position: 50% 25px;
+        }
+
+        @include breakpoint($SIZE_MOBILE){
+            padding: 100px 20px 20px;
+            background-size: 60px;
+        }
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+            border-color: $color-blue;
+            box-shadow: 0 0 5px rgba(44, 44, 44, 0.25);
+        }
+
+        p {
+            margin: 0 auto;
+            max-width: 75%;
+            color: $color-black;
+
+            @include breakpoint($SIZE_MOBILE){
+                max-width: 100%;
+                font-size: rem(14px);
+            }
+        }
+    }
+}

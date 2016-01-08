@@ -1,0 +1,38 @@
+.language-picker {
+    padding: 20px 20px 10px;
+    background: $color-grey;
+    display: none;
+    @extend %clearfix;
+
+    @include breakpoint($SIZE_TABLET_SMALL){
+        padding-bottom: 20px;
+        display: block;
+    }
+
+    h6 {
+        padding-top: 3px;
+        float: left;
+        color: $color-black;
+        font-size: rem(12px);
+        letter-spacing: 1px;
+    }
+
+    .custom-select {
+        width: 65%;
+        height: 35px;
+        margin-top: -3px;
+        float: right;
+
+        select, option {
+            text-transform: uppercase;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        .arrow {
+            top: 3px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.reach-out {
+
+    @extend %clearfix;
+
+    section {
+        width: 33%;
+        float: left;
+        text-align: center;
+
+        @include breakpoint($SIZE_DESKTOP_SMALL){
+            width: 100%;
+            margin-bottom: 30px;
+            float: none;
+        }
+    }
+
+    &__link {
+        a {
+            height: 48px;
+            padding: 14px 0 0 65px;
+            display: inline-block;
+        }
+    }
+
+    &__social {
+        a {
+            height: 40px;
+            width: 40px;
+            margin-right: 30px;
+            display: inline-block;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+body.home .reach-out {
+    margin-bottom: 90px;
+
+    @include breakpoint($SIZE_TABLET_SMALL){
+        margin-bottom: 30px;
+    }
+}

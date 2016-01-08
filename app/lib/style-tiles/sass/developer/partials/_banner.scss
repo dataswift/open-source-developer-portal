@@ -1,0 +1,52 @@
+.banner {
+    padding: 68px 0 72px 0;
+    position: relative;
+    text-align: center;
+
+    h1 {
+        max-width: 865px;
+        margin: 0 auto 35px;
+        color: $color-white;
+        font-size: rem(40px);
+        line-height: rem(46px);
+
+        &.icon {
+            padding-top: 100px;
+            background-position: 50% 0;
+        }
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        background: image-url("../images/backgrounds/banner_developer_desktop.jpg") center center no-repeat;
+        background-size: cover;
+
+        @include breakpoint($SIZE_TABLET){
+            background: image-url("../images/backgrounds/banner_developer_tablet.jpg") center center no-repeat;
+            background-size: cover;
+        }
+
+        @include breakpoint($SIZE_TABLET_SMALL){
+            background: $color-blue;
+        }
+
+        &:after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include linear-gradient($gradient-tilt-banner, rgba($color-blue, 0.85), rgba($color-gradient-purple, 0.85));
+
+            @include breakpoint($SIZE_MOBILE){
+                display: none;
+            }
+        }
+    }
+}

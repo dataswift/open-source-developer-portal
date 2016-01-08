@@ -1,0 +1,324 @@
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    margin-bottom: 6px;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    font-size: rem(14px);
+    line-height: rem(21px);
+    font-weight: 700;
+    text-align: left;
+    color: $color-grey-med-3;
+    font-weight: 400;
+    cursor: text;      
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border: 1px solid $color-grey-3;
+    border-radius: 3px;
+    font-size: rem(14px);
+    line-height: rem(21px);
+    background: $color-white;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: text;
+
+    &:hover {
+        border-color:$color-grey-med-3;
+    }
+
+    &:focus {
+        border-color:$color-blue;
+    }
+
+    &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder {
+        //does not work on moz and ms, yet...
+        color: $color-grey-med-3;
+    }
+
+    &.error {
+        border-color: $color-red;
+    }
+
+    &::-ms-clear {
+        //removes clear button on IE.
+        display: none;
+    }
+
+    &[disabled]{
+        color: $color-grey-med-2;
+        border-color: $color-grey-med-3;
+        background-color: $color-grey;
+    }
+}
+
+textarea {
+    height: 180px;
+    resize: none;
+    overflow: auto;
+}
+
+input[type="checkbox"]:not(old), input[type="radio"]:not(old){
+    //hides checkbox for newerish browsers
+    height: 13px;
+    margin: -13px 0 0 0;
+    padding: 0;
+    position: relative;
+    top: 13px;
+    opacity: 0;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+    //this requires ie8 conditional class (<!--[if IE 8]><html class="ie8"><![endif]-->)
+    //needs to exist in a pos relative parent!
+    width: 16px;
+    height: 16px;
+    margin: 0 0 13px 0;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    background: $color-grey-light;
+    border: 1px solid $color-grey-med-2;
+
+    & > span {
+        padding-left: 25px;
+        display: inline-block;
+        position: relative;
+        top: -4px;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+
+    &:hover {
+        border-color: $color-blue;
+    }
+
+    &:after {
+        position: absolute;
+        opacity: 0;
+        content: "";
+    }
+}
+
+input[type="checkbox"] + label {
+    border-radius: 2px;
+
+    &:after {
+        width: 10px;
+        height: 5px;
+        top: 4px;
+        left: 2px;
+        border: 3px solid $color-blue;
+        border-top: none;
+        border-right: none;
+
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+input[type="radio"] + label {
+    border-radius: 50%;
+
+    &:after {
+        width: 8px;
+        height: 8px;
+        top: 3px;
+        left: 3px;
+        background-color: $color-blue;
+        border-radius: 50%;
+    }
+}
+
+input[type="checkbox"]:checked + label:after, input[type="radio"]:checked + label:after {
+    opacity: 1;
+}
+
+input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
+    background: $color-grey;
+    border-color: $color-grey-3;
+}
+
+input[type="checkbox"]:disabled:checked + label:after {
+    border-color: $color-grey-med-2;
+}
+
+input[type="radio"]:disabled:checked + label:after {
+    background-color: $color-grey-med-2;
+}
+
+.ie8 {
+    input[type="checkbox"], input[type="radio"] {
+        border: none;
+    }
+
+    input[type="checkbox"] + label, input[type="radio"] + label {
+        width: auto;
+        margin: -30px 0 0 10px;
+        background: none;
+        border: none;
+        &:after {
+            border: none;
+            background: none;
+        }
+    }
+
+    input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
+        background: none;
+    }
+}
+
+.custom-select {
+    //this requires ie9 conditional class (<!--[if IE 9]><html class="ie9"><![endif]-->)
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: $color-grey;
+    
+    select{
+        height: 100%;
+        padding: 4px 30px 4px 8px;
+        background:transparent;
+        border: medium none; box-shadow: none;
+        vertical-align:top;
+        cursor:pointer;
+        border:solid 1px $color-grey-med;
+        border-radius: 5px;
+        font-size: rem(14px);
+        line-height: rem(21px);
+        color: $color-black;
+
+        //remove arrow
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        //removes ie arrow
+        &::-ms-expand { display: none; }
+        &:focus {outline: none; }
+        option { color:$color-grey-dark; }
+    }
+
+    .arrow {
+        width: 30px;
+        height: 25px;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        background: $color-grey;
+        content: "";
+        pointer-events: none;
+        border-radius: 5px;
+
+        &:before {
+            width: 0;
+            height: 0;
+            position:absolute;
+            top:41%;
+            left:50%;
+            margin: 2px 0 0 -6px;
+            @include arrow(6px, $color-black, "down");
+            content:"";
+        }
+
+        &:after {
+            width: 0;
+            height: 0;
+            position:absolute;
+            top:41%;
+            left:50%;
+            margin: 0 0 0 -6px;
+            @include arrow(6px, $color-grey, "down");
+            content:"";
+        }
+    }
+
+    &--blue {
+        background: $color-blue;
+        select {
+            border: none;
+            color: $color-white;
+            option {
+                color:$color-white;
+                background: $color-blue;
+            }
+        }
+
+        .arrow {
+            background: $color-blue;
+
+            &:before {
+                @include arrow(6px, $color-white, "down");
+            }
+
+            &:after {
+                @include arrow(6px, $color-blue, "down");
+            }
+        }
+    }
+
+
+    &.compact {
+        height: 30px;
+        margin-bottom: 15px;
+
+        select {
+            padding: 0 25px 0 8px;
+            font-size: rem(11px);
+            color: $color-grey-dark;
+        }
+
+        .arrow {
+            width: 25px;
+            height: 28px;
+            &:before {
+                border: none;
+            }
+            &:after {
+                top:50%;
+                border-top: 4px solid $color-grey-dark;
+            }
+        }
+    }
+}
+
+.ie9 .custom-select {
+    .arrow { display: none; }
+    select { padding: 0; }
+}
+
+.fields-list {
+    overflow: hidden;
+    
+    input, textarea, label {
+        width: 100%;
+        display: block;
+    }
+
+    & > li {
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    &__error {
+        width: 100%;
+        font-size: rem(12px);
+        font-weight: 700;
+        color: $color-red;
+        
+        border-radius: 3px;
+        display: inline-block;
+    }
+}

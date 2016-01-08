@@ -1,0 +1,48 @@
+body > footer, .cnt-two-col__content footer {
+    
+    //.cnt-two-col__content footer is for api docs that has fixed pos left nav.
+
+    padding: 20px 0 50px;
+    position: relative;
+    z-index: 5;
+    background: $color-white;
+    color: $color-black; 
+    text-align: center;
+
+    .page-wrap {
+        display: block;
+    }
+
+    a {
+        margin: 0 20px;
+        text-decoration: none;
+
+        @include breakpoint($SIZE_TABLET){
+            line-height: rem(30px);
+        }
+    }
+
+    nav {
+        &:first-child {
+            margin-bottom: 33px;
+
+            a {
+                font-weight: 600;
+                white-space: nowrap;
+            }
+        }
+
+        &.disclaimer {
+
+            span {
+                margin-right: 20px;
+                color: $color-grey-med-3;
+            }
+
+            a {
+                color: $color-grey-med-3;
+                text-decoration: underline;
+            }
+        }
+    }
+}

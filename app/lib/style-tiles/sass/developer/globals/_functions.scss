@@ -1,0 +1,12 @@
+@function image-url($image){
+    @if variable-exists(imagePath) {
+        @return url("#{$imagePath}#{$image}");
+    }
+    @return url("#{$image}");
+}
+
+//typography
+@function rem($size) {
+  $remSize: $size / $BASE-FONT-SIZE;
+  @return #{$remSize}rem;
+}
