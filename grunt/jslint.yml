@@ -1,13 +1,16 @@
 src:
     src:
+        - 'app/js/*.js'
         - 'app/js/dwolla/**/*.js'
     directives:
         browser: true
         regexp: true
+        unparam: true
         predef:
             - dwolla
             - $
             - ga
+            - StatusPage
     options:
         errorsOnly: true
 test:
