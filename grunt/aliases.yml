@@ -2,7 +2,6 @@ check:
     - clean:server
     - jekyll:check
     - sass
-    - jshint:all
     - csslint:check
     - jslint
     - karma
