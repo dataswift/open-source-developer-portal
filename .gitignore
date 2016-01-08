@@ -46,3 +46,6 @@ node_modules
 # Ignore jekyll files #
 _site
 Gemfile.lock
+
+!app/lib/icons
+!app/lib/**/dist

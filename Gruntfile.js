@@ -18,6 +18,7 @@ module.exports = function(grunt) {
 
         grunt.task.run([
             'clean:server',
+            'bower',
             'concurrent:server',
             'autoprefixer:dist',
             'browserSync:server',
