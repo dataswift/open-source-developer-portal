@@ -202,7 +202,7 @@ module.exports = function (grunt) {
           }
         },
         files: {
-            '.tmp/js/developer.js': [
+            'app/js/developer.js': [
               'app/_bower_components/style-tiles/dist/js/developer.js',
               'app/js/dwolla/**/*.js'
             ]
@@ -356,7 +356,8 @@ module.exports = function (grunt) {
         '<%= yeoman.app %>/js/**/*.js',
         'test/spec/**/*.js',
          '!<%= yeoman.app %>/js/dwolla/**/*.js',
-         '!<%= yeoman.app %>/js/test/**/*.js'
+         '!<%= yeoman.app %>/js/test/**/*.js',
+         '!<%= yeoman.app %>/js/developer.js'
       ]
     },
     csslint: {
