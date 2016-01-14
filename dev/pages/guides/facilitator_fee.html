@@ -280,23 +280,18 @@
 		<div class="guide">
 			<h2 id="facilitator-fees">Facilitator Fees</h2>
 <h4 id="overview">Overview</h4>
-<p>The facilitator fee is the application feature which allows a percentage or flat rate amount removed from every transaction as a fee and sent to the creator of the application / the Dwolla ID associated with their account. This fee comes out of the transaction total and is not appended to the transaction total itself. By default, this application feature is available to test against in our sandbox environment.</p>
+<p>The facilitator fee is the application feature which allows a percentage or flat rate amount removed from every transaction as a fee and sent to the creator of the application / the Dwolla ID associated with their account. This fee comes out of the transaction total and is not appended to the transaction total itself.</p>
 <p>Facilitator fees can be expressed in one of two ways:</p>
 <ul>
 <li>Percentage: The fee is a percentage of the transaction that the facilitator receives not exceeding 50% of the transaction total.</li>
 <li>Fixed Rate: The fee is a flat rate greater than $0.01 and not exceeding 50% of the transaction total.</li>
 </ul>
-<div class="alert alert-info">
-<strong>Note</strong>: facilitator fee is a premium application feature. To try it out, please <a href="https://www.dwolla.com/contact">contact us</a> or call 1-888-289-8744.
-</div>
 
 <h3 id="setting-facilitator-fees">Setting Facilitator Fees</h3>
 <p>The facilitator fee can either be set in your Dwolla application settings, or per each transaction via the API. Please note that if custom fees are specified via the API they <strong>will override</strong> the application settings set via the Dwolla web portal.</p>
 <h4 id="dwolla-application-settings">Dwolla Application Settings</h4>
 <ol>
-<li><p>To enable facilitator fee, <a href="https://www.dwolla.com/contact">contact us</a> through this short form or by phone at 1-888-289-8744.</p>
-</li>
-<li><p><a href="https://dwolla.com/applications">Click here</a> and log in to view your list of applications, then hit &quot;Edit Features&quot;.
+<li><p>In production,<a href="https://dwolla.com/applications">click here</a> and log in to view your list of applications, then hit &quot;Edit Features&quot;.
 <img src="http://puu.sh/a16nU/bebb52f732.png" alt="Example view"></p>
 </li>
 <li><p>The &quot;Facilitator Fee&quot; section will allow you to set your fee as either a fixed rate, or as in the example below, a percentage. Hit &quot;Update Features&quot; when you are finished making your changes. 
