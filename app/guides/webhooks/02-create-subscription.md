@@ -14,12 +14,12 @@ Each application can have multiple subscriptions associated to it. While one sub
 
 To make the following request, we need to use the `access_token` we just previously obtained. Security considerations:
 
-Your webhook endpoint should only be accessible over TLS (https). Your subscription should include a random, secret key, only known by your application. This secret key should be securely stored and used later when validating the authenticity of the webhook request from Dwolla.
+Your webhook endpoint should only be accessible over TLS (HTTPS) and your server should have a valid certificate. Your subscription should include a random, secret key, only known by your application. This secret key should be securely stored and used later when validating the authenticity of the webhook request from Dwolla.
  
 
 ```ruby
 subscription = DwollaSwagger::WebhooksubscriptionsApi.create({:body => {
-  :url => "http://myawesomeapplication.com/destination",
+  :url => "https://myawesomeapplication.com/destination",
   :secret => "your webhook secret"
 }})
 
@@ -31,14 +31,14 @@ Accept: application/vnd.dwolla.v1.hal+json
 Content-Type: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 {
-    "url": "http://myapplication.com/webhooks",
+    "url": "https://myapplication.com/webhooks",
     "secret": "sshhhhhh"
 }
 ```
 ```javascript
 dwolla.then(function(dwolla) {
     dwolla['webhook-subscriptions'].list({
-        "url": "http://myapplication.com/webhooks",
+        "url": "https://myapplication.com/webhooks",
         "secret": "sshhhhhh"
     }).then(function(data) {
         console.log(data.obj); // https://api-uat.dwolla.com/webhook-subscriptions/5af4c10a-f6de-4ac8-840d-42cb65454216
@@ -48,7 +48,7 @@ dwolla.then(function(dwolla) {
 ```python
 webhook_api = dwollaswagger.WebhooksubscriptionsApi(client)
 subscription = webhook_api.create({
-    "url": "http://myapplication.com/webhooks",
+    "url": "https://myapplication.com/webhooks",
     "secret": "sshhhhhh"
 })
 
@@ -58,7 +58,7 @@ print(subscription) # => https://api-uat.dwolla.com/webhook-subscriptions/5af4c1
 <?php
 $webhookApi = new DwollaSwagger\WebhooksubscriptionsApi($apiClient);
 $subscription = $webhookApi->create(array (
-  'url' => 'http://myapplication.com/webhooks',
+  'url' => 'https://myapplication.com/webhooks',
   'secret' => 'sshhhhhh',
 ));
 
@@ -86,7 +86,7 @@ Schema:
     }
   },
   "id": "077dfffb-4852-412f-96b6-0fe668066589",
-  "url": "http://myapplication.com/webhooks",
+  "url": "https://myapplication.com/webhooks",
   "created": "2015-10-28T16:20:47+00:00"
 }
 ```
