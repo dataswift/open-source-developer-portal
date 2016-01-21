@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 title:  "Guides"
-description: "View our comprehensive getting started guides."
+description: "Programmatically send bank transfers with our developer API."
 ---
 
 <nav class="big-grid-nav">
