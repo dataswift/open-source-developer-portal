@@ -6,7 +6,7 @@ guide:
     name: webhooks
     step: '1'
 title: Webhooks
-description: Webhooks for payments within your application by utilizing our open API with no per transaction fees. 
+description: Webhooks for payments within your application by utilizing our open bank transfer API with no transaction fees. 
 ---
 
 # Subscribing to webhooks: obtain authorization
