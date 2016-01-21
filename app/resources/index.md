@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 title:  "Resources"
-description: "In-depth articles on Dwolla features and integration patterns."
+description: "Getting started with Dwolla's bank transfer API."
 ---
 
 <h1>Tools</h1>
