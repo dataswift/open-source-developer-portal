@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: article
 title:  "Customer verification"
-description: "Build bank transfers programmatically into your site or app. Learn about account verification and how to respond when additional information is required."
+description: "How to verify a customer before sending a bank transfer with Dwolla's ACH API."
 ---
 
 # Customer verification
