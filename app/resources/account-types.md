@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: article
 title:  "Account types"
-description: "Build bank transfers programmatically into your site or app. Learn about the different types of Dwolla accounts, transfer limits, and eligibility."
+description: "Getting started with Dwolla's bank transfer API."
 ---
 
 # Account types
