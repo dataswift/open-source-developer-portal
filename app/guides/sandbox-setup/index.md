@@ -5,8 +5,8 @@ type: guide
 guide: 
     name: sandbox-setup
     step: overview
-title:  Get started with integrating ACH transfers into your application
-description: Use this guide to start sending payments from your application by utilizing our open API with no per transaction fees. 
+title:  Get started with integrating bank transfers into your application
+description: Test free programmatic bank transfers with Dwolla's bank transfer API in our developer sandbox. 
 ---
 
 # Getting started
