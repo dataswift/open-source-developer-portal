@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: article
 title:  OAuth refresh strategies
-description: "Best practices for managing your access tokens."
+description: "Manage OAuth access tokens for Dwolla's bank transfer API."
 ---
 
 # OAuth refresh strategies
