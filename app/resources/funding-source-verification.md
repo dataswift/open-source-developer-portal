@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: article
 title:  "Funding source verification"
-description: "Verify Customer funding sources using Instant Account Verification or micro-deposits to start sending and receiving payments by utilizing our open API with no per transaction fees."
+description: "Programmatically verify a bank to initiate a bank transfer."
 ---
 
 # Funding source verification
