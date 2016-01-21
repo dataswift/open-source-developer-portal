@@ -6,7 +6,7 @@ guide:
     name: transfer-money-between-users
     step: overview
 title:  Transfer money between Customers in your application
-description: Transfer money between Customers within your application by utilizing our open API with no per transaction fees.
+description: Send money online between customers by utilizing our open bank transfer API.
 ---
 
 # Overview: Transfer money between your users
