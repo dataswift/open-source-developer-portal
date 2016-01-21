@@ -12,6 +12,9 @@ Dwolla.js is a client-side JavaScript library with the primary function of secur
 
 When you collect and submit the user's bank account information, dwolla.js has built-in validation that will trigger an error if any of the required fields are invalid.
 
+### Testing Dwolla.js and Customization
+Test Dwolla.js and customization functionality <a href="https://www.dwolla.com/dwollajs-bank-verification">here.</a>
+
 ### Generate a funding sources token
 Before utilizing dwolla.js to add a new funding source, you need to generate a funding sources token. Your server initiates a POST request to Dwolla, specifying for which Dwolla account or white label Customer you want to add a bank account. Dwolla will respond with a funding sources `token` that expires in an hour. This token will be sent to the client and used to authenticate the HTTP request asking Dwolla to add a new funding source. 
 
