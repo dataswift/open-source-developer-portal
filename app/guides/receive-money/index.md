@@ -5,8 +5,8 @@ type: guide
 guide: 
     name: receive-money
     step: overview
-title:  Receive ACH transfers within your application
-description: Receive payments from your application by utilizing our open API with no per transaction fees. 
+title:  Receive bank transfers within your application
+description: Programmatically collect money from customer bank accounts with bank transfers. 
 ---
 
 # Overview: Receive money from your users
