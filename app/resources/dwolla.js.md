@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: article
 title:  "Dwolla.js"
-description: "Securely transmit bank information from your application using our client-side JavaScript library."
+description: "Quickly integrate instant bank verification for developers using the Dwolla ACH API."
 ---
 
 # Dwolla.js
