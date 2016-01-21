@@ -3,7 +3,7 @@ layout: twoColumn
 section: resources
 type: tool
 title:  "Sandbox Console"
-description: "Learn more about our Sandbox Console."
+description: "Set up bank transfers with Dwolla's ACH API in our developer sandbox environment."
 ---
 
 # What is a Sandbox Console?
