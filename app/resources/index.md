@@ -18,6 +18,10 @@ description: "Getting started with Dwolla's bank transfer API."
         <p>The different types of Dwolla accounts and their transfer limits and eligibility.</p>
     </li>
     <li>
+        <h3><a href="/resources/bank-transfer-workflow.html">Bank transfer workflow</a></h3>
+        <p>A walkthrough of the ACH transfer process, including transfer statuses and processing times.</p>
+    </li>
+    <li>
         <h3><a href="/resources/customer-verification.html">Customer verification</a></h3>
         <p>Account verification statuses and how to respond when additional information is required.</p>
     </li>
@@ -32,9 +36,5 @@ description: "Getting started with Dwolla's bank transfer API."
     <li>
         <h3><a href="/resources/oauth-refresh-strategies.html">OAuth refresh strategies</a></h3>
         <p>Best practices and recommendations for managing your tokens.</p>
-    </li>
-    <li>
-        <h3><a href="/resources/transfer-workflow.html">Transfer workflow</a></h3>
-        <p>A walkthrough of the ACH transfer process, including transfer statuses and processing times.</p>
     </li>
 </ul>

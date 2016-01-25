@@ -2,11 +2,11 @@
 layout: twoColumn
 section: resources
 type: article
-title:  "Transfer workflow"
-description: "Build bank transfers programmatically into your site or app. Get to know the ACH transfer process, including transfer statuses and processing times."
+title:  "Bank transfer workflow"
+description: "Bank transfer API to programmatically send money online"
 ---
 
-# Transfer workflow
+# Bank transfer workflow
 
 Most bank transfers initiated within the Dwolla network are processed via the Automated Clearing House (ACH). We’ve reduced the complex nature of the ACH protocol down to several distinct statuses for transfers. Once a transfer is created it is recorded as an event (`transfer_created`) and will be sent to you via a webhook (if subscribed). You will receive subsequent webhooks as the transfer follows the workflow outlined below. Webhooks will notify your application of a transfer status changes.
 

@@ -50,4 +50,4 @@ The Sandbox environment does not replicate any ACH processes, so a `pending` tra
 
 The Sandbox Console interface allows you to immediately trigger any of the four possible outcomes for a given transfer: `processed`, `failed`, `cancelled`, `reclaimed`. If subscribed to [webhooks](/guides/webhooks), when a transfer outcome is triggered a webhook will be sent to your server which includes the corresponding created event.
 
-For more information on transfer statuses, read the [transfer workflow](/resources/transfer-workflow.html) article.
+For more information on transfer statuses, read the [bank transfer workflow](/resources/bank-transfer-workflow.html) article.
