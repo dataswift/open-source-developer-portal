@@ -70,6 +70,9 @@
     <loc>https://developers.dwolla.com/resources/account-types.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/bank-transfer-workflow.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/changelog.html</loc>
   </url>
   <url>
@@ -85,10 +88,13 @@
     <loc>https://developers.dwolla.com/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/</loc>
+    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
+    <loc>https://developers.dwolla.com/resources/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/receive-money/</loc>
@@ -97,13 +103,10 @@
     <loc>https://developers.dwolla.com/guides/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/resources/</loc>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies.html</loc>
@@ -113,9 +116,6 @@
   </url>
   <url>
     <loc>https://developers.dwolla.com/pages/sdks.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/resources/transfer-workflow.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/404.html</loc>
