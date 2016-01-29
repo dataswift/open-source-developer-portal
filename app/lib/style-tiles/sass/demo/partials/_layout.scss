@@ -1,0 +1,181 @@
+//box size all the things!
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    &:before{
+        content:"desktop"; display: none;
+        @include breakpoint($SIZE_TABLET) { content:"tablet"; }
+        @include breakpoint($SIZE_MOBILE) { content:"mobile"; }
+        @include breakpoint-landscape($SIZE_MOBILE) { content:"mobile-landscape"; }
+    }
+}
+
+body.demo-specific__marketing {
+    & > div, & > header {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.demo-specific {
+
+    &__body-wrap {
+        padding: 20px;
+        background-color: #eceef1;
+    }
+
+    &__dark-wrap {
+        margin-bottom: 10px;
+        padding: 20px;
+        background-color: #888888;
+
+        &.no-side-pad {
+            padding: 20px 0;
+        }
+    }
+
+    &__dashboard_cnt {
+        width: 680px;
+        margin: 0 auto;
+        padding: 20px;
+        @extend .cnt;
+    }
+
+    &__main {
+        margin: 0 20px;
+        padding: 0 200px 0 0;
+
+        @include breakpoint($SIZE_MOBILE){
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 12px;
+            & + pre { margin-top: -0.5em; }
+        }
+
+        ul {
+            margin: 0 0 2em;
+            li { list-style: none; }
+        }
+
+        pre {
+            margin-bottom: 15px;
+            padding: 10px;
+            white-space: pre-wrap;
+        }
+
+        section {
+            padding: 10px 0;
+            border-top: 1px solid $color-demo-specific-grey;
+            &:first-child {
+                border-top: none;
+            }
+            .highlight {
+                display: inline-block;
+                margin: 16px 0 24px;
+                padding: 8px;
+                background: $color-demo-specific-yellow;
+            }
+            .footnote {
+                font-size: 0.75em;
+                color: $color-demo-specific-grey;
+            }
+            .examples {
+                width: 100%;
+                margin-bottom: 3em;
+                display: table;
+                @include breakpoint($SIZE_TABLET){
+                    display: block;
+                }
+                .row {
+                    display:table-row;
+                    @extend %clearfix;
+                    @include breakpoint($SIZE_TABLET){
+                        display: block;
+                    }
+                    & > div {
+                        width: 70%;
+                        display:table-cell;
+                        padding: 24px 0 24px 32px;
+                        border-bottom: 1px solid $color-demo-specific-grey-light;
+                        @include breakpoint($SIZE_TABLET){
+                            width: 100%;
+                            padding: 20px 0;
+                            display: block;
+                            border-bottom: none;
+                        }
+                        &:first-child {
+                            width: 30%;
+                            background: lighten($color-demo-specific-grey-dark, 45%);
+                            @include breakpoint($SIZE_TABLET){
+                                width: 100%;
+                                padding: 20px 10px;
+                            }
+                        }
+
+                        &.negative {
+                            background: $color-demo-specific-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__aside {
+        width: 200px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 30px;
+        background: lighten($color-demo-specific-grey-light, 7%);
+        border-left: 1px solid $color-demo-specific-grey;
+
+        @include breakpoint($SIZE_MOBILE){
+            width: 100%;
+            padding: 0;
+            position: static;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+            @include breakpoint($SIZE_MOBILE){
+                display: none;
+            }
+        } 
+
+        nav {
+            li {
+                position: relative;
+                margin: 10px 0;
+                @include breakpoint($SIZE_MOBILE){
+                    padding: 10px 0;
+                    margin: 0;
+                    text-align: center;
+                    border-bottom: 1px solid $color-demo-specific-grey;
+                }
+                &:after {
+                    content: ">";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 1em;
+                    font-weight: 300;
+                    @include breakpoint($SIZE_MOBILE){
+                        content: "";
+                    }
+                }
+            }
+            a, a:link, a:visited {
+                display: block;
+                width: 100%;
+                color: $color-demo-specific-grey;
+                font-size: 0.875em;
+                font-weight: bold;
+            }
+        }
+    }
+}

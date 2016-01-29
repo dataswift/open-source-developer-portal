@@ -1,0 +1,33 @@
+src:
+    src:
+        - 'app/js/*.js'
+        - 'app/js/dwolla/**/*.js'
+    directives:
+        browser: true
+        regexp: true
+        unparam: true
+        predef:
+            - dwolla
+            - $
+            - ga
+            - StatusPage
+    options:
+        errorsOnly: true
+test:
+    src:
+        - 'app/js/test/**/*.js'
+    directives:
+        browser: true
+        predef:
+            - describe
+            - it
+            - assert
+            - before
+            - afterEach
+            - beforeEach
+            - sinon
+            - dwolla
+            - helpers
+            - $
+    options:
+        errorsOnly: true

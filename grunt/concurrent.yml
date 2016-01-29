@@ -1,0 +1,7 @@
+server:
+    - sass
+    - copy:stageCss
+    - jekyll:server
+dist:
+    - sass
+    - copy:dist

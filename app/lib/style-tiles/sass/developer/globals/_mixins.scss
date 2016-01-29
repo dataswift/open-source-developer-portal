@@ -1,0 +1,46 @@
+@mixin breakpoint($size) {
+    @media only screen and (max-width: $size) { @content; }
+}
+
+@mixin breakpoint-landscape($size){
+    @media only screen and (max-width: $size) and (orientation:"landscape") { @content; }
+}
+
+@mixin breakpoint-height($size) {
+    @media only screen and (max-height: $size) { @content; }
+}
+
+@mixin linear-gradient($dir, $colorA, $colorB) {
+    background: -moz-linear-gradient($dir, $colorA 0%, $colorB 100%) repeat scroll 0 0;
+    background: -webkit-linear-gradient($dir, $colorA 0%, $colorB 100%) repeat scroll 0 0;
+    background: -ms-linear-gradient($dir, $colorA 0%, $colorB 100%) repeat scroll 0 0;
+    background: linear-gradient($dir, $colorA 0%, $colorB 100%) repeat scroll 0 0;
+}
+
+@mixin border-top-radius($val) {
+    border-top-left-radius: $val;
+    border-top-right-radius: $val;
+}
+
+@mixin border-bottom-radius($val) {
+    border-bottom-left-radius: $val;
+    border-bottom-right-radius: $val;
+}
+
+@mixin arrow($size, $color, $direction) {
+    //used to generate css arrows
+    border-style: solid;
+    @if $direction == "up" {
+        border-width: 0 $size $size $size;
+        border-color: transparent transparent $color transparent;
+    } @else if $direction == "left" {
+        border-width: $size $size $size 0;
+        border-color: transparent  $color transparent transparent;
+    } @else if $direction == "right" {
+        border-width: $size 0 $size $size;
+        border-color: transparent transparent transparent $color;
+    } @else {
+        border-width: $size $size 0 $size;
+        border-color: $color transparent transparent transparent;
+    }
+}

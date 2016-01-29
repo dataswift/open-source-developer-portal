@@ -1,0 +1,256 @@
+$slide-time: 0.5s;
+
+body > header {
+    position: relative;
+    z-index: 5;
+    @extend %inverse;
+    @extend %clearfix;
+
+    .notification {
+        height: 44px;
+        padding-top: 10px;
+        background: $color-black-dark;
+        text-align: center;
+
+        a {
+            color: $color-blue;
+            text-decoration: none;
+
+            span {
+                margin-right: 10px;
+                padding: 4px 10px;
+                background: $color-black;
+                border-radius: 3px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .page-wrap {
+        @extend %clearfix;
+
+        & > div {
+            @extend %clearfix;
+
+            .logo {
+                width: 135px;
+                height: 26px;
+                margin-top: 6px;
+                display: inline-block;
+                text-indent: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                float: left;
+                opacity: 1;
+            }
+
+            .hamburger {
+                display: none;
+                float: right;
+
+                a {
+                    margin-right: 15px;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    @include breakpoint($SIZE_MOBILE_SMALL) {
+                        margin-right: 10px;
+                    }
+
+                    &:not(.btn) {
+                        line-height: rem(40px);
+                    }
+                }
+
+                @include breakpoint($SIZE_TABLET_SMALL) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    nav a {
+       margin-right: 30px; 
+    }
+
+    a {
+        text-decoration: none;
+        opacity: 0.5;
+        font-weight: 600;
+
+        &:hover {
+            opacity: 0.85; 
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &.btn {
+            opacity: 1;
+        }
+    }
+
+    .header__primary {
+        padding: 25px 0;
+        @include linear-gradient($gradient-tilt, $color-gradient-orange, $color-gradient-red);
+
+        .page-wrap {
+            & > div {
+                float: left;
+
+                @include breakpoint($SIZE_TABLET_SMALL){
+                    float: none;
+                }
+            }
+        }
+
+        nav {
+            float: right;
+            transition: height $slide-time, margin $slide-time;
+
+            @include breakpoint($SIZE_TABLET_SMALL) {
+                width: 100%;
+                height: 0;
+                padding: 0;
+                float: none;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.25);
+            }
+
+            a {
+                @include breakpoint($SIZE_TABLET_SMALL) {
+                    margin: 0;
+                    padding: 15px 0;
+                    display: block;
+                    text-align: center;
+                }
+
+                &.btn {
+                    @include breakpoint($SIZE_TABLET_SMALL) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__secondary {
+        height: 51px;
+        padding: 15px 0 15px;
+        position: relative;
+
+        @extend %clearfix;
+
+        & > div {
+            height: 51px;
+            width: 100%;
+            padding: 15px 0 15px;
+            border-bottom: 1px solid $color-grey-med;
+            background: $color-white;
+            top: 0;
+            position: absolute;
+        }
+
+        a {
+            padding-bottom: 13px;
+            color: $color-grey-dark;
+            opacity: 1;
+            position: relative;
+
+            &:hover {
+                text-decoration: none;
+                color: $color-blue;
+            }
+
+            &.active {
+                color: $color-blue;
+                border-bottom: 3px solid $color-blue;
+            }
+
+
+            @include breakpoint($SIZE_TABLET_SMALL){
+                margin-right: 10px;
+                padding-right: 15px;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                &:before {
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 9px;
+                    right: 0;
+                    @include arrow(4px, $color-grey-dark, "down");
+                    content:"";
+                }
+
+                &:after {
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    @include arrow(4px, $color-white, "down");
+                    content:"";
+                }
+
+                &.active {
+                    &:before {
+                        @include arrow(4px, $color-blue, "down");
+                    }
+                }
+
+                &.no-nav {
+                    padding-right: 0;
+                    &:after, &:before {
+                        border: none;
+                    }
+                }
+            }
+
+            @include breakpoint($SIZE_MOBILE_SMALL) {
+                padding-right: 12px;
+            }
+        }
+
+        .custom-select {
+            display: inline-block;
+            //a little hacky but fixes alignment issues on iOS
+            position: absolute;
+            top: -5px;
+
+            @include breakpoint($SIZE_TABLET_SMALL){
+                display: none;
+            }
+
+            select, option {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+body.home > header .header__secondary {
+    border-bottom: none;
+
+    @include breakpoint($SIZE_TABLET_SMALL){
+        background: $color-white;
+    }
+
+    & > div {
+        background: rgba($color-white, 0.5);
+    }
+
+    a {
+        color: $color-white;
+
+        @include breakpoint($SIZE_TABLET_SMALL){
+            color: $color-grey-dark;
+        }
+    }
+}

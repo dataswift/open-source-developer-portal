@@ -1,0 +1,27 @@
+.pager-nav {
+    margin: 40px 0;
+    font-weight: 600;
+    @extend %clearfix;
+
+    @include breakpoint($SIZE_MOBILE_SMALL){
+        font-size: rem(13px);
+    }
+
+    a {
+        &:first-child {
+            @include breakpoint($SIZE_TABLET_SMALL){
+                display: none;
+            }
+
+            &:before {
+                content: "< ";
+            }
+        }
+        &:last-child {
+            float: right;
+            &:after {
+                content: " >";
+            }
+        }
+    }
+}

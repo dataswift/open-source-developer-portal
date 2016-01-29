@@ -1,0 +1,18 @@
+sass:
+  files:
+    -'<%= yeoman.app %>/_scss/**/*.{scss,sass}'
+  tasks:
+    - sass
+    - autoprefixer:dist
+autoprefixer:
+  files:
+    - '<%= yeoman.app %>/css/**/*.css'
+  tasks:
+    - copy:stageCss
+    - autoprefixer:dist
+jekyll:
+  files:
+    - '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}'
+    - '!<%= yeoman.app %>/_bower_components/**/*'
+  tasks:
+    - 'jekyll:server'

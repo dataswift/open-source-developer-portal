@@ -1,0 +1,15 @@
+.hover-box {
+    margin-bottom: 80px;
+    padding: 55px 55px 0;
+    background: $color-white;
+    box-shadow: 0 0 4px 1px rgba($color-black, 0.22);
+    text-align: center;
+
+    @include breakpoint($SIZE_TABLET_SMALL){
+        padding: 40px 20px 0;
+    }
+
+    em {
+        color: $color-grey-med-3;
+    }
+}

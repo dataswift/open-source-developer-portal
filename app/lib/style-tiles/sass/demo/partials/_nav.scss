@@ -1,0 +1,18 @@
+.demo-specific__nav {
+
+    ul {
+        font-size: rem(16px);
+        ul {
+            font-size: rem(14px);
+            padding-left: 20px;
+        }
+    }
+
+    .disclaimer {
+        padding-left: 20px;
+        display: block;
+        font-size: rem(12px);
+        color: $color-demo-specific-grey-med;
+        font-style: italic;
+    }
+}
