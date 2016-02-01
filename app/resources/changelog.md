@@ -8,7 +8,7 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 
 <section class="change-log">
 	<h1>Upcoming</h1>
-	<h3>2016-02-22</h3>
+	<h3>2016-02-29</h3>
 	<h4><em>DEPRECATED</em></h4>
 	<ul class="bullet">
 	    <li>Removal of the <code>description</code> field in API v2 error
