@@ -121,4 +121,16 @@
     <loc>https://developers.dwolla.com/404.html</loc>
     <lastmod>2016-01-14T09:41:33-06:00</lastmod>
   </url>
+  <url>
+    <loc>https://developers.dwolla.com/lib/icons/dist/base/preview.html</loc>
+    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/lib/icons/dist/developer/preview.html</loc>
+    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/lib/icons/dist/guides/preview.html</loc>
+    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+  </url>
 </urlset>
