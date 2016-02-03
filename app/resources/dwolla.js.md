@@ -156,3 +156,12 @@ The callback function (err, res) allows you to determine if there is an error wi
 
 ## Using Dwolla.js for Instant Account Verification (IAV)
 For white label partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function, `dwolla.iav.start()` the white label partner application can render the IAV flow within a specified container. Read more about [funding source verification](/resources/funding-source-verification.html) and how to use dwolla.js to quickly add and verify a white label Customer’s bank account.
+
+## Using Dwolla.js for On-demand bank transfers
+On-demand bank transfers allow Dwolla white label partners to receive variable totals from a payer’s bank account via an ACH transaction—perfect for companies with usage-based business models, such as utilities or advertising platforms. No other third-party gateways or merchant accounts required, just your Dwolla integration and payer authorization.
+
+This is an account level setting for a white label partner. When enabled, the end user is presented with text on the bank selection screen within the IAV flow giving authorization to Dwolla for future variable payments.
+
+![Screenshot of On-demand](/images/on-demand-iav.png "On-demand bank transfers")
+
+Once you have collected all of the authorizations required for a bank transfer, including the additional authorization from the Customer for on-demand transfers, you will be able to <a href="https://docsv2.dwolla.com/#initiate-transfer">initiate transfers</a> for variable amounts and dates.
