@@ -39,13 +39,15 @@ The `topic` field of an event holds [a description](http://docsv2.dwolla.com/#ev
 ```
 
 #### Step A. Authenticating the webhook request
-Before we process any data from the webhook we’ll want to validate that the request really came from Dwolla and not someone pretending to be Dwolla. Dwolla signs each webhook request with the `secret` you passed in when you created the webhook subscription. The signature is contained in the `X-Request-Signature` header and is a SHA-1 HMAC hash of the request body with the key being your webhook secret.
+Before we process any data from the webhook we’ll want to validate that the request really came from Dwolla and not someone pretending to be Dwolla. Dwolla signs each webhook request with the `secret` you passed in when you created the webhook subscription. The signature is contained in the `X-Request-Signature-Sha-256` header and is a SHA256 HMAC hash of the request body with the key being your webhook secret.
 
-You can validate the webhook by generating the same SHA-1 HMAC hash and comparing it to the signature sent with the payload.
+You can validate the webhook by generating the same SHA256 HMAC hash and comparing it to the signature sent with the payload.
+
+**Deprecation note:** The existing signature `X-Request-Signature` relied on using a SHA-1 HMAC hash. This header will be deprecated on **February 29, 2016**. We'll include both the old signature and the new signature ('X-Request-Signature-Sha-256') in webhook requests to allow for backwards compatibility until previously mentioned deprecation date.
 
 ```ruby
 def verify_signature(payload_body, request_signature)
-  signature = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new("sha1"),
+  signature = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new("sha256"),
 ENV["DWOLLA_WEBHOOK_SECRET"],
 payload_body)
   unless Rack::Utils.secure_compare(signature, request_signature)
@@ -58,12 +60,9 @@ not available
 ```
 ```javascript
 var verifyGatewaySignature = function(proposed_signature, webhook_secret, payload_body) {
-  var crypto    = require('crypto')
-  , secret      = 'API_SECRET_HERE'
-  , text        = webhook_secret + payload_body
-  , hash;
+  var crypto    = require('crypto');
 
-hash = crypto.createHmac('sha1', secret).update(text).digest('hex');
+  var hash = crypto.createHmac('sha256', webhook_secret).update(payload_body).digest('hex');
 
 return proposed_signature === hash;
 }
@@ -71,16 +70,16 @@ return proposed_signature === hash;
 ```python
 def verify_gateway_signature(proposed_signature, webhook_secret, payload_body):
   import hmac
-  import hashlib
+  from hashlib import sha256
 
-  signature = hmac.new(payload_body, webhook_secret, hashlib.sha1).hexdigest()
+  signature = hmac.new(payload_body, webhook_secret, sha256).hexdigest()
 
   return True if (signature == proposed_signature) else False
 ```
 ```php
 <?php
 function verifyGatewaySignature($proposedSignature, $webhookSecret, $payloadBody) {
-    $signature = hash_hmac("sha1", $webhookSecret, $payloadBody);
+    $signature = hash_hmac("sha256", $webhookSecret, $payloadBody);
     return $signature == $proposedSignature;
 }
 ?>
