@@ -19,7 +19,8 @@
                     {{ item.title }}
                 </a>
                 <ul>
-                    {% for subItem in site.pages %}
+                    {% assign pages = site.pages | sort:'weight'  %}
+                    {% for subItem in pages %}
                         {% if subItem.section == item.title and subItem.type == 'article' %}
                             <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
                         {% endif %}

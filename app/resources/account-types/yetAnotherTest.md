@@ -2,8 +2,8 @@
 layout: twoColumn
 section: Account types
 type: article
-title:  "Test sub"
-weight: 0
+title:  "Test sub (yet another)"
+weight: 2
 description: "Getting started with Dwolla's bank transfer API."
 ---
 
