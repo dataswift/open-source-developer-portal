@@ -16,10 +16,10 @@
     <loc>https://developers.dwolla.com/guides/webhooks/01-obtain-authorization.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/01-white-label-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/receive-money/01-white-label-onboarding.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/01-white-label-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/01-white-label-onboarding.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/receive-money/02-check-transfer.html</loc>
@@ -70,7 +70,13 @@
     <loc>https://developers.dwolla.com/resources/account-types.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/dwolla-js/add-a-bank-account.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/bank-transfer-workflow.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/customer-verification/business-verified-customers.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/changelog.html</loc>
@@ -79,22 +85,16 @@
     <loc>https://developers.dwolla.com/resources/customer-verification.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/resources/dwolla.js.html</loc>
+    <loc>https://developers.dwolla.com/resources/dwolla-js.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/customer-verification/handling-verification-statuses.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/resources/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/receive-money/</loc>
@@ -103,13 +103,49 @@
     <loc>https://developers.dwolla.com/guides/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/send-money/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/funding-source-verification/instant-account-verification.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/funding-source-verification/micro-deposit-verification.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/dwolla-js/on-demand-bank-transfers.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/customer-verification/personal-verified-customers.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies/preemptively-refresh.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/bank-transfer-workflow/processing-times.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies/refresh-best-practices.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies/refresh-on-demand.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/sandbox-console.html</loc>
@@ -118,19 +154,28 @@
     <loc>https://developers.dwolla.com/pages/sdks.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/account-types/traditional-accounts.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/bank-transfer-workflow/transfer-failures.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/account-types/white-label-accounts.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/404.html</loc>
-    <lastmod>2016-01-14T09:41:33-06:00</lastmod>
+    <lastmod>2016-02-10T11:01:50-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/base/preview.html</loc>
-    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+    <lastmod>2016-02-10T11:01:50-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+    <lastmod>2016-02-10T11:01:51-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2016-02-01T12:32:28-06:00</lastmod>
+    <lastmod>2016-02-10T11:01:51-06:00</lastmod>
   </url>
 </urlset>
