@@ -1,19 +1,15 @@
 ---
 layout: twoColumn
-section: resources
+section: Dwolla.js
 type: article
-title:  "Dwolla.js"
+title:  "Add a bank account"
+weight: 0
 description: "Quickly integrate instant bank verification for developers using the Dwolla ACH API."
 ---
 
 # Dwolla.js
 
-Dwolla.js is a client-side JavaScript library with the primary function of securely transmitting sensitive data (bank account and routing number) from your application's front-end to Dwolla without the data passing through your server. When you attach a bank account to a Dwolla account or white label Customer, use dwolla.js and let Dwolla reduce your risk of handling sensitive data. You will generate a funding sources token, collect the user's bank account information, and call a JavaScript function to send this data to Dwolla.
-
-When you collect and submit the user's bank account information, dwolla.js has built-in validation that will trigger an error if any of the required fields are invalid.
-
-### Testing Dwolla.js and Customization
-Test Dwolla.js and customization functionality <a href="https://www.dwolla.com/dwollajs-bank-verification">here.</a>
+## Add a bank account
 
 ### Generate a funding sources token
 Before utilizing dwolla.js to add a new funding source, you need to generate a funding sources token. Your server initiates a POST request to Dwolla, specifying for which Dwolla account or white label Customer you want to add a bank account. Dwolla will respond with a funding sources `token` that expires in an hour. This token will be sent to the client and used to authenticate the HTTP request asking Dwolla to add a new funding source. 
@@ -153,15 +149,3 @@ The callback function (err, res) allows you to determine if there is an error wi
   * Example: `{"error":{"code":"ValidationError","message":"Validation error(s) present. See embedded errors list for more details.","_embedded":{"errors":[{"code":"Invalid","message":"Routing number invalid.","path":"/routingNumber"}]}}}`
 * If successful: You will receive a JSON response that includes a link to the newly attached funding source. 
   * Example:  `{"error":null,"response":{"_links":{"funding-source":{"href":"https://api-uat.dwolla.com/funding-sources/746d5c93-acb9-4826-a9c1-78ecf16401a6"}}}}`
-
-## Using Dwolla.js for Instant Account Verification (IAV)
-For white label partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function, `dwolla.iav.start()` the white label partner application can render the IAV flow within a specified container. Read more about [funding source verification](/resources/funding-source-verification.html) and how to use dwolla.js to quickly add and verify a white label Customer’s bank account.
-
-## Using Dwolla.js for On-demand bank transfers
-On-demand bank transfers allow Dwolla white label partners to receive variable totals from a payer’s bank account via an ACH transaction—perfect for companies with usage-based business models, such as utilities or advertising platforms. No other third-party gateways or merchant accounts required, just your Dwolla integration and payer authorization.
-
-This is an account level setting for a white label partner. When enabled, the end user is presented with text on the bank selection screen within the IAV flow giving authorization to Dwolla for future variable payments.
-
-![Screenshot of On-demand](/images/on-demand-iav.png "On-demand bank transfers")
-
-Once you have collected all of the authorizations required for a bank transfer, including the additional authorization from the Customer for on-demand transfers, you will be able to <a href="https://docsv2.dwolla.com/#initiate-transfer">initiate transfers</a> for variable amounts and dates.
