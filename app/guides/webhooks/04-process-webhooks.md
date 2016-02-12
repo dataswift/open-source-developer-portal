@@ -37,7 +37,7 @@ Let's assume that you have a webhook subscription and Dwolla has just delivered 
 }
 ```
 
-For ilustrative purposes, let's assume you are using Ruby on Rails with a controller defined to handle the POST request from Dwolla's servers. Your application logic will look a little something like this:
+For illustrative purposes, let's assume you are using Ruby on Rails with a controller defined to handle the POST request from Dwolla's servers. Your application logic will look a little something like this:
 
 ##### Ruby
 ```rubynoselect
