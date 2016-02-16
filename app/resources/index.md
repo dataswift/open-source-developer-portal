@@ -26,7 +26,7 @@ description: "Getting started with Dwolla's bank transfer API."
         <p>Account verification statuses and how to respond when additional information is required.</p>
     </li>
     <li>
-        <h3><a href="/resources/dwolla.js.html">Dwolla.js</a></h3>
+        <h3><a href="/resources/dwolla-js.html">Dwolla.js</a></h3>
         <p>Securely transmit bank information from your application using our client-side JavaScript library.</p>
     </li>
     <li>
