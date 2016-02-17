@@ -74,6 +74,8 @@ Otherwise, if you're deploying to your own repo, make sure you edit the `buildco
 
 ## License
 
+The MIT License (MIT)
+
 Copyright (c) 2016 Dwolla
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
