@@ -46,12 +46,12 @@ dwolla.then(function(dwolla) {
 ```
 ```python
 funding_api = dwollaswagger.FundingsourcesApi(client)
-funding_sources = funding_api.id('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
+funding_sources = funding_api.get_account_funding_sources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
 ```
 ```php
 <?php
 $fundingApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-$fundingSources = $fundingApi->id('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
+$fundingSources = $fundingApi->getAccountFundingSources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
 ?>
 ```
 
