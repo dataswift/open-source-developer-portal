@@ -15,4 +15,4 @@ When you collect and submit the user's bank account information, dwolla.js has b
 ### Testing Dwolla.js and Customization
 Test Dwolla.js and customization functionality <a href="https://www.dwolla.com/dwollajs-bank-verification">here.</a>
 
-View: [Add a bank account](/resources/dwolla-js/add-a-bank-account.html), [Instant account verification](/resources/dwolla-js/instant-account-verification.html), or [On-demand bank transfers](/resources/dwolla-js/on-demand-transfers.html)
+View: [Add a bank account](/resources/dwolla-js/add-a-bank-account.html), [Instant account verification](/resources/dwolla-js/instant-account-verification.html), or [On-demand bank transfers](/resources/dwolla-js/on-demand-bank-transfers.html)
