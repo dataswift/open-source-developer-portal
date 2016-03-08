@@ -30,6 +30,10 @@ description: "Getting started with Dwolla's bank transfer API."
         <p>Securely transmit bank information from your application using our client-side JavaScript library.</p>
     </li>
     <li>
+        <h3><a href="/resources/facilitator-fee.html">Facilitator Fee</a></h3>
+        <p>Collect a portion of the transfer amount on payments facilitated between two users.</p>
+    </li>
+    <li>
         <h3><a href="/resources/funding-source-verification.html">Funding source verification</a></h3>
         <p>Methods to verify funding sources, including Instant Account Verification and micro-deposits.</p>
     </li>
