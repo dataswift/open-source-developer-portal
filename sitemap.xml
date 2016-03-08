@@ -16,10 +16,10 @@
     <loc>https://developers.dwolla.com/guides/webhooks/01-obtain-authorization.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/01-white-label-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/01-white-label-onboarding.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/01-white-label-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/receive-money/01-white-label-onboarding.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/receive-money/02-check-transfer.html</loc>
@@ -88,6 +88,9 @@
     <loc>https://developers.dwolla.com/resources/dwolla-js.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/facilitator-fee.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification.html</loc>
   </url>
   <url>
@@ -97,16 +100,10 @@
     <loc>https://developers.dwolla.com/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/webhooks/</loc>
@@ -115,13 +112,19 @@
     <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/resources/funding-source-verification/instant-account-verification.html</loc>
+    <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
+    <loc>https://developers.dwolla.com/resources/funding-source-verification/instant-account-verification.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification/micro-deposit-verification.html</loc>
