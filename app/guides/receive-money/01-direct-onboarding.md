@@ -23,7 +23,7 @@ URL Format:
 
 Example URL:
 
-`https://uat.dwolla.com/oauth/v2/authenticate?client_id=PO%2BSzGAsZCE4BTG7Cw4OAL40Tpf1008mDjGBSVo6QLNfM4mD%2Ba&response_type=code&redirect_uri=https://example.com/return&scope=Balance%7CAccountInfoFull%7CSend%7CRequest%7CTransactions%7CContacts%7CFunding%7CManageAccount%7CScheduled`
+`https://uat.dwolla.com/oauth/v2/authenticate?client_id=PO%2BSzGAsZCE4BTG7Cw4OAL40Tpf1008mDjGBSVo6QLNfM4mD%2Ba&response_type=code&redirect_uri=https://example.com/return&scope=Send%7CTransactions%7CFunding%7CManageCustomers`
 
 ### Step B. Redirect back to your application and generate access token
 
@@ -60,7 +60,7 @@ Response:
   "refresh_token": "aClhbl9euHAq31ldke51DcN0ml2ZAAfBIT7PDhyYXoLCEtGQHO",
   "refresh_expires_in": 5184000,
   "token_type": "bearer",
-  "scope": "balance|accountinfofull|send|request|transactions|contacts|funding|manageaccount|scheduled",
+  "scope": "transactions|send|funding|managecustomers",
   "account_id": "4bb512e4-ad4d-4f7e-bfd0-a232007f21a1"
 }
 ```
