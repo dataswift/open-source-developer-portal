@@ -44,3 +44,56 @@
         border-color: $color transparent transparent transparent;
     }
 }
+
+/* ------ FLEXBOX ------- */
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-wrap($value: nowrap) {
+    // No Webkit Box fallback.
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    @if $value == nowrap {
+        -ms-flex-wrap: none;
+    } @else { 
+        -ms-flex-wrap: $value; 
+    }
+    flex-wrap: $value;
+}
+
+@mixin flex-basis($value: auto) {
+    -webkit-flex-basis: $value;
+    -moz-flex-basis: $value;
+    -ms-flex-preferred-size: $value;
+    flex-basis: $value;
+}
+
+@mixin flex-grow($int: 0) {
+    -webkit-box-flex: $int;
+    -webkit-flex-grow: $int;
+    -moz-flex-grow: $int;
+    -ms-flex-positive: $int;
+    flex-grow: $int;
+}
+
+@mixin order($int: 0) {
+    -webkit-box-ordinal-group: $int + 1;
+    -webkit-order: $int;
+    -moz-order: $int;
+    -ms-flex-order: $int;
+    order: $int;
+}
+
+@mixin justify-content($justify: flex-start) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+}

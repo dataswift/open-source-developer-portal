@@ -1,0 +1,29 @@
+.copyright {
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 5;
+    color: $color-grey-med-3;
+    background: $color-white;
+
+    .page-wrap {
+
+        & > div {
+            padding-top: 35px;
+            border-top: 1px solid $color-grey-med;
+        }
+    }
+
+    a {
+        color: $color-grey-med-3;
+        text-decoration: underline;
+
+        @include breakpoint($SIZE_MOBILE){
+            margin-top: 25px;
+            display: block;
+        }
+    }
+
+    span {
+        padding-right: 45px;
+    }
+}
