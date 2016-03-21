@@ -4,11 +4,8 @@
     z-index: 5;
     background: $color-white;
 
-    @include breakpoint($SIZE_MOBILE){
-        display: none;
-    }
-
     h5 {
+        display: block;
         font-size: rem(14px);
         color: $color-grey-med-3;
     }
@@ -17,5 +14,11 @@
         font-size: rem(12px);
         line-height: rem(20px);
         color: $color-grey-med-3;
+    }
+}
+
+.cnt-two-col__content > .disclaimer {
+    .page-wrap {
+        padding: 0;
     }
 }

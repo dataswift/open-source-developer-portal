@@ -1,4 +1,4 @@
-body > footer {
+body > footer, .cnt-two-col__content > footer {
     padding-top: 50px;
     position: relative;
     z-index: 5;
@@ -38,6 +38,25 @@ body > footer {
             a {
                 margin-bottom: 6px;
                 display: block;
+            }
+        }
+    }
+}
+
+.cnt-two-col__content > footer {
+    padding-top: 15px;
+
+    .page-wrap {
+        padding: 0;
+
+        & > nav {
+            @include breakpoint($SIZE_COL_MOBILE_FOOTER_BREAK){
+                width: 50%;
+            }
+
+            @include breakpoint($SIZE_MOBILE_SMALL){
+                width: 100%;
+                text-align: center;
             }
         }
     }
