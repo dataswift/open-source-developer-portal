@@ -1,0 +1,24 @@
+.disclaimer {
+    padding-bottom: 45px;
+    position: relative;
+    z-index: 5;
+    background: $color-white;
+
+    h5 {
+        display: block;
+        font-size: rem(14px);
+        color: $color-grey-med-3;
+    }
+
+    p {
+        font-size: rem(12px);
+        line-height: rem(20px);
+        color: $color-grey-med-3;
+    }
+}
+
+.cnt-two-col__content > .disclaimer {
+    .page-wrap {
+        padding: 0;
+    }
+}

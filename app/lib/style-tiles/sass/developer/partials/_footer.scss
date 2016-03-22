@@ -1,47 +1,62 @@
-body > footer, .cnt-two-col__content footer {
-    
-    //.cnt-two-col__content footer is for api docs that has fixed pos left nav.
-
-    padding: 20px 0 50px;
+body > footer, .cnt-two-col__content > footer {
+    padding-top: 50px;
     position: relative;
     z-index: 5;
     background: $color-white;
-    color: $color-black; 
-    text-align: center;
+
+    h6 {
+        font-size: rem(14px);
+        font-weight: 400;
+        color: $color-grey-med-3;
+    }
 
     .page-wrap {
-        display: block;
-    }
+        @include flexbox();
+        @include flex-wrap(wrap);
 
-    a {
-        margin: 0 20px;
-        text-decoration: none;
-
-        @include breakpoint($SIZE_TABLET){
-            line-height: rem(30px);
+        @include breakpoint($SIZE_MOBILE){
+            padding: 0 30px;
         }
-    }
 
-    nav {
-        &:first-child {
-            margin-bottom: 33px;
+        @include breakpoint($SIZE_MOBILE_SMALL){
+            padding: 0;
+        }
 
-            a {
-                font-weight: 600;
-                white-space: nowrap;
+        & > nav {
+            margin-bottom: 55px;
+            @include flex-grow(1);
+
+            @include breakpoint($SIZE_MOBILE){
+                width: 50%;
             }
-        }
 
-        &.disclaimer {
-
-            span {
-                margin-right: 20px;
-                color: $color-grey-med-3;
+            @include breakpoint($SIZE_MOBILE_SMALL){
+                width: 100%;
+                text-align: center;
             }
 
             a {
-                color: $color-grey-med-3;
-                text-decoration: underline;
+                margin-bottom: 6px;
+                display: block;
+            }
+        }
+    }
+}
+
+.cnt-two-col__content > footer {
+    padding-top: 15px;
+
+    .page-wrap {
+        padding: 0;
+
+        & > nav {
+            @include breakpoint($SIZE_COL_MOBILE_FOOTER_BREAK){
+                width: 50%;
+            }
+
+            @include breakpoint($SIZE_MOBILE_SMALL){
+                width: 100%;
+                text-align: center;
             }
         }
     }

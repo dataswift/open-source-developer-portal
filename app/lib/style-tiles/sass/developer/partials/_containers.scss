@@ -84,7 +84,7 @@ $slide-time: 0.3s;
         margin-right: -40px;
     }
 
-    .page-wrap {
+    & > .page-wrap {
         max-width: none;
         display: -webkit-flex;
         display: -ms-flexbox;
