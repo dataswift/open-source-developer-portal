@@ -7,15 +7,15 @@ description: "Programmatically send bank transfers with our developer API."
 <nav class="big-grid-nav">
   <a href="/guides/send-money" class="icon-guides-send">
       <h3>Send money to your users</h3>
-      <p>Send ACH transfers. Choose custom (white label) onboarding or Dwolla Direct account creation.</p>
+      <p>Send bank transfers. Choose custom (white label) onboarding or Dwolla Direct account creation.</p>
   </a>
   <a href="/guides/receive-money" class="icon-guides-receive">
       <h3>Receive money from your users</h3>
-      <p>Accept ACH transfers. Covers both white label and Dwolla Direct integrations.</p>
+      <p>Accept bank transfers. Covers both white label and Dwolla Direct integrations.</p>
   </a>
   <a href="/guides/transfer-money-between-users" class="icon-guides-transfer">
-      <h3>Transfer money betwen users</h3>
-      <p>Facilitate white label ACH transfers between two distinct parties, e.g. for marketplace applications that connect buyers with sellers for bank to bank payments.</p>
+      <h3>Transfer money between users</h3>
+      <p>Facilitate white label bank transfers between two distinct parties, e.g. for marketplace applications that connect buyers with sellers for bank to bank payments.</p>
   </a>
   <a href="/guides/webhooks" class="icon-guides-web-hooks">
       <h3>Webhooks</h3>
