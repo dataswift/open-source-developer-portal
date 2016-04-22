@@ -12,7 +12,11 @@ description: "Programmatically verify a bank to initiate a bank transfer."
 ## Instant account verification (IAV)
 Instant Account Verification (IAV) gives you the ability to add and verify a Customer's bank account in a matter of seconds, which is much faster than the multiple days required for micro-deposits to transfer and then be verified by the Customer. Your application will utilize the client-side `dwolla.js` JavaScript library to render the IAV flow within a container in your application. 
 
-### Generate a single-use IAV token for a Customer
+<ol class="alerts">
+    <li class="alert icon-alert-info">This article will walk through IAV functionality using dwolla.js which is only available for white label integrations. For more information about Dwolla White Label, please <a href="https://www.dwolla.com/contact">contact sales</a>.</li>
+</ol>
+
+### Step 1: Generate a single-use IAV token for a Customer
 To initiate the IAV flow, dwolla.js requires a single-use IAV token for a Customer. Your server initiates a POST request to Dwolla, specifying for which Customer you want to add/verify a bank account. Dwolla will respond with a non-expiring single-use `token`. This IAV token will be sent to the client and used to authenticate the HTTP request asking Dwolla to render the IAV flow. 
 
 ```raw
@@ -33,24 +37,43 @@ HTTP/1.1 200 OK
 }
 ```
 ```ruby
-# coming soon
+customer_url = 'https://api-uat.dwolla.com/customers/06b51d56-7a6c-4535-a0cc-2c0106f56ba6'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = account_token.post "#{customer_url}/iav-token"
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.get_customer_iav_token(customer_url)
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.getCustomerIavToken({id: '06b51d56-7a6c-4535-a0cc-2c0106f56ba6'})
-    .then(function(data) {
-       console.log(data.obj.token);
-    });
-});
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api-uat.dwolla.com/customers/06b51d56-7a6c-4535-a0cc-2c0106f56ba6';
+
+accountToken
+  .post(`${customerUrl}/iav-token`)
+  .then(function(res) {
+    res.body.token; // => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
+  });
 ```
 ```python
-# coming soon
+customer_url = 'http://api.dwolla.com/customers/06b51d56-7a6c-4535-a0cc-2c0106f56ba6'
+customers_api = dwollaswagger.CustomersApi(client)
+
+token = customers_api.get_customer_iav_token(customer_url)
+print token['token'] # => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
 ```
 ```php
-// coming soon
+<?php
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
+
+$fsToken = $customersApi->getCustomerIavToken("https://api-uat.dwolla.com/customers/06b51d56-7a6c-4535-a0cc-2c0106f56ba6");
+$fsToken->token; # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+?>
 ```
 
-### Include dwolla.js and add container for IAV
+### Step 2: Include dwolla.js and add container for IAV
 We'll begin the client-side implementation by including dwolla.js in the HEAD of our HTML page. Notice, we are utilizing development version 1 of dwolla.js, alternatively you can include the minified version of `<script src="https://cdn.dwolla.com/1/dwolla.min.js"></script>`. 
 
 ```htmlnoselect
@@ -70,7 +93,7 @@ Next, add the container to the body of the page where you want to render the IAV
 ```
 
 
-### Configure and call JavaScript function to start IAV
+### Step 3: Configure and call JavaScript function to start IAV
 Now that you have initialized dwolla.js on your page you can configure and create the function that will call `dwolla.iav.start()`. For simplicity of this example, use jQuery and call the function to start IAV when the Customer clicks the "Add Bank" button on your page. To test IAV in the sandbox environment you will use the `dwolla.configure` helper function and pass in the value of `uat`. As you can see below, `dwolla.iav.start` takes three arguments: the iavContainer element where IAV will render, a string value of the single-use IAV token, and a callback function that will handle any error or response.
 
 
@@ -88,7 +111,7 @@ $('#start').click(function() {
 
 In order to facilitate testing IAV in the Sandbox, we allow you to specify any value in the IAV text field inputs to proceed through the flow.
 
-### Handle the error or response
+### Step 4: Handle the error or response
 The callback function (err, res) allows you to determine if there is an error with the request (i.e. `InvalidIavToken`) or if the response was successful.
 
 * If there is an error: generate a new IAV token and re-attempt the IAV flow.

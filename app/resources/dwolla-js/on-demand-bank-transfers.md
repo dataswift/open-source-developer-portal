@@ -17,3 +17,11 @@ This is an account level setting for a white label partner. When enabled, the en
 ![Screenshot of On-demand](/images/on-demand-iav.png "On-demand bank transfers")
 
 Once you have collected all of the authorizations required for a bank transfer, including the additional authorization from the Customer for on-demand transfers, you will be able to <a href="https://docsv2.dwolla.com/#initiate-transfer">initiate transfers</a> for variable amounts and dates.
+
+* * *
+
+**View:**
+
+*   [Dwolla.js - Overview](/resources/dwolla-js.html)
+*   [Add a bank account](/resources/dwolla-js/add-a-bank-account.html)
+*   [Instant account verification](/resources/dwolla-js/instant-account-verification.html)
