@@ -11,8 +11,32 @@ description: "Quickly integrate instant bank verification for developers using t
 
 ## Add a bank account
 
-### Generate a funding sources token
-Before utilizing dwolla.js to add a new funding source, you need to generate a funding sources token. Your server initiates a POST request to Dwolla, specifying for which Dwolla account or white label Customer you want to add a bank account. Dwolla will respond with a funding sources `token` that expires in an hour. This token will be sent to the client and used to authenticate the HTTP request asking Dwolla to add a new funding source. 
+Using dwolla.js, securely transmit sensitive data (bank account and routing number) to Dwolla without the data passing through your server. This resource guide will walk you through the process of generating a funding sources token, collecting the user's bank account information, and calling a JavaScript function to send this data to Dwolla. When you collect and submit the user's bank account information, dwolla.js has built-in validation that will trigger an error if any of the required fields are invalid.
+
+### dwolla.fundingSources.create()
+
+Param | Type | Value
+----------|-------------|-------------
+funding-sources-token | string | A funding sources token generated on your server.
+params | object | An object containing params to create a funding source. Contains keys: `routingNumber`, `accountNumber`, `type`, and `name`. See example below. <br> `routingNumber` represents a string value nine digit routing number. <br> `accountNumber` represents a string value account number. <br> `type` represents a string value of either `checking` or `savings`. <br> `name` represents a string value identifying name of the user's bank.  
+callback | function | A callback function that handles the response from Dwolla.
+
+#### Example 
+
+```javascriptnoselect
+dwolla.fundingSources.create('1zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
+          routingNumber: getVal('routingNumber'),
+          accountNumber: getVal('accountNumber'),
+          type: getVal('type'),
+          name: getVal('name')
+        }, function(err, res) {
+    console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
+  })
+})
+```
+
+### Step 1: Generate a funding sources token
+Before calling a function within dwolla.js to add a new funding source, you need to generate a funding sources token. Your server initiates a POST request to Dwolla, specifying for which Dwolla account or white label Customer you want to add a bank account. Dwolla will respond with a funding sources `token` that expires in an hour. This token will be sent to the client and used to authenticate the HTTP request asking Dwolla to add a new funding source. 
 
 ```raw
 curl -X POST 
@@ -32,34 +56,44 @@ HTTP/1.1 200 OK
 }
 ```
 ```ruby
-# coming soon
+customer_url = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = account_token.post "#{customer_url}/funding-sources-token"
+customer.token # => "Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.create_funding_sources_token_for_customer(customer_url)
+customer.token # => "Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.createFundingSourcesTokenForCustomer({id: '247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'})
-    .then(function(data) {
-       console.log(data.obj.token);
-    });
-});
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api-uat.dwolla.com/customers/28138609-30ff-4607-b28c-4a3872f8fd4a';
+
+accountToken
+  .post(`${customerUrl}/funding-sources-token`)
+  .then(function(res) {
+    res.body.token; // => 'Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg'
+  });
 ```
 ```python
-# coming soon
+customer_url = 'http://api.dwolla.com/customers/28138609-30ff-4607-b28c-4a3872f8fd4a'
+customers_api = dwollaswagger.CustomersApi(client)
+
+token = customers_api.create_funding_sources_token_for_customer(customer_url)
+print token['token'] # => 'Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg'
 ```
 ```php
-// coming soon
+<?php
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
+
+$fsToken = $customersApi->createFundingSourcesTokenForCustomer("https://api-uat.dwolla.com/customers/28138609-30ff-4607-b28c-4a3872f8fd4a");
+$fsToken->token; # => "Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg"
+?>
 ```
 
-### Include dwolla.js and add form to collect bank account information
-Begin the client-side implementation by including dwolla.js in the HEAD of your HTML page. Please note that the example below uses development version 1 of dwolla.js. You could also use the minified version of `<script src="https://cdn.dwolla.com/1/dwolla.min.js"></script>`.
-
-```htmlnoselect
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdn.dwolla.com/1/dwolla.js"></script>
-</head>
-```
-
-Next, add the form to the body of the page where you want to collect the user's bank account information.
+### Step 2: Add form to collect bank account information
+You'll then add a form to the body of the page where you want to collect the user's bank account information. 
 
 ```htmlnoselect
 <form>
@@ -91,29 +125,10 @@ Next, add the form to the body of the page where you want to collect the user's 
 ```
 
 
-### Configure and call JavaScript function to create a new funding source
-Once you initialize `dwolla.js` on your page, you can configure and create the function that will call `dwolla.fundingSources.create()`. For this example, jQuery is used to call the function that creates a funding source when the user clicks the "Add Bank" button on your page. To test in the sandbox environment, use the `dwolla.configure()` helper function and pass in the value of `uat`. Additional configuration options are available below. 
+### Step 3: Configure and call JavaScript function to create a new funding source
+Assuming `dwolla.js` is already included and configured on your page, you will create the function that will call `dwolla.fundingSources.create()`. For this example, jQuery is used to call the function that creates a funding source when the user clicks the "Add Bank" button on your page. To test in the sandbox environment, use the `dwolla.configure()` helper function and pass in the value of `uat`. 
 
-In our example, `dwolla.fundingSources.create()` takes three arguments: a string value of the funding sources token, JavaScript object containing bank account information entered by the user, and a callback function that will handle any error or response.
-
-#### Additional configuration options
-There are 2 config values you can manually set:
-
-- `dwolla.config.dwollaUrl` (default: `https://www.dwolla.com`)
-- `dwolla.config.apiUrl` (default: `https://api.dwolla.com`)
-
-Or you can use the `dwolla.configure` helper for preset configurations:
-
-```javascriptnoselect
-//UAT
-// dwolla.config.dwollaUrl = 'https://uat.dwolla.com'
-// dwolla.config.apiUrl = 'https://api-uat.dwolla.com'
-dwolla.configure('uat')
-//Production
-// dwolla.config.dwollaUrl = 'https://www.dwolla.com'
-// dwolla.config.apiUrl = 'https://api.dwolla.com'
-dwolla.configure('prod') // default
-```
+In our example, `dwolla.fundingSources.create()` takes three arguments: a string value of the funding sources token, JavaScript object containing bank account information entered by the user, and a callback function that will handle any error or response. 
 
 ```javascriptnoselect
 <script type="text/javascript">
@@ -142,10 +157,18 @@ function callback(err, res) {
 }
 ```
 
-### Callback function - handling the error or response
+### Step 4: Callback function - handling the error or response
 The callback function (err, res) allows you to determine if there is an error with the request (e.g. `Routing number invalid.`) or if the response was successful. In the example above, we are displaying any error or response within a `logs` container on our page.
 
 * If there is an error: Display the error to the user to have them correct any fields, and have them re-attempt to add their bank.
   * Example: `{"error":{"code":"ValidationError","message":"Validation error(s) present. See embedded errors list for more details.","_embedded":{"errors":[{"code":"Invalid","message":"Routing number invalid.","path":"/routingNumber"}]}}}`
 * If successful: You will receive a JSON response that includes a link to the newly attached funding source. 
   * Example:  `{"error":null,"response":{"_links":{"funding-source":{"href":"https://api-uat.dwolla.com/funding-sources/746d5c93-acb9-4826-a9c1-78ecf16401a6"}}}}`
+
+* * *
+
+**View:**
+
+*   [Dwolla.js - Overview](/resources/dwolla-js.html)
+*   [Instant account verification](/resources/dwolla-js/instant-account-verification.html)
+*   [On-demand bank transfers](/resources/dwolla-js/on-demand-bank-transfers.html)
