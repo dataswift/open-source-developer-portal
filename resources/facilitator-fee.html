@@ -51,7 +51,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
       }
    ]
 }
-</code></pre></div></div><h3>Retrieve fees charged on a transfer</h3><p>Once a transfer is successfully created, subsequent transfers will be created that represent the associated fees on that transfer. These fees will not be charged until the transfer processes successfully to the destination user. In the event of a <code>failed</code> or <code>cancelled</code> payment no fees will be charged.</p><h4>Example Get a transfer’s fees request</h4><div class="code-snippet js-code-snippet language-nohide"><button class="btn alternative">copy</button><div class="code-snippet__cnt highlight"><pre><code class=language-nohide data-lang=nohide>GET https://api-uat.dwolla.com/transfers/83eb4b5e-a5d9-e511-80de-0aa34a9b2388/fees
+</code></pre></div></div><h3>Retrieve fees charged on a transfer</h3><p>Once a transfer is successfully created, subsequent transfers will be created that represent the associated fees on that transfer. These fees will not be charged until the transfer processes successfully to the destination user. In the event of a <code>failed</code> or <code>cancelled</code> payment no fees will be charged.</p><h4>Example Get a transfer’s fees request:</h4><div class="code-snippet js-code-snippet language-nohide"><button class="btn alternative">copy</button><div class="code-snippet__cnt highlight"><pre><code class=language-nohide data-lang=nohide>GET https://api-uat.dwolla.com/transfers/83eb4b5e-a5d9-e511-80de-0aa34a9b2388/fees
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
