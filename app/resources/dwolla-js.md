@@ -34,7 +34,7 @@ dwolla.configure('prod');
 
 * * *
 
-**View:**
+#### View:
 
 *   [Add a bank account](/resources/dwolla-js/add-a-bank-account.html)
 *   [Instant account verification](/resources/dwolla-js/instant-account-verification.html)

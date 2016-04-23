@@ -20,7 +20,7 @@ Once you have collected all of the authorizations required for a bank transfer, 
 
 * * *
 
-**View:**
+#### View:
 
 *   [Dwolla.js - Overview](/resources/dwolla-js.html)
 *   [Add a bank account](/resources/dwolla-js/add-a-bank-account.html)

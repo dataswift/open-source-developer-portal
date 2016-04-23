@@ -167,7 +167,7 @@ The callback function (err, res) allows you to determine if there is an error wi
 
 * * *
 
-**View:**
+#### View:
 
 *   [Dwolla.js - Overview](/resources/dwolla-js.html)
 *   [Instant account verification](/resources/dwolla-js/instant-account-verification.html)

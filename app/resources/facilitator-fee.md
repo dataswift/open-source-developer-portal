@@ -82,7 +82,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 ### Retrieve fees charged on a transfer
 Once a transfer is successfully created, subsequent transfers will be created that represent the associated fees on that transfer. These fees will not be charged until the transfer processes successfully to the destination user. In the event of a `failed` or `cancelled` payment no fees will be charged.
 
-#### Example Get a transfer’s fees request
+#### Example Get a transfer’s fees request:
 ```noselect
 GET https://api-uat.dwolla.com/transfers/83eb4b5e-a5d9-e511-80de-0aa34a9b2388/fees
 Accept: application/vnd.dwolla.v1.hal+json

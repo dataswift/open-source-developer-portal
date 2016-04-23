@@ -215,4 +215,8 @@ print($newCustomer->verified); # => false
 
 Our Customer is created successfully, but there is a verification status of “document”. Continue reading for instructions on handling Customer verification statuses and guidelines for providing additional information to verify this type of Customer.
 
-View: [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)
+* * *
+
+#### View:
+
+*   [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)

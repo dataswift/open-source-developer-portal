@@ -170,4 +170,8 @@ print($newCustomer->verified); # => true
 
 Our Customer was successfully verified! Other Customers, however, may require additional verification. Continue reading for instructions on providing additional information to verify these Customers.
 
-View: [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)
+* * *
+
+#### View:
+
+*   [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)

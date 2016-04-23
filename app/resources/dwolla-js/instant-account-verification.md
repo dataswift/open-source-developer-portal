@@ -16,7 +16,7 @@ For white label partners, `dwolla.js` has the added function of facilitating Ins
     <li class="alert icon-alert-info">Read more about how to use dwolla.js to quickly add and verify a white label Customer’s bank account in the <a href="/resources/funding-source-verification/instant-account-verification.html">funding source verification</a> resource article.</li>
 </ol>
 
-#### dwolla.iav.start()
+### dwolla.iav.start()
 
 Param | Type | Value
 ----------|-------------|--------------

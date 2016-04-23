@@ -12,4 +12,9 @@ Before a Dwolla account or white label Customer is eligible to transfer money fr
 
 In this article we use the example of verifying a white label Customer's bank account and detail the interaction between Dwolla, your application, and the white label Customer.
 
-View: [Micro-deposit verification](/resources/funding-source-verification/micro-deposit-verification.html) or [Instant account verification](/resources/funding-source-verification/instant-account-verification.html)
+* * *
+
+#### View:
+
+*   [Micro-deposit verification](/resources/funding-source-verification/micro-deposit-verification.html)
+*   [Instant account verification](/resources/funding-source-verification/instant-account-verification.html)

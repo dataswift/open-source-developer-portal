@@ -17,15 +17,21 @@ First, you should have [an active webhook subscription](/guides/webhooks/).  Inf
 
 ## Quick overview
 
-* Personal verified Customer
+* [Personal verified Customer](/resources/customer-verification/personal-verified-customers.html)
   * Create a verified personal Customer
   * Check the status of a the personal Customer
-* Business verified Customer
+* [Business verified Customer](/resources/customer-verification/business-verified-customers.html)
   * Create a verified personal Customer
   * Check the status of a the personal Customer
-* Handling verification statuses
+* [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)
   * If necessary, `retry` verification
   * If necessary, upload a `document`
   * Status of `suspended`
 
-View: [Personal verified Customers](/resources/customer-verification/personal-verified-customers.html), [Business verified Customers](/resources/customer-verification/business-verified-customers.html), or [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)
+* * *
+
+#### View:
+
+*   [Personal verified Customers](/resources/customer-verification/personal-verified-customers.html)
+*   [Business verified Customers](/resources/customer-verification/business-verified-customers.html)
+*   [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)

@@ -14,4 +14,9 @@ A key difference between Traditional accounts and White Label Customer accounts 
 
 Regardless of whether your application interacts with Traditional accounts or White Label Customer accounts, it’s important to note that in a transfer of money between two parties at least one account must be Customer Identity Program (CIP) verified. It’s your decision about which party completes this process, based on your business model, and you may want to have both parties complete CIP verification. In addition, we also require CIP verification as a part of a customer holding funds in the Dwolla network. 
 
-View: [Traditional account](/resources/account-types/traditional-accounts.html) or [White Label account](/resources/account-types/white-label-accounts.html) types
+* * *
+
+#### View:
+
+*   [Traditional account types](/resources/account-types/traditional-accounts.html)
+*   [White Label account types](/resources/account-types/white-label-accounts.html)

@@ -118,3 +118,9 @@ The callback function (err, res) allows you to determine if there is an error wi
 	* Example: `{code: "InvalidIavToken", message: "Invalid IAV token." }`
 * If successful: You will receive a JSON response that includes a link to the newly created and verified funding source. You can then pass this value to either initiate a transfer or store the created resource in your database to be used later.
 	* Example:  `{"_links":{"funding-source":{"href":"https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"}}}`
+
+* * *
+
+#### View:
+
+*   [Dwolla.js - Instant account verification](/resources/dwolla-js/instant-account-verification.html)

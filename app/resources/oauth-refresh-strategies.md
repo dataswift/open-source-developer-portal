@@ -16,4 +16,10 @@ Dwolla’s implementation of the <a href="https://tools.ietf.org/html/rfc6749" t
 
 There are two recommended strategies for managing short-lived access tokens. If your application relies heavily on calling the Dwolla API several times in a day, we recommend setting up a cron job to refresh authorization constantly during the day. However, if for example, your application only calls Dwolla’s API once a day or once a month, we recommend refreshing your token pair prior to making any API call.
 
-View: [Preemptively refresh authorization](/resources/oauth-refresh-strategies/preemptively-refresh.html), [Refresh on-demand](/resources/oauth-refresh-strategies/refresh-on-demand.html), or [Refresh best practices](/resources/oauth-refresh-strategies/refresh-best-practices.html)
+* * *
+
+#### View:
+
+*   [Preemptively refresh authorization](/resources/oauth-refresh-strategies/preemptively-refresh.html)
+*   [Refresh on-demand](/resources/oauth-refresh-strategies/refresh-on-demand.html)
+*   [Refresh best practices](/resources/oauth-refresh-strategies/refresh-best-practices.html)
