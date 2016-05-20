@@ -10,7 +10,7 @@ description: "Quickly integrate instant bank verification for developers using t
 # Dwolla.js
 
 ## Using Dwolla.js for Instant Account Verification (IAV)
-For white label partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function `dwolla.iav.start()`, the white label partner application can render the IAV flow within a specified container. `dwolla.iav.start()` allows for customization through configurable options such as: `stylesheets` which represents a list of CSS stylesheets for styling the IAV flow, and `fallbackToMicrodeposits` which gives your user the option fallback to selecting the micro-deposit method of bank verification within the IAV flow.
+For white label partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function `dwolla.iav.start()`, the white label partner application can render the IAV flow within a specified container. `dwolla.iav.start()` allows for customization through configurable options such as: `stylesheets` which represents a list of CSS stylesheets for styling the IAV flow, and `fallbackToMicroDeposits` which gives your user the option fallback to selecting the micro-deposit method of bank verification within the IAV flow.
 
 <ol class="alerts">
     <li class="alert icon-alert-info">Read more about how to use dwolla.js to quickly add and verify a white label Customer’s bank account in the <a href="/resources/funding-source-verification/instant-account-verification.html">funding source verification</a> resource article.</li>
@@ -21,10 +21,10 @@ For white label partners, `dwolla.js` has the added function of facilitating Ins
 Param | Type | Value
 ----------|-------------|--------------
 iav-token | string | A single use IAV token [generated on your server](https://docsv2.dwolla.com/#generate-an-iav-token).
-options | object | An object containing configurable options. Contains keys: `container`, `stylesheets`, and `fallbackToMicrodeposits`. See example below. <br> `container` represents a string value container element where IAV will render. <br> `stylesheets` represents an array list of stylesheets to load IAV styles. <br> `fallbackToMicrodeposits` represents a boolean `true` or `false` value which determines if a fallback selection screen appears for choosing a bank verification method.
+options | object | An object containing configurable options. Contains keys: `container`, `stylesheets`, and `fallbackToMicroDeposits`. See example below. <br> `container` represents a string value container element where IAV will render. <br> `stylesheets` represents an array list of stylesheets to load IAV styles. <br> `fallbackToMicroDeposits` represents a boolean `true` or `false` value which determines if a fallback selection screen appears for choosing a bank verification method.
 callback | function | A callback function that handles the response from Dwolla.
 
-#### Example 
+#### Example
 
 ```javascriptnoselect
 dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
@@ -33,7 +33,7 @@ dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
       'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
       'http://myapp.com/iav/customStylesheet.css'
     ],
-    fallbackToMicrodeposits: true
+    fallbackToMicroDeposits: true
   }, function(err, res) {
     log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
   })
@@ -42,12 +42,12 @@ dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
 
 ### Customization
 #### Enable fallback to micro-deposits
-If your application sets the `fallbackToMicrodeposits` option to `true`, a fallback selection screen will appear if a.) the user is unable to locate their bank on the bank search screen, or b.) there was an issue with the initial IAV flow. This selection screen asks the user to choose from either the traditional micro-deposit method of bank verification or re-attempt the IAV flow. 
+If your application sets the `fallbackToMicroDeposits` option to `true`, a fallback selection screen will appear if a.) the user is unable to locate their bank on the bank search screen, or b.) there was an issue with the initial IAV flow. This selection screen asks the user to choose from either the traditional micro-deposit method of bank verification or re-attempt the IAV flow.
 
 ![Screenshot of micro-deposit fallback](/images/microdeposits-fallback.png "fallback to micro-deposits")
 
 #### IAV styles
-Dwolla provides a list of CSS classes available for styling certain elements of the IAV flow. These elements can be easily customized to match the look and feel of your application, and are included within the `options` JavaScript object of the function dwolla.iav.start(). You can specify one or many stylesheets as a list within the `stylesheets` attribute. By default, the elements within your specified container are responsive to any change in screen size. 
+Dwolla provides a list of CSS classes available for styling certain elements of the IAV flow. These elements can be easily customized to match the look and feel of your application, and are included within the `options` JavaScript object of the function dwolla.iav.start(). You can specify one or many stylesheets as a list within the `stylesheets` attribute. By default, the elements within your specified container are responsive to any change in screen size.
 
 ##### Demo Dwolla.js and IAV customization <a href="https://www.dwolla.com/dwollajs-bank-verification">here.</a>
 
