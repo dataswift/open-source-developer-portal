@@ -8,7 +8,7 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 
 <section class="change-log">
 	<h1>Upcoming</h1>
-	<h3>2016-05-23</h3>
+	<h3>2016-06-01</h3>
 	<h4><em>CHANGED/DEPRECATED</em></h4>
 	<ul class="bullet">
 	    <li>Change in functionality for removing a funding source in API v2. The method for <a href="https://docsv2.dwolla.com/#remove-a-funding-source">removing a funding source</a> 
