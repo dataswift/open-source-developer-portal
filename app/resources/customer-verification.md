@@ -21,8 +21,8 @@ First, you should have [an active webhook subscription](/guides/webhooks/).  Inf
   * Create a verified personal Customer
   * Check the status of a the personal Customer
 * [Business verified Customer](/resources/customer-verification/business-verified-customers.html)
-  * Create a verified personal Customer
-  * Check the status of a the personal Customer
+  * Create a verified business Customer
+  * Check the status of a the business Customer
 * [Handling verification statuses](/resources/customer-verification/handling-verification-statuses.html)
   * If necessary, `retry` verification
   * If necessary, upload a `document`

@@ -27,9 +27,9 @@ Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
 {
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
   "address1": "221 Corrected Address St.",
@@ -43,9 +43,9 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 ```
 ```ruby
 retry_customer = DwollaSwagger::CustomersApi.create({:body => {
-      "firstName" => "Bill",
-       "lastName" => "Bibbit",
-          "email" => "bbibbit@nomail.net",
+      "firstName" => "John",
+       "lastName" => "Doe",
+          "email" => "johndoe@nomail.net",
       "ipAddress" => "10.10.10.10",
            "type" => "personal",
        "address1" => "221 Corrected Address St.",
@@ -62,9 +62,9 @@ p retry_customer # => https://api.dwolla.com/customers/132681FA-1B4D-4181-8FF2-6
 ```javascript
 dwolla.then(function(dwolla) {
     dwolla.customers.updateCustomer({
-        "firstName": "Bill",
-        "lastName": "Bibbit",
-        "email": "bbibbit@nomail.net",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "johndoe@nomail.net",
         "ipAddress": "10.10.10.10",
         "type": "personal",
         "address1": "221 Corrected Address St.",
@@ -84,9 +84,9 @@ dwolla.then(function(dwolla) {
 customers_api = dwollaswagger.CustomersApi(client)
 
 retry_customer = customers_api.create(body = {
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
   "address1": "221 Corrected Address St.",
@@ -105,9 +105,9 @@ print(retry_customer) # => https://api.dwolla.com/customers/132681FA-1B4D-4181-8
 $customersApi = DwollaSwagger\CustomersApi($apiClient);
 
 $retryCustomer = $customersApi->create(array (
-  'firstName' => 'Bill',
-  'lastName' => 'Bibbit',
-  'email' => 'bbibbit@nomail.net',
+  'firstName' => 'John',
+  'lastName' => 'Doe',
+  'email' => 'johndoe@nomail.net',
   'ipAddress' => '10.10.10.10',
   'type' => 'personal',
   'address1' => '221 Corrected Address St.',

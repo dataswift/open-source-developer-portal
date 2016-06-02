@@ -22,9 +22,9 @@ Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
 {
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
   "address1": "99-99 3rd St.",
@@ -40,9 +40,9 @@ Location: https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
 ```
 ```ruby
 new_customer = DwollaSwagger::CustomersApi.create({:body => {
-      "firstName" => "Bill",
-       "lastName" => "Bibbit",
-          "email" => "bbibbit@nomail.net",
+      "firstName" => "John",
+       "lastName" => "Doe",
+          "email" => "johndoe@nomail.net",
       "ipAddress" => "10.10.10.10",
            "type" => "personal",
        "address1" => "99-99 3rd St.",
@@ -62,9 +62,9 @@ p new_customer # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E35
 customers_api = dwollaswagger.CustomersApi(client)
 
 new_customer = customers_api.create(body = {
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
   "address1": "99-99 3rd St.",
@@ -82,9 +82,9 @@ print(new_customer) # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB9
 $customersApi = DwollaSwagger\CustomersApi($apiClient);
 
 $newCustomer = $customersApi->create(array (
-  'firstName' => 'Bill',
-  'lastName' => 'Bibbit',
-  'email' => 'bbibbit@nomail.net',
+  'firstName' => 'John',
+  'lastName' => 'Doe',
+  'email' => 'johndoe@nomail.net',
   'ipAddress' => '10.10.10.10',
   'type' => 'personal',
   'address1' => '99-99 3rd St.',
@@ -135,9 +135,9 @@ HTTP 200 OK
     }
   },
   "id": "132681FA-1B4D-4181-8FF2-619CA46235B1",
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "type": "personal",
   "status": "verified",
   "created": "2015-09-29T19:47:28.920Z"

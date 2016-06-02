@@ -22,9 +22,9 @@ Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
 {
-  "firstName": "Elizabeth",
-  "lastName": "Warren",
-  "email": "liz@nomail.com",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "janedoe@nomail.com",
   "ipAddress": "10.10.10.10",
   "type": "business",
   "address1": "1234 Main St.",
@@ -36,7 +36,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
   "phone": "5152345678",
   "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
   "businessType": "llc",
-  "businessName":"Liz Corp",
+  "businessName":"Jane Corp",
   "ein":"12-3456789"
 }
 
@@ -45,9 +45,9 @@ Location: https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
 ```
 ```ruby
 new_customer = DwollaSwagger::CustomersApi.create({:body => {
-      "firstName" => "Elizabeth",
-       "lastName" => "Warren",
-          "email" => "liz@nomail.com",
+      "firstName" => "Jane",
+       "lastName" => "Doe",
+          "email" => "janedoe@nomail.com",
       "ipAddress" => "10.10.10.10",
            "type" => "business",
        "address1" => "1234 Main St.",
@@ -59,7 +59,7 @@ new_customer = DwollaSwagger::CustomersApi.create({:body => {
           "phone" => "5152345678",
           "businessClassification" => "9ed3f677-7d6f-11e3-96a2-5404a6144203",
           "businessType" => "llc",
-          "businessName" => "Liz Corp",
+          "businessName" => "Jane Corp",
           "ein" => "12-3456789"
 }})
 
@@ -68,9 +68,9 @@ p new_customer # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E35
 ```javascript
 dwolla.then(function(dwolla) {
   dwolla.customers.create({
-      "firstName": "Elizabeth",
-      "lastName": "Warren",
-      "email": "liz@nomail.com",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "janedoe@nomail.com",
       "ipAddress": "10.10.10.10",
       "type": "business",
       "address1": "1234 Main St.",
@@ -82,7 +82,7 @@ dwolla.then(function(dwolla) {
       "phone": "3478589191",
       "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
       "businessType": "llc",
-      "businessName": "Liz Corp",
+      "businessName": "Jane Corp",
       "ein": "12-3456789"
     })
     .then(function(data) {
@@ -95,9 +95,9 @@ dwolla.then(function(dwolla) {
 customers_api = dwollaswagger.CustomersApi(client)
 
 new_customer = customers_api.create(body = {
-  "firstName": "Elizabeth",
-  "lastName": "Warren",
-  "email": "liz@nomail.com",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane@nomail.com",
   "ipAddress": "10.10.10.10",
   "type": "business",
   "address1": "1234 Main St.",
@@ -109,7 +109,7 @@ new_customer = customers_api.create(body = {
   "phone": "5152345678",
   "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
   "businessType": "llc",
-  "businessName": "Liz Corp",
+  "businessName": "Jane Corp",
   "ein": "12-3456789"
 })
 
@@ -120,9 +120,9 @@ print(new_customer) # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB9
 $customersApi = DwollaSwagger\CustomersApi($apiClient);
 
 $newCustomer = $customersApi->create(array (
-  'firstName' => 'Elizabeth',
-  'lastName' => 'Warren',
-  'email' => 'liz@nomail.com',
+  'firstName' => 'Jane',
+  'lastName' => 'Doe',
+  'email' => 'janedoe@nomail.com',
   'ipAddress' => '10.10.10.10',
   'type' => 'business',
   'address1' => '1234 Main St.',
@@ -134,7 +134,7 @@ $newCustomer = $customersApi->create(array (
   'phone' => '5152345678',
   'businessClassification' => '9ed3f677-7d6f-11e3-96a2-5404a6144203',
   'businessType' => 'llc',
-  'businessName' => 'Liz Corp',
+  'businessName' => 'Jane Corp',
   'ein' => '12-3456789'
 ));
 
@@ -175,9 +175,9 @@ HTTP 200 OK
     }
   },
   "id": "5F8A457F-9883-4598-8449-27C5DC1119C5",
-  "firstName": "Elizabeth",
-  "lastName": "Warren",
-  "email": "liz@nomail.com",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "janedoe@nomail.com",
   "type": "business",
   "status": "document",
   "created": "2016-01-08T20:27:12.340Z"
