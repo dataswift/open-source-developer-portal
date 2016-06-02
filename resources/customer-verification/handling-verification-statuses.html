@@ -12,9 +12,9 @@ Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
 {
-  "firstName": "Bill",
-  "lastName": "Bibbit",
-  "email": "bbibbit@nomail.net",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
   "address1": "221 Corrected Address St.",
@@ -26,9 +26,9 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
   "ssn ": "202-99-1516"
 }
 </code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>retry_customer</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>CustomersApi</span><span class=p>.</span><span class=nf>create</span><span class=p>({</span><span class=ss>:body</span> <span class=o>=&gt;</span> <span class=p>{</span>
-      <span class=s2>"firstName"</span> <span class=o>=&gt;</span> <span class=s2>"Bill"</span><span class=p>,</span>
-       <span class=s2>"lastName"</span> <span class=o>=&gt;</span> <span class=s2>"Bibbit"</span><span class=p>,</span>
-          <span class=s2>"email"</span> <span class=o>=&gt;</span> <span class=s2>"bbibbit@nomail.net"</span><span class=p>,</span>
+      <span class=s2>"firstName"</span> <span class=o>=&gt;</span> <span class=s2>"John"</span><span class=p>,</span>
+       <span class=s2>"lastName"</span> <span class=o>=&gt;</span> <span class=s2>"Doe"</span><span class=p>,</span>
+          <span class=s2>"email"</span> <span class=o>=&gt;</span> <span class=s2>"johndoe@nomail.net"</span><span class=p>,</span>
       <span class=s2>"ipAddress"</span> <span class=o>=&gt;</span> <span class=s2>"10.10.10.10"</span><span class=p>,</span>
            <span class=s2>"type"</span> <span class=o>=&gt;</span> <span class=s2>"personal"</span><span class=p>,</span>
        <span class=s2>"address1"</span> <span class=o>=&gt;</span> <span class=s2>"221 Corrected Address St."</span><span class=p>,</span>
@@ -43,9 +43,9 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 <span class=nb>p</span> <span class=n>retry_customer</span> <span class=c1># =&gt; https://api.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1</span>
 </code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=nx>dwolla</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span><span class=p>(</span><span class=nx>dwolla</span><span class=p>)</span> <span class=p>{</span>
     <span class=nx>dwolla</span><span class=p>.</span><span class=nx>customers</span><span class=p>.</span><span class=nx>updateCustomer</span><span class=p>({</span>
-        <span class=s2>"firstName"</span><span class=p>:</span> <span class=s2>"Bill"</span><span class=p>,</span>
-        <span class=s2>"lastName"</span><span class=p>:</span> <span class=s2>"Bibbit"</span><span class=p>,</span>
-        <span class=s2>"email"</span><span class=p>:</span> <span class=s2>"bbibbit@nomail.net"</span><span class=p>,</span>
+        <span class=s2>"firstName"</span><span class=p>:</span> <span class=s2>"John"</span><span class=p>,</span>
+        <span class=s2>"lastName"</span><span class=p>:</span> <span class=s2>"Doe"</span><span class=p>,</span>
+        <span class=s2>"email"</span><span class=p>:</span> <span class=s2>"johndoe@nomail.net"</span><span class=p>,</span>
         <span class=s2>"ipAddress"</span><span class=p>:</span> <span class=s2>"10.10.10.10"</span><span class=p>,</span>
         <span class=s2>"type"</span><span class=p>:</span> <span class=s2>"personal"</span><span class=p>,</span>
         <span class=s2>"address1"</span><span class=p>:</span> <span class=s2>"221 Corrected Address St."</span><span class=p>,</span>
@@ -63,9 +63,9 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 </code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>customers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>CustomersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
 
 <span class=n>retry_customer</span> <span class=o>=</span> <span class=n>customers_api</span><span class=o>.</span><span class=n>create</span><span class=p>(</span><span class=n>body</span> <span class=o>=</span> <span class=p>{</span>
-  <span class=s>"firstName"</span><span class=p>:</span> <span class=s>"Bill"</span><span class=p>,</span>
-  <span class=s>"lastName"</span><span class=p>:</span> <span class=s>"Bibbit"</span><span class=p>,</span>
-  <span class=s>"email"</span><span class=p>:</span> <span class=s>"bbibbit@nomail.net"</span><span class=p>,</span>
+  <span class=s>"firstName"</span><span class=p>:</span> <span class=s>"John"</span><span class=p>,</span>
+  <span class=s>"lastName"</span><span class=p>:</span> <span class=s>"Doe"</span><span class=p>,</span>
+  <span class=s>"email"</span><span class=p>:</span> <span class=s>"johndoe@nomail.net"</span><span class=p>,</span>
   <span class=s>"ipAddress"</span><span class=p>:</span> <span class=s>"10.10.10.10"</span><span class=p>,</span>
   <span class=s>"type"</span><span class=p>:</span> <span class=s>"personal"</span><span class=p>,</span>
   <span class=s>"address1"</span><span class=p>:</span> <span class=s>"221 Corrected Address St."</span><span class=p>,</span>
@@ -82,9 +82,9 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 <span class=nv>$customersApi</span> <span class=o>=</span> <span class=nx>DwollaSwagger\CustomersApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
 
 <span class=nv>$retryCustomer</span> <span class=o>=</span> <span class=nv>$customersApi</span><span class=o>-&gt;</span><span class=na>create</span><span class=p>(</span><span class=k>array</span> <span class=p>(</span>
-  <span class=s1>'firstName'</span> <span class=o>=&gt;</span> <span class=s1>'Bill'</span><span class=p>,</span>
-  <span class=s1>'lastName'</span> <span class=o>=&gt;</span> <span class=s1>'Bibbit'</span><span class=p>,</span>
-  <span class=s1>'email'</span> <span class=o>=&gt;</span> <span class=s1>'bbibbit@nomail.net'</span><span class=p>,</span>
+  <span class=s1>'firstName'</span> <span class=o>=&gt;</span> <span class=s1>'John'</span><span class=p>,</span>
+  <span class=s1>'lastName'</span> <span class=o>=&gt;</span> <span class=s1>'Doe'</span><span class=p>,</span>
+  <span class=s1>'email'</span> <span class=o>=&gt;</span> <span class=s1>'johndoe@nomail.net'</span><span class=p>,</span>
   <span class=s1>'ipAddress'</span> <span class=o>=&gt;</span> <span class=s1>'10.10.10.10'</span><span class=p>,</span>
   <span class=s1>'type'</span> <span class=o>=&gt;</span> <span class=s1>'personal'</span><span class=p>,</span>
   <span class=s1>'address1'</span> <span class=o>=&gt;</span> <span class=s1>'221 Corrected Address St.'</span><span class=p>,</span>
