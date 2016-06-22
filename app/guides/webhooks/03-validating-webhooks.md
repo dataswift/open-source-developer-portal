@@ -72,7 +72,7 @@ def verify_gateway_signature(proposed_signature, webhook_secret, payload_body):
   import hmac
   from hashlib import sha256
 
-  signature = hmac.new(payload_body, webhook_secret, sha256).hexdigest()
+  signature = hmac.new(webhook_secret, payload_body, sha256).hexdigest()
 
   return True if (signature == proposed_signature) else False
 ```
