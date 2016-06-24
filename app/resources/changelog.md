@@ -7,7 +7,12 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 ---
 
 <section class="change-log">
-	<h1>Upcoming</h1>
+	<h1>Completed</h1>
+	<h3>2016-06-17</h3>
+	<h4><em>ADDED</em></h4>
+	<ul class="bullet">
+	    <li>Release support for an optional <code>Idempotency-Key</code> header on requests to API v2.</li>
+	</ul>
 	<h3>2016-06-01</h3>
 	<h4><em>CHANGED/DEPRECATED</em></h4>
 	<ul class="bullet">
@@ -17,8 +22,6 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 	    <li>A <code>removed</code> querystring request parameter is supplied when listing an <a href="https://docsv2.dwolla.com/#list-an-account39s-funding-sources">Account</a> or <a href="https://docsv2.dwolla.com/#list-a-customer39s-funding-sources">Customer's</a> funding sources. By default, all funding sources are returned from the listing unless the <code>removed</code> request parameter 
 	   	is set to <code>false</code>.
 	</ul>
-	<hr>
-	<h1>Completed</h1>
 	<h3>2016-02-29</h3>
 	<h4><em>DEPRECATED</em></h4>
 	<ul class="bullet">
