@@ -34,7 +34,7 @@
         <h1 class="logo-main"><a href="https://www.dwolla.com">Dwolla</a></h1>
 
           <ul class="nav nav-primary">
-            <li><a href="http://blog.dwolla.com">Blog</a></li>
+            <li><a href="https://www.dwolla.com/updates">Updates</a></li>
             <li><a href="http://help.dwolla.com">Support</a></li>
             <li><a href="https://www.dwolla.com/applications">Log in</a></li>
             <li><a href="https://www.dwolla.com/applications/create" class="btn orange">Get API Key</a></li>
@@ -44,7 +44,7 @@
 
     <div id="wrap">
       <div class="container">
-          
+
 <h2><span>Getting Started</span></h2>
 <h4></h4>
 
@@ -54,7 +54,7 @@
 	<div class="well" style="padding: 8px 0;">
 		<ul class="nav nav-list">
 			<li class="nav-header">
-				Developer Newsletter 
+				Developer Newsletter
 			</li>
 			<li>
 			<!-- Begin MailChimp Signup Form -->
@@ -84,14 +84,14 @@
 			<li class="nav-header">
 				Topics
 			</li>
-			<li 
+			<li
 >
 				<a href="../../../index.html">
 					<i class="icon-screenshot"></i>
 					Getting Started
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../docs/users/account.html" target="_blank">
 					<i class="icon-list-alt"></i>
@@ -104,7 +104,7 @@
 				    API Status
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="http://discuss.dwolla.com/category/api-support" target="_blank">
 					<i class="icon-comment"></i>
@@ -121,42 +121,42 @@
 			<li class="nav-header">
 				Guides
 			</li>
-			<li 
+			<li
 >
 				<a href="white_label.html">
 					<i class="icon-check"></i>
 					White Label: Transfer funds
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="create_application.html">
 					<i class="icon-check"></i>
 					Generate API Credentials
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="receiving_money.html">
 					<i class="icon-check"></i>
 					Accepting Payments
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="sending_money.html">
 					<i class="icon-check"></i>
 					Sending Money
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="masspay.html">
 					<i class="icon-check"></i>
 					Sending Batch Payments
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="facilitator_fee.html">
 					<i class="icon-check"></i>
@@ -170,14 +170,14 @@
 					Off-Site Gateway Checkout
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="sandbox.html">
 					<i class="icon-check"></i>
 					Sandbox: Getting Started
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="using_webhooks.html">
 					<i class="icon-check"></i>
@@ -188,14 +188,14 @@
 			<li class="nav-header">
 				Integration Options
 			</li>
-			<li 
+			<li
 >
 				<a href="../gateway.html">
 					<i class="icon-shopping-cart"></i>
 					Off-Site Gateway
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../auth.html">
 					<i class="icon-user"></i>
@@ -206,60 +206,60 @@
 			<li class="nav-header">
 				Reference
 			</li>
-			<li 
+			<li
 >
 				<a href="direct_limitations.html">
 					<i class="icon-download-alt"></i>
 					Direct Account Limitatons
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="correlate_transactions.html">
 					<i class="icon-download-alt"></i>
 					Correlate Transaction IDs
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="oauth_account_creation.html">
 					<i class="icon-bell"></i>
 					OAuth Account Creation
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../docs/gateway/direct.html">
 					<i class="icon-arrow-right"></i>
 					Dwolla Direct
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../sandbox.html">
 					<i class="icon-hdd"></i>
 					Sandbox
 				</a>
 			</li>
-			
+
 			<li class="nav-header">
 				Tools
 			</li>
-			<li 
+			<li
 >
 				<a href="../sandbox/admin.html">
 					<i class="icon-asterisk"></i>
 					Sandbox Admin
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../testing.html">
 					<i class="icon-road"></i>
 					Reflector Account
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../token.html">
 					<i class="icon-pencil"></i>
@@ -403,7 +403,7 @@ var redirect_uri = &#39;http://localhost:3000/redirect&#39;;
 dwolla.sandbox = true;
 
 /**
- * EXAMPLE 1: (simple example) 
+ * EXAMPLE 1: (simple example)
  *   Create a new standard offsite gateway checkout
  **/
 app.get(&#39;/&#39;, function(req, res) {
@@ -607,7 +607,7 @@ hash = CGI.escape(Base64.encode64(&quot;#{hmac.digest}\n&quot;))
 
   hash = hmac.new(secret, text, sha1)
 
-  # We format the string to exclude the last character which is a newline delimiter. 
+  # We format the string to exclude the last character which is a newline delimiter.
   return binascii.b2a_base64(hashed.digest())[:-1]
 </code></pre>
 <pre><code class="lang-js">var crypto    = require(&#39;crypto&#39;)
@@ -859,9 +859,9 @@ Content-Type: application/json
   &quot;purchaseOrder&quot;: {
         &quot;orderItems&quot;: [
             {
-                &quot;name&quot;: &quot;T-Shirt&quot;, 
-                &quot;description&quot;: &quot;Size: Large - Graphic Tee&quot;, 
-                &quot;quantity&quot;: &quot;1&quot;, 
+                &quot;name&quot;: &quot;T-Shirt&quot;,
+                &quot;description&quot;: &quot;Size: Large - Graphic Tee&quot;,
+                &quot;quantity&quot;: &quot;1&quot;,
                 &quot;price&quot;: &quot;15.00&quot;
             }
         ],
@@ -1096,7 +1096,7 @@ return proposed_signature === hash;
             <li><a href="https://www.dwolla.com/fees">Fees</a></li>
             <li><a href="https://www.dwolla.com/security">Security</a></li>
             <li><a href="https://press.dwolla.com/">Press</a></li>
-            <li><a href="https://blog.dwolla.com/">Blog</a></li>
+            <li><a href="https://www.dwolla.com/updates">Updates</a></li>
             <li><a href="https://jobs.dwolla.com/">Careers</a></li>
           </ul>
           <p>&copy; <script>document.write(new Date().getFullYear())</script> Dwolla Inc. &nbsp;<a href="https://www.dwolla.com/privacy">Privacy</a>
@@ -1109,12 +1109,12 @@ return proposed_signature === hash;
 
 		<script src="../../../assets/js/common.js?v=110"></script>
 
-		
-			
-			
+
+
+
 		<script src="../../../assets/js/dev.js?v=110"></script>
-			
-		
+
+
 
     <!-- Chartbeat -->
 		<script type="text/javascript">
