@@ -34,7 +34,7 @@
         <h1 class="logo-main"><a href="https://www.dwolla.com">Dwolla</a></h1>
 
           <ul class="nav nav-primary">
-            <li><a href="http://blog.dwolla.com">Blog</a></li>
+            <li><a href="https://www.dwolla.com/updates">Updates</a></li>
             <li><a href="http://help.dwolla.com">Support</a></li>
             <li><a href="https://www.dwolla.com/applications">Log in</a></li>
             <li><a href="https://www.dwolla.com/applications/create" class="btn orange">Get API Key</a></li>
@@ -44,7 +44,7 @@
 
     <div id="wrap">
       <div class="container">
-          
+
 <h2><span>Getting Started</span></h2>
 <h4></h4>
 
@@ -54,7 +54,7 @@
 	<div class="well" style="padding: 8px 0;">
 		<ul class="nav nav-list">
 			<li class="nav-header">
-				Developer Newsletter 
+				Developer Newsletter
 			</li>
 			<li>
 			<!-- Begin MailChimp Signup Form -->
@@ -84,14 +84,14 @@
 			<li class="nav-header">
 				Topics
 			</li>
-			<li 
+			<li
 >
 				<a href="../../../index.html">
 					<i class="icon-screenshot"></i>
 					Getting Started
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../docs/users/account.html" target="_blank">
 					<i class="icon-list-alt"></i>
@@ -104,7 +104,7 @@
 				    API Status
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="http://discuss.dwolla.com/category/api-support" target="_blank">
 					<i class="icon-comment"></i>
@@ -121,14 +121,14 @@
 			<li class="nav-header">
 				Guides
 			</li>
-			<li 
+			<li
 >
 				<a href="white_label.html">
 					<i class="icon-check"></i>
 					White Label: Transfer funds
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="create_application.html">
 					<i class="icon-check"></i>
@@ -142,42 +142,42 @@
 					Accepting Payments
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="sending_money.html">
 					<i class="icon-check"></i>
 					Sending Money
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="masspay.html">
 					<i class="icon-check"></i>
 					Sending Batch Payments
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="facilitator_fee.html">
 					<i class="icon-check"></i>
 					Setting Facilitator Fees
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="offsite_gateway.html">
 					<i class="icon-check"></i>
 					Off-Site Gateway Checkout
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="sandbox.html">
 					<i class="icon-check"></i>
 					Sandbox: Getting Started
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="using_webhooks.html">
 					<i class="icon-check"></i>
@@ -188,14 +188,14 @@
 			<li class="nav-header">
 				Integration Options
 			</li>
-			<li 
+			<li
 >
 				<a href="../gateway.html">
 					<i class="icon-shopping-cart"></i>
 					Off-Site Gateway
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../auth.html">
 					<i class="icon-user"></i>
@@ -206,60 +206,60 @@
 			<li class="nav-header">
 				Reference
 			</li>
-			<li 
+			<li
 >
 				<a href="direct_limitations.html">
 					<i class="icon-download-alt"></i>
 					Direct Account Limitatons
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="correlate_transactions.html">
 					<i class="icon-download-alt"></i>
 					Correlate Transaction IDs
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="oauth_account_creation.html">
 					<i class="icon-bell"></i>
 					OAuth Account Creation
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../docs/gateway/direct.html">
 					<i class="icon-arrow-right"></i>
 					Dwolla Direct
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../sandbox.html">
 					<i class="icon-hdd"></i>
 					Sandbox
 				</a>
 			</li>
-			
+
 			<li class="nav-header">
 				Tools
 			</li>
-			<li 
+			<li
 >
 				<a href="../sandbox/admin.html">
 					<i class="icon-asterisk"></i>
 					Sandbox Admin
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../testing.html">
 					<i class="icon-road"></i>
 					Reflector Account
 				</a>
 			</li>
-			<li 
+			<li
 >
 				<a href="../../token.html">
 					<i class="icon-pencil"></i>
@@ -410,16 +410,16 @@ print_r($Checkouts-&gt;verify(&#39;YOUR SIGNATURE HERE&#39;, &#39;YOUR CHECKOUT 
 
 <p><a href="../button.html">Payment buttons</a> are built on top of the Off-Site Gateway and allow you to implement a checkout experience by copying and pasting a Javascript snippet into your website. These buttons are designed for simple payments, such as donations or tips. For more robust applications like an e-commerce store, consider integrating directly with the Gateway.</p>
 <p><div class="codeContainer"></p>
-<pre><code class="lang-html">&lt;script src=&quot;https://www.dwolla.com/scripts/button.min.js&quot; 
-    class=&quot;dwolla_button&quot; 
-    type=&quot;text/javascript&quot; 
-    data-key=&quot;IiScE2XEs2bka2ufaUX6/fL1do3ayR1qsSfdqAYy/bRiKjk3G+&quot; 
-    data-redirect=&quot;http://www.nasa.org/simple&quot; 
-    data-label=&quot;Simple Payment Button ($1.00)&quot; 
-    data-name=&quot;Simple Product&quot; 
-    data-description=&quot;Simple Description&quot; 
-    data-amount=&quot;1.00&quot; 
-    data-guest-checkout=&quot;true&quot; 
+<pre><code class="lang-html">&lt;script src=&quot;https://www.dwolla.com/scripts/button.min.js&quot;
+    class=&quot;dwolla_button&quot;
+    type=&quot;text/javascript&quot;
+    data-key=&quot;IiScE2XEs2bka2ufaUX6/fL1do3ayR1qsSfdqAYy/bRiKjk3G+&quot;
+    data-redirect=&quot;http://www.nasa.org/simple&quot;
+    data-label=&quot;Simple Payment Button ($1.00)&quot;
+    data-name=&quot;Simple Product&quot;
+    data-description=&quot;Simple Description&quot;
+    data-amount=&quot;1.00&quot;
+    data-guest-checkout=&quot;true&quot;
     data-type=&quot;simple&quot;&gt;
 &lt;/script&gt;
 </code></pre>
@@ -439,9 +439,9 @@ print_r($Checkouts-&gt;verify(&#39;YOUR SIGNATURE HERE&#39;, &#39;YOUR CHECKOUT 
 Dwolla::token = &quot;Some OAuth token here&quot;
 
 transactionId = Dwolla::Transactions.send({
-    :destinationId =&gt; &#39;812-626-8794&#39;, 
-    :amount =&gt; 1.00, 
-    :pin =&gt; 9999 
+    :destinationId =&gt; &#39;812-626-8794&#39;,
+    :amount =&gt; 1.00,
+    :pin =&gt; 9999
     })
 
 puts transactionId
@@ -471,7 +471,7 @@ puts transactionId
             <li><a href="https://www.dwolla.com/fees">Fees</a></li>
             <li><a href="https://www.dwolla.com/security">Security</a></li>
             <li><a href="https://press.dwolla.com/">Press</a></li>
-            <li><a href="https://blog.dwolla.com/">Blog</a></li>
+            <li><a href="https://www.dwolla.com/updates">Updates</a></li>
             <li><a href="https://jobs.dwolla.com/">Careers</a></li>
           </ul>
           <p>&copy; <script>document.write(new Date().getFullYear())</script> Dwolla Inc. &nbsp;<a href="https://www.dwolla.com/privacy">Privacy</a>
@@ -484,12 +484,12 @@ puts transactionId
 
 		<script src="../../../assets/js/common.js?v=110"></script>
 
-		
-			
-			
+
+
+
 		<script src="../../../assets/js/dev.js?v=110"></script>
-			
-		
+
+
 
     <!-- Chartbeat -->
 		<script type="text/javascript">
