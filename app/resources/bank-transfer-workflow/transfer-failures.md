@@ -17,9 +17,11 @@ There are several reasons transfers can fail, a few of which are outlined below.
 - **No Account/Unable to Locate Account:** The recipient of a transfer has closed their bank account or has incorrectly entered their bank account/routing number when attaching their funding source.
 - **Customer Advises Not Authorized:** The owner of a bank account has told their bank that this transfer was unauthorized.
 
-### What happens to funds when a bank transfer fails?
+### What occurs in the Dwolla system when a bank transfer fails?
 
-When a bank transfer fails from a verified account (e.g. [Traditional CIP Verified](/resources/account-types/traditional-accounts.html) or [White Label Verified Customer](/resources/account-types/white-label-accounts.html) to a recipient), funds will return to the sending account’s Dwolla balance. For other transfer scenarios, funds will return to the source bank account.
+Bank accounts will automatically be removed from the Dwolla system for all ACH return codes except an `R01`. If subscribed to webhooks, your application will receieve a webhook with the `funding_source_removed` event along with the `transfer_failed` event.
+
+When a bank transfer fails from a verified account (e.g. [Traditional CIP Verified](/resources/account-types/traditional-accounts.html) or [White Label Verified Customer](/resources/account-types/white-label-accounts.html) to a recipient), funds will return to the sending account’s Dwolla balance. For other transfer scenarios, funds will return to the source bank account. 
 
 ### Retrieving the reason for a failed bank transfer
 
