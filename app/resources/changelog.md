@@ -8,6 +8,12 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 
 <section class="change-log">
 	<h1>Completed</h1>
+	<h3>2016-07-21</h3>
+	<h4><em>DEPRECATED</em></h4>
+	<ul class="bullet">
+	    <li>Remove the <code>profileId</code> request parameter from the <a href="https://docs.dwolla.com/#checkouts">Off-Site Gateway</a>
+	    in API v1.</li>
+	</ul>
 	<h3>2016-06-17</h3>
 	<h4><em>ADDED</em></h4>
 	<ul class="bullet">
