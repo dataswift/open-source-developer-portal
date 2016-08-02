@@ -11,23 +11,29 @@ description: Use this guide to start sending payments from your application by u
 
 # Using an SDK? Enable Sandbox mode
 
-To use the Sandbox environment with our API V2 SDKs, just provide `https://api-uat.dwolla.com/` as the hostname.
+To use the Sandbox environment with our API V2 SDKs, either set the environment to `sandbox` or provide `https://api-uat.dwolla.com/` as the hostname if using a Swagger Client.
 
 ```raw
 not available
 ```
 ```javascript
-var client = require('swagger-client');
+var dwolla = require('dwolla-v2');
 
-var dwolla = new client({
-    url: 'https://api-uat.dwolla.com/swagger.json',
-    authorizations: {
-        dwollaHeaderAuth: new client.ApiKeyAuthorization('Authorization', 'Bearer your_token', 'header')
-    },
-    usePromise: true
+var client = new dwolla.Client({
+  id: process.env.DWOLLA_ID,
+  secret: process.env.DWOLLA_SECRET,
+  environment: 'sandbox',
 });
 ```
 ```ruby
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+require 'dwolla_v2'
+
+$dwolla = DwollaV2::Client.new(id: ENV["DWOLLA_ID"], secret: ENV["DWOLLA_SECRET"]) do |config|
+  config.environment = :sandbox
+end
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
 require 'dwolla_swagger'
 
 DwollaSwagger::Swagger.configure do |config|
@@ -35,9 +41,20 @@ DwollaSwagger::Swagger.configure do |config|
 end
 ```
 ```python
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+client = dwollav2.Client(
+  id = os.environ['DWOLLA_ID'],
+  secret = os.environ['DWOLLA_SECRET'],
+  environment = 'sandbox'
+)
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 client = dwollaswagger.ApiClient('https://api-uat.dwolla.com')
 ```
 ```php
+/**
+ * Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-php
+ */
 <?php
 require('../path/to/vendor/autoload.php');
 

@@ -18,15 +18,15 @@ In this guide, we’ll cover the key points of transferring money:
 - Associate a funding source (bank or credit union account) with the customer 
 - Transfer fund to a customer's linked account
 
-### Get set up with Sandbox accounts
+### Before you begin
 
-Before you begin, be sure your [Sandbox accounts](/guides/sandbox-setup) are already set up. 
+You need to have a [Sandbox account](/guides/sandbox-setup) already set up. 
 
 ### Choose the experience you want for your customers
 
 Dwolla offers two different paths for you to onboard your customers onto the payment platform. If you want to keep Dwolla in the background, choose our white label solution. Or if you’d like to tap into Dwolla’s lightly branded OAuth experience, select Dwolla Direct. [Contact sales](https://www.dwolla.com/contact) for information about pricing for each option. 
 
-Regardless of which option you implement, the first step is to create recipients for your transfer, along with a funding source where the money will be sent. Dwolla’s branded experience prompts your recipients for their bank or credit union account information. Otherwise, if you choose to implement the white label solution, your application will need to capture these fields to pass through to Dwolla for secure storage.
+Regardless of which option you implement, the first step is to onboard recipients for your transfer, along with ensuring a funding source is added where money will be sent. Dwolla’s branded experience prompts your recipients for their bank or credit union account information. Otherwise, if you choose to implement the white label solution, your application will need to capture the recipients bank account information to pass through to Dwolla for secure storage.
 
 ### Next step: Choose your onboarding experience
 

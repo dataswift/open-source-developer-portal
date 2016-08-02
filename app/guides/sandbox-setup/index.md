@@ -20,7 +20,7 @@ The Sandbox environment is a complete replica of the Dwolla production environme
 - The Sandbox contains only test data and is completely separate from your production account
 - Actual money is not sent or received as part of test transactions. Real financial data should never be used in the Sandbox
 - The Sandbox web interface is available at `https://uat.dwolla.com/`
-- All API V2 endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://www.dwolla.com`
+- All API V2 endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://api.dwolla.com`
 
 ## Sandbox account
 
