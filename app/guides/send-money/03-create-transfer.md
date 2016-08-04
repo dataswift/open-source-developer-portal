@@ -12,6 +12,8 @@ title:  "Step 3: Create a transfer"
 
 Create a [transfer](https://docsv2.dwolla.com/#transfers) by specifying your funding source as the **source** and the Customer or Account as the **destination**.
 
+#### Request and response (view schema in 'raw')
+
 ```raw
 POST https://api-uat.dwolla.com/transfers
 Accept: application/vnd.dwolla.v1.hal+json
@@ -23,7 +25,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
             "href": "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985"
         },
         "destination": {
-            "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
+            "href": "https://api-uat.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747"
         }
     },
     "amount": {
@@ -35,6 +37,8 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
         "notes": "For work completed on Sept. 1, 2015"
     }
 }
+
+...
 
 HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
@@ -42,67 +46,85 @@ Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2
 ```ruby
 transfer_request = {
   :_links => {
-      :destination => {:href => 'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747'},
-      :source => {:href => 'https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985'}
+    :source => {
+      :href => "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985"
+    },
+    :destination => {
+      :href => "https://api-uat.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747"
+    }
   },
-  :amount => {:currency => 'USD', :value => 225.00},
+  :amount => {
+    :currency => "USD",
+    :value => "225.00"
+  },
   :metadata => {
-      :customerId => 8675309,
-      :notes => 'For work completed on Sept. 1, 2015'
+    :customerId => "8675309",
+    :notes => "For work completed on Sept. 1, 2015"
   }
 }
 
-xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
-p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+transfer = account_token.post "transfers", transfer_request
+transfer.headers[:location] # => "https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+transfer = DwollaSwagger::TransfersApi.create(:body => transfer_request)
+transfer # => "https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.transfers.create({
-      "_links": {
-          "destination": {
-              "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
-          },
-          "source": {
-              "href": "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985"
-          }
-      },
-      "amount": {
-          "currency": "USD",
-          "value": "225.00"
-      },
-      "metadata": {
-          "customerId": "8675309",
-          "notes": "For work completed on Sept. 1, 2015"
-      }
-      }).then(function(data) {
-          console.log(data.obj); // https://api.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388
-      })
-})
+var transferRequest = {
+  _links: {
+    source: {
+      href: 'https://api.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985'
+    },
+    destination: {
+      href: 'https://api.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747'
+    }
+  },
+  amount: {
+    currency: 'USD',
+    value: '225.00'
+  },
+  metadata: {
+    customerId: '8675309',
+    notes: 'For work completed on Sept. 1, 2015'
+  }
+};
+
+accountToken
+  .post('transfers', transferRequest)
+  .then(function(res) {
+    res.headers.get('location'); // => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+  });
 ```
 ```python
 transfer_request = {
-    "_links": {
-        "source": {
-            "href": "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985"
-        },
-        "destination": {
-            "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
-        }
+  '_links': {
+    'source': {
+      'href': 'https://api.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985'
     },
-    "amount": {
-        "currency": "USD",
-        "value": "225.00"
-    },
-    "metadata": {
-        "customerId": "8675309",
-        "notes": "For work completed on Sept. 1, 2015"
+    'destination': {
+      'href': 'https://api.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747'
     }
+  },
+  'amount': {
+    'currency': 'USD',
+    'value': '225.00'
+  },
+  'metadata': {
+    'customerId': '8675309',
+    'notes': 'For work completed on Sept. 1, 2015'
+  }
 }
 
-transfers_api = dwollaswagger.TransfersApi(client)
-xfer = transfers_api.create(body=transfer_request)
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+transfer = account_token.post('transfers', transfer_request)
+transfer.headers['location'] # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 
-print(xfer) # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+transfers_api = dwollaswagger.TransfersApi(client)
+transfer = transfers_api.create(body = transfer_request)
+transfer # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 ```
 ```php
 <?php
@@ -115,7 +137,7 @@ $transfer_request = array (
     ),
     'destination' => 
     array (
-      'href' => 'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747',
+      'href' => 'https://api-uat.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747',
     ),
   ),
   'amount' => 
@@ -131,9 +153,9 @@ $transfer_request = array (
 );
 
 $transferApi = new DwollaSwagger\TransfersApi($apiClient);
-$myAccount = $transferApi->create($transfer_request);
+$transfer = $transferApi->create($transfer_request);
 
-print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+print($transfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 ?>
 ```
 

@@ -12,57 +12,46 @@ title:  "Step 4: Check the transfer status"
 
 You can check the status of the newly created transfer by retrieving the transfer by its URL.
 
+#### Request and response (view schema in 'raw')
 ```raw
 GET https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
-```
-```ruby
-transfer = DwollaSwagger::TransfersApi.by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-```
-```javascript
-dwolla.then(function(dwolla) {
-    dwolla.transfers.byId({id: 'd76265cd-0951-e511-80da-0aa34a9b2388'})
-    .then(function(data) {
-        // See response below
-    })
-});
-```
-```python
-transfer_api = dwollaswagger.TransfersApi(client)
-transfer = transfer_api.by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-```
-```php
-<?php
-$transferApi = new DwollaSwagger\TransfersApi($apiClient);
-$transfer = $transferApi->by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-?>
-```
-
-Response (view schema in 'raw'):
-
-```raw
-Schema
 
 {
   "_links": {
-    "self": {
-      "href": "https://api-uat.dwolla.com/transfers/D76265CD-0951-E511-80DA-0AA34A9B2388"
+    "cancel": {
+      "href": "https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388",
+      "type": "transfer"
     },
     "source": {
-      "href": "https://api-uat.dwolla.com/accounts/DCBB698D-BEE7-4F79-8576-E4301BDC57FC"
+      "href": "https://api-uat.dwolla.com/accounts/4bb512e4-ad4d-4f7e-bfd0-a232007f21a1",
+      "type": "account"
+    },
+    "funding-transfer": {
+      "href": "https://api-uat.dwolla.com/transfers/e73f5b8e-e458-e611-80e5-0aa34a9b2388",
+      "type": "transfer"
+    },
+    "self": {
+      "href": "https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388",
+      "type": "transfer"
+    },
+    "source-funding-source": {
+      "href": "https://api-uat.dwolla.com/funding-sources/5cfcdc41-10f6-4a45-b11d-7ac89893d985",
+      "type": "funding-source"
     },
     "destination": {
-      "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
+      "href": "https://api-uat.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747",
+      "type": "customer"
     }
   },
-  "id": "D76265CD-0951-E511-80DA-0AA34A9B2388",
+  "id": "d76265cd-0951-e511-80da-0aa34a9b2388",
   "status": "pending",
   "amount": {
-    "value": "225.00",
-    "currency": "USD"
+    "value": "42.00",
+    "currency": "usd"
   },
-  "created": "2015-09-02T00:30:25.580Z",
+  "created": "2015-09-01T19:08:55.500Z",
   "metadata": {
     "customerId": "8675309",
     "notes": "For work completed on Sept. 1, 2015"
@@ -70,24 +59,51 @@ Schema
 }
 ```
 ```ruby
+transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+transfer = account_token.get transfer_url
+transfer.status # => "pending"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+transfer = DwollaSwagger::TransfersApi.by_id(transfer_url)
 # Access desired information in response object fields
 p transfer.status # => pending
 ```
 ```javascript
-console.log(data.obj._embedded[0].status); // pending
+var transferUrl = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388';
+
+accountToken
+  .get(transferUrl)
+  .then(function(res) {
+    res.body.status; // => 'pending'
+  });
 ```
 ```python
+transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+fees = account_token.get(transfer_url)
+fees.body['stats'] # => 'pending'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+transfers_api = dwollaswagger.TransfersApi(client)
+transfer = transfers_api.by_id(transfer_url)
 # Access desired information in response object fields
 print(transfer.status) # => pending
 ```
 ```php
 <?php
-# Access desired information in response object fields
-print($transfer->status) # => pending
+$transferUrl = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388';
+
+$transfersApi = new DwollaSwagger\TransfersApi($apiClient);
+
+$transfer = $transfersApi->byId($transferUrl);
+print($transfer->status); # => "pending"
 ?>
 ```
 
-That’s it! You’ve successfully transferred money to a recipient. Please continue to the Webhooks guide for information on implementing notifications for your customers about the transfer.
+That’s it! You’ve successfully transferred money to a recipient. Please continue to the Webhooks guide for information on implementing notifications for your customers about the status of the transfer.
 
 <nav class="pager-nav">
     <a href="03-create-transfer.html">Back: Create a transfer</a>

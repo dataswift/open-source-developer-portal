@@ -43,8 +43,6 @@ Before we process any data from the webhook we’ll want to validate that the re
 
 You can validate the webhook by generating the same SHA256 HMAC hash and comparing it to the signature sent with the payload.
 
-**Deprecation note:** The existing signature `X-Request-Signature` relied on using a SHA-1 HMAC hash. This header will be deprecated on **February 29, 2016**. We'll include both the old signature and the new signature ('X-Request-Signature-Sha-256') in webhook requests to allow for backwards compatibility until previously mentioned deprecation date.
-
 ```ruby
 def verify_signature(payload_body, request_signature)
   signature = OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new("sha256"),

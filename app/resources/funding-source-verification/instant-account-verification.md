@@ -102,7 +102,7 @@ Now that you have initialized dwolla.js on your page you can configure and creat
 $('#start').click(function() {
   var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
   dwolla.configure('uat');
-  dwolla.iav.start('iavContainer', iavToken, function(err, res) {
+  dwolla.iav.start(iavToken, 'iavContainer', function(err, res) {
     console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
   });
 });

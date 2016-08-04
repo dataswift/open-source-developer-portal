@@ -10,7 +10,7 @@ title:  "Step 2: Fetch funding sources"
 
 # Step 2: Fetch funding sources
 
-No matter which method you used to set up your Customers, the remaining steps of sending money are the same. Please note the difference in terminology between the two onboarding experiences:
+No matter which method you used to set up your customers, the remaining steps of sending money are the same. Please note the difference in terminology between the two onboarding experiences:
 
 | Solution | Recipient|
 |----------|----------|
@@ -24,40 +24,17 @@ Now that you’ve created a Customer or an Account and associated its funding so
 
 Dwolla uses URLs to represent relations between resources. Therefore, you’ll need to provide the full URL of the funding source and recipient.
 
-### Fetch a list of available funding sources
+### Fetch your Account's list of available funding sources
 
-Use the [List Funding Sources (Account)](https://docsv2.dwolla.com/#list-funding-sources-account) endpoint to fetch a list of your own funding sources. 
+Use the [List an Account's funding sources](https://docsv2.dwolla.com/#list-an-account39s-funding-sources) endpoint to fetch a list of your own funding sources. You'll need your account URL which can be retrieved by calling [the Root](https://docsv2.dwolla.com/#root) of the API.
+
+#### Request and response (view schema in 'raw')
 
 ```raw
 GET https://api-uat.dwolla.com/accounts/4BB512E4-AD4D-4F7E-BFD0-A232007F21A1/funding-sources
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
-```
-```ruby
-funding_sources = DwollaSwagger::FundingsourcesApi.get_account_funding_sources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
-```
-```javascript
-dwolla.then(function(dwolla) {
-    dwolla['funding-sources'].getAccountFundingSources()
-    .then(function(data) {
-       // See response below
-    });
-});
-```
-```python
-funding_api = dwollaswagger.FundingsourcesApi(client)
-funding_sources = funding_api.get_account_funding_sources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
-```
-```php
-<?php
-$fundingApi = new DwollaSwagger\FundingsourcesApi($apiClient);
-$fundingSources = $fundingApi->getAccountFundingSources('https://api-uat.dwolla.com/accounts/0270baed-dda5-46d0-b074-e7f3d478896f')
-?>
-```
 
-Response (view schema in 'raw'): 
-
-```raw
 {
   "_links": {
     "self": {
@@ -96,7 +73,7 @@ Response (view schema in 'raw'):
         "id": "5cfcdc41-10f6-4a45-b11d-7ac89893d985",
         "status": "verified",
         "type": "bank",
-        "name": "Checking account",
+        "name": "ABC Bank Checking",
         "created": "2014-09-04T23:19:19.543Z"
       }
     ]
@@ -104,18 +81,46 @@ Response (view schema in 'raw'):
 }
 ```
 ```ruby
+account_url = 'https://api.dwolla.com/accounts/4bb512e4-ad4d-4f7e-bfd0-a232007f21a1'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+funding_sources = account_token.get "#{account_url}/funding-sources"
+funding_sources._embedded['funding-sources'][0].name # => "ABC Bank Checking"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+funding_sources = DwollaSwagger::FundingsourcesApi.get_account_funding_sources(account_url)
 # Access desired information in response object fields
 p funding_sources._embedded # => Ruby Hash of _embedded contents in schema
 ```
 ```javascript
-console.log(data.obj._embedded); 
+var accountUrl = 'https://api-uat.dwolla.com/accounts/4bb512e4-ad4d-4f7e-bfd0-a232007f21a1';
+
+accountToken
+  .get(`${accountUrl}/funding-sources`)
+  .then(function(res) {
+    res.body._embedded['funding-sources'][0].name; // => 'ABC Bank Checking'
+  });
 ```
 ```python
+account_url = 'https://api.dwolla.com/accounts/4bb512e4-ad4d-4f7e-bfd0-a232007f21a1'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+funding_sources = account_token.get('%s/funding-sources' % account_url)
+funding_sources.body['_embedded']['funding-sources'][0]['name'] # => 'ABC Bank Checking'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+fs_api = dwollaswagger.FundingsourcesApi(client)
+funding_sources = fs_api.get_account_funding_sources(account_url)
 # Access desired information in response object fields
 print(funding_sources._embedded) # => Python Dict of _embedded contents in schema
 ```
 ```php
 <?php
+$accountUrl = 'https://api.dwolla.com/accounts/4BB512E4-AD4D-4F7E-BFD0-A232007F21A1';
+
+$fsApi = new DwollaSwagger\FundingsourcesApi($apiClient);
+
+$fundingSources = $fsApi->getAccountFundingSources($accountUrl);
 # Access desired information in response object fields
 print($fundingSources->_embedded) # => PHP associative array of _embedded contents in schema
 ?>
