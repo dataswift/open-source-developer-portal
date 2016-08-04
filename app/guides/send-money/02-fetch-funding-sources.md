@@ -26,7 +26,7 @@ Dwolla uses URLs to represent relations between resources. Therefore, you’ll n
 
 ### Fetch your Account's list of available funding sources
 
-Use the [List an Account's funding sources](https://docsv2.dwolla.com/#list-an-account39s-funding-sources) endpoint to fetch a list of your own funding sources. 
+Use the [List an Account's funding sources](https://docsv2.dwolla.com/#list-an-account39s-funding-sources) endpoint to fetch a list of your own funding sources. You'll need your account URL which can be retrieved by calling [the Root](https://docsv2.dwolla.com/#root) of the API.
 
 #### Request and response (view schema in 'raw')
 

@@ -11,7 +11,7 @@ description: Use this guide to start sending payments from your application by u
 
 # Using an SDK? Enable Sandbox mode
 
-To use the Sandbox environment with our API V2 SDKs, either set the environment to `sandbox` or provide `https://api-uat.dwolla.com/` as the hostname if using a Swagger Client.
+To use the Sandbox environment with our API V2 SDKs, either set the environment to `sandbox` or provide `https://api-uat.dwolla.com/` as the hostname if using a Swagger client.
 
 ```raw
 not available
@@ -59,8 +59,8 @@ client = dwollaswagger.ApiClient('https://api-uat.dwolla.com')
 require('../path/to/vendor/autoload.php');
 
 $apiClient = new DwollaSwagger\ApiClient("https://api-uat.dwolla.com/");
+?>
 ```
-
 
 You’re all set! With Sandbox mode enabled, you’re ready to start sending money in the Sandbox. 
 
