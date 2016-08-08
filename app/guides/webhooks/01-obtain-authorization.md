@@ -13,7 +13,7 @@ description: Webhooks for payments within your application by utilizing our open
 
 To subscribe to webhooks, you must first obtain client authorization via OAuth. You will be requesting these credentials on the behalf of your own application, so there will be no OAuth permissions dialog; you are only required to provide your `client_id` and `client_secret`. 
 
-To generate an application access token, you'll need to initiate a POST request to `https://uat.dwolla.com/oauth/v2/token` in our UAT (Sandbox) environment or `https://www.dwolla.com/oauth/v2/token` in our production environment.
+To generate an application access token, you'll need to initiate a POST request to `https://uat.dwolla.com/oauth/v2/token` in our UAT (Sandbox) environment or `https://www.dwolla.com/oauth/v2/token` in our production environment. The `Content-Type: application/json` header should be included if passing your client_id, client_secret, and grant_type via a JSON-encoded request body.
 
 **NOTE**: Currently, the Dwolla/Swagger SDKs do not contain the capability to do this, so you must use an external REST client. We are working on resolving this. 
 

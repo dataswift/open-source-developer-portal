@@ -10,21 +10,22 @@ title:  "Step 1: White label onboarding"
 
 # Step 1: Create a customer using the white label solution
 
-### Step A: Create an access token.
+### Step A: Generate an OAuth account access token
 
-Go to the <a href="https://tokengenerator.dwolla.com" target="_blank">token generator</a>. 
+Navigate to the <a href="https://uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
 
-Use your application’s key and secret and select the following scopes: Send, Funding, Transactions, and ManageCustomers. When you get to the OAuth login log in screen, log in with your child Sandbox account. Once you agree to the permissions, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing customers. More detail is available in [API docs](https://docsv2.dwolla.com/#oauth).
+Before selecting the "Create token" button, make sure your created application has the following scopes enabled: `Send`, `Funding`, `Transactions`, and `ManageCustomers`. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing Customers. More detail for implementing the OAuth flow can be found in the [API documentation](https://docsv2.dwolla.com/#oauth).
 
-### Step B: Create a customer
+### Step B: Create a Customer
 
-Create a customer for the user that is going to pay you. At a minimum, provide the user’s full name and email address to create the customer. 
+Create a Customer for the user that is going to pay you. At a minimum, provide the user’s full name and email address to create the customer. 
 
 ```raw
 POST https://api-uat.dwolla.com/customers
 Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
+
 {
 "firstName": "Joe", 
 "lastName": "Buyer",
@@ -33,38 +34,54 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 }
 
 HTTP/1.1 201 Created
-Location: https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+Location: https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c
 ```
 ```ruby
-new_customer = DwollaSwagger::CustomersApi.create({:body => {
+request_body = {
   :firstName => 'Joe',
   :lastName => 'Buyer',
   :email => 'jbuyer@mail.net',
-  :ipAddress => '99.99.99.99'}})
+  :ipAddress => '99.99.99.99'
+}
 
-p new_customer # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+new_customer = account_token.post "customers", request_body
+new_customer.headers[:location] # => "https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+new_customer = DwollaSwagger::CustomersApi.create(:body => request_body)
+p new_customer # => "https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.create({
-      "firstName": "Joe",
-      "lastName": "Buyer",
-      "email": "jbuyer@mail.net",
-      "ipAddress": "99.99.99.99"})
-      .then(function(data) {
-          console.log(data); // https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
-      });
-});
+var requestBody = {
+  firstName: 'Joe',
+  lastName: 'Buyer',
+  email: 'jbuyer@mail.net',
+  ipAddress: '99.99.99.99'
+};
+
+accountToken
+  .post('customers', requestBody)
+  .then(function(res) {
+    res.headers.get('location'); // => 'https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c'
+  });
 ```
 ```python
+request_body = {
+  'firstName': 'Joe',
+  'lastName': 'Buyer',
+  'email': 'jbuyer@mail.net',
+  'ipAddress': '99.99.99.99'
+}
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+new_customer = account_token.post('customers', request_body)
+new_customer.headers['location'] # => 'https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 customers_api = dwollaswagger.CustomersApi(client)
-
-new_customer = customers_api.create(body = {'firstName': 'Joe', 
-                                            'lastName': 'Buyer',
-                                            'email': 'jbuyer@mail.net',
-                                            'ipAddress': '99.99.99.99'})
-
-print(new_customer) # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+new_customer = customers_api.create(body = request_body)
+print(new_customer) # => 'https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c'
 ```
 ```php
 <?php
@@ -77,7 +94,7 @@ $new_customer = $customersApi->create([
   'ipAddress' => '99.99.99.99'
 ]);
 
-print($new_customer); # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C
+print($new_customer); # => https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c
 ?>
 ```
 ```java
@@ -99,14 +116,14 @@ catch (Exception e) {
 }
 ```
 
-When the customer is created, you’ll receive the customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
+When the Customer is created, you’ll receive the Customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
 
 **Important**: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud. Sending random, hardcoded, or incorrect information in the ipAddress field will cause delays or throttling of requests.
 
 
-### Step C: Attach a funding source to the customer
+### Step C: Attach a funding source to the Customer
 
-Next you will attach a verified funding source to the Customer, which will be done using Instant Account Verification (IAV). This method will give the Customer the ability to add and verify their bank account in a matter of seconds by authenticating with their online banking credentials. Once the Customer reaches the page in your application to add a bank account you'll ask Dwolla’s server to [generate an IAV token](http://docsv2.dwolla.com/#generate-an-iav-token-customer). 
+Next you will attach a verified funding source to the Customer, which will be done using Instant Account Verification (IAV). This method will give the Customer the ability to add and verify their bank account in a matter of seconds by authenticating with their online banking credentials. Once the Customer reaches the page in your application to add a bank account you'll ask Dwolla’s server to [generate an IAV token](http://docsv2.dwolla.com/#generate-an-iav-token). 
 
 Generate a single-use IAV token for our Customer:
 
@@ -115,34 +132,58 @@ curl -X POST
 \ -H "Content-Type: application/vnd.dwolla.v1.hal+json"
 \ -H "Accept: application/vnd.dwolla.v1.hal+json"
 \ -H "Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q"
-\ "https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+\ "https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c/iav-token"
 
 HTTP/1.1 200 OK
 {  
    "_links":{  
       "self":{  
-         "href":"https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+         "href":"https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c/iav-token"
       }
    },
    "token":"lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 }
 ```
 ```ruby
-# coming soon
+customer_url = 'https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = account_token.post "#{customer_url}/iav-token"
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.get_customer_iav_token(customer_url)
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.getCustomerIavToken({id: '247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'})
-    .then(function(data) {
-       console.log(data.obj.token);
-    });
-});
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c';
+
+accountToken
+  .post(`${customerUrl}/iav-token`)
+  .then(function(res) {
+    res.body.token; // => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
+  });
 ```
 ```python
-# coming soon
+customer_url = 'http://api.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = account_token.post('%s/iav-token' % customer_url)
+customer.body['token'] # => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+customers_api = dwollaswagger.CustomersApi(client)
+token = customers_api.get_customer_iav_token(customer_url)
+print token['token'] # => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
 ```
 ```php
-// coming soon
+<?php
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
+
+$fsToken = $customersApi->getCustomerIavToken("https://api-uat.dwolla.com/customers/247b1bd8-f5a0-4b71-a898-f62f67b8ae1c");
+$fsToken->token; # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+?>
 ```
 
 Then, you’ll pass this single-use IAV token to the client-side of your application where it will be used in the JavaScript function `dwolla.iav.start`. This token will be used to authenticate the request asking Dwolla to render the IAV flow. Before calling this function you'll want to include `dwolla.js` in the HEAD of your page. 
@@ -163,21 +204,29 @@ Next, you'll add in a container to the body of your page where you want to rende
 <div id="iavContainer"></div>
 ```
 
-Now that you have `dwolla.js` initialized on the page and the container created where you'll render the IAV flow, you'll create a JavaScript function that responds to the Customer clicking the "Add bank" button on your page. Once the Customer clicks "Add Bank", your application will call `dwolla.iav.start()` passing in the following arguments: the iavContainer element where IAV will render, a string value of your single-use IAV token, and a callback function that will handle any error or response.
+Now that you have `dwolla.js` initialized on the page and the container created where you'll render the IAV flow, you'll create a JavaScript function that responds to the Customer clicking the "Add bank" button on your page. Once the Customer clicks "Add Bank", your application will call `dwolla.iav.start()` passing in the following arguments: a string value of your single-use IAV token, options such as the iavContainer element where IAV will render, and a callback function that will handle any error or response.
 
 ```javascriptnoselect
 <script type="text/javascript">
 $('#start').click(function() {
   var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
   dwolla.configure('uat');
-  dwolla.iav.start('iavContainer', iavToken, function(err, res) {
+  dwolla.iav.start(iavToken, {
+          container: 'iavContainer',
+          stylesheets: [
+            'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
+            'http://localhost:8080/iav/customStylesheet.css'
+          ],
+          microDeposits: 'true',
+          fallbackToMicroDeposits: (fallbackToMicroDeposits.value === 'true')
+        }, function(err, res) {
     console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
   });
 });
 </script>
 ```
 
-The Customer will complete the IAV flow by authenticating with their online banking credentials. You'll know their bank account was successfully added and verified if you receive a JSON response in your callback that includes a link to the newly created funding source. 
+The customer will complete the IAV flow by authenticating with their online banking credentials. You'll know their bank account was successfully added and verified if you receive a JSON response in your callback that includes a link to the newly created funding source. 
 
 * Sample response:  `{"_links":{"funding-source":{"href":"https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"}}}`
 
@@ -198,7 +247,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
             "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
         },
         "destination": {
-            "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
+            "href": "https://api-uat.dwolla.com/accounts/ab443d36-3757-44c1-a1b4-29727fb3111c"
         }
     },
     "amount": {
@@ -211,57 +260,87 @@ HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 ```
 ```ruby
-transfer_request = {
+request_body = {
   :_links => {
-      :destination => {:href => 'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C'},
-      :source => {:href => 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'}
+    :source => {
+      :href => "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
+    },
+    :destination => {
+      :href => "https://api-uat.dwolla.com/accounts/ab443d36-3757-44c1-a1b4-29727fb3111c"
+    }
   },
-  :amount => {:currency => 'USD', :value => 225.00}
+  :amount => {
+    :currency => "USD",
+    :value => "225.00"
+  },
+  :metadata => {
+    :foo => "bar",
+    :baz => "boo"
+  }
 }
 
-xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
-p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+transfer = account_token.post "transfers", request_body
+transfer.headers[:location] # => "https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+transfer = DwollaSwagger::TransfersApi.create(:body => request_body)
+transfer # => "https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.transfers.create({
-      "_links": {
-          "destination": {
-              "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
-          },
-          "source": {
-              "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
-          }
-      },
-      "amount": {
-          "currency": "USD",
-          "value": "225.00"
-      }
-      }).then(function(data) {
-          console.log(data.obj); // https://api.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388
-      })
-})
+var requestBody = {
+  _links: {
+    source: {
+      href: 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'
+    },
+    destination: {
+      href: 'https://api-uat.dwolla.com/accounts/ab443d36-3757-44c1-a1b4-29727fb3111c'
+    }
+  },
+  amount: {
+    currency: 'USD',
+    value: '225.00'
+  },
+  metadata: {
+    foo: 'bar',
+    baz: 'boo'
+  }
+};
+
+accountToken
+  .post('transfers', requestBody)
+  .then(function(res) {
+    res.headers.get('location'); // => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+  });
 ```
 ```python
-transfer_request = {
-    "_links": {
-        "source": {
-            "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
-        },
-        "destination": {
-            "href": "https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C"
-        }
+request_body = {
+  '_links': {
+    'source': {
+      'href': 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'
     },
-    "amount": {
-        "currency": "USD",
-        "value": "225.00"
+    'destination': {
+      'href': 'https://api-uat.dwolla.com/accounts/ab443d36-3757-44c1-a1b4-29727fb3111c'
     }
+  },
+  'amount': {
+    'currency': 'USD',
+    'value': '225.00'
+  },
+  'metadata': {
+    'foo': 'bar',
+    'baz': 'boo'
+  }
 }
 
-transfers_api = dwollaswagger.TransfersApi(client)
-xfer = transfers_api.create(body=transfer_request)
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+transfer = account_token.post('transfers', request_body)
+transfer.headers['location'] # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 
-print(xfer) # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+transfers_api = dwollaswagger.TransfersApi(client)
+transfer = transfers_api.create(body = request_body)
+transfer # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 ```
 ```php
 <?php
@@ -274,7 +353,7 @@ $transfer_request = array (
     ),
     'destination' => 
     array (
-      'href' => 'https://api-uat.dwolla.com/accounts/AB443D36-3757-44C1-A1B4-29727FB3111C',
+      'href' => 'https://api-uat.dwolla.com/accounts/ab443d36-3757-44c1-a1b4-29727fb3111c',
     ),
   ),
   'amount' => 

@@ -17,7 +17,7 @@ In this guide, we’ll cover the key points of collecting money from your custom
 - Associate a verified funding source (bank or credit union account) with the customer
 - Transfer funds from the customer’s linked account 
 
-Prerequisite: complete the [Getting started guide](/guides/sandbox-setup) and have [Traditional CIP-Verified Dwolla account](/resources/account-types.html).
+*Prerequisite*: complete the [Getting started guide](/guides/sandbox-setup) and have [Traditional CIP-Verified Dwolla account](/resources/account-types.html).
 
 ### Choose the experience your want for your customers
 

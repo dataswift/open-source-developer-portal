@@ -21,7 +21,7 @@ By submitting `verified`, `retry`, `document`, or `suspended` in the firstName p
 If the Customer has a status of `retry`, some information may have been miskeyed. You have one more opportunity to correct any mistakes. This time, you’ll need to provide the customer’s full SSN.
 
 ```raw
-POST /customers/132681FA-1B4D-4181-8FF2-619CA46235B1
+POST https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1
 Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
@@ -42,63 +42,79 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 }
 ```
 ```ruby
-retry_customer = DwollaSwagger::CustomersApi.create({:body => {
+customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
+request_body = {
       "firstName" => "John",
        "lastName" => "Doe",
-          "email" => "johndoe@nomail.net",
+          "email" => "jdoe@nomail.com",
       "ipAddress" => "10.10.10.10",
            "type" => "personal",
-       "address1" => "221 Corrected Address St.",
-       "address2" => "Fl 8",
-           "city" => "Ridgewood",
-          "state" => "NY",
-     "postalCode" => "11385",
-    "dateOfBirth" => "1990-07-11",
-            "ssn" => "202-99-1516"
-}})
+       "address1" => "221 Corrected Address St..",
+       "address2" => "Apt 201",
+           "city" => "San Francisco",
+          "state" => "CA",
+     "postalCode" => "94104",
+    "dateOfBirth" => "1970-07-11",
+            "ssn" => "123-45-6789"
+}
 
-p retry_customer # => https://api.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = account_token.post customer_url, request_body
+customer.id # => "132681fa-1b4d-4181-8ff2-619ca46235b1"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.update_customer(customer_url, :body => request_body)
+customer.id # => "132681fa-1b4d-4181-8ff2-619ca46235b1"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.updateCustomer({
-        "firstName": "John",
-        "lastName": "Doe",
-        "email": "johndoe@nomail.net",
-        "ipAddress": "10.10.10.10",
-        "type": "personal",
-        "address1": "221 Corrected Address St.",
-        "address2": "Fl 8",
-        "city": "Ridgewood",
-        "state": "NY",
-        "postalCode": "11385",
-        "dateOfBirth": "1990-07-11",
-        "ssn": "202-99-1516"
-      })
-      .then(function(data) {
-          console.log(data); // https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1
-      });
-});
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1';
+var requestBody = {
+  firstName: "John",
+  lastName: "Doe",
+  email: "johndoe@dwolla.com",
+  ipAddress: "10.10.10.10",
+  type: "personal",
+  address1: "221 Corrected Address St..",
+  address2: "Fl 8",
+  city: "Ridgewood",
+  state: "NY",
+  postalCode: "11385",
+  dateOfBirth: "1990-07-11",
+  ssn: "202-99-1516"
+};
+
+accountToken
+  .post(customerUrl, requestBody)
+  .then(function(res) {
+    res.body.id; // => '132681fa-1b4d-4181-8ff2-619ca46235b1'
+  });
 ```
 ```python
-customers_api = dwollaswagger.CustomersApi(client)
-
-retry_customer = customers_api.create(body = {
+customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
+request_body = {
   "firstName": "John",
   "lastName": "Doe",
-  "email": "johndoe@nomail.net",
+  "email": "jdoe@nomail.com",
   "ipAddress": "10.10.10.10",
   "type": "personal",
-  "address1": "221 Corrected Address St.",
-  "address2": "Fl 8",
-  "city": "Ridgewood",
-  "state": "NY",
-  "postalCode": "11385",
-  "dateOfBirth": "1990-07-11",
-  "ssn": "202-99-1516"
-})
+  "address1": "221 Corrected Address St..",
+  "address2": "Apt 201",
+  "city": "San Francisco",
+  "state": "CA",
+  "postalCode": "94104",
+  "dateOfBirth": "1970-07-11",
+  "ssn": "123-45-6789"
+}
 
-print(retry_customer) # => https://api.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = account_token.post('customers', request_body)
+customer.body.id # => '132681fa-1b4d-4181-8ff2-619ca46235b1'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+customers_api = dwollaswagger.CustomersApi(client)
+customer = customers_api.update_customer(customer_url, body = request_body)
+customer.id # => '132681fa-1b4d-4181-8ff2-619ca46235b1'
 ```
 ```php
 <?php
@@ -117,13 +133,13 @@ $retryCustomer = $customersApi->create(array (
   'postalCode' => '11385',
   'dateOfBirth' => '1990-07-11',
   'ssn' => '202-99-1516',
-););
+));
 
-print($retryCustomer); # => 132681FA-1B4D-4181-8FF2-619CA46235B1
+print($retryCustomer); # => 132681fa-1b4d-4181-8ff2-619ca46235b1
 ?>
 ```
 
-Check the Customer’s status again. The Customer will either be verified or in the `document` or `suspended` state of verification.
+Check the Customer’s status again. The Customer will either be `verified` or in the `document` or `suspended` state of verification.
 
 ### Handling status: `document`
 
@@ -133,6 +149,7 @@ If the Customer has a status of `document`, then you'll need to upload additiona
 **Personal verified Customers:** a scanned photo of the Customer's identifying document can be specified as documentType: `passport`, `license` (state issued driver's license), or `idCard` (other U.S. government-issued photo id card).
 
 **Business verified Customers:** Documents that are used to help identify a business are specified as documentType `other`. Business Identifying documents can include the following:
+
 * Partnership, General Partnership: EIN Letter (IRS-issued SS4 confirmation letter).
 * Limited Liability Corporation (LLC), Corporation: EIN Letter (IRS-issued SS4 confirmation letter).
 * Sole Proprietorship: one or more of the following, as applicable to your sole proprietorship: Fictitious Business Name Statement; EIN documentation (IRS-issued SS4 confirmation letter); Color copy of a valid government-issued photo ID (e.g., a driver’s license, passport, or state ID card).
@@ -145,19 +162,43 @@ curl -X POST
 \ -H "Content-Type: multipart/form-data" 
 \ -F "documentType=passport" 
 \ -F "file=@foo.png" 
-\ 'https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1/documents'
+\ 'https://api-uat.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1/documents'
 
 HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0
 ```
 ```ruby
-# No SDK support. Coming soon
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby
+customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
+
+file = Faraday::UploadIO.new('mclovin.jpg', 'image/jpeg')
+document = account_token.post "#{customer_url}/documents", file: file, documentType: 'license'
+document.headers[:location] # => "https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0"
 ```
 ```javascript
-// No SDK support. Coming soon
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1';
+
+var requestBody = new FormData();
+body.append('file', fs.createReadStream('mclovin.jpg'), {
+  filename: 'mclovin.jpg',
+  contentType: 'image/jpeg',
+  knownLength: fs.statSync('mclovin.jpg').size
+});
+body.append('documentType', 'license');
+
+accountToken
+  .post(`${customerUrl}/documents`, requestBody)
+  .then(function(res) {
+    res.headers.get('location'); // => "https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0"
+  });
 ```
 ```python
-# No SDK support. Coming soon
+customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+document = account_token.post('%s/documents' % customer_url, file = open('mclovin.jpg', 'rb'), documentType = 'license')
+document.headers['location'] # => 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 ```
 ```php
 // No SDK support. Coming soon
@@ -172,7 +213,7 @@ Location: https://api-uat.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc05
 
 You’ll also get a webhook with a `customer_verification_document_uploaded` event to let you know the document was successfully uploaded.
 
-Once created, the document will be reviewed by Dwolla. When our team has made a decision, we’ll create either a `customer_verification_document_approved` or `customer_verification_document_failed`event (possibly followed by another `customer_verification_document_needed`).
+Once created, the document will be reviewed by Dwolla. When our team has made a decision, we’ll trigger either a `customer_verification_document_approved` or `customer_verification_document_failed`event (possibly followed by another `customer_verification_document_needed`).
 
 If the document was sufficient, the Customer will be verified. If not, we may need additional documentation.
 
@@ -180,6 +221,7 @@ If the document was found to be fraudulent or doesn’t match the identity of th
 
 #### Document failure
 If you receive a `customer_verification_document_failed` webhook, you’ll need to upload another document. The document can fail if, for example, the Customer uploaded the wrong type of document or the `.jpg` or `.png` file supplied was not readable (i.e. blurry, not well lit, or cuts off a portion of the identifying image). To retrieve the failure reason for the document upload, you’ll retrieve the document by its id. Contained in the response will be a `failureReason` which corresponds to one of the following values:
+
 * ScanNotReadable
 * ScanNotUploaded
 * ScanIdTypeNotSupported
@@ -190,7 +232,7 @@ If you receive a `customer_verification_document_failed` webhook, you’ll need 
 #### Request and response:
 
 ```raw
-GET https://api-uat.dwolla.com/documents/669863fc-eccf-4172-bdd6-79fba5d43f84
+GET https://api-uat.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer tJlyMNW6e3QVbzHjeJ9JvAPsRglFjwnba4NdfCzsYJm7XbckcR
 
@@ -199,10 +241,10 @@ Authorization: Bearer tJlyMNW6e3QVbzHjeJ9JvAPsRglFjwnba4NdfCzsYJm7XbckcR
 {
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/documents/669863fc-eccf-4172-bdd6-79fba5d43f84"
+      "href": "https://api-uat.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0"
     }
   },
-  "id": "669863fc-eccf-4172-bdd6-79fba5d43f84",
+  "id": "11fe0bab-39bd-42ee-bb39-275afcc050d0",
   "status": "reviewed",
   "type": "license",
   "created": "2016-01-29T21:22:22.000Z",
@@ -210,26 +252,40 @@ Authorization: Bearer tJlyMNW6e3QVbzHjeJ9JvAPsRglFjwnba4NdfCzsYJm7XbckcR
 }
 ```
 ```ruby
-a_document = 'https://api.dwolla.com/documents/669863fc-eccf-4172-bdd6-79fba5d43f84'
+document_url = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 
-retrieved = DwollaSwagger::DocumentsApi.get_customer(a_document)
-p retrieved.failureReason # => "ScanNotReadable"
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+document = account_token.get document_url
+document.failureReason # => "ScanNotReadable"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+document = DwollaSwagger::DocumentsApi.get_document(document_url)
+document.failureReason # => "ScanNotReadable"
 ```
 ```javascript
-// No SDK support. Coming soon
+var documentUrl = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0';
+
+accountToken
+  .get(document_url)
+  .then(function(res) {
+    res.body.failureReason; // => "ScanNotReadable"
+  });
 ```
 ```python
-a_document = 'https://api.dwolla.com/documents/669863fc-eccf-4172-bdd6-79fba5d43f84'
+document_url = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+documents = account_token.get(document_url)
+documents.body['failureReason'] # => 'ScanNotReadable'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 documents_api = dwollaswagger.DocumentsApi(client)
-
-retrieved = documents_api.get_customer(a_document)
-print(retrieved.failureReason) # => "ScanNotReadable"
-
+document = documents_api.get_customer(document_url)
+document.failureReason # => "ScanNotReadable"
 ```
 ```php
 <?php
-$aDocument = 'https://api.dwolla.com/documents/669863fc-eccf-4172-bdd6-79fba5d43f84';
+$aDocument = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0';
 
 $documentsApi = DwollaSwagger\DocumentsApi($apiClient);
 

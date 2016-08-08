@@ -66,13 +66,13 @@ Content-Type: application/json
 
 You won’t need to use the access token for the Dwolla Direct user, all we need from the above response is their account URL.
 
-### Step C. Create an access token to access your own account
+### Step C. Create an account access token to access your own account
 
 Next, you’ll need to generate an access token for your own account, which you’ll use to transfer funds from your account to the newly created Direct account.
 
-Navigate to the <a href="https://uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account token. 
+Navigate to the <a href="https://uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
 
-Before selecting the "Create token" button, make sure your created application has at least the `Send` and `Funding` scopes in order to send funds from your own account. Once you click the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for sending money. More detail for implementing the OAuth flow can be found in [API docs](https://docsv2.dwolla.com/#oauth). Important: this access token will allow you to send money from your own account, so be sure to securely store it.
+Before selecting the "Create token" button, make sure your created application has at least the `Send` and `Funding` scopes in order to send funds from your own account. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for sending money. More detail for implementing the OAuth flow can be found in [API docs](https://docsv2.dwolla.com/#oauth). Important: this access token will allow you to send money from your own account, so be sure to securely store it.
 
 <nav class="pager-nav">
     <a href="./">Back: Overview</a>
