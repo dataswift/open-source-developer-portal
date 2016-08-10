@@ -10,10 +10,10 @@ description: "Programmatically verify a bank to initiate a bank transfer."
 # Funding source verification
 
 ## Micro-deposit verification
-If you choose to verify using micro-deposits, Dwolla will transfer two deposits of less than $0.10 to the Customer's linked bank or credit union account. After [initiating micro-deposits](https://docsv2.dwolla.com/#initiate-or-verify-micro-deposits), two random amounts should post to the Customer’s bank account in 1-2 business days. Once the Customer sees these deposits in their account, they need to verify the two deposit amounts in your application. If subscribed to [webhooks](/guides/webhooks), your application will be notified throughout this process with the triggered events of `customer_microdeposits_added` and either `customer_microdeposits_completed` or `customer_microdeposits_failed`.
+If you choose the micro-deposit method of bank verification, Dwolla will transfer two deposits of less than $0.10 to your customer's linked bank or credit union account. After [initiating micro-deposits](https://docsv2.dwolla.com/#initiate-or-verify-micro-deposits), two random amounts will post to your customer’s bank account in 1-2 business days. Once your customer sees these deposits in their account, they need to verify the two amounts in your application. If subscribed to [webhooks](/guides/webhooks), your application will be notified throughout this process via micro-deposit related [events](https://docsv2.dwolla.com/#events).
 
-### Retrieve the funding source.
-Once the Customer has [added a bank account](http://docsv2.dwolla.com/#new-funding-source-customer) you'll want to retrieve the funding source and follow the link to `initiate-micro-deposits`. A link to `initiate-micro-deposits` will appear when an unverified `bank` is eligible to receive micro-deposits.
+### Retrieve the funding source
+After your customer has added a bank account you'll want to retrieve the funding source to check if a `initiate-micro-deposits` link relation exists. A link to `initiate-micro-deposits` will return when an unverified `bank` funding source is eligible to receive micro-deposits.
 
 ```raw
 GET https://api.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909
@@ -85,7 +85,7 @@ accountToken
 ```
 
 ### Initiate micro-deposits 
-After you follow the link to `initiate-micro-deposits` Dwolla will trigger two micro-deposits. The `retrieved` variable from the previous step holds the location of the Customer's Funding Source and is passed over to the `micro_deposits()` function. If the request is successful, Dwolla returns a `HTTP 201` and a link to the resource `fundingsources/{id}/micro-deposits` in the location header, which can be later used to verify micro-deposit amounts. If your application is subscribed to webhooks, a webhook will be sent with the event topic of `customer-micro-deposits-added`, notifying your application that micro-deposits are en route to the Customer’s bank account.
+Once you POST to the [`initiate-micro-deposits`](https://docsv2.dwolla.com/#initiate-or-verify-micro-deposits) link, Dwolla will send two small amounts to your customer's bank or credit union account. If the request is successful, Dwolla returns a `HTTP 201` and a link to the created micro-deposits resource `funding-sources/{id}/micro-deposits` in the location header. The micro-deposits resource can be later used to retrieve the status of micro-deposits or verify micro-deposit amounts. If your application is subscribed to webhooks, a webhook will be sent with the `microdeposits_added` event, notifying your application that micro-deposits are en route to your customer’s bank account.
 
 ```raw
 POST https://api-uat.dwolla.com/funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits
@@ -129,11 +129,9 @@ $micro_deposits = $fsApi->micro_deposits($retrieved);
 ```
 
 ### Verify micro-deposits
-In the Dwolla production environment, you must wait until the micro-deposits actually post to the Customer’s bank account before the account can be verified, which can take 1-2 business days. However, in the Sandbox environment, any amount **below** $0.10 will allow you to verify the account immediately. This operation is successful unless an exception is thrown:
+In the Dwolla production environment, you must wait until the micro-deposits actually post to the customer’s bank account before the account can be verified, which can take 1-2 business days. A `microdeposits_completed` event will be triggered once micro-deposits have successfully posted to the bank. Once micro-deposits have completed, a `verify-micro-deposits` link relation will return on the funding source letting your application know the funding source can be verified.
 
-`amount1`: `0.03`
-
-`amount2`: `0.09`
+**Note**: In the Sandbox environment, any amount **below** $0.10 will allow you to verify the account immediately. 
 
 ```raw
 POST /funding-sources/e52006c3-7560-4ff1-99d5-b0f3a6f4f909/micro-deposits
@@ -226,3 +224,13 @@ $fsApi->micro_deposits($fundingSourceUrl, [
 ]);
 ?>
 ```
+
+### Handle failed verification attempts
+Your customer will have only three attempts to correctly input the two posted micro-deposit amounts. If your customer reaches the max attempts allowed, a `microdeposits_maxattempts` [event](https://docsv2.dwolla.com/#events) will be triggered and they will no longer be allowed to verify the funding source using those same two posted micro-deposit amounts. In order to retry bank account verification via micro-deposits, the following steps will need to be taken by your customer and application:
+
+1. [Removal of the funding source](https://docsv2.dwolla.com/#remove-a-funding-source) with failed micro-deposit verification attempts.
+2. Wait 48 hours after the initial funding source was added to re-add the funding source.
+3. Initiate new micro-deposits to the funding source.
+4. Verify the funding source using the new posted micro-deposit amounts.
+
+Links returned on the funding source resource, either `initiate-micro-deposits` or `verify-micro-deposits`, will give your application insight into whether the funding source is eligible to receive or verify micro-deposits.
