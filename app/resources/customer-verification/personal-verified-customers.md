@@ -13,7 +13,7 @@ description: "How to verify a customer before sending a bank transfer with Dwoll
 
 ### Create a verified personal Customer
 
-To create a verified personal Customer, use the [Create Customer](https://docsv2.dwolla.com/#new-customer) endpoint:
+To create a verified personal Customer, use the [create a customer](https://docsv2.dwolla.com/#create-a-customer) endpoint:
 
 ```raw
 POST /customers

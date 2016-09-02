@@ -19,7 +19,7 @@ Before selecting the "Create token" button, make sure your created application h
 
 ### Step B. Create a Customer
 
-Create a Customer for each user you’d like to transfer funds to. At a minimum, provide the user’s full name, email address, and IP address to create the Customer. More detail is available in [API docs](https://docsv2.dwolla.com/#customers).
+Create a Customer for each user you’d like to transfer funds to. At a minimum, provide the user’s full name, email address, and IP address to create the Customer. More detail is available in [API docs](https://docsv2.dwolla.com/#create-a-customer).
 
 ```raw
 POST https://api-uat.dwolla.com/customers
@@ -124,7 +124,7 @@ When the Customer is created, you’ll receive the Customer URL in the location 
 
 The next step is to attach a bank or credit union account to the Customer by providing the bank account’s routing number, account number, account type, and an arbitrary name. 
 
-Funds transferred to this Customer will be automatically swept into the funding source. The example below shows sample bank information, but you will include actual routing, account, and bank name after prompting your customer for this information within your application. Possible values for “type” can be either “checking” or “savings”. More detail is available in [API docs](https://docsv2.dwolla.com/#funding-sources). 
+Funds transferred to this Customer will be automatically swept into the funding source. The example below shows sample bank information, but you will include actual routing, account, and bank name after prompting your customer for this information within your application. Possible values for “type” can be either “checking” or “savings”. More detail is available in [API docs](https://docsv2.dwolla.com/#create-a-funding-source-for-a-customer). 
 
 ```raw
 POST https://api.dwolla.com/customers/c7f300c0-f1ef-4151-9bbe-005005aa3747/funding-sources

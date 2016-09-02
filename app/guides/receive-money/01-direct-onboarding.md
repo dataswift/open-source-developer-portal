@@ -69,7 +69,7 @@ Content-Type: application/json
 
 Using the access token we just receieved, we’ll need to get the funding source ID of the bank account we’d like to use to fund the transfer.  
 
-Use the [List an Account's funding sources](https://docsv2.dwolla.com/#list-an-account39s-funding-sources) endpoint to fetch a list of the payer’s funding sources.  You first need to fetch [the root](https://docsv2.dwolla.com/#root) resource to determine the URL to get the account’s funding source list from.
+Use the [List an account's funding sources](https://docsv2.dwolla.com/#list-funding-sources-for-an-account) endpoint to fetch a list of the payer’s funding sources.  You first need to fetch [the root](https://docsv2.dwolla.com/#root) resource to determine the URL to get the account’s funding source list from.
 
 ```raw
 GET https://api.dwolla.com/accounts/ca32853c-48fa-40be-ae75-77b37504581b/funding-sources
