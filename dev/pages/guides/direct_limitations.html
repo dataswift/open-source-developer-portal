@@ -93,7 +93,7 @@
 			</li>
 			<li
 >
-				<a href="../../docs/users/account.html" target="_blank">
+				<a href="https://docs.dwolla.com/" target="_blank">
 					<i class="icon-list-alt"></i>
 					API Documentation
 				</a>
@@ -123,34 +123,6 @@
 			</li>
 			<li
 >
-				<a href="create_application.html">
-					<i class="icon-check"></i>
-					Generate API Credentials
-				</a>
-			</li>
-			<li
->
-				<a href="receiving_money.html">
-					<i class="icon-check"></i>
-					Accepting Payments
-				</a>
-			</li>
-			<li
->
-				<a href="sending_money.html">
-					<i class="icon-check"></i>
-					Sending Money
-				</a>
-			</li>
-			<li
->
-				<a href="masspay.html">
-					<i class="icon-check"></i>
-					Sending Batch Payments
-				</a>
-			</li>
-			<li
->
 				<a href="facilitator_fee.html">
 					<i class="icon-check"></i>
 					Setting Facilitator Fees
@@ -161,13 +133,6 @@
 				<a href="offsite_gateway.html">
 					<i class="icon-check"></i>
 					Off-Site Gateway Checkout
-				</a>
-			</li>
-			<li
->
-				<a href="sandbox.html">
-					<i class="icon-check"></i>
-					Sandbox: Getting Started
 				</a>
 			</li>
 			<li
@@ -199,18 +164,11 @@
 			<li class="nav-header">
 				Reference
 			</li>
-			<li
+			<li class="active"
 >
 				<a href="direct_limitations.html">
-					<i class="icon-download-alt"></i>
+					<i class="icon-download-alt "></i>
 					Direct Account Limitatons
-				</a>
-			</li>
-			<li
->
-				<a href="correlate_transactions.html">
-					<i class="icon-download-alt"></i>
-					Correlate Transaction IDs
 				</a>
 			</li>
 			<li
@@ -227,30 +185,9 @@
 					Dwolla Direct
 				</a>
 			</li>
-			<li
->
-				<a href="../sandbox.html">
-					<i class="icon-hdd"></i>
-					Sandbox
-				</a>
-			</li>
 
 			<li class="nav-header">
 				Tools
-			</li>
-			<li
->
-				<a href="../sandbox/admin.html">
-					<i class="icon-asterisk"></i>
-					Sandbox Admin
-				</a>
-			</li>
-			<li
->
-				<a href="../testing.html">
-					<i class="icon-road"></i>
-					Reflector Account
-				</a>
 			</li>
 			<li
 >
@@ -261,7 +198,7 @@
 			</li>
 
 			<li>
-				<a href="../../docs/users/account.html">Looking for API Docs? &raquo;</a>
+				<a href="https://docs.dwolla.com/">Looking for API Docs? &raquo;</a>
 			</li>
 
 		</ul>
@@ -280,12 +217,12 @@
 <li>Any payments sent from a Direct user must be funded by a verified funding source.</li>
 </ul>
 <h4 id="direct-users-with-verified-funding-source">Direct users with verified funding source</h4>
-<p>Direct users with a verified funding source can send money from that verified funding source. Direct users can only send money to recipients with traditional fully verified Dwolla accounts. This lightweight account can send up to $5,000 per week. Direct users do not have a PIN, so the PIN field must be omitted when using the <a href="../../docs/users/account.html#send-money">Send API</a>. </p>
+<p>Direct users with a verified funding source can send money from that verified funding source. Direct users can only send money to recipients with traditional fully verified Dwolla accounts. This lightweight account can send up to $5,000 per week. Direct users do not have a PIN, so the PIN field must be omitted when using the <a href="https://docs.dwolla.com/#send-money">Send API</a>. </p>
 <p>The following endpoints are restricted: MassPay, Request from Direct or External and Refund with an error of &quot;User cannot perform this operation&quot;.</p>
 <h4 id="direct-users-with-unverified-receive-only-funding-source">Direct users with unverified (receive-only) funding source</h4>
 <p>Direct users with an unverified funding source can receive money to that linked account, but cannot send money from that account. Any API endpoints that involve moving money, such as MassPay, Send, Fulfill Request, Refund are unavailable to these users.</p>
 <h4 id="direct-users-and-pins">Direct users and PINs</h4>
-<p>Use the <a href="../../docs/users/account.html#catalog">Catalog</a> endpoint to determine whether or not the user needs to provide a PIN in order to use the Send, Create Scheduled, or Fulfill Request endpoints.</p>
+<p>Use the <a href="https://docs.dwolla.com/#catalog">Catalog</a> endpoint to determine whether or not the user needs to provide a PIN in order to use the Send, Create Scheduled, or Fulfill Request endpoints.</p>
 <p>The Catalog endpoint returns links to endpoints that can be used by a user.  When it&#39;s called with a Direct user, some endpoint names in the keys of the <code>_links</code> object will have <code>&quot;WithoutPin&quot;</code> appended (eg. <code>&quot;sendWithoutPin&quot;</code>), which indicates that you will not need to supply a pin to use the endpoint and will not need to ask the user for a PIN.</p>
 <p><div class="codeContainer"></p>
 <pre><code class="lang-json">{

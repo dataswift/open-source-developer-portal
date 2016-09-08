@@ -93,7 +93,7 @@
 			</li>
 			<li
 >
-				<a href="../../docs/users/account.html" target="_blank">
+				<a href="https://docs.dwolla.com/" target="_blank">
 					<i class="icon-list-alt"></i>
 					API Documentation
 				</a>
@@ -123,34 +123,6 @@
 			</li>
 			<li
 >
-				<a href="create_application.html">
-					<i class="icon-check"></i>
-					Generate API Credentials
-				</a>
-			</li>
-			<li
->
-				<a href="receiving_money.html">
-					<i class="icon-check"></i>
-					Accepting Payments
-				</a>
-			</li>
-			<li
->
-				<a href="sending_money.html">
-					<i class="icon-check"></i>
-					Sending Money
-				</a>
-			</li>
-			<li
->
-				<a href="masspay.html">
-					<i class="icon-check"></i>
-					Sending Batch Payments
-				</a>
-			</li>
-			<li
->
 				<a href="facilitator_fee.html">
 					<i class="icon-check"></i>
 					Setting Facilitator Fees
@@ -161,13 +133,6 @@
 				<a href="offsite_gateway.html">
 					<i class="icon-check"></i>
 					Off-Site Gateway Checkout
-				</a>
-			</li>
-			<li
->
-				<a href="sandbox.html">
-					<i class="icon-check"></i>
-					Sandbox: Getting Started
 				</a>
 			</li>
 			<li class="active"
@@ -208,13 +173,6 @@
 			</li>
 			<li
 >
-				<a href="correlate_transactions.html">
-					<i class="icon-download-alt"></i>
-					Correlate Transaction IDs
-				</a>
-			</li>
-			<li
->
 				<a href="oauth_account_creation.html">
 					<i class="icon-bell"></i>
 					OAuth Account Creation
@@ -227,30 +185,9 @@
 					Dwolla Direct
 				</a>
 			</li>
-			<li
->
-				<a href="../sandbox.html">
-					<i class="icon-hdd"></i>
-					Sandbox
-				</a>
-			</li>
 
 			<li class="nav-header">
 				Tools
-			</li>
-			<li
->
-				<a href="../sandbox/admin.html">
-					<i class="icon-asterisk"></i>
-					Sandbox Admin
-				</a>
-			</li>
-			<li
->
-				<a href="../testing.html">
-					<i class="icon-road"></i>
-					Reflector Account
-				</a>
 			</li>
 			<li
 >
@@ -261,7 +198,7 @@
 			</li>
 
 			<li>
-				<a href="../../docs/users/account.html">Looking for API Docs? &raquo;</a>
+				<a href="https://docs.dwolla.com/">Looking for API Docs? &raquo;</a>
 			</li>
 
 		</ul>
@@ -272,19 +209,19 @@
 	<div class="content">
 		<div class="guide">
 			<h2 id="using-webhooks">Using Webhooks</h2>
-<p>In this guide, we will walk through what webhooks are, the different types of webhooks you can receive, how to enable webhooks, and an example of using webhooks after <a href="../../docs/transactions/send.html">sending</a> money through the API.</p>
+<p>In this guide, we will walk through what webhooks are, the different types of webhooks you can receive, how to enable webhooks, and an example of using webhooks after <a href="https://docs.dwolla.com/#send-money">sending</a> money through the API.</p>
 <h4 id="what-are-webhooks-">What are Webhooks?</h4>
 <p>Webhooks are a way for applications to get real-time notifications that track the progress of transactions tied to your consumer application.</p>
 <p>Dwolla API consumer applications can subscribe to Webhook Notifications. These Notifications are messages pushed to a subscribed URL as specified by the application owner. Notifications act as a private messaging system giving the application owner messages related to events triggered or initiated by their application&#39;s usage of the Dwolla API. </p>
 <h3 id="types-of-webhooks">Types of Webhooks</h3>
 <ul>
-<li><a href="../../docs/webhooks/transactionstatus.html">Transaction Status</a> - Notifies the consumer application&#39;s
+<li><a href="https://docs.dwolla.com/#transactionstatus">Transaction Status</a> - Notifies the consumer application&#39;s
   subscribed Webhook URL of transaction status changes for all transactions initiated by the given consumer application.</li>
-<li><a href="../../docs/webhooks/transactionreturned.html">Transaction Returned</a> - Notifies the consumer application&#39;s
+<li><a href="https://docs.dwolla.com/#transactionreturned">Transaction Returned</a> - Notifies the consumer application&#39;s
 subscribed Webhook URL of when a bank funded transaction is returned by the financial institution.    </li>
-<li><a href="../../docs/webhooks/requestfulfilled.html">Request Fulfilled</a> - Notifies the consumer application&#39;s
+<li><a href="https://docs.dwolla.com/#requestfulfilled">Request Fulfilled</a> - Notifies the consumer application&#39;s
 subscribed Webhook URL when money requests that were initiate by the given consumer application have been fulfilled.</li>
-<li><a href="../../docs/webhooks/requestcancelled.html">Request Cancelled</a> - Notifies the consumer application&#39;s
+<li><a href="https://docs.dwolla.com/#requestcancelled">Request Cancelled</a> - Notifies the consumer application&#39;s
 subscribed Webhook URL when money requests that were initiate by the given consumer application have been cancelled.</li>
 </ul>
 <h3 id="enabling-webhooks">Enabling Webhooks</h3>
@@ -297,7 +234,7 @@ subscribed Webhook URL when money requests that were initiate by the given consu
 <img src="../../../assets/images/guides/enableWebhooks.png" alt="Example view"></li>
 </ol>
 <h4 id="example-scenario">Example Scenario</h4>
-<p>In this example we will walk through receiving a webhook &quot;Transaction Status&quot; notification whenever someone makes a payment through the <a href="../../docs/transactions/send.html">Send</a> endpoint.</p>
+<p>In this example we will walk through receiving a webhook &quot;Transaction Status&quot; notification whenever someone makes a payment through the <a href="https://docs.dwolla.com/#send-money">Send</a> endpoint.</p>
 <h5 id="http-send-request">HTTP Send Request</h5>
 <pre><code>POST https://www.dwolla.com/oauth/rest/transactions/send
 Content-Type: application/json
