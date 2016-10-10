@@ -1,0 +1,37 @@
+<section class="steps-nav" {% unless page.url contains '/guides/migrate-to-v2' %}style="display:none"{% endunless %}>
+    <h6>Follow the steps</h6>
+    <ol>
+        <li>
+            <a href="/guides/migrate-to-v2" {% if page.guide.step == 'overview' %}class="active"{% endif %}>Overview: Migrate to v2</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/01-api-v2-principles.html" {% if page.guide.step == '1' %}class="active"{% endif %}>API v2 principles</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/02-making-requests.html" {% if page.guide.step == '2' %}class="active"{% endif %}>Making requests</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/03-authentication.html" {% if page.guide.step == '3' %}class="active"{% endif %}>Authentication</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/04-sdk-support.html" {% if page.guide.step == '4' %}class="active"{% endif %}>SDK support</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/05-v1-to-v2-endpoint-changes.html" {% if page.guide.step == '5' %}class="active"{% endif %}>v1 to v2 endpoint changes</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/06-other-notable-changes.html" {% if page.guide.step == '6' %}class="active"{% endif %}>Other notable changes</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/migrate-to-v2/07-faq.html" {% if page.guide.step == '7' %}class="active"{% endif %}>FAQ</a>
+            <div class="dot"></div>
+        </li>
+    </ol>
+</section>

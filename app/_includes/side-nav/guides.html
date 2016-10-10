@@ -13,6 +13,8 @@
                     Set up Sandbox
                 {% elsif page.url contains 'webhooks' %}
                     Webhooks
+                {% elsif page.url contains 'migrate-to-v2' %}
+                    Migrate to v2
                 {% else %}
                     Please select a guide
                 {% endif %}
@@ -36,6 +38,9 @@
             {% unless page.url contains '/guides/webhooks/' %}
                 <a href="/guides/webhooks/">Webhooks</a>
             {% endunless %}
+            {% unless page.url contains '/guides/migrate-to-v2/' %}
+                <a href="/guides/migrate-to-v2/">Migrate to v2</a>
+            {% endunless %}
         </nav>
     </section>
 
@@ -44,5 +49,6 @@
     {% include side-nav/guide-sandbox-setup.html %}
     {% include side-nav/guide-webhooks.html %}
     {% include side-nav/guide-transfer-money-between-users.html %}
+    {% include side-nav/guide-migrate-to-v2.html %}
 </nav>
 
