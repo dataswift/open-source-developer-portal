@@ -30,9 +30,27 @@ The table below provides a mapping of endpoints in v1 to their equivalent in v2.
 | [Transactions - List an app’s transactions](https://docs.dwolla.com/#list-an-app39s-transactions) | /transactions | N/A | N/A | **Not supported:** V2 does not have a method that allows an application to view transactions facilitated by the app itself. |
 | [Transactions - Get a specific transaction](https://docs.dwolla.com/#get-a-specific-transaction) | /transactions/{id} | [Transfers - Retrieve a transfer](https://docsv2.dwolla.com/#retrieve-a-transfer) | /transfers/{id} | Retrieve a transfer belonging to the authorized user. **Not supported:** Transaction type is not returned on the transfer. Expected clearing date is no longer returned for bank transfers. Source and destination names are no longer displayed on the transfer object. |
 | [Transactions - Search transactions](https://docs.dwolla.com/#search-transactions) | /transactions/search | [Accounts - List and search transfers for an account](https://docsv2.dwolla.com/#list-and-search-transfers-for-an-account) | /accounts/{id}/transfers | Search transactions for the authorized user. **New:** Transaction search is included on the List Transfers for an Account endpoint. Same request params supported on v2 as v1. |
-
+| [Scheduled Payments](https://docs.dwolla.com/#scheduled-payments) | /transactions/scheduled | N/A | N/A | **Not supported:** Includes: Create, List, Retrieve, Edit, Delete, and Delete all Scheduled Payments. **Note:** Scheduled transactions are allowed in v2, however you’ll need to build your own scheduler and call the transfers endpoint. |
+| [Transaction Stats](https://docs.dwolla.com/#transaction-stats) | /transactions/stats | N/A | N/A | **Not supported.** Information will likely be accessible in the new Dwolla dashboard. |
+| [Users - Get Basic Account Info](https://docs.dwolla.com/#get-basic-account-info) | /users/{account_identifier} | [Accounts - Retrieve account details](https://docsv2.dwolla.com/#retrieve-account-details) | /accounts/{id} | Retrieve name and unique account identifier for a Dwolla account. |
+| [Users - Get Full Account Info](https://docs.dwolla.com/#get-full-account-info) | /users | N/A | N/A | **Not supported** |
+| [Users - Get Email Address](https://docs.dwolla.com/#get-email-address) | /users/email | N/A | N/A | **Not supported** |
+| [Users - Get Avatar](https://docs.dwolla.com/#get-avatar) | /avatars/{dwolla_id} | N/A | N/A | **Not supported** |
+| [Users - Find Nearby Businesses](https://docs.dwolla.com/#find-nearby-businesses) | /contacts/nearby | N/A | N/A | **Not supported** |
+| [Users - Find Users Nearby](https://docs.dwolla.com/#find-users-nearby) | /users/nearby | N/A | N/A | **Not supported** |
+| [Contacts - Get a user’s contacts](https://docs.dwolla.com/#get-a-user39s-contacts) | /contacts | N/A | N/A | **Not supported** |
+| [Balance](https://docs.dwolla.com/#balance) | /balance | [Funding sources - Retrieve a funding source](https://docsv2.dwolla.com/#retrieve-a-funding-source) | /funding-sources/{id} | Retrieve the balance of a funding source. |
+| [MassPay - Create Job](https://docs.dwolla.com/#create-job) | /masspay | [MassPay - Initiate a mass payment](https://docsv2.dwolla.com/#initiate-a-mass-payment) | /mass-payments | Initiate a mass payment for the authorized account to many recipients. **New:** Metadata can be added to a MassPay job. Webhooks are sent notifying your app of the status of a mass payment. |
+| [MassPay - List Jobs](https://docs.dwolla.com/#list-jobs) | /masspay | [Accounts - List mass payments for an account](https://docsv2.dwolla.com/#list-mass-payments-for-an-account) | /accounts/{id}/mass-payments | Retrieve all mass payments for the authorized account. |
+| [MassPay - Retrieve Job](https://docs.dwolla.com/#retrieve-job) | /masspay/{id} | [MassPay - Retrieve a mass payment](https://docsv2.dwolla.com/#retrieve-a-mass-payment) | /mass-payments/{id} | Retrieve a single mass payment for the authorized account. |
+| [MassPay - List a Job’s Items](https://docs.dwolla.com/#list-a-job39s-items) | /masspay/{id}/items | [MassPay - List items for a mass payment](https://docsv2.dwolla.com/#list-items-for-a-mass-payment) | /mass-payments/{id}/items | List the items contained in a mass payment. |
+| [MassPay - Retrieve a Job’s Item](https://docs.dwolla.com/#retrieve-a-job39s-item) | /masspay/{job_id}/items/{item_id} | [MassPay - Retrieve a mass payment item](https://docsv2.dwolla.com/#retrieve-a-mass-payment-item) | /mass-payment-items/{id} | Retrieve a single item for a mass payment. |
+| [Refund](https://docs.dwolla.com/#refund) | /transactions/refund | N/A | N/A | **Not supported.** Your app will need to handle refunds by calling the [initiate a transfer](https://docsv2.dwolla.com/#initiate-a-transfer) endpoint, specifying the source, destination and amount to be refunded. |
+| [Money Requests](https://docs.dwolla.com/#money-requests) | /requests | N/A | N/A | Includes: Create, List, Retrieve, Fulfill, and Cancel a Money Request. |
+| [Account Settings - Get Auto Withdrawal Status](https://docs.dwolla.com/#get-auto-withdrawal-status) | /accounts/features/auto_withdrawl | N/A | N/A | **Not supported** |
+| [Account Settings - Enable/Disable Auto Withdrawal](https://docs.dwolla.com/#enabledisable-auto-withdrawal) | /accounts/features/auto_withdrawl | N/A | N/A | **Not supported** |
 
 <nav class="pager-nav">
     <a href="04-sdk-support.html">Back: SDK support</a>
-    <a href="06-faq.html">Next step: FAQ</a>
+    <a href="06-other-notable-changes.html">Next step: Other notable changes</a>
 </nav>

@@ -40,6 +40,6 @@ description: Underlying principles of Dwolla's v2 API and guidance on upgrading 
 
 
 <nav class="pager-nav">
-    <a href="06-sdk-support.html">Back: SDK support</a>
+    <a href="05-v1-to-v2-endpoint-changes.html">Back: v1 to v2 endpoint changes</a>
     <a href="07-faq.html">Next step: FAQ</a>
 </nav>
