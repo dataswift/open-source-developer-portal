@@ -14,7 +14,7 @@ description: Underlying principles of Dwolla's v2 API and guidance on upgrading 
 ## Making requests
 Since you are talking to a new API, the components that make up a request such as the base URL, headers, and request payload will vary slightly. Interacting with v2 is fairly straightforward, and you should be aware of the following items when calling the API:
 
-* The base URL has changed in API v2 from https://www.dwolla.com/oauth/rest/ to simply https://api.dwolla.com/
+* The base URL has changed in API v2 from `https://www.dwolla.com/oauth/rest/` to simply `https://api.dwolla.com/`
 * All requests should supply the `Accept` header with a value of: application/vnd.dwolla.v1.hal+json. This new header tells Dwolla how to interpret the request (specifically what format you expect in the response) and provides the ability to easily version the API if needed!
 * When data is supplied in a POST body, the `Content-Type` header is required with a value of: application/vnd.dwolla.v1.hal+json or simply application/json. The Content-Type header describes the data in the body of the request(e.g. JSON).
 
