@@ -21,4 +21,8 @@ description: "Programmatically send bank transfers with our developer API."
       <h3>Webhooks</h3>
       <p>Implement simple, real-time, event notifications regarding account and transaction status, and more.</p>
   </a>
+    <a href="/guides/migrate-to-v2" class="icon-guides-v1-to-v2">
+      <h3>Migrate to v2</h3>
+      <p>Underlying principles of our v2 API and guidance on upgrading your application from Dwolla's legacy v1 API.</p>
+  </a>
 </nav>
