@@ -17,7 +17,7 @@
         color: $color-grey-med-3;
         text-decoration: underline;
 
-        @include breakpoint($SIZE_MOBILE){
+        @include breakpoint($size-mobile){
             margin-top: 25px;
             display: block;
         }

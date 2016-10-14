@@ -4,7 +4,7 @@
     display: none;
     @extend %clearfix;
 
-    @include breakpoint($SIZE_TABLET_SMALL){
+    @include breakpoint($size-tablet-small){
         padding-bottom: 20px;
         display: block;
     }

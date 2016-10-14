@@ -26,12 +26,12 @@
         background: image-url("../images/backgrounds/banner_developer_desktop.jpg") center center no-repeat;
         background-size: cover;
 
-        @include breakpoint($SIZE_TABLET){
+        @include breakpoint($size-tablet){
             background: image-url("../images/backgrounds/banner_developer_tablet.jpg") center center no-repeat;
             background-size: cover;
         }
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             background: $color-blue;
         }
 
@@ -44,7 +44,7 @@
             left: 0;
             @include linear-gradient($gradient-tilt-banner, rgba($color-blue, 0.85), rgba($color-gradient-purple, 0.85));
 
-            @include breakpoint($SIZE_MOBILE){
+            @include breakpoint($size-mobile){
                 display: none;
             }
         }

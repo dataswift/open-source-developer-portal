@@ -6,16 +6,16 @@ $slide-time: 0.3s;
     position: relative;
     z-index: 1;
 
-    @include breakpoint($SIZE_DESKTOP_SMALL){
+    @include breakpoint($size-desktop-small){
         padding: 0 30px;
     }
 
 
-    @include breakpoint($SIZE_MOBILE){
+    @include breakpoint($size-mobile){
         padding: 0 15px;
     }
 
-    @include breakpoint($SIZE_MOBILE_SMALL){
+    @include breakpoint($size-mobile-small){
         padding: 0 10px;
     }
 }
@@ -46,7 +46,7 @@ $slide-time: 0.3s;
             margin: 0 -55px;
             border-top: 1px solid $color-grey-med;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 margin: 0 -20px;
             }
 
@@ -54,7 +54,7 @@ $slide-time: 0.3s;
                 &:first-child {
                     border-right: 1px solid $color-grey-med;
 
-                    @include breakpoint($SIZE_TABLET_SMALL){
+                    @include breakpoint($size-tablet-small){
                         border-right: none;
                         border-bottom: 1px solid $color-grey-med;
                     }
@@ -70,7 +70,7 @@ $slide-time: 0.3s;
     .reach-out {
         margin-bottom: 30px;
 
-        @include breakpoint($SIZE_DESKTOP_SMALL){
+        @include breakpoint($size-desktop-small){
             margin-bottom: 30px;
         }
     }
@@ -90,11 +90,11 @@ $slide-time: 0.3s;
         display: -ms-flexbox;
         display: flex;
 
-        @include breakpoint($SIZE_DESKTOP_SMALL){
+        @include breakpoint($size-desktop-small){
             padding: 0;
         }
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             position: static;
         }
     }
@@ -107,7 +107,7 @@ $slide-time: 0.3s;
         z-index: 10;
         position: relative;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             width: 103.5%;
             margin-top: 100vh;
             display: none;
@@ -130,7 +130,7 @@ $slide-time: 0.3s;
             
             @extend %clearfix;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 height: 260px;
                 display: block;
                 top: -60px;
@@ -161,7 +161,7 @@ $slide-time: 0.3s;
             top: 0;
             bottom: 0;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 height: 100%;
                 width: auto;
                 padding:  0;
@@ -179,7 +179,7 @@ $slide-time: 0.3s;
             }
 
             .steps-nav {
-                @include breakpoint($SIZE_TABLET_SMALL){
+                @include breakpoint($size-tablet-small){
                     display: none;
                 }
 
@@ -199,7 +199,7 @@ $slide-time: 0.3s;
 
     &__content {
         width: 100%;
-        max-width: $SIZE_MAX_CONTENT_WIDTH;
+        max-width: $size-max-content-width;
         margin-left: -300px;
         padding: 35px 40px 30px 335px;
         overflow: hidden;
@@ -207,7 +207,7 @@ $slide-time: 0.3s;
         overflow-wrap: break-word;
         word-wrap: break-word;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             margin: 0;
             padding: 30px 20px;
         }
@@ -228,7 +228,7 @@ $slide-time: 0.3s;
             margin: 0 -20px -30px;
             padding-right: 20px;
             padding-left: 20px;
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 display: block;
             }
         }

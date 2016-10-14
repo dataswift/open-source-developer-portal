@@ -35,7 +35,7 @@ $rotation-time: 0.35s;
         border-bottom: 1px solid $color-grey-med;
         background: $color-grey;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             border: none;
         }
 
@@ -50,7 +50,7 @@ $rotation-time: 0.35s;
 
                 &:first-child {
                     padding-top: 0;
-                    @include breakpoint($SIZE_TABLET_SMALL){
+                    @include breakpoint($size-tablet-small){
                         margin-bottom: 10px;
                         padding-left: 20px;
                     }
@@ -59,7 +59,7 @@ $rotation-time: 0.35s;
 
             &:last-child {
                 border-bottom: 1px solid $color-grey-med;
-                @include breakpoint($SIZE_TABLET_SMALL){
+                @include breakpoint($size-tablet-small){
                     border: none;
                 }
             }
@@ -74,13 +74,13 @@ $rotation-time: 0.35s;
         & > h6 {
             padding: 0 0 0 25px;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 padding-left: 20px;
             }
 
             &:first-child {
                 padding-top: 30px;
-                @include breakpoint($SIZE_TABLET_SMALL){
+                @include breakpoint($size-tablet-small){
                     padding-top: 0;
                 }
             }
@@ -94,7 +94,7 @@ $rotation-time: 0.35s;
                 margin-bottom: 30px;
             }
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 border-top: 1px solid $color-grey-med;
             }
 
@@ -119,7 +119,7 @@ $rotation-time: 0.35s;
                             display: inline-block;
                             background-position: 100% 2px;
 
-                            @include breakpoint($SIZE_TABLET_SMALL){
+                            @include breakpoint($size-tablet-small){
                                 margin-right: -5px;
                                 display: block;
                             }
@@ -128,7 +128,7 @@ $rotation-time: 0.35s;
                 }
 
                 a {
-                    @include breakpoint($SIZE_TABLET_SMALL){
+                    @include breakpoint($size-tablet-small){
                         position :relative;
                         padding-left: 20px;
                         border-bottom: 1px solid $color-grey-med;
@@ -167,7 +167,7 @@ $rotation-time: 0.35s;
                         background: $color-grey-2;
                         border-left: 3px solid $color-blue;
 
-                        @include breakpoint($SIZE_TABLET_SMALL){
+                        @include breakpoint($size-tablet-small){
                             &:after {
                                 @include arrow(6px, $color-grey-2, "right");
                             }
@@ -231,7 +231,7 @@ $rotation-time: 0.35s;
         color: $color-black;
         @extend %clearfix;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             padding: 0 20px 20px;
         }
 
@@ -249,19 +249,19 @@ $rotation-time: 0.35s;
             float: right;
 
             a {
-                @include breakpoint($SIZE_MOBILE){
+                @include breakpoint($size-mobile){
                     width: 50%;
                 }
 
                 &:first-child {
-                    @include breakpoint($SIZE_MOBILE){
+                    @include breakpoint($size-mobile){
                         border-top-right-radius: 0;
                         border-bottom-left-radius: 5px;
                     }
                 }
 
                 &:last-child {
-                    @include breakpoint($SIZE_MOBILE){
+                    @include breakpoint($size-mobile){
                         border-top-right-radius: 5px;
                         border-bottom-left-radius: 0;
                     }
@@ -273,7 +273,7 @@ $rotation-time: 0.35s;
     &__dropdown {
         padding: 30px 25px;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             padding: 0; 
         }
 
@@ -304,7 +304,7 @@ $rotation-time: 0.35s;
             border: none;
             background: transparent;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 display: none;
             }
 
@@ -322,7 +322,7 @@ $rotation-time: 0.35s;
                 background: transparent;
             }
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 height: auto;
                 border-top: 1px solid $color-grey-med;
 
@@ -379,7 +379,7 @@ $rotation-time: 0.35s;
                 top: 4px;
                 left: 0;
 
-                @include breakpoint($SIZE_TABLET_SMALL){
+                @include breakpoint($size-tablet-small){
                     display: none;
                 }
             }
@@ -413,7 +413,7 @@ $rotation-time: 0.35s;
             font-size: rem(12px);
             position: relative;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 padding-left: 20px;
             }
 

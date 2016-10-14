@@ -55,7 +55,7 @@ body > header {
                         margin: 0;
                     }
 
-                    @include breakpoint($SIZE_MOBILE_SMALL) {
+                    @include breakpoint($size-mobile-small) {
                         margin-right: 10px;
                     }
 
@@ -64,7 +64,7 @@ body > header {
                     }
                 }
 
-                @include breakpoint($SIZE_TABLET_SMALL) {
+                @include breakpoint($size-tablet-small) {
                     display: inline-block;
                 }
             }
@@ -101,7 +101,7 @@ body > header {
             & > div {
                 float: left;
 
-                @include breakpoint($SIZE_TABLET_SMALL){
+                @include breakpoint($size-tablet-small){
                     float: none;
                 }
             }
@@ -111,7 +111,7 @@ body > header {
             float: right;
             transition: height $slide-time, margin $slide-time;
 
-            @include breakpoint($SIZE_TABLET_SMALL) {
+            @include breakpoint($size-tablet-small) {
                 width: 100%;
                 height: 0;
                 padding: 0;
@@ -121,7 +121,7 @@ body > header {
             }
 
             a {
-                @include breakpoint($SIZE_TABLET_SMALL) {
+                @include breakpoint($size-tablet-small) {
                     margin: 0;
                     padding: 15px 0;
                     display: block;
@@ -129,7 +129,7 @@ body > header {
                 }
 
                 &.btn {
-                    @include breakpoint($SIZE_TABLET_SMALL) {
+                    @include breakpoint($size-tablet-small) {
                         display: none;
                     }
                 }
@@ -171,7 +171,7 @@ body > header {
             }
 
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 margin-right: 10px;
                 padding-right: 15px;
 
@@ -213,7 +213,7 @@ body > header {
                 }
             }
 
-            @include breakpoint($SIZE_MOBILE_SMALL) {
+            @include breakpoint($size-mobile-small) {
                 padding-right: 12px;
             }
         }
@@ -224,7 +224,7 @@ body > header {
             position: absolute;
             top: -5px;
 
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 display: none;
             }
 
@@ -238,7 +238,7 @@ body > header {
 body.home > header .header__secondary {
     border-bottom: none;
 
-    @include breakpoint($SIZE_TABLET_SMALL){
+    @include breakpoint($size-tablet-small){
         background: $color-white;
     }
 
@@ -249,7 +249,7 @@ body.home > header .header__secondary {
     a {
         color: $color-white;
 
-        @include breakpoint($SIZE_TABLET_SMALL){
+        @include breakpoint($size-tablet-small){
             color: $color-grey-dark;
         }
     }

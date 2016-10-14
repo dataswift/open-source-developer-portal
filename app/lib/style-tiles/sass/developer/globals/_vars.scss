@@ -1,19 +1,19 @@
-/* ---- BREAKPOINTS ----- */
-$SIZE_DESKTOP_SMALL: 1084px;
-$SIZE_TABLET: 768px;
-$SIZE_TABLET_SMALL: 725px;
-$SIZE_MOBILE: 600px;
-$SIZE_MOBILE_SMALL: 350px;
+// ---- BREAKPOINTS -----
+$size-desktop-small: 1084px;
+$size-tablet: 768px;
+$size-tablet-small: 725px;
+$size-mobile: 600px;
+$size-mobile-small: 350px;
 
-/* ---- WIDTHS ----- */
-$SIZE_MAX_CONTENT_WIDTH: 1385px;
-$SIZE_COL_MOBILE_FOOTER_BREAK: 900px;
-$SIZE_COL_MOBILE_SMALL_FOOTER_BREAK: 650px;
+// ---- WIDTHS -----
+$size-max-content-width: 1385px;
+$size-col-mobile-footer-break: 900px;
+$size-col-mobile-small-footer-break: 650px;
 
-/* ---- TYPOGRAPHY ----- */
-$BASE-FONT-SIZE: 14px;
+// ---- TYPOGRAPHY -----
+$base-font-size: 14px;
 
-/* ------ COLORS ------- */
+// ------ COLORS -------
 //primary
 $color-orange: #ff7404;
 $color-blue: #2395d6;
@@ -22,7 +22,7 @@ $color-grey-light: #f6fafc;
 $color-grey: #eef3f6;
 $color-grey-med: #ccd6dd;
 $color-grey-dark: #6f828e;
-$color-black: #3E4956;
+$color-black: #3e4956;
 
 //greys
 $color-grey-2: #e2e9ed;
@@ -46,3 +46,6 @@ $gradient-tilt-banner: 156deg;
 $color-gradient-orange: #ff8929;
 $color-gradient-red: #ce5951;
 $color-gradient-purple: #7863a9;
+
+//shadows
+$color-grid-box-hover-shadow: rgba(44, 44, 44, .25);

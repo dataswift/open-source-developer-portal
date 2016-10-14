@@ -1,5 +1,26 @@
 %clearfix {
     zoom: 1;
-    &:before{ content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
-    &:after{ content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; clear: both; }
+
+    &::before {
+        display: block;
+        width: 0;
+        height: 0;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    &::after {
+        display: block;
+        width: 0;
+        height: 0;
+        clear: both;
+        content: '\0020';
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+%roboto-slab {
+    font-family: 'Roboto Slab', serif;
 }
