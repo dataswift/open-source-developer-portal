@@ -14,11 +14,11 @@ body > footer, .cnt-two-col__content > footer {
         @include flexbox();
         @include flex-wrap(wrap);
 
-        @include breakpoint($SIZE_MOBILE){
+        @include breakpoint($size-mobile){
             padding: 0 30px;
         }
 
-        @include breakpoint($SIZE_MOBILE_SMALL){
+        @include breakpoint($size-mobile-small){
             padding: 0;
         }
 
@@ -26,11 +26,11 @@ body > footer, .cnt-two-col__content > footer {
             margin-bottom: 55px;
             @include flex-grow(1);
 
-            @include breakpoint($SIZE_MOBILE){
+            @include breakpoint($size-mobile){
                 width: 50%;
             }
 
-            @include breakpoint($SIZE_MOBILE_SMALL){
+            @include breakpoint($size-mobile-small){
                 width: 100%;
                 text-align: center;
             }
@@ -50,11 +50,11 @@ body > footer, .cnt-two-col__content > footer {
         padding: 0;
 
         & > nav {
-            @include breakpoint($SIZE_COL_MOBILE_FOOTER_BREAK){
+            @include breakpoint($size-col-mobile-footer-break){
                 width: 50%;
             }
 
-            @include breakpoint($SIZE_MOBILE_SMALL){
+            @include breakpoint($size-mobile-small){
                 width: 100%;
                 text-align: center;
             }

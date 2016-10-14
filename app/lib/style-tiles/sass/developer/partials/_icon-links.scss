@@ -18,7 +18,7 @@
         display: -ms-flexbox;
 
         &:nth-child(2n) {
-            @include breakpoint($SIZE_DESKTOP_SMALL){
+            @include breakpoint($size-desktop-small){
                 margin-right: 0;
             }
         }
@@ -27,12 +27,12 @@
             margin-right: 0;
         }
 
-        @include breakpoint($SIZE_DESKTOP_SMALL){
+        @include breakpoint($size-desktop-small){
             width: 49%;
             margin-right: 2%;
         }
 
-        @include breakpoint($SIZE_MOBILE){
+        @include breakpoint($size-mobile){
             width: 100%;
             margin-right: 0;
             margin-bottom: 15px;

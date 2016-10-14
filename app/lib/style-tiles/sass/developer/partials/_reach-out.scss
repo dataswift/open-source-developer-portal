@@ -7,7 +7,7 @@
         float: left;
         text-align: center;
 
-        @include breakpoint($SIZE_DESKTOP_SMALL){
+        @include breakpoint($size-desktop-small){
             width: 100%;
             margin-bottom: 30px;
             float: none;
@@ -39,7 +39,7 @@
 body.home .reach-out {
     margin-bottom: 90px;
 
-    @include breakpoint($SIZE_TABLET_SMALL){
+    @include breakpoint($size-tablet-small){
         margin-bottom: 30px;
     }
 }

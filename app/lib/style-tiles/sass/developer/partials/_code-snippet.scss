@@ -65,7 +65,7 @@
                 font-size: rem(12px);
                 font-weight: 600;
 
-                @include breakpoint($SIZE_MOBILE_SMALL) {
+                @include breakpoint($size-mobile-small) {
                     padding: 6px;
                     font-size: rem(11px);
                 }

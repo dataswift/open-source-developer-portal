@@ -1,0 +1,21 @@
+.demo-specific__colors {
+    .orange { background-color: $color-orange; }
+    .blue { background-color: $color-blue; }
+    .green { background-color: $color-green; }
+    .red { background-color: $color-red; }
+
+    .black-dark {background-color: $color-black-dark; }
+    .black {background-color: $color-black; }
+    .grey-dark {background-color: $color-grey-dark; }
+    .grey-3 {background-color: $color-grey-3; }
+    .grey-2 {background-color: $color-grey-2; }
+    .grey {background-color: $color-grey; }
+    .grey-light {background-color: $color-grey-light; }
+    .white-dark {background-color: $color-white-dark; }
+    .white-med {background-color: $color-white-med; }
+    .white {background-color: $color-white; }
+}
+
+.demo-specific__body-wrap {
+    background-color: $color-white-dark;
+}

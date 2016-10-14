@@ -21,7 +21,7 @@
         float: left;
         &:first-child {
             margin-right: 10%;
-            @include breakpoint($SIZE_TABLET){
+            @include breakpoint($size-tablet){
                 margin-right: 0;
                 float: none;
             }

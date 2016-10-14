@@ -1,0 +1,21 @@
+.demo-specific {
+    &__typography-info {
+        li {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__typography-info-strip {
+        font-size: rem(14px);
+        line-height: rem(32px);
+        opacity: 0.75;
+        background: $color-demo-specific-grey-light;
+
+        span {
+            margin: 0 10px 10px 0;
+            padding: 2px 5px;
+            border: 1px solid $color-demo-specific-black;
+            cursor: pointer;
+        }    
+    }
+}

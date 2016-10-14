@@ -11,9 +11,9 @@ button::-moz-focus-inner {
 body {
     &:before{
         content:"desktop"; display: none;
-        @include breakpoint($SIZE_TABLET) { content:"tablet"; }
-        @include breakpoint($SIZE_TABLET_SMALL) { content:"tablet_small"; }
-        @include breakpoint($SIZE_MOBILE) { content:"mobile"; }
-        @include breakpoint-landscape($SIZE_MOBILE) { content:"mobile-landscape"; }
+        @include breakpoint($size-tablet) { content:"tablet"; }
+        @include breakpoint($size-tablet-small) { content:"tablet_small"; }
+        @include breakpoint($size-mobile) { content:"mobile"; }
+        @include breakpoint-landscape($size-mobile) { content:"mobile-landscape"; }
     }
 }

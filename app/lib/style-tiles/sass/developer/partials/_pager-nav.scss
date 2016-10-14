@@ -3,13 +3,13 @@
     font-weight: 600;
     @extend %clearfix;
 
-    @include breakpoint($SIZE_MOBILE_SMALL){
+    @include breakpoint($size-mobile-small){
         font-size: rem(13px);
     }
 
     a {
         &:first-child {
-            @include breakpoint($SIZE_TABLET_SMALL){
+            @include breakpoint($size-tablet-small){
                 display: none;
             }
 

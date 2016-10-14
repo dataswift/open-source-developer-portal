@@ -1,7 +1,7 @@
 .lng-reference {
     margin-bottom: 90px;
 
-    @include breakpoint($SIZE_TABLET){
+    @include breakpoint($size-tablet){
         margin-bottom: 30px;
     }
 
@@ -10,7 +10,7 @@
         padding: 20px 0 0 186px;
         position: relative;
 
-        @include breakpoint($SIZE_TABLET){
+        @include breakpoint($size-tablet){
             padding: 110px 0 0;
         }
 
@@ -24,7 +24,7 @@
             border-radius: 8px;
             background-position: 50%;
 
-            @include breakpoint($SIZE_TABLET){
+            @include breakpoint($size-tablet){
                 top: 10px;
                 left: 50%;
                 margin-left: -77px;

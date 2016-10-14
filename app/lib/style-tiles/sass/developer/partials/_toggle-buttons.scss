@@ -11,7 +11,7 @@
         text-align: center;
         color: $color-grey-dark;
 
-        @include breakpoint($SIZE_MOBILE){
+        @include breakpoint($size-mobile){
             width: 100%;
         }
 
@@ -19,7 +19,7 @@
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
 
-            @include breakpoint($SIZE_MOBILE){
+            @include breakpoint($size-mobile){
                 border-top-right-radius: 5px;
                 border-bottom-left-radius: 0;
             }
@@ -29,7 +29,7 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
 
-            @include breakpoint($SIZE_MOBILE){
+            @include breakpoint($size-mobile){
                 border-top-right-radius: 0;
                 border-bottom-left-radius: 5px;
             }

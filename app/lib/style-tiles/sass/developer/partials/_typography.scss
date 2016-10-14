@@ -8,12 +8,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-%roboto-slab {
-    font-family: "Roboto Slab", serif;
-}
-
 html {
-    font-size: $BASE-FONT-SIZE;
+    font-size: $base-font-size;
 }
 
 input, select, textarea, button{
@@ -29,50 +25,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: rem(35px);
-    line-height: rem(40px);
+    @include font-size-h1;
     font-weight: 300;
     color: $color-orange;
     @extend %roboto-slab;
 
-    @include breakpoint($SIZE_TABLET){
+    @include breakpoint($size-tablet){
         font-size: rem(27px);
         line-height: rem(32px);
     }
 }
 
 h2 {
-    font-size: rem(26px);
-    line-height: rem(31px);
+    @include font-size-h2;
     font-weight: 400;
 }
 
 h3 {
-    font-size: rem(20px);
-    line-height: rem(25px);
+    @include font-size-h3;
 }
 
 h4 {
-    font-size: rem(18px);
-    line-height: rem(25px);
+    @include font-size-h4;
 }
 
 h5 {
-    font-size: rem(16px);
-    line-height: rem(23px);
+    @include font-size-h5;
 }
 
 h6 {
-    font-size: rem(16px);
-    line-height: rem(23px);
+    @include font-size-h5;
     text-transform: uppercase;
 }
 
 p {
+    @include font-size-paragraph;
     margin: 0 0 25px 0;
     padding: 0;
-    font-size: rem(16px);
-    line-height: rem(26px);
 }
 
 a {
@@ -121,7 +110,7 @@ ul {
     li {
         font-size: rem(16px);
     }
-    
+
     &.bullet {
         margin-bottom: 30px;
 
@@ -188,7 +177,7 @@ table {
     margin-bottom: 30px;
 
     thead {
-        @include breakpoint($SIZE_MOBILE){
+        @include breakpoint($size-mobile){
             display: none;
         }
 
@@ -206,19 +195,19 @@ table {
         background: $color-grey-light;
 
         tr {
-            @include breakpoint($SIZE_MOBILE){
+            @include breakpoint($size-mobile){
                 border: 1px solid #ccc;
             }
-            
+
            &:nth-child(even) {
                 background: $color-grey;
-            } 
+            }
 
             td {
                 padding: 6px 15px;
                 font-size: rem(13px);
 
-                @include breakpoint($SIZE_MOBILE){
+                @include breakpoint($size-mobile){
                     width: 100%;
                     padding-left: 50%;
                     display: block;
@@ -243,7 +232,7 @@ table {
                     top: 6px;
                     left: 15px;
 
-                    @include breakpoint($SIZE_MOBILE){
+                    @include breakpoint($size-mobile){
                         display: block;
                     }
                 }
