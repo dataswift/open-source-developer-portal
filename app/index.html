@@ -7,57 +7,62 @@ description: The ACH API for bank transfers
 sampleRuby: >
     ```ruby 
 
-    require 'dwolla_swagger'
+    require 'dwolla_v2'
 
-    DwollaSwagger::Swagger.configure do |config|
-        config.auth_token = 'elq7kponDPk4iT5DUllTIHL5H5vhZCORKLQ6aB3jfkfSnqSNw6'
-        config.host = 'api-uat.dwolla.com'
-        config.base_path = '/'
+
+    $dwolla = DwollaV2::Client.new(id: ENV["DWOLLA_ID"], secret: ENV["DWOLLA_SECRET"]) do |config|
+        config.environment = :sandbox
     end
 
-    transfer_request = {
-          "_links" => {
-            "destination" => {
-                "href" => "https://api-uat.dwolla.com/funding-sources/929e1066-3ad0-4799-9f0d-30121f71375d"
-            },
-             "source" => {
-                "href" => "https://api-uat.dwolla.com/funding-sources/617c9d7f-84a8-4e1b-8bb5-831db7fde136"
-            }
+
+    account_token = $dwolla.tokens.new access_token: "GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N"
+
+
+    request_body = {
+      :_links => {
+        :source => {
+          :href => "https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e"
         },
-          "amount" => {
-            "currency" => "USD",
-               "value" => "9.00"
-        },
-        "metadata" => {
-            "foo" => "bar",
-            "baz" => "boo"
+        :destination => {
+          :href => "https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d"
         }
+      },
+      :amount => {
+        :currency => "USD",
+        :value => "1.00"
+      },
+      :metadata => {
+        :foo => "bar",
+        :baz => "boo"
+      }
     }
 
-    xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
 
-    p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+    transfer = account_token.post "transfers", request_body
+
+    transfer.headers[:location] # => "https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388"
+
     ```
 
 sampleRaw: >
     ```raw
 
-    curl -X POST -H "Authorization: Bearer elq7kponDPk4iT5DUllTIHL5H5vhZCORKLQ6aB3jfkfSnqSNw6" \
+    curl -X POST -H "Authorization: Bearer GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N" \
     -H "Content-Type: application/vnd.dwolla.v1.hal+json" \
     -H "Accept: application/vnd.dwolla.v1.hal+json" \
     -d '{
         "_links": {
-            "destination": {
-                "href": "https://api-uat.dwolla.com/funding-sources/929e1066-3ad0-4799-9f0d-30121f71375d"
+            "source": {
+                "href": "https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e"
                 
             },
-            "source": {
-                "href": "https://api-uat.dwolla.com/funding-sources/617c9d7f-84a8-4e1b-8bb5-831db7fde136"
+            "destination": {
+                "href": "https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d"
             }
         },
         "amount": {
             "currency": "USD",
-            "value": "9.00"
+            "value": "1.00"
         },
         "metadata": {
             "foo": "bar",
@@ -70,37 +75,43 @@ sampleRaw: >
 samplePython: >
     ```python
 
-    import dwollaswagger
+    import dwollav2
 
 
-    dwollaswagger.configuration.auth_token = 'elq7kponDPk4iT5DUllTIHL5H5vhZCORKLQ6aB3jfkfSnqSNw6'
+    client = dwollav2.Client(
+      id = os.environ['DWOLLA_ID'],
+      secret = os.environ['DWOLLA_SECRET'],
+      environment = 'sandbox'
+    )
 
-    client = dwollaswagger.ApiClient('https://api-uat.dwolla.com')
 
-    transfer_request = {
-        "_links": {
-            "destination": {
-                "href": "https://api-uat.dwolla.com/funding-sources/929e1066-3ad0-4799-9f0d-30121f71375d"
-            },
-            "source": {
-                "href": "https://api-uat.dwolla.com/funding-sources/617c9d7f-84a8-4e1b-8bb5-831db7fde136"
-            }
+    account_token = client.Token(access_token = 'GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N')
+
+
+    request_body = {
+      '_links': {
+        'source': {
+          'href': 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e'
         },
-        "amount": {
-            "currency": "USD",
-            "value": "9.00"
-        },
-        "metadata": {
-            "foo": "bar",
-            "baz": "boo"
+        'destination': {
+          'href': 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d'
         }
+      },
+      'amount': {
+        'currency': 'USD',
+        'value': '1.00'
+      },
+      'metadata': {
+        'foo': 'bar',
+        'baz': 'boo'
+      }
     }
 
-    transfers_api = dwollaswagger.TransfersApi(client)
 
-    xfer = transfers_api.create(body=transfer_request)
+    transfer = account_token.post('transfers', request_body)
 
-    print(xfer) # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+    transfer.headers['location'] # => 'https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388'
+
     ```
 
 samplePHP: >
@@ -108,20 +119,22 @@ samplePHP: >
 
     <?php
 
-    DwollaSwagger\Configuration::$auth_token = 'elq7kponDPk4iT5DUllTIHL5H5vhZCORKLQ6aB3jfkfSnqSNw6';
+    DwollaSwagger\Configuration::$auth_token = 'GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N';
+
 
     $apiClient = new DwollaSwagger\ApiClient("https://api-uat.dwolla.com/");
+
 
     $transfer_request = array (
       '_links' => 
       array (
-        'destination' => 
-        array (
-          'href' => 'https://api-uat.dwolla.com/funding-sources/929e1066-3ad0-4799-9f0d-30121f71375d',
-        ),
         'source' => 
         array (
-          'href' => 'https://api-uat.dwolla.com/funding-sources/617c9d7f-84a8-4e1b-8bb5-831db7fde136',
+          'href' => 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e',
+        ),
+        'destination' => 
+        array (
+          'href' => 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d',
         ),
       ),
       'amount' => 
@@ -136,30 +149,55 @@ samplePHP: >
       ),
     );
 
+
     $transferApi = new DwollaSwagger\TransfersApi($apiClient);
+
     
     $myAccount = $transferApi->create($transfer_request);
 
     print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+
     ?>
+    
     ```
 
 sampleJavascript: >
     ```javascript
 
-    var client = require('swagger-client');
+    var dwolla = require('dwolla-v2');
 
-    var ACCESS_TOKEN = 'elq7kponDPk4iT5DUllTIHL5H5vhZCORKLQ6aB3jfkfSnqSNw6';
 
-    var swagger = new client({
-      url: 'https://api-uat.dwolla.com/swagger.json',
-      authorizations: {
-        headerAuth: new client.ApiKeyAuthorization('Authorization', 'Bearer ' + ACCESS_TOKEN, 'header')
+    var client = new dwolla.Client({id: "...", secret: "..."});
+
+
+    var accountToken = new client.Token({access_token: "GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N"});
+
+
+    var requestBody = {
+      _links: {
+        source: {
+          href: 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e'
+        },
+        destination: {
+          href: 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d'
+        }
       },
-      success: function() {
-        swagger.customers.list();
+      amount: {
+        currency: 'USD',
+        value: '1.00'
+      },
+      metadata: {
+        foo: 'bar',
+        baz: 'boo'
       }
-    });
+    };
+
+
+    accountToken
+      .post('transfers', requestBody)
+      .then(function(res) {
+        res.headers.get('location'); // => 'https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388'
+      });
 
     ```
 ---
