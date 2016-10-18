@@ -14,10 +14,10 @@ The Dwolla API requires an OAuth access token for authorization. Whether you’r
 
 ### Generate an access token for your own Dwolla account
 
-To generate an account access token, navigate to the applications page within the dwolla.com dashboard, located at: [https://www.dwolla.com/applications]() (the Sandbox equivalent is located at: [https://uat.dwolla.com/applications]()). The applications page contains a list of existing applications you have created.
+To generate an account access token, navigate to the applications page within the dwolla.com dashboard, located at: [https://www.dwolla.com/applications](https://www.dwolla.com/applications) (the Sandbox equivalent is located at: [https://uat.dwolla.com/applications](https://uat.dwolla.com/applications)). The applications page contains a list of existing applications you have created.
 
 ![Screenshot of Token Generator](/images/token-generator.png "Token Generator")
 
 A **create token** button is located beneath each application, allowing you to easily generate an access token and refresh token. The access token generated will contain the scopes enabled on your application, so be sure to enable the scopes you need in order to call the Dwolla API prior to generating the token.
 
-**Important:** Keep in mind that Dwolla’s implementation of the [OAuth 2.0](https://tools.ietf.org/html/rfc6749) standard uses short-lived access tokens and long-lived refresh tokens. The access token will expire one hour after it’s generated, so to maintain access be sure to refresh [authorization](https://docsv2.dwolla.com/#refresh-authorization). Reference the [OAuth refresh strategies](https://developers.dwolla.com/resources/oauth-refresh-strategies.html) article for more information on recommended refresh strategies.
+**Important:** Keep in mind that Dwolla’s implementation of the [OAuth 2.0](https://tools.ietf.org/html/rfc6749) standard uses short-lived access tokens and long-lived refresh tokens. The access token will expire one hour after it’s generated, so to maintain access be sure to [refresh authorization](https://docsv2.dwolla.com/#refresh-authorization). Reference the [OAuth refresh strategies](https://developers.dwolla.com/resources/oauth-refresh-strategies.html) article for more information on recommended refresh strategies.
