@@ -21,8 +21,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
   "state": "NY",
   "postalCode": "11101",
   "dateOfBirth": "1970-01-01",
-  "ssn": "1234",
-  "phone": "5152325555"
+  "ssn": "1234"
 }
 
 HTTP/1.1 201 Created
@@ -65,8 +64,7 @@ Location: https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB31
 
         <span class=c1>// If the entire SSN is provided, </span>
         <span class=c1>// it will still be accepted</span>
-        <span class=s2>"ssn"</span><span class=p>:</span> <span class=s2>"1234"</span><span class=p>,</span>
-        <span class=s2>"phone"</span><span class=p>:</span> <span class=s2>"3478589191"</span>
+        <span class=s2>"ssn"</span><span class=p>:</span> <span class=s2>"1234"</span>
       <span class=p>})</span>
       <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span><span class=p>(</span><span class=nx>data</span><span class=p>)</span> <span class=p>{</span>
           <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span> <span class=c1>// https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F</span>
