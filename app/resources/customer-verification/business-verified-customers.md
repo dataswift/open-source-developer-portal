@@ -33,7 +33,6 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
   "postalCode": "11385",
   "dateOfBirth": "1970-01-01",
   "ssn": "1516",
-  "phone": "5152345678",
   "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
   "businessType": "llc",
   "businessName":"Jane Corp",
@@ -56,7 +55,6 @@ new_customer = DwollaSwagger::CustomersApi.create({:body => {
      "postalCode" => "11385",
     "dateOfBirth" => "1970-01-01",
             "ssn" => "1516",
-          "phone" => "5152345678",
           "businessClassification" => "9ed3f677-7d6f-11e3-96a2-5404a6144203",
           "businessType" => "llc",
           "businessName" => "Jane Corp",
@@ -79,7 +77,6 @@ dwolla.then(function(dwolla) {
       "postalCode": "11385",
       "dateOfBirth": "1970-01-01",
       "ssn": "1516",
-      "phone": "3478589191",
       "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
       "businessType": "llc",
       "businessName": "Jane Corp",
@@ -106,7 +103,6 @@ new_customer = customers_api.create(body = {
   "postalCode": "11385",
   "dateOfBirth": "1970-01-01",
   "ssn": "1516",
-  "phone": "5152345678",
   "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
   "businessType": "llc",
   "businessName": "Jane Corp",
@@ -131,7 +127,6 @@ $newCustomer = $customersApi->create(array (
   'postalCode' => '11385',
   'dateOfBirth' => '1970-01-01',
   'ssn' => '1516',
-  'phone' => '5152345678',
   'businessClassification' => '9ed3f677-7d6f-11e3-96a2-5404a6144203',
   'businessType' => 'llc',
   'businessName' => 'Jane Corp',
@@ -142,7 +137,7 @@ print($newCustomer); # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB
 ?>
 ```
 
-You’ll need to provide the the a full name, email address, home address, date of birth, phone number and the last four digits of the Social Security Number for the authorized representative of the business. In addition to the authorized representative’s identifying information, you’ll also need to supply information which helps Dwolla identify the business. Required information includes: `businessClassification`, `businessType`, `businessName`, and `ein`.
+You’ll need to provide the the a full name, email address, home address, date of birth, and the last four digits of the Social Security Number for the authorized representative of the business. In addition to the authorized representative’s identifying information, you’ll also need to supply information which helps Dwolla identify the business. Required information includes: `businessClassification`, `businessType`, `businessName`, and `ein`.
 
 Once you submit this request, Dwolla will perform some initial validation to check for formatting issues such as an invalid date of birth, invalid email format, etc. If successful, the response will be a HTTP 201/Created with the URL of the new Customer resource contained in the `Location` header.
 

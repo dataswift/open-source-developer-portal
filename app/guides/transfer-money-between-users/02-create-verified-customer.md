@@ -30,8 +30,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
   "state": "NY",
   "postalCode": "11101",
   "dateOfBirth": "1970-01-01",
-  "ssn": "1234",
-  "phone": "5152325555"
+  "ssn": "1234"
 }
 
 HTTP/1.1 201 Created
@@ -78,8 +77,7 @@ dwolla.then(function(dwolla) {
 
         // If the entire SSN is provided, 
         // it will still be accepted
-        "ssn": "1234",
-        "phone": "3478589191"
+        "ssn": "1234"
       })
       .then(function(data) {
           console.log(data); // https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
