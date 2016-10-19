@@ -5,7 +5,7 @@ bodyClass: home
 description: The ACH API for bank transfers
 
 sampleRuby: >
-    ```ruby 
+    ```ruby
 
     require 'dwolla_v2'
 
@@ -30,10 +30,6 @@ sampleRuby: >
       :amount => {
         :currency => "USD",
         :value => "1.00"
-      },
-      :metadata => {
-        :foo => "bar",
-        :baz => "boo"
       }
     }
 
@@ -54,7 +50,7 @@ sampleRaw: >
         "_links": {
             "source": {
                 "href": "https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e"
-                
+
             },
             "destination": {
                 "href": "https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d"
@@ -63,10 +59,6 @@ sampleRaw: >
         "amount": {
             "currency": "USD",
             "value": "1.00"
-        },
-        "metadata": {
-            "foo": "bar",
-            "baz": "boo"
         }
     }' 'https://api-uat.dwolla.com/transfers' -v
 
@@ -100,10 +92,6 @@ samplePython: >
       'amount': {
         'currency': 'USD',
         'value': '1.00'
-      },
-      'metadata': {
-        'foo': 'bar',
-        'baz': 'boo'
       }
     }
 
@@ -115,7 +103,7 @@ samplePython: >
     ```
 
 samplePHP: >
-    ```php 
+    ```php
 
     <?php
 
@@ -126,39 +114,34 @@ samplePHP: >
 
 
     $transfer_request = array (
-      '_links' => 
+      '_links' =>
       array (
-        'source' => 
+        'source' =>
         array (
           'href' => 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e',
         ),
-        'destination' => 
+        'destination' =>
         array (
           'href' => 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d',
         ),
       ),
-      'amount' => 
+      'amount' =>
       array (
         'currency' => 'USD',
         'value' => '9.00',
-      ),
-      'metadata' => 
-      array (
-        'foo' => 'bar',
-        'baz' => 'boo',
       ),
     );
 
 
     $transferApi = new DwollaSwagger\TransfersApi($apiClient);
 
-    
+
     $myAccount = $transferApi->create($transfer_request);
 
     print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 
     ?>
-    
+
     ```
 
 sampleJavascript: >
@@ -185,10 +168,6 @@ sampleJavascript: >
       amount: {
         currency: 'USD',
         value: '1.00'
-      },
-      metadata: {
-        foo: 'bar',
-        baz: 'boo'
       }
     };
 
@@ -222,7 +201,7 @@ sampleJavascript: >
             {{ page.samplePython | markdownify }}
             {{ page.samplePHP | markdownify }}
         </div>
-    
+
         <section class="split-options">
             <div>
                 <h3 class="icon-home-sandbox">Set up Sandbox</h3>
