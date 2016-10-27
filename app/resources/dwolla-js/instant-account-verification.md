@@ -28,16 +28,15 @@ callback | function | A callback function that handles the response from Dwolla.
 
 ```javascriptnoselect
 dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
-    container: 'iavContainer',
-    stylesheets: [
-      'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
-      'http://myapp.com/iav/customStylesheet.css'
-    ],
-    microDeposits: false,
-    fallbackToMicroDeposits: true
-  }, function(err, res) {
-    log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
-  })
+  container: 'iavContainer',
+  stylesheets: [
+    'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
+    'http://myapp.com/iav/customStylesheet.css'
+  ],
+  microDeposits: false,
+  fallbackToMicroDeposits: true
+}, function(err, res) {
+  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
 })
 ```
 
