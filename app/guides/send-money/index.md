@@ -24,7 +24,7 @@ You need to have a [Sandbox account](/guides/sandbox-setup) already set up.
 
 ### Choose the experience you want for your customers
 
-Dwolla offers two different paths for you to onboard your customers onto the payment platform. If you want to keep Dwolla in the background, choose our white label solution. Or if you’d like to tap into Dwolla’s lightly branded OAuth experience, select Dwolla Direct. [Contact sales](https://www.dwolla.com/contact) for information about pricing for each option. 
+Dwolla offers two different paths for you to onboard your customers onto the payment platform. If you want to keep Dwolla in the background, choose our white label solution. Or if you’d like to tap into Dwolla’s co-branded OAuth experience, select Dwolla Direct. [Contact sales](https://www.dwolla.com/contact) for information about pricing for each option. 
 
 Regardless of which option you implement, the first step is to onboard recipients for your transfer, along with ensuring a funding source is added where money will be sent. Dwolla’s branded experience prompts your recipients for their bank or credit union account information. Otherwise, if you choose to implement the white label solution, your application will need to capture the recipients bank account information to pass through to Dwolla for secure storage.
 
