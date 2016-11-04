@@ -36,8 +36,8 @@ dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
   microDeposits: false,
   fallbackToMicroDeposits: true
 }, function(err, res) {
-  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
-})
+  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
+});
 ```
 
 ### Customization
