@@ -6,8 +6,6 @@
 
 .icon-cnt-two-col-close { background-image: url('png/cnt-two-col-close.png'); background-repeat: no-repeat; }
 
-.icon-developer-community { background-image: url('png/developer-community.png'); background-repeat: no-repeat; }
-
 .icon-guides-oauth-small { background-image: url('png/guides-oauth-small.png'); background-repeat: no-repeat; }
 
 .icon-guides-receive-small { background-image: url('png/guides-receive-small.png'); background-repeat: no-repeat; }
@@ -31,6 +29,8 @@
 .icon-guides-web-hooks { background-image: url('png/guides-web-hooks.png'); background-repeat: no-repeat; }
 
 .icon-home-api { background-image: url('png/home-api.png'); background-repeat: no-repeat; }
+
+.icon-home-dev-community { background-image: url('png/home-dev-community.png'); background-repeat: no-repeat; }
 
 .icon-home-launch { background-image: url('png/home-launch.png'); background-repeat: no-repeat; }
 
@@ -73,4 +73,3 @@
 .icon-tools-status { background-image: url('png/tools-status.png'); background-repeat: no-repeat; }
 
 .icon-tools-token-generator { background-image: url('png/tools-token-generator.png'); background-repeat: no-repeat; }
-
