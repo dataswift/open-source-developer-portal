@@ -1,24 +1,15 @@
 .reach-out {
-
+    text-align: center;
     @extend %clearfix;
 
     section {
-        width: 33%;
+        width: 50%;
         float: left;
-        text-align: center;
 
-        @include breakpoint($size-desktop-small){
-            width: 100%;
+        @include breakpoint($size-tablet-small){
+            width: auto;
             margin-bottom: 30px;
             float: none;
-        }
-    }
-
-    &__link {
-        a {
-            height: 48px;
-            padding: 14px 0 0 65px;
-            display: inline-block;
         }
     }
 
@@ -34,6 +25,11 @@
             }
         }
     }
+}
+
+.newsletter {
+    margin: auto;
+    max-width: 300px;
 }
 
 body.home .reach-out {
