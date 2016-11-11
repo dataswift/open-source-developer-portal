@@ -11,7 +11,7 @@ description: Webhooks for payments within your application by utilizing our open
 
 # Webhooks
 
-A webhook is a means of notifying a third-party application of the occurrence of an event with some relevant information. In the Dwolla V2 API, webhooks are currently triggered by the following resources: 
+A webhook is a means of notifying a third-party application of the occurrence of an event with some relevant information. In the Dwolla v2 API, webhooks are currently triggered by the following resources: 
 
 - Customers
 - Documents
