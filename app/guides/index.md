@@ -5,8 +5,8 @@ description: "Programmatically send bank transfers with our developer API."
 ---
 
 <nav class="grid-nav">
-    <a href="/guides/sandbox-setup" class="icon-guides-sandbox-small grid-nav__item grid-nav__item--large">
-        <h3>Getting started</h3>
+    <a href="/guides/sandbox-setup" class="icon-guides-sandbox-featured grid-nav__item grid-nav__item--large">
+        <h3>Getting started in Sandbox</h3>
         <p>Applications should be built and tested against the Sandbox environment before being used in production.</p>
     </a>
     <a href="/guides/send-money" class="icon-guides-send-small grid-nav__item">
@@ -25,7 +25,7 @@ description: "Programmatically send bank transfers with our developer API."
       <h3>Webhooks</h3>
       <p>Implement simple, real-time, event notifications regarding account and transaction status, and more.</p>
     </a>
-    <a href="/guides/migrate-to-v2" class="icon-guides-v1-to-v2-featured grid-nav__item">
+    <a href="/guides/migrate-to-v2" class="icon-guides-v1-to-v2-small grid-nav__item">
         <h3>Migrate to v2</h3>
         <p>Underlying principles of our v2 API and guidance on upgrading your application from Dwolla’s legacy v1 API.</p>
     </a>
