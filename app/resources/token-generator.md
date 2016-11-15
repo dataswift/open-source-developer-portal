@@ -8,8 +8,6 @@ description: "Generate an OAuth access token for Dwolla's bank transfer API."
 
 # Token generator
 
-## Overview
-
 The Dwolla API requires an OAuth access token for authorization. Whether you’re using the API for payouts or integrating with Dwolla White Label, sometimes you just need an access token for your own account without going through the hassle of creating an entire [OAuth flow](https://docsv2.dwolla.com/#request-user-authorization). We have created a tool that lets you easily generate an access token with the click of a button. The token generator also serves as a great testing tool in our Sandbox environment for developers who are looking to quickly interact with the API.
 
 ### Generate an access token for your own Dwolla account

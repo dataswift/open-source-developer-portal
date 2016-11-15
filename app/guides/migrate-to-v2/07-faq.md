@@ -9,9 +9,7 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API.
 ---
 
-# Migrate to v2
-
-## FAQ
+# FAQ
 
 1.  **Are OAuth user access tokens I used in v1 the same as the account access tokens needed for API v2?**
     - Yes! OAuth and access tokens are shared across both APIs therefore nothing will change with regards to any current user account tokens you may have stored. Make sure these access tokens contain the proper scopes to call v2 resources.

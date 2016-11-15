@@ -9,7 +9,7 @@ title: Webhooks
 description: Webhooks for payments within your application by utilizing our open API with no per transaction fees. 
 ---
 
-# Validating webhooks
+# Step 3: Validating webhooks
 
 Assume that your integration is an online marketplace, and that a customer just placed an order on your site. A few days after the customer initiated their payment, your application receives this webhook.
 

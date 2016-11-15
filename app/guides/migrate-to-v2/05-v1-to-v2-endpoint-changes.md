@@ -9,9 +9,7 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API. 
 ---
 
-# Migrate to v2
-
-## v1 to v2 endpoint changes
+# V1 to v2 endpoint changes
 
 The table below provides a mapping of endpoints in v1 to their equivalent in v2. Links to the v2 API reference docs are provided alongside each method. Not all v2 endpoints are listed, therefore you’ll want to reference the API docs for new functionality such as [Customers](https://docsv2.dwolla.com/#customers) and [Webhook-Subscriptions](https://docsv2.dwolla.com/#webhook-subscriptions).  
 

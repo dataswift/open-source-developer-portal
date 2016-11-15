@@ -9,9 +9,7 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API. 
 ---
 
-# Migrate to v2
-
-## Authentication
+# Authentication
 
 The way in which you interact with Dwolla’s authorization server will remain **unchanged**. OAuth user account access tokens that are currently issued to applications leveraging v1 can be used to call various v2 endpoints. 
 
