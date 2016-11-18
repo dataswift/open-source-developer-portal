@@ -10,13 +10,13 @@ description: "Bank transfer API to programmatically send money online"
 # Bank transfer workflow
 
 ## Processing times
-The scenarios in the table below are composed of two transfers: a bank to Dwolla network transfer and a Dwolla network to bank transfer. Transfers where the destination is a Dwolla balance are complete as soon as the funds enter the Dwolla network, and all transfers into the Dwolla network that are either sourced from Dwolla user balances, an authorized Dwolla Credit source, or from FiSync-enabled financial institutions can be settled in real-time.
+The scenarios in the table below are composed of two transfers: a bank to Dwolla network transfer and a Dwolla network to bank transfer. Transfers where the destination is a Dwolla balance are complete as soon as the funds enter the Dwolla network, and all transfers into the Dwolla network that are either sourced from Dwolla user balances or from FiSync-enabled financial institutions can be settled in real-time.
 
 #### Customer to customer transfers
 
 | Source of transfer | Time to Dwolla network | Time from Dwolla network to recipient’s bank account | Total time to `processed` |
 |:------------- |:--------------|:------|:-----|
-| Real-time: Dwolla balance, FiSync, Dwolla Credit | Instant | 1-2 business days | 1-2 business days |
+| Real-time: Dwolla balance, FiSync | Instant | 1-2 business days | 1-2 business days |
 | Next-day ACH: linked bank account | 1-2 business days | 1-2 business days | 2-4 business days |
 | Standard ACH: linked bank account | 3-4 business days | 1-2 business days | 4-6 business days |
 

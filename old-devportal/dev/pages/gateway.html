@@ -516,10 +516,9 @@ value=&quot;1323302400&quot; /&gt;
         <td>additionalFundingSources</td>
         <td>Requires allowFundingSources to be set to <code>true</code>. Specify which funding sources are acceptable for this checkout transaction. Multiple sources may be specified in a comma delimited format. Possible values are:
         <br/><br/>
-        <code>credit</code>: Display Dwolla Credit, if both the merchant and user support it<br/>
         <code>banks</code>: Display all users usable banks<br/>
         <code>fisync</code>: Display all users usable banks that are FiSync-enabled<br/>
-        <code>realtime</code>: Display 'credit' and 'fisync' sources<br/>
+        <code>realtime</code>: Display 'fisync' source<br/>
         <code>true</code>: Display all<br/>
         <code>false</code>: Display none</td>
       </tr>
@@ -1206,7 +1205,7 @@ end
       </tr>
       <tr>
         <td>FundingSource</td>
-        <td>Funding source type chosen by the customer.  If checkout on Gateway hasn't been completed yet, value will be null.  Possible values: <code>null</code>, <code>Balance</code>, <code>Credit</code>, or <code>Bank</code>.</td>
+        <td>Funding source type chosen by the customer.  If checkout on Gateway hasn't been completed yet, value will be null.  Possible values: <code>null</code>, <code>Balance</code>, or <code>Bank</code>.</td>
       </tr>
       <tr>
         <td>Status</td>
