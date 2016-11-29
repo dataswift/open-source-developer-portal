@@ -7,7 +7,33 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 ---
 
 <section class="change-log">
+	<h1>Upcoming</h1>
+	<h3>2016-12-01</h3>
+	<h4><em>Added</em></h4>
+	<ul class="bullet">
+	    <li>Release support for a new <code>clearing</code> request parameter when <a href="https://docsv2.dwolla.com/#initiate-a-transfer">initiating a transfer</a>. Clearing is a JSON object that supports specifying same-day and standard ACH clearing per API request. <b>Note:</b> The clearing request parameter is a premium feature available for Dwolla <a href="https://www.dwolla.com/white-label">White Label</a> partners.</li>
+	</ul>
+	<h3>2016-12-01</h3>
+	<h4><em>DEPRECATED</em></h4>
+	<ul class="bullet">
+	    <li>Remove the <code>scope</code> attribute from the <a href="https://docsv2.dwolla.com/#application-access-token"> application access token</a> response. </li>
+	</ul>
+	<h3>2016-12-01</h3>
+	<h4><em>CHANGED</em></h4>
+	<ul class="bullet">
+	    <li>Automatic pause of webhook subscriptions after 400 consecutive failed delivery attempts. Reference the <a href="https://docsv2.dwolla.com/#webhook-subscriptions">API docs</a> for more information. </li>
+	</ul>
 	<h1>Completed</h1>
+	<h3>2016-10-19</h3>
+	<h4><em>CHANGED</em></h4>
+	<ul class="bullet">
+	    <li>Change the <code>phone</code> request parameter from required to optional when <a href="https://docsv2.dwolla.com/#create-a-customer">creating a Customer</a>.</li>
+	</ul>
+	<h3>2016-10-19</h3>
+	<h4><em>ADDED</em></h4>
+	<ul class="bullet">
+	    <li>Added a new <code>bankName</code> attribute to the funding source object that is returned when retrieving a funding source of type bank.</li>
+	</ul>
 	<h3>2016-07-21</h3>
 	<h4><em>DEPRECATED</em></h4>
 	<ul class="bullet">
@@ -25,7 +51,7 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 	    <li>Change in functionality for removing a funding source in API v2. The method for <a href="https://docsv2.dwolla.com/#remove-a-funding-source">removing a funding source</a> 
 	    changes from a <code>DELETE</code> to a <code>POST</code> with the need to supply <code>{ "removed": true }</code> in the body of the request.</li>
 	    <li>A <code>removed</code> attribute is added to the <a href="https://docsv2.dwolla.com/#funding-source-resource">funding source object.</a></li>
-	    <li>A <code>removed</code> querystring request parameter is supplied when listing an <a href="https://docsv2.dwolla.com/#list-an-account39s-funding-sources">Account</a> or <a href="https://docsv2.dwolla.com/#list-a-customer39s-funding-sources">Customer's</a> funding sources. By default, all funding sources are returned from the listing unless the <code>removed</code> request parameter 
+	    <li>A <code>removed</code> querystring request parameter is supplied when listing an <a href="https://docsv2.dwolla.com/#list-funding-sources-for-an-account">Account</a> or <a href="https://docsv2.dwolla.com/#list-funding-sources-for-a-customer">Customer's</a> funding sources. By default, all funding sources are returned from the listing unless the <code>removed</code> request parameter 
 	   	is set to <code>false</code>.
 	</ul>
 	<h3>2016-02-29</h3>
