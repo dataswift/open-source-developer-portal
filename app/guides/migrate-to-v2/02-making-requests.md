@@ -9,9 +9,8 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API. 
 ---
 
-# Migrate to v2
+# Making requests
 
-## Making requests
 Since you are talking to a new API, the components that make up a request such as the base URL, headers, and request payload will vary slightly. Interacting with v2 is fairly straightforward, and you should be aware of the following items when calling the API:
 
 * The base URL has changed in API v2 from `https://www.dwolla.com/oauth/rest/` to simply `https://api.dwolla.com/`

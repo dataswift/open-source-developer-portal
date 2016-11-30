@@ -9,30 +9,28 @@ title:  Get started with integrating bank transfers into your application
 description: Test free programmatic bank transfers with Dwolla's bank transfer API in our developer sandbox. 
 ---
 
-# Getting started
+# Getting started in Sandbox
 
 ## Sandbox environment
 
-The Sandbox environment is a complete replica of the Dwolla production environment, supporting all of the same API endpoints. Applications should be built and tested against the Sandbox environment before being used in production.
+The Sandbox environment is a complete replica of the Dwolla production environment, supporting all of the same API endpoints. Applications should be tested against the Sandbox environment before being used in production.
 
-#### Differences from Dwolla production
+#### Differences from production environment
 
 - The Sandbox contains only test data and is completely separate from your production account
 - Actual money is not sent or received as part of test transactions. Real financial data should never be used in the Sandbox
-- The Sandbox web interface is available at `https://uat.dwolla.com/`
-- All API V2 endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://api.dwolla.com`
+- All API v2 endpoints have a base URL of `https://api-uat.dwolla.com/` instead of `https://api.dwolla.com/`
 
-## Sandbox account
+## Sandbox setup
 
-To get started, the first thing you need is a Sandbox account. You’ll be able to test your code end-to-end after creating test accounts, and use test credentials to make API requests and verify the responses.
+During Sandbox account creation, Dwolla will associate a funding source, add $1000 to the account balance, and create an Application. You are then redirected to our Sandbox web interface at `https://dashboard-uat.dwolla.com/` where you can view your API key and secret and create [OAuth tokens](https://docsv2.dwolla.com/#oauth).
 
-## Overview
+- Use a valid email address to [create your Sandbox account](https://uat.dwolla.com/oauth/v2/authenticate?client_id=xxXlsnHdGTnA2U5evWXB9cDnxMHeGbIuNxdGX7aKLON4uVciPe&response_type=code&redirect_uri=https%3A%2F%2Fdashboard-uat.dwolla.com%2Fcallback&scope=send%7Cbalance%7Caccountinfofull%7Ccontacts%7Cfunding%7Crequest%7Ctransactions%7Cscheduled%7Cmanagecustomers%7Cmanageapplications&verified_account=true&state=DwollaSandboxDashboard)
+- To simplify development, learn about configuring and using our [SDKs](/pages/sdks.html)
 
-1. Create a Sandbox account with a valid email address belonging to you
-2. Generate API credentials using your Sandbox account
-2. Get an SDK and enable Sandbox mode
+You’re ready to start sending money in Sandbox! You can jump straight into the [API docs](https://docsv2.dwolla.com/) or continue to the next guide below.
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-create-sandbox-account.html">Next step: Create a Sandbox account</a>
+<a href="/guides/send-money">Next guide: Send money to your users</a>
 </nav>

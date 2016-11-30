@@ -9,7 +9,7 @@ title: Webhooks
 description: Webhooks for payments within your application by utilizing our open bank transfer API with no transaction fees. 
 ---
 
-# Subscribing to webhooks: obtain authorization
+# Step 1: Obtain authorization
 
 To subscribe to webhooks, you must first obtain client authorization via OAuth. You will be requesting these credentials on the behalf of your own application, so there will be no OAuth permissions dialog; you are only required to provide your `client_id` and `client_secret`. 
 

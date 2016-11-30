@@ -9,9 +9,7 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API. 
 ---
 
-# Migrate to v2
-
-## Other notable changes
+# Other notable changes
 
 #### Webhooks - v1 vs. v2
 *  **Webhook payload differences** - One of the biggest differences in webhooks sent in v1 vs. v2 is the type of data included in the webhook payload. 

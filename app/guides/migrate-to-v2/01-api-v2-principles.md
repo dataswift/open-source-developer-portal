@@ -9,9 +9,7 @@ title: Migrate to v2
 description: Underlying principles of Dwolla's v2 API and guidance on upgrading your application from Dwolla's legacy v1 API. 
 ---
 
-# Migrate to v2
-
-## API v2 principles
+# API v2 principles
 
 Developers migrating from v1 should familiarize themselves with new design and patterns used in v2. V2 is a hypermedia API that adopts the [HAL](http://stateless.co/hal_specification.html) spec, which provides a set of conventions for using hyperlinks (URLs) for “discoverability”.  One key benefit is its self-documenting nature and the ability to consume the API with no prior knowledge. The idea is to follow links to suggested resources and actions based on the current OAuth context, instead of referencing resources by their Id.
 

@@ -10,7 +10,7 @@
                 {% elsif page.url contains 'transfer-money-between-users' %}
                     Transfer money between users
                 {% elsif page.url contains 'sandbox-setup' %}
-                    Set up Sandbox
+                    Getting started in Sandbox
                 {% elsif page.url contains 'webhooks' %}
                     Webhooks
                 {% elsif page.url contains 'migrate-to-v2' %}
@@ -24,7 +24,7 @@
         </div>
         <nav id="js-sidenav-dropdown-nav">
             {% unless page.url contains '/guides/sandbox-setup/' %}
-                <a href="/guides/sandbox-setup/">Set up Sandbox</a>
+                <a href="/guides/sandbox-setup/">Getting started in Sandbox</a>
             {% endunless %}
             {% unless page.url contains '/guides/send-money/' %}
                 <a href="/guides/send-money/">Send money to your users</a>
@@ -46,7 +46,6 @@
 
     {% include side-nav/guide-send-money.html %}
     {% include side-nav/guide-receive-money.html %}
-    {% include side-nav/guide-sandbox-setup.html %}
     {% include side-nav/guide-webhooks.html %}
     {% include side-nav/guide-transfer-money-between-users.html %}
     {% include side-nav/guide-migrate-to-v2.html %}
