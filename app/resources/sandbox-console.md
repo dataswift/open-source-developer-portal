@@ -40,7 +40,7 @@ In either the White Label or Standard Console, you can view and trigger transfer
 
 #### Transfer behavior in the Sandbox
 
-Unlike balance, credit, or FiSync sourced transfers, which are processed instantaneously, bank-sourced transfers exist in the pending state for a few business days until they are `processed`, `failed`, `cancelled`, or `reclaimed`.
+Unlike balance or FiSync sourced transfers, which are processed instantaneously, bank-sourced transfers exist in the pending state for a few business days until they are `processed`, `failed`, `cancelled`, or `reclaimed`.
 
 The Sandbox environment does not replicate any ACH processes, so a `pending` transfer will not clear or fail automatically after a few business days as it would in production. It will simply remain in the `pending` state indefinitely.
 
