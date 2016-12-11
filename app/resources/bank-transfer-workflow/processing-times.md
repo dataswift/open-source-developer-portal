@@ -40,5 +40,6 @@ The timetables for transfers in and out of the Dwolla network are:
 |:-------------------------- |:----------------- |
 | FiSync                     | Instant           |
 | ACH (Next Day or Standard) | 1-2 business days |
+| Same Day ACH               | Same business day |
 
 * Transfers out of the Dwolla network can be cancelled at any point until 4pm CT on that same business day if the transfer was initiated prior to 4PM CT. If a transfer was initiated after 4pm CT, it can be cancelled anytime before 4pm CT on the following business day. **Note:** You must contact Dwolla support at 1-888-289-8744 to cancel transfers going out of the Dwolla Network.

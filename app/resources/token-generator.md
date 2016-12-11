@@ -14,7 +14,7 @@ The Dwolla API requires an OAuth access token for authorization. Whether you’r
 
 Navigate to the applications page, which contains a list of your created applications. For Production, visit [https://www.dwolla.com/applications](https://www.dwolla.com/applications).
 
-<img src="/images/token-generator-prod.png" alt="Production Token Generator""/>
+<img src="/images/token-generator-prod.png" alt="Production Token Generator"/>
 
 For Sandbox, visit [https://dashboard-uat.dwolla.com/applications](https://dashboard-uat.dwolla.com/applications).
 

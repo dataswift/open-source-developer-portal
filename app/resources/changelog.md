@@ -7,7 +7,7 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 ---
 
 <section class="change-log">
-	<h1>Upcoming</h1>
+	<h1>Completed</h1>
 	<h3>2016-12-01</h3>
 	<h4><em>Added</em></h4>
 	<ul class="bullet">
@@ -23,7 +23,6 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 	<ul class="bullet">
 	    <li>Automatic pause of webhook subscriptions after 400 consecutive failed delivery attempts. Reference the <a href="https://docsv2.dwolla.com/#webhook-subscriptions">API docs</a> for more information. </li>
 	</ul>
-	<h1>Completed</h1>
 	<h3>2016-10-19</h3>
 	<h4><em>CHANGED</em></h4>
 	<ul class="bullet">
