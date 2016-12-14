@@ -25,14 +25,13 @@ callback | function | A callback function that handles the response from Dwolla.
 
 ```javascriptnoselect
 dwolla.fundingSources.create('1zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
-          routingNumber: getVal('routingNumber'),
-          accountNumber: getVal('accountNumber'),
-          type: getVal('type'),
-          name: getVal('name')
-        }, function(err, res) {
-    console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res))
-  })
-})
+  routingNumber: getVal('routingNumber'),
+  accountNumber: getVal('accountNumber'),
+  type: getVal('type'),
+  name: getVal('name')
+}, function(err, res) {
+  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
+});
 ```
 
 ### Step 1: Generate a funding sources token
@@ -103,16 +102,16 @@ You'll then add a form to the body of the page where you want to collect the use
   </div>
   <div>
     <label>Account number</label>
-    <input type="text" id="accountNumber" placeholder="account number" />
+    <input type="text" id="accountNumber" placeholder="Account number" />
   </div>
   <div>
     <label>Bank account name</label>
-    <input type="text" id="name" placeholder="name" />
+    <input type="text" id="name" placeholder="Name" />
   </div>
   <div>
     <select name="type" id="type">
-      <option value="checking">checking</option>
-      <option value="savings">savings</option>
+      <option value="checking">Checking</option>
+      <option value="savings">Savings</option>
     </select>
   </div>
   <div>
@@ -131,7 +130,6 @@ Assuming `dwolla.js` is already included and configured on your page, you will c
 In our example, `dwolla.fundingSources.create()` takes three arguments: a string value of the funding sources token, JavaScript object containing bank account information entered by the user, and a callback function that will handle any error or response. 
 
 ```javascriptnoselect
-<script type="text/javascript">
 $('form').on('submit', function() {
   dwolla.configure('uat');
   var token = 'Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg';
@@ -142,18 +140,18 @@ $('form').on('submit', function() {
     name: $('name').val()
   }
   dwolla.fundingSources.create(token, bankInfo, callback);
-  return false
-})
+  return false;
+});
 
 function callback(err, res) {
-  $div = $('<div />')
+  var $div = $('<div />');
   var logValue = {
     error: err,
     response: res
-  }
-  $div.text(JSON.stringify(logValue))
-  console.log(logValue)
-  $('#logs').append($div)
+  };
+  $div.text(JSON.stringify(logValue));
+  console.log(logValue);
+  $('#logs').append($div);
 }
 ```
 
