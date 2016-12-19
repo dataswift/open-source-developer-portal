@@ -15,7 +15,7 @@ No matter which method you used to set up your customers, the remaining steps of
 | Solution | Recipient|
 |----------|----------|
 |White label solution|Customer|
-|Dwolla Direct|Account|
+|Co-branded|Account|
 
 Now that you’ve created a Customer or an Account and associated its funding source, you can initiate your first transfer. The transfer requires the following information:
 
@@ -26,7 +26,7 @@ Dwolla uses URLs to represent relations between resources. Therefore, you’ll n
 
 ### Fetch your Account's list of available funding sources
 
-Use the [List an account's funding sources](https://docsv2.dwolla.com/#list-funding-sources-for-an-account) endpoint to fetch a list of your own funding sources. You'll need your account URL which can be retrieved by calling [the Root](https://docsv2.dwolla.com/#root) of the API.
+Use the [list an account's funding sources](https://docsv2.dwolla.com/#list-funding-sources-for-an-account) endpoint to fetch a list of your own funding sources. You'll need your account URL which can be retrieved by calling [the Root](https://docsv2.dwolla.com/#root) of the API.
 
 #### Request and response (view schema in 'raw')
 

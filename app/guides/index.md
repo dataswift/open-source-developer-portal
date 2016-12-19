@@ -11,11 +11,11 @@ description: "Programmatically send bank transfers with our developer API."
     </a>
     <a href="/guides/send-money" class="icon-guides-send-small grid-nav__item">
         <h3>Send money to your users</h3>
-        <p>Send ACH transfers. Choose custom (white label) onboarding or Dwolla Direct account creation. Learn about MassPay and recurring</p>
+        <p>Send ACH transfers. Choose custom (white label) onboarding or co-branded (OAuth) account creation.</p>
     </a>
     <a href="/guides/receive-money" class="icon-guides-receive-small grid-nav__item">
         <h3>Recieve money from your users</h3>
-        <p>Accept ACH transfers. Covers both white label and Dwolla Direct integrations. Learn about recurring payments and offsite gateway.</p>
+        <p>Accept ACH transfers. Covers both white label and co-branded integrations.</p>
     </a>
     <a href="/guides/transfer-money-between-users" class="icon-guides-transfer-small grid-nav__item">
         <h3>Transfer money betwen users</h3>

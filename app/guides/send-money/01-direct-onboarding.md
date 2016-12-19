@@ -18,7 +18,7 @@ In this experience, the user on-boarding process of Dwolla account creation and 
 Create a URL to send the user to in order to create a new Dwolla Direct account.  Optionally, you can set the `dwolla_landing` querystring parameter to `register` which will prompt the user to create an account as opposed to login with an existing account. When the user has created a Direct account, they’ll be prompted to give your application permission to access their account, and if they agree, they will be redirected back to your application.  [Read about OAuth](https://docsv2.dwolla.com/#request-user-authorization).
 
 ##### URL Format:
-`https://www.dwolla.com/oauth/v2/authenticate?client_id={client_id}&response_type=code&redirect_uri={redirect_uri}&scope={scope}`
+`https://www.dwolla.com/oauth/v2/authenticate?client_id={client_id}&response_type=code&redirect_uri={redirect_uri}&scope={scope}&dwolla_landing=register`
 
 ##### Example URL:
 
@@ -70,7 +70,7 @@ You won’t need to use the access token for the Dwolla Direct user, all we need
 
 Next, you’ll need to generate an access token for your own account, which you’ll use to transfer funds from your account to the newly created Direct account.
 
-Navigate to the <a href="https://uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
+Navigate to the <a href="https://dashboard-uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
 
 Before selecting the "Create token" button, make sure your created application has at least the `Send` and `Funding` scopes in order to send funds from your own account. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for sending money. More detail for implementing the OAuth flow can be found in [API docs](https://docsv2.dwolla.com/#oauth). Important: this access token will allow you to send money from your own account, so be sure to securely store it.
 

@@ -42,7 +42,7 @@ Regardless of which option you implement, the first step is to onboard recipient
     <div>
         <a href="01-direct-onboarding.html">
             <div class="icon-decision-nav-direct"></div>
-            Dwolla Direct
+            Co-branded
         </a>
         <p>Dwolla captures your customer data.</p>
     </div>
