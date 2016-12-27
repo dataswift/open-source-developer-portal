@@ -146,13 +146,6 @@
 					Off-Site Gateway
 				</a>
 			</li>
-			<li
->
-				<a href="dev/pages/auth.html">
-					<i class="icon-user"></i>
-					OAuth + REST API
-				</a>
-			</li>
 
 			<li class="nav-header">
 				Reference
@@ -162,13 +155,6 @@
 				<a href="dev/pages/guides/direct_limitations.html">
 					<i class="icon-download-alt"></i>
 					Direct Account Limitatons
-				</a>
-			</li>
-			<li
->
-				<a href="dev/pages/guides/oauth_account_creation.html">
-					<i class="icon-bell"></i>
-					OAuth Account Creation
 				</a>
 			</li>
 			<li
