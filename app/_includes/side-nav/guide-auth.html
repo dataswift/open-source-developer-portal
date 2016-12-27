@@ -1,0 +1,27 @@
+<section class="steps-nav" {% unless page.url contains '/guides/auth' %}style="display:none"{% endunless %}>
+    <h6>In this guide</h6>
+    <ol>
+        <li>
+            <a href="/guides/auth" {% if page.guide.step == 'overview' %}class="active"{% endif %}>Overview: Dwolla OAuth 2.0</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/auth/authorization-code-flow.html" {% if page.guide.step == '1' %}class="active"{% endif %}>Authorization code flow (Co-branded)</a>
+            <div class="dot"></div>
+            <ol>
+                <li>
+                    <a href="/guides/auth/oauth-account-creation.html" {% if page.guide.step == '1a' %}class="active"{% endif %}>OAuth account creation</a>
+                    <div class="dot"></div>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <a href="/guides/auth/client-credentials-flow.html" {% if page.guide.step == '2' %}class="active"{% endif %}>Client credentials flow (White Label and/or Webhooks)</a>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <a href="/guides/auth/using-an-access-token.html" {% if page.guide.step == '3' %}class="active"{% endif %}>Using an access token</a>
+            <div class="dot"></div>
+        </li>
+    </ol>
+</section>
