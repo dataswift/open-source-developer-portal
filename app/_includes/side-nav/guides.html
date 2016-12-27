@@ -15,6 +15,8 @@
                     Webhooks
                 {% elsif page.url contains 'migrate-to-v2' %}
                     Migrate to v2
+                {% elsif page.url contains 'auth' %}
+                    Dwolla OAuth 2.0
                 {% else %}
                     Please select a guide
                 {% endif %}
@@ -41,6 +43,9 @@
             {% unless page.url contains '/guides/migrate-to-v2/' %}
                 <a href="/guides/migrate-to-v2/">Migrate to v2</a>
             {% endunless %}
+            {% unless page.url contains '/guides/auth/' %}
+                <a href="/guides/migrate-to-v2/">Dwolla OAuth 2.0</a>
+            {% endunless %}
         </nav>
     </section>
 
@@ -49,5 +54,6 @@
     {% include side-nav/guide-webhooks.html %}
     {% include side-nav/guide-transfer-money-between-users.html %}
     {% include side-nav/guide-migrate-to-v2.html %}
+    {% include side-nav/guide-auth.html %}
 </nav>
 

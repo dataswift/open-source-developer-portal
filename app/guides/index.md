@@ -29,4 +29,8 @@ description: "Programmatically send bank transfers with our developer API."
         <h3>Migrate to v2</h3>
         <p>Underlying principles of our v2 API and guidance on upgrading your application from Dwolla’s legacy v1 API.</p>
     </a>
+    <a href="/guides/auth" class="icon-guides-oauth-small grid-nav__item">
+        <h3>Dwolla OAuth 2.0</h3>
+        <p>The Dwolla API uses OAuth 2 to facilitate authorization. Learn about obtaining OAuth access tokens which are used when calling the Dwolla API to access data that belongs to a user or application.</p>
+    </a>
 </nav>
