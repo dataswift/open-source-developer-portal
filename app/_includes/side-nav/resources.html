@@ -31,4 +31,11 @@
         {% endfor %}
         </ul>
     </section>
+    <section class="side-nav__options" {% unless page.url contains '/resources/' %}style="display:none"{% endunless %}>
+        <h6>API v1 Resources</h6>
+        <ul>
+            <li><a href="/guides/offsite-gateway/"><span>Off-site Gateway</span></a></li>
+            <li class="external-link"><a href="https://docs.dwolla.com/" target="_blank"><span class="icon-sidenav-option">API v1 reference docs</span></a></li>
+        </ul>
+    </section>
 </nav>

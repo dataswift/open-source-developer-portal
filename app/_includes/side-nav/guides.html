@@ -55,5 +55,13 @@
     {% include side-nav/guide-transfer-money-between-users.html %}
     {% include side-nav/guide-migrate-to-v2.html %}
     {% include side-nav/guide-auth.html %}
+    {% include side-nav/guide-offsite-gateway.html %}
+    <section class="side-nav__options" {% unless page.url contains '/guides/' %}style="display:none"{% endunless %}>
+        <h6>API v1 Resources</h6>
+        <ul>
+            <li><a href="/guides/offsite-gateway/"><span>Off-Site Gateway</span></a></li>
+            <li class="external-link"><a href="https://docs.dwolla.com/" target="_blank"><span class="icon-sidenav-option">API v1 reference docs</span></a></li>
+        </ul>
+    </section>
 </nav>
 
