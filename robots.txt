@@ -121,62 +121,13 @@
 			<li class="nav-header">
 				Guides
 			</li>
-			<li
->
-				<a href="dev/pages/guides/offsite_gateway.html">
-					<i class="icon-check"></i>
-					Off-Site Gateway Checkout
-				</a>
-			</li>
-			<li
->
-				<a href="dev/pages/guides/using_webhooks.html">
-					<i class="icon-check"></i>
-					Using Webhooks
-				</a>
-			</li>
 
 			<li class="nav-header">
 				Integration Options
 			</li>
-			<li
->
-				<a href="dev/pages/gateway.html">
-					<i class="icon-shopping-cart"></i>
-					Off-Site Gateway
-				</a>
-			</li>
-			<li
->
-				<a href="dev/pages/auth.html">
-					<i class="icon-user"></i>
-					OAuth + REST API
-				</a>
-			</li>
 
 			<li class="nav-header">
 				Reference
-			</li>
-			<li
->
-				<a href="dev/pages/guides/direct_limitations.html">
-					<i class="icon-download-alt"></i>
-					Direct Account Limitatons
-				</a>
-			</li>
-			<li
->
-				<a href="dev/pages/guides/oauth_account_creation.html">
-					<i class="icon-bell"></i>
-					OAuth Account Creation
-				</a>
-			</li>
-			<li
->
-				<a href="dev/docs/gateway/direct.html">
-					<i class="icon-arrow-right"></i>
-					Dwolla Direct
-				</a>
 			</li>
 
 			<li class="nav-header">
