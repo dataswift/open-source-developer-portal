@@ -19,4 +19,4 @@ A Traditional CIP Verified Dwolla account maintains full access to the Dwolla pl
 
 ##### Dwolla Direct
 
-A Direct account is a lightweight account that maintains partial platform capabilities. This type of account requires only a username and password with no added CIP verification steps. Since identity vetting is not required, a Direct account may only transact with a Traditional CIP Verified account. **Note:** Dwolla Direct accounts have a sending transaction limit of $5000 per week. A week is defined as Monday to Sunday.
+A Direct account is a lightweight account that maintains partial platform capabilities. This type of account requires only a username and password with no added CIP verification steps. Since identity vetting is not required, a Direct account may only transact with a Traditional CIP Verified account. **Note:** Dwolla Direct accounts have a default sending transaction limit of $5000 per week. A week is defined as Monday to Sunday.

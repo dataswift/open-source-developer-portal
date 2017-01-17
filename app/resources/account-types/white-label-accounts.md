@@ -19,4 +19,4 @@ This third-party-created account requires the same user profile data as a Tradit
 
 ##### White Label Unverified Customer
 
-A White Label unverified Customer is a third-party-created account that requires a minimal amount of account data: first name, last name, email address, and IP address. **Note:** Unverified Customer accounts have a sending transaction limit of $5000 per week. A week is defined as Monday to Sunday.
+A White Label unverified Customer is a third-party-created account that requires a minimal amount of account data: first name, last name, email address, and IP address. **Note:** Unverified Customer accounts have a default sending transaction limit of $5000 per week. A week is defined as Monday to Sunday.
