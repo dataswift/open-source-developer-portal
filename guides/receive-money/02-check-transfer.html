@@ -68,8 +68,8 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 </code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>transfer_url</span> <span class=o>=</span> <span class=s>'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'</span>
 
 <span class=c># Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)</span>
-<span class=n>fees</span> <span class=o>=</span> <span class=n>account_token</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>transfer_url</span><span class=p>)</span>
-<span class=n>fees</span><span class=o>.</span><span class=n>body</span><span class=p>[</span><span class=s>'stats'</span><span class=p>]</span> <span class=c># =&gt; 'pending'</span>
+<span class=n>transfer</span> <span class=o>=</span> <span class=n>account_token</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>transfer_url</span><span class=p>)</span>
+<span class=n>transfer</span><span class=o>.</span><span class=n>body</span><span class=p>[</span><span class=s>'status'</span><span class=p>]</span> <span class=c># =&gt; 'pending'</span>
 
 <span class=c># Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python</span>
 <span class=n>transfers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>TransfersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>

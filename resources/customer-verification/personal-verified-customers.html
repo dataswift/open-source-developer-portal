@@ -17,116 +17,200 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
   "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
-  "address1": "99-99 3rd St.",
-  "city": "Ridgewood",
+  "address1": "99-99 33rd St",
+  "city": "Some City",
   "state": "NY",
-  "postalCode": "11385",
-  "dateOfBirth": "1990-07-11",
-  "ssn": "1516"
+  "postalCode": "11101",
+  "dateOfBirth": "1970-01-01",
+  "ssn": "1234"
 }
 
 HTTP/1.1 201 Created
 Location: https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>new_customer</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>CustomersApi</span><span class=p>.</span><span class=nf>create</span><span class=p>({</span><span class=ss>:body</span> <span class=o>=&gt;</span> <span class=p>{</span>
-      <span class=s2>"firstName"</span> <span class=o>=&gt;</span> <span class=s2>"John"</span><span class=p>,</span>
-       <span class=s2>"lastName"</span> <span class=o>=&gt;</span> <span class=s2>"Doe"</span><span class=p>,</span>
-          <span class=s2>"email"</span> <span class=o>=&gt;</span> <span class=s2>"johndoe@nomail.net"</span><span class=p>,</span>
-      <span class=s2>"ipAddress"</span> <span class=o>=&gt;</span> <span class=s2>"10.10.10.10"</span><span class=p>,</span>
-           <span class=s2>"type"</span> <span class=o>=&gt;</span> <span class=s2>"personal"</span><span class=p>,</span>
-       <span class=s2>"address1"</span> <span class=o>=&gt;</span> <span class=s2>"99-99 3rd St."</span><span class=p>,</span>
-           <span class=s2>"city"</span> <span class=o>=&gt;</span> <span class=s2>"Ridgewood"</span><span class=p>,</span>
-          <span class=s2>"state"</span> <span class=o>=&gt;</span> <span class=s2>"NY"</span><span class=p>,</span>
-     <span class=s2>"postalCode"</span> <span class=o>=&gt;</span> <span class=s2>"11385"</span><span class=p>,</span>
-    <span class=s2>"dateOfBirth"</span> <span class=o>=&gt;</span> <span class=s2>"1990-07-11"</span><span class=p>,</span>
-            <span class=s2>"ssn"</span> <span class=o>=&gt;</span> <span class=s2>"1516"</span>
-<span class=p>}})</span>
-
-<span class=nb>p</span> <span class=n>new_customer</span> <span class=c1># =&gt; https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// No example for this language yet.</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>customers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>CustomersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
-
-<span class=n>new_customer</span> <span class=o>=</span> <span class=n>customers_api</span><span class=o>.</span><span class=n>create</span><span class=p>(</span><span class=n>body</span> <span class=o>=</span> <span class=p>{</span>
-  <span class=s>"firstName"</span><span class=p>:</span> <span class=s>"John"</span><span class=p>,</span>
-  <span class=s>"lastName"</span><span class=p>:</span> <span class=s>"Doe"</span><span class=p>,</span>
-  <span class=s>"email"</span><span class=p>:</span> <span class=s>"johndoe@nomail.net"</span><span class=p>,</span>
-  <span class=s>"ipAddress"</span><span class=p>:</span> <span class=s>"10.10.10.10"</span><span class=p>,</span>
-  <span class=s>"type"</span><span class=p>:</span> <span class=s>"personal"</span><span class=p>,</span>
-  <span class=s>"address1"</span><span class=p>:</span> <span class=s>"99-99 3rd St."</span><span class=p>,</span>
-  <span class=s>"city"</span><span class=p>:</span> <span class=s>"Ridgewood"</span><span class=p>,</span>
-  <span class=s>"state"</span><span class=p>:</span> <span class=s>"NY"</span><span class=p>,</span>
-  <span class=s>"postalCode"</span><span class=p>:</span> <span class=s>"11385"</span><span class=p>,</span>
-  <span class=s>"dateOfBirth"</span><span class=p>:</span> <span class=s>"1990-07-11"</span><span class=p>,</span>
-  <span class=s>"ssn"</span><span class=p>:</span> <span class=s>"1516"</span>
-<span class=p>})</span>
-
-<span class=k>print</span><span class=p>(</span><span class=n>new_customer</span><span class=p>)</span> <span class=c># =&gt; https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F</span>
 </code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
-<span class=nv>$customersApi</span> <span class=o>=</span> <span class=nx>DwollaSwagger\CustomersApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
+<span class=nv>$customersApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DwollaSwagger\CustomersApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
 
-<span class=nv>$newCustomer</span> <span class=o>=</span> <span class=nv>$customersApi</span><span class=o>-&gt;</span><span class=na>create</span><span class=p>(</span><span class=k>array</span> <span class=p>(</span>
+<span class=nv>$customer</span> <span class=o>=</span> <span class=nv>$customersApi</span><span class=o>-&gt;</span><span class=na>create</span><span class=p>([</span>
   <span class=s1>'firstName'</span> <span class=o>=&gt;</span> <span class=s1>'John'</span><span class=p>,</span>
   <span class=s1>'lastName'</span> <span class=o>=&gt;</span> <span class=s1>'Doe'</span><span class=p>,</span>
-  <span class=s1>'email'</span> <span class=o>=&gt;</span> <span class=s1>'johndoe@nomail.net'</span><span class=p>,</span>
-  <span class=s1>'ipAddress'</span> <span class=o>=&gt;</span> <span class=s1>'10.10.10.10'</span><span class=p>,</span>
+  <span class=s1>'email'</span> <span class=o>=&gt;</span> <span class=s1>'jdoe@nomail.net'</span><span class=p>,</span>
   <span class=s1>'type'</span> <span class=o>=&gt;</span> <span class=s1>'personal'</span><span class=p>,</span>
-  <span class=s1>'address1'</span> <span class=o>=&gt;</span> <span class=s1>'99-99 3rd St.'</span><span class=p>,</span>
-  <span class=s1>'city'</span> <span class=o>=&gt;</span> <span class=s1>'Ridgewood'</span><span class=p>,</span>
+  <span class=s1>'address1'</span> <span class=o>=&gt;</span> <span class=s1>'99-99 33rd St'</span><span class=p>,</span>
+  <span class=s1>'city'</span> <span class=o>=&gt;</span> <span class=s1>'Some City'</span><span class=p>,</span>
   <span class=s1>'state'</span> <span class=o>=&gt;</span> <span class=s1>'NY'</span><span class=p>,</span>
-  <span class=s1>'postalCode'</span> <span class=o>=&gt;</span> <span class=s1>'11385'</span><span class=p>,</span>
-  <span class=s1>'dateOfBirth'</span> <span class=o>=&gt;</span> <span class=s1>'1990-07-11'</span><span class=p>,</span>
-  <span class=s1>'ssn'</span> <span class=o>=&gt;</span> <span class=s1>'1516'</span><span class=p>,</span>
-<span class=p>));</span>
+  <span class=s1>'postalCode'</span> <span class=o>=&gt;</span> <span class=s1>'11101'</span><span class=p>,</span>
+  <span class=s1>'dateOfBirth'</span> <span class=o>=&gt;</span> <span class=s1>'1970-01-01'</span><span class=p>,</span>
 
-<span class=k>print</span><span class=p>(</span><span class=nv>$newCustomer</span><span class=p>);</span> <span class=c1># =&gt; https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+  <span class=c1># For the first attempt, only the
+</span>  <span class=c1># last 4 digits of SSN required
+</span>
+  <span class=c1># If the entire SSN is provided,
+</span>  <span class=c1># it will still be accepted
+</span>  <span class=s1>'ssn'</span> <span class=o>=&gt;</span> <span class=s1>'1234'</span>
+<span class=p>]);</span>
+
+<span class=nv>$customer</span><span class=p>;</span> <span class=c1># =&gt; "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 </span><span class=cp>?&gt;</span>
-</code></pre></div></div><p>You’ll need to provide the Customer’s full name, email address, home address, date of birth, and the last four digits of their taxpayer identification number (for individuals, this is their Social Security Number).</p><p>Once you submit this request, Dwolla will perform some initial validation to check for formatting issues such as an invalid date of birth, invalid email format, etc. If successful, the response will be a HTTP 201/Created with the URL of the new Customer resource contained in the <code>Location</code> header.</p><h3>Check the status of the personal Customer</h3><p>The successful creation of a Customer doesn’t necessarily mean the Customer is verified. When a Customer has been successfully verified by Dwolla, their status will be set to <code>verified</code>.</p><p>Let’s check to see if the Customer was successfully verified or not. We are going to use the location of the Customer resource that we just created, which is in <code>new_customer</code>.</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>GET https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-Content-Type: application/vnd.dwolla.v1.hal+json
+</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>request_body</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=ss>:firstName</span> <span class=o>=&gt;</span> <span class=s1>'John'</span><span class=p>,</span>
+  <span class=ss>:lastName</span> <span class=o>=&gt;</span> <span class=s1>'Doe'</span><span class=p>,</span>
+  <span class=ss>:email</span> <span class=o>=&gt;</span> <span class=s1>'jdoe@nomail.net'</span><span class=p>,</span>
+  <span class=ss>:type</span> <span class=o>=&gt;</span> <span class=s1>'personal'</span><span class=p>,</span>
+  <span class=ss>:address1</span> <span class=o>=&gt;</span> <span class=s1>'99-99 33rd St'</span><span class=p>,</span>
+  <span class=ss>:city</span> <span class=o>=&gt;</span> <span class=s1>'Some City'</span><span class=p>,</span>
+  <span class=ss>:state</span> <span class=o>=&gt;</span> <span class=s1>'NY'</span><span class=p>,</span>
+  <span class=ss>:postalCode</span> <span class=o>=&gt;</span> <span class=s1>'11101'</span><span class=p>,</span>
+  <span class=ss>:dateOfBirth</span> <span class=o>=&gt;</span> <span class=s1>'1970-01-01'</span><span class=p>,</span>
+
+  <span class=c1># For the first attempt, only the</span>
+  <span class=c1># last 4 digits of SSN required</span>
+
+  <span class=c1># If the entire SSN is provided,</span>
+  <span class=c1># it will still be accepted</span>
+
+  <span class=ss>:ssn</span> <span class=o>=&gt;</span> <span class=s1>'1234'</span>
+<span class=p>}</span>
+
+<span class=c1># Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>app_token</span><span class=p>.</span><span class=nf>post</span> <span class=s2>"customers"</span><span class=p>,</span> <span class=n>request_body</span>
+<span class=n>customer</span><span class=p>.</span><span class=nf>headers</span><span class=p>[</span><span class=ss>:location</span><span class=p>]</span> <span class=c1># =&gt; "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"</span>
+
+<span class=c1># Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>CustomersApi</span><span class=p>.</span><span class=nf>create</span><span class=p>(</span><span class=ss>:body</span> <span class=o>=&gt;</span> <span class=n>request_body</span><span class=p>)</span>
+<span class=n>customer</span> <span class=c1># =&gt; "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>request_body</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=s>'firstName'</span><span class=p>:</span> <span class=s>'John'</span><span class=p>,</span>
+  <span class=s>'lastName'</span><span class=p>:</span> <span class=s>'Doe'</span><span class=p>,</span>
+  <span class=s>'email'</span><span class=p>:</span> <span class=s>'jdoe@nomail.net'</span><span class=p>,</span>
+  <span class=s>'type'</span><span class=p>:</span> <span class=s>'personal'</span><span class=p>,</span>
+  <span class=s>'address1'</span><span class=p>:</span> <span class=s>'99-99 33rd St'</span><span class=p>,</span>
+  <span class=s>'city'</span><span class=p>:</span> <span class=s>'Some City'</span><span class=p>,</span>
+  <span class=s>'state'</span><span class=p>:</span> <span class=s>'NY'</span><span class=p>,</span>
+  <span class=s>'postalCode'</span><span class=p>:</span> <span class=s>'11101'</span><span class=p>,</span>
+  <span class=s>'dateOfBirth'</span><span class=p>:</span> <span class=s>'1970-01-01'</span><span class=p>,</span>
+  <span class=c># For the first attempt, only the</span>
+  <span class=c># last 4 digits of SSN required</span>
+  <span class=c># If the entire SSN is provided,</span>
+  <span class=c># it will still be accepted</span>
+  <span class=s>'ssn'</span><span class=p>:</span> <span class=s>'1234'</span>
+<span class=p>}</span>
+
+<span class=c># Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>app_token</span><span class=o>.</span><span class=n>post</span><span class=p>(</span><span class=s>'customers'</span><span class=p>,</span> <span class=n>request_body</span><span class=p>)</span>
+<span class=n>customer</span><span class=o>.</span><span class=n>headers</span><span class=p>[</span><span class=s>'location'</span><span class=p>]</span> <span class=c># =&gt; 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'</span>
+
+<span class=c># Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python</span>
+<span class=n>customers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>CustomersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>customers_api</span><span class=o>.</span><span class=n>create</span><span class=p>(</span><span class=n>body</span> <span class=o>=</span> <span class=n>request_body</span><span class=p>)</span>
+<span class=n>customer</span> <span class=c># =&gt; 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=kd>var</span> <span class=nx>requestBody</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=na>firstName</span><span class=p>:</span> <span class=s1>'John'</span><span class=p>,</span>
+  <span class=na>lastName</span><span class=p>:</span> <span class=s1>'Doe'</span><span class=p>,</span>
+  <span class=na>email</span><span class=p>:</span> <span class=s1>'jdoe@nomail.net'</span><span class=p>,</span>
+  <span class=na>type</span><span class=p>:</span> <span class=s1>'personal'</span><span class=p>,</span>
+  <span class=na>address1</span><span class=p>:</span> <span class=s1>'99-99 33rd St'</span><span class=p>,</span>
+  <span class=na>city</span><span class=p>:</span> <span class=s1>'Some City'</span><span class=p>,</span>
+  <span class=na>state</span><span class=p>:</span> <span class=s1>'NY'</span><span class=p>,</span>
+  <span class=na>postalCode</span><span class=p>:</span> <span class=s1>'11101'</span><span class=p>,</span>
+  <span class=na>dateOfBirth</span><span class=p>:</span> <span class=s1>'1970-01-01'</span><span class=p>,</span>
+  <span class=c1>// For the first attempt, only the</span>
+  <span class=c1>// last 4 digits of SSN required</span>
+  <span class=c1>// If the entire SSN is provided,</span>
+  <span class=c1>// it will still be accepted</span>
+  <span class=na>ssn</span><span class=p>:</span> <span class=s1>'1234'</span>
+<span class=p>};</span>
+
+<span class=nx>appToken</span>
+  <span class=p>.</span><span class=nx>post</span><span class=p>(</span><span class=s1>'customers'</span><span class=p>,</span> <span class=nx>requestBody</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>res</span> <span class=o>=&gt;</span> <span class=nx>res</span><span class=p>.</span><span class=nx>headers</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>'location'</span><span class=p>));</span> <span class=c1>// =&gt; 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'</span>
+</code></pre></div></div><p>You’ll need to provide the Customer’s full name, email address, home address, date of birth, and the last four digits of their taxpayer identification number (for individuals, this is their Social Security Number).</p><p>Once you submit this request, Dwolla will perform some initial validation to check for formatting issues such as an invalid date of birth, invalid email format, etc. If successful, the response will be a HTTP 201/Created with the URL of the new Customer resource contained in the <code>Location</code> header.</p><h3>Check the status of the personal Customer</h3><p>The successful creation of a Customer doesn’t necessarily mean the Customer is verified. When a Customer has been successfully verified by Dwolla, their status will be set to <code>verified</code>.</p><p>Let’s check to see if the Customer was successfully verified or not. We are going to use the location of the Customer resource that we just created, which is in <code>new_customer</code>.</p><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>GET https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
-HTTP 200 OK
 {
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "customer"
     },
     "receive": {
-      "href": "https://api-uat.dwolla.com/transfers"
+      "href": "https://api-uat.dwolla.com/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
+    },
+    "edit-form": {
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json; profile=\"https://github.com/dwolla/hal-forms\"",
+      "resource-type": "customer"
+    },
+    "edit": {
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "customer"
     },
     "funding-sources": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1/funding-sources"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F/funding-sources",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "funding-source"
     },
     "transfers": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1/transfers"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
     },
     "send": {
-      "href": "https://api-uat.dwolla.com/transfers"
+      "href": "https://api-uat.dwolla.com/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
     }
   },
-  "id": "132681FA-1B4D-4181-8FF2-619CA46235B1",
+  "id": "FC451A7A-AE30-4404-AB95-E3553FCD733F",
   "firstName": "John",
   "lastName": "Doe",
-  "email": "johndoe@nomail.net",
+  "email": "jdoe@nomail.net",
   "type": "personal",
   "status": "verified",
-  "created": "2015-09-29T19:47:28.920Z"
+  "created": "2016-11-28T19:51:48.050Z",
+  "address1": "99-99 33rd St",
+  "address2": "Apt 8",
+  "city": "Some City",
+  "state": "NY",
+  "postalCode": "11101",
+  "phone": "5554321234"
 }
-</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>retrieved_customer</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>CustomersApi</span><span class=p>.</span><span class=nf>get_customer</span><span class=p>(</span><span class=n>new_customer</span><span class=p>)</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby><span class=n>customer_url</span> <span class=o>=</span> <span class=s1>'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'</span>
 
-<span class=nb>p</span> <span class=n>retrieved_customer</span><span class=p>.</span><span class=nf>verified</span> <span class=c1># =&gt; true</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=c1>// No example for this language yet.</span>
-</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>customers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>CustomersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
+<span class=c1># Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>app_token</span><span class=p>.</span><span class=nf>get</span> <span class=n>customer_url</span>
+<span class=n>customer</span><span class=p>.</span><span class=nf>status</span> <span class=c1># =&gt; "verified"</span>
 
-<span class=n>retrieved_customer</span> <span class=o>=</span> <span class=n>customers_api</span><span class=o>.</span><span class=n>get_customer</span><span class=p>(</span><span class=n>new_customer</span><span class=p>)</span>
-
-<span class=k>print</span><span class=p>(</span><span class=n>retrieved_customer</span><span class=o>.</span><span class=n>verified</span><span class=p>)</span> <span class=c># =&gt; True</span>
+<span class=c1># Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=no>DwollaSwagger</span><span class=o>::</span><span class=no>CustomersApi</span><span class=p>.</span><span class=nf>get_customer</span><span class=p>(</span><span class=n>customer_url</span><span class=p>)</span>
+<span class=n>customer</span><span class=p>.</span><span class=nf>status</span> <span class=c1># =&gt; "verified"</span>
 </code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php><span class=cp>&lt;?php</span>
-<span class=nv>$customersApi</span> <span class=o>=</span> <span class=nx>DwollaSwagger\CustomersApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
+<span class=nv>$customerUrl</span> <span class=o>=</span> <span class=s1>'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'</span><span class=p>;</span>
 
-<span class=nv>$retrievedCustomer</span> <span class=o>=</span> <span class=nv>$customersApi</span><span class=o>-&gt;</span><span class=na>getCustomer</span><span class=p>(</span><span class=nv>$newCustomer</span><span class=p>);</span>
+<span class=nv>$customersApi</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>DwollaSwagger\CustomersApi</span><span class=p>(</span><span class=nv>$apiClient</span><span class=p>);</span>
 
-<span class=k>print</span><span class=p>(</span><span class=nv>$newCustomer</span><span class=o>-&gt;</span><span class=na>verified</span><span class=p>);</span> <span class=c1># =&gt; true
+<span class=nv>$customer</span> <span class=o>=</span> <span class=nv>$customersApi</span><span class=o>-&gt;</span><span class=na>getCustomer</span><span class=p>(</span><span class=nv>$customerUrl</span><span class=p>);</span>
+<span class=nv>$customer</span><span class=o>-&gt;</span><span class=na>status</span><span class=p>;</span> <span class=c1># =&gt; "verified"
 </span><span class=cp>?&gt;</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python><span class=n>customer_url</span> <span class=o>=</span> <span class=s>'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'</span>
+
+<span class=c># Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>app_token</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=n>customer_url</span><span class=p>)</span>
+<span class=n>customer</span><span class=o>.</span><span class=n>body</span><span class=p>[</span><span class=s>'status'</span><span class=p>]</span>
+
+<span class=c># Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python</span>
+<span class=n>customers_api</span> <span class=o>=</span> <span class=n>dwollaswagger</span><span class=o>.</span><span class=n>CustomersApi</span><span class=p>(</span><span class=n>client</span><span class=p>)</span>
+<span class=n>customer</span> <span class=o>=</span> <span class=n>customers_api</span><span class=o>.</span><span class=n>get_customer</span><span class=p>(</span><span class=n>customer_url</span><span class=p>)</span>
+<span class=n>customer</span><span class=o>.</span><span class=n>status</span> <span class=c># =&gt; 'verified'</span>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript><span class=kd>var</span> <span class=nx>customerUrl</span> <span class=o>=</span> <span class=s1>'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'</span><span class=p>;</span>
+
+<span class=nx>appToken</span>
+  <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=nx>customerUrl</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>res</span> <span class=o>=&gt;</span> <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>status</span><span class=p>);</span> <span class=c1>// =&gt; 'verified'</span>
 </code></pre></div></div><p>Our Customer was successfully verified! Other Customers, however, may require additional verification. Continue reading for instructions on providing additional information to verify these Customers.</p><hr><h4>View:</h4><ul><li><a href=/resources/customer-verification/handling-verification-statuses.html>Handling verification statuses</a></li></ul><hr><footer><div class=page-wrap><nav><h6>Product</h6><a href=https://www.dwolla.com/access-api>Access API</a></nav><nav><h6>Features</h6><a href=https://www.dwolla.com/bank-transfers>Bank Transfers</a> <a href=https://www.dwolla.com/mass-payments-api>Mass Payments</a> <a href=https://www.dwolla.com/same-day-ach>Same Day ACH</a> <a href=https://www.dwolla.com/white-label>White Label</a> <a href=https://www.dwolla.com/ach-transfer-dashboard>Dashboard & Admin</a> <a href=https://www.dwolla.com/dwollajs-bank-verification>Instant Bank Account Verification</a></nav><nav><h6>Account</h6><a href=https://accounts.dwolla.com/interest>Sign up</a> <a href=https://www.dwolla.com/login>Log in</a> <a href=http://help.dwolla.com>Support</a> <a href=https://www.dwolla.com/security>Security</a> <a href="https://www.dwolla.com/legal/privacy/">Privacy</a> <a href="https://www.dwolla.com/legal/tos/">Legal</a></nav><nav><h6>Case Studies</h6><a href="https://www.dwolla.com/updates/case-study-delivery-platform-leverages-dwolla-ach-api-for-payouts/">On-Demand Payouts</a> <a href="https://www.dwolla.com/updates/case-study-instagram-ad-platform-leverages-dwolla-api-for-payouts/">Ad Platform</a> <a href="https://www.dwolla.com/updates/dwolla-case-study-featuring-goat-for-ach-payouts/">Marketplace Payouts</a> <a href="https://www.dwolla.com/updates/kill-bill-adds-dwolla-to-offer-subscription-billing-with-ach-payments/">Subscription Billing</a> <a href="https://www.dwolla.com/updates/case-study-how-a-leading-rental-management-platform-used-an-ach-api/">Rental Collection</a> <a href="https://www.dwolla.com/updates/case-study-how-sweep-uses-dwolla-ach-api-for-bank-transfers/">Savings Tool</a> <a href="https://www.dwolla.com/updates/solar-investing-platform-uses-dwolla-api-to-power-bank-transfers/">Investment Platform</a> <a href="https://www.dwolla.com/updates/case-study-clear-capital-streamlines-disbursements-with-dwolla/">B2B Disbursements</a></nav><nav><h6>Learn more</h6><a href=https://www.dwolla.com/contact>Let's talk</a> <a href=https://developers.dwolla.com>Developer Docs</a> <a href=https://www.dwolla.com/updates>Updates</a> <a href=https://www.dwolla.com/press>Press</a> <a href=https://www.dwolla.com/careers>Careers</a></nav></div></footer><section class=disclaimer><div class=page-wrap><h5>Financial institutions play an important role in the Dwolla network.</h5><p>Dwolla, Inc. is an agent of Veridian Credit Union and Compass Bank and all funds associated with your account in the Dwolla network are held in pooled accounts at Veridian Credit Union and Compass Bank. These funds are not eligible for individual insurance, including FDIC insurance and may not be eligible for share insurance by the National Credit Union Share Insurance Fund. Dwolla, Inc. is the operator of a software platform that communicates user instructions for funds transfers to Veridian Credit Union and Compass Bank.</p></div></section><section class=copyright><div class=page-wrap><div><span>© 2016 Dwolla, Inc.</span> <a href="https://www.dwolla.com/legal/about-our-financial-institution-partner/">Dwolla, Inc. is an agent of its Financial Institution Partner(s)</a></div></div></section></section></div></div></div><script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script><script>window.jQuery || document.write('<script src="/_bower_components/jquery/jquery.min.js"><\/script>')</script><script src=/js/script.3a68.js></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
