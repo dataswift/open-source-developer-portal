@@ -16,24 +16,25 @@ Let's assume that you have a webhook subscription and Dwolla has just delivered 
 ##### Sample Payload
 ```jsonnoselect
 {
-  "id": "80d8ff7d-7e5a-4975-ade8-9e97306d6c15",
-  "resourceId": "36E9DCB2-889B-4873-8E52-0C9404EA002A",
-  "topic": "transfer_created",
-  "timestamp": "2015-10-22T14:44:11.407Z",
+  "id": "cac95329-9fa5-42f1-a4fc-c08af7b868fb",
+  "resourceId": "cdb5f11f-62df-e611-80ee-0aa34a9b2388",
+  "topic": "customer_transfer_created",
+  "timestamp": "2017-01-20T22:45:12.790Z",
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/events/80d8ff7d-7e5a-4975-ade8-9e97306d6c15"
+      "href": "https://api-uat.dwolla.com/events/cac95329-9fa5-42f1-a4fc-c08af7b868fb"
     },
     "account": {
-      "href": "https://api-uat.dwolla.com/accounts/b4cdac07-eeca-4059-a29c-48900e453d54"
+      "href": "https://api-uat.dwolla.com/accounts/ad5f2162-404a-4c4c-994e-6ab6c3a13254"
     },
     "resource": {
-      "href": "https://api-uat.dwolla.com/transfers/36E9DCB2-889B-4873-8E52-0C9404EA002A"
+      "href": "https://api-uat.dwolla.com/transfers/cdb5f11f-62df-e611-80ee-0aa34a9b2388"
     },
     "customer": {
-      "href": "https://api-uat.dwolla.com/customers/36E9DCB2-889B-4873-8E52-0C9404EA002A"
+      "href": "https://api-uat.dwolla.com/customers/e358a488-6699-4d79-bbfb-c5bf58100ea4"
     }
-  }
+  },
+  "created": "2017-01-20T22:45:12.790Z"
 }
 ```
 

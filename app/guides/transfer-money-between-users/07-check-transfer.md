@@ -12,37 +12,13 @@ title:  "Step 7: Check the status of your transfer"
 
 You can check the status of the newly created transfer by retrieving the transfer by its URL.
 
+#### Request and response (view schema in `raw`)
 ```raw
-GET https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+GET https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 Accept: application/vnd.dwolla.v1.hal+json
-Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
-```
-```ruby
-transfer = DwollaSwagger::TransfersApi.by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-```
-```javascript
-dwolla.then(function(dwolla) {
-    dwolla.transfers.byId({id: 'd76265cd-0951-e511-80da-0aa34a9b2388'})
-    .then(function(data) {
-        // See response below
-    })
-});
-```
-```python
-transfer_api = dwollaswagger.TransfersApi(client)
-transfer = transfer_api.by_id('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-```
-```php
-<?php
-$transferApi = new DwollaSwagger\TransfersApi($apiClient);
-$transfer = $transferApi->byId('https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388')
-?>
-```
+Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
-Response (view schema in 'raw'):
-
-```raw
-Schema
+...
 
 {
   "_links": {
@@ -66,21 +42,47 @@ Schema
 }
 ```
 ```ruby
-# Access desired information in response object fields
-p transfer.status # => pending
-```
-```javascript
-console.log(data.obj._embedded[0].status); // pending
-```
-```python
-# Access desired information in response object fields
-print(transfer.status) # => pending
+transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+transfer = account_token.get transfer_url
+transfer.status # => "pending"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+transfer = DwollaSwagger::TransfersApi.by_id(transfer_url)
+transfer.status # => "pending"
 ```
 ```php
 <?php
-# Access desired information in response object fields
-print($transfer->status) # => pending
+$transferUrl = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388';
+
+$transfersApi = new DwollaSwagger\TransfersApi($apiClient);
+
+$transfer = $transfersApi->byId($transferUrl);
+$transfer->status; # => "pending"
 ?>
+```
+```python
+transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+transfer = account_token.get(transfer_url)
+transfer.body['status'] # => 'pending'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+transfers_api = dwollaswagger.TransfersApi(client)
+transfer = transfers_api.by_id(transfer_url)
+transfer.status # => 'pending'
+```
+```javascript
+var transferUrl = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388';
+
+// For white label applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+accountToken
+  .get(transferUrl)
+  .then(res => res.body.status); // => 'pending'
 ```
 
 That’s it!  You’ve successfully transferred money from Joe Buyer to Jane Merchant. Please continue to the Webhooks guide for information on implementing notifications for your customers about the transfer.

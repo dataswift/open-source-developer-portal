@@ -20,21 +20,25 @@ The `topic` field of an event holds [a description](http://docsv2.dwolla.com/#ev
 ##### JSON
 ```jsonnoselect
 {
-  "id": "2c311238-b9ef-4763-b1cb-03e1aa651227",
-  "resourceId": "0089A051-9B79-E511-80DB-0AA34A9B2388",
-  "topic": "transfer_completed",
-  "timestamp": "2015-10-23T15:35:35.366Z",
+  "id": "cac95329-9fa5-42f1-a4fc-c08af7b868fb",
+  "resourceId": "cdb5f11f-62df-e611-80ee-0aa34a9b2388",
+  "topic": "customer_transfer_created",
+  "timestamp": "2017-01-20T22:45:12.790Z",
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/events/2c311238-b9ef-4763-b1cb-03e1aa651227"
+      "href": "https://api-uat.dwolla.com/events/cac95329-9fa5-42f1-a4fc-c08af7b868fb"
     },
     "account": {
-      "href": "https://api-uat.dwolla.com/accounts/b4cdac07-eeca-4059-a29c-48900e453d54"
+      "href": "https://api-uat.dwolla.com/accounts/ad5f2162-404a-4c4c-994e-6ab6c3a13254"
     },
     "resource": {
-      "href": "https://api-uat.dwolla.com/transfers/0089A051-9B79-E511-80DB-0AA34A9B2388"
+      "href": "https://api-uat.dwolla.com/transfers/cdb5f11f-62df-e611-80ee-0aa34a9b2388"
+    },
+    "customer": {
+      "href": "https://api-uat.dwolla.com/customers/e358a488-6699-4d79-bbfb-c5bf58100ea4"
     }
-  }
+  },
+  "created": "2017-01-20T22:45:12.790Z"
 }
 ```
 

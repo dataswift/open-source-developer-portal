@@ -27,76 +27,120 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
   "email": "johndoe@nomail.net",
   "ipAddress": "10.10.10.10",
   "type": "personal",
-  "address1": "99-99 3rd St.",
-  "city": "Ridgewood",
+  "address1": "99-99 33rd St",
+  "city": "Some City",
   "state": "NY",
-  "postalCode": "11385",
-  "dateOfBirth": "1990-07-11",
-  "ssn": "1516"
+  "postalCode": "11101",
+  "dateOfBirth": "1970-01-01",
+  "ssn": "1234"
 }
 
 HTTP/1.1 201 Created
 Location: https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
 ```
-```ruby
-new_customer = DwollaSwagger::CustomersApi.create({:body => {
-      "firstName" => "John",
-       "lastName" => "Doe",
-          "email" => "johndoe@nomail.net",
-      "ipAddress" => "10.10.10.10",
-           "type" => "personal",
-       "address1" => "99-99 3rd St.",
-           "city" => "Ridgewood",
-          "state" => "NY",
-     "postalCode" => "11385",
-    "dateOfBirth" => "1990-07-11",
-            "ssn" => "1516"
-}})
-
-p new_customer # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-```
-```javascript
-// No example for this language yet.
-```
-```python
-customers_api = dwollaswagger.CustomersApi(client)
-
-new_customer = customers_api.create(body = {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@nomail.net",
-  "ipAddress": "10.10.10.10",
-  "type": "personal",
-  "address1": "99-99 3rd St.",
-  "city": "Ridgewood",
-  "state": "NY",
-  "postalCode": "11385",
-  "dateOfBirth": "1990-07-11",
-  "ssn": "1516"
-})
-
-print(new_customer) # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-```
 ```php
 <?php
-$customersApi = DwollaSwagger\CustomersApi($apiClient);
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
 
-$newCustomer = $customersApi->create(array (
+$customer = $customersApi->create([
   'firstName' => 'John',
   'lastName' => 'Doe',
-  'email' => 'johndoe@nomail.net',
-  'ipAddress' => '10.10.10.10',
+  'email' => 'jdoe@nomail.net',
   'type' => 'personal',
-  'address1' => '99-99 3rd St.',
-  'city' => 'Ridgewood',
+  'address1' => '99-99 33rd St',
+  'city' => 'Some City',
   'state' => 'NY',
-  'postalCode' => '11385',
-  'dateOfBirth' => '1990-07-11',
-  'ssn' => '1516',
-));
+  'postalCode' => '11101',
+  'dateOfBirth' => '1970-01-01',
 
-print($newCustomer); # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+  # For the first attempt, only the
+  # last 4 digits of SSN required
+
+  # If the entire SSN is provided,
+  # it will still be accepted
+  'ssn' => '1234'
+]);
+
+$customer; # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 ?>
+```
+```ruby
+request_body = {
+  :firstName => 'John',
+  :lastName => 'Doe',
+  :email => 'jdoe@nomail.net',
+  :type => 'personal',
+  :address1 => '99-99 33rd St',
+  :city => 'Some City',
+  :state => 'NY',
+  :postalCode => '11101',
+  :dateOfBirth => '1970-01-01',
+
+  # For the first attempt, only the
+  # last 4 digits of SSN required
+
+  # If the entire SSN is provided,
+  # it will still be accepted
+
+  :ssn => '1234'
+}
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.post "customers", request_body
+customer.headers[:location] # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.create(:body => request_body)
+customer # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
+```
+```python
+request_body = {
+  'firstName': 'John',
+  'lastName': 'Doe',
+  'email': 'jdoe@nomail.net',
+  'type': 'personal',
+  'address1': '99-99 33rd St',
+  'city': 'Some City',
+  'state': 'NY',
+  'postalCode': '11101',
+  'dateOfBirth': '1970-01-01',
+  # For the first attempt, only the
+  # last 4 digits of SSN required
+  # If the entire SSN is provided,
+  # it will still be accepted
+  'ssn': '1234'
+}
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = app_token.post('customers', request_body)
+customer.headers['location'] # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+customers_api = dwollaswagger.CustomersApi(client)
+customer = customers_api.create(body = request_body)
+customer # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
+```
+```javascript
+var requestBody = {
+  firstName: 'John',
+  lastName: 'Doe',
+  email: 'jdoe@nomail.net',
+  type: 'personal',
+  address1: '99-99 33rd St',
+  city: 'Some City',
+  state: 'NY',
+  postalCode: '11101',
+  dateOfBirth: '1970-01-01',
+  // For the first attempt, only the
+  // last 4 digits of SSN required
+  // If the entire SSN is provided,
+  // it will still be accepted
+  ssn: '1234'
+};
+
+appToken
+  .post('customers', requestBody)
+  .then(res => res.headers.get('location')); // => 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'
 ```
 
 You’ll need to provide the Customer’s full name, email address, home address, date of birth, and the last four digits of their taxpayer identification number (for individuals, this is their Social Security Number).
@@ -110,62 +154,102 @@ The successful creation of a Customer doesn’t necessarily mean the Customer is
 Let’s check to see if the Customer was successfully verified or not. We are going to use the location of the Customer resource that we just created, which is in `new_customer`.
 
 ```raw
-GET https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-Content-Type: application/vnd.dwolla.v1.hal+json
+GET https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
-HTTP 200 OK
 {
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "customer"
     },
     "receive": {
-      "href": "https://api-uat.dwolla.com/transfers"
+      "href": "https://api-uat.dwolla.com/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
+    },
+    "edit-form": {
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json; profile=\"https://github.com/dwolla/hal-forms\"",
+      "resource-type": "customer"
+    },
+    "edit": {
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "customer"
     },
     "funding-sources": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1/funding-sources"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F/funding-sources",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "funding-source"
     },
     "transfers": {
-      "href": "https://api-uat.dwolla.com/customers/132681FA-1B4D-4181-8FF2-619CA46235B1/transfers"
+      "href": "https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
     },
     "send": {
-      "href": "https://api-uat.dwolla.com/transfers"
+      "href": "https://api-uat.dwolla.com/transfers",
+      "type": "application/vnd.dwolla.v1.hal+json",
+      "resource-type": "transfer"
     }
   },
-  "id": "132681FA-1B4D-4181-8FF2-619CA46235B1",
+  "id": "FC451A7A-AE30-4404-AB95-E3553FCD733F",
   "firstName": "John",
   "lastName": "Doe",
-  "email": "johndoe@nomail.net",
+  "email": "jdoe@nomail.net",
   "type": "personal",
   "status": "verified",
-  "created": "2015-09-29T19:47:28.920Z"
+  "created": "2016-11-28T19:51:48.050Z",
+  "address1": "99-99 33rd St",
+  "address2": "Apt 8",
+  "city": "Some City",
+  "state": "NY",
+  "postalCode": "11101",
+  "phone": "5554321234"
 }
 ```
 ```ruby
-retrieved_customer = DwollaSwagger::CustomersApi.get_customer(new_customer)
+customer_url = 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'
 
-p retrieved_customer.verified # => true
-```
-```javascript
-// No example for this language yet.
-```
-```python
-customers_api = dwollaswagger.CustomersApi(client)
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.get customer_url
+customer.status # => "verified"
 
-retrieved_customer = customers_api.get_customer(new_customer)
-
-print(retrieved_customer.verified) # => True
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.get_customer(customer_url)
+customer.status # => "verified"
 ```
 ```php
 <?php
-$customersApi = DwollaSwagger\CustomersApi($apiClient);
+$customerUrl = 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F';
 
-$retrievedCustomer = $customersApi->getCustomer($newCustomer);
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
 
-print($newCustomer->verified); # => true
+$customer = $customersApi->getCustomer($customerUrl);
+$customer->status; # => "verified"
 ?>
+```
+```python
+customer_url = 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F'
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = app_token.get(customer_url)
+customer.body['status']
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+customers_api = dwollaswagger.CustomersApi(client)
+customer = customers_api.get_customer(customer_url)
+customer.status # => 'verified'
+```
+```javascript
+var customerUrl = 'https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F';
+
+appToken
+  .get(customerUrl)
+  .then(res => res.body.status); // => 'verified'
 ```
 
 Our Customer was successfully verified! Other Customers, however, may require additional verification. Continue reading for instructions on providing additional information to verify these Customers.

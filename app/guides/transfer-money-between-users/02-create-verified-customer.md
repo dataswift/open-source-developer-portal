@@ -10,9 +10,9 @@ title:  "Step 2: Create a verified customer"
 
 # Step 2: Create a verified Customer
 
-First, we’ll create a verified customer for Jane Merchant.
+First, we’ll create a `Verified Customer` for Jane Merchant.
 
-The following information is required for a verified Customer. In this example, we use personal verified customers and we’re adding support for business customers coming soon. 
+The following information is required for a `Verified Customer`. In this example, we use business verified customers to represent the merchant who will be receiving funds. 
 
 ```raw
 POST https://api-uat.dwolla.com/customers
@@ -20,113 +20,119 @@ Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "johndoe@email.com",
+  "firstName": "Jane",
+  "lastName": "Merchant",
+  "email": "janeMerchant@email.com",
   "ipAddress": "127.0.0.1",
-  "type": "personal",
+  "type": "business",
   "address": "99-99 33rd St",
   "city": "Some city",
   "state": "NY",
   "postalCode": "11101",
   "dateOfBirth": "1970-01-01",
-  "ssn": "1234"
+  "ssn": "1234",
+  "businessClassification": "9ed38155-7d6f-11e3-83c3-5404a6144203",
+  "businessType": "llc",
+  "businessName":"Jane Corp",
+  "ein":"12-3456789"
 }
 
 HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
 ```
 ```ruby
-new_customer = DwollaSwagger::CustomersApi.create({:body => {
-  :firstName => 'Bob',
+request_body = {
+  :firstName => 'Jane',
   :lastName => 'Merchant',
-  :email => 'bmerchant@nomail.net',
-  :type => 'personal',
-  :address => '99-99 33rd St',
+  :email => 'janeMerchant@email.com',
+  :type => 'business',
+  :address1 => '99-99 33rd St',
   :city => 'Some City',
   :state => 'NY',
   :postalCode => '11101',
   :dateOfBirth => '1970-01-01',
+  :ssn => '1234',
+  :businessClassification => '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  :businessType => 'llc',
+  :businessName => 'Jane Corp',
+  :ein => '12-3456789',
+}
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.post "customers", request_body
+customer.headers[:location] # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 
-  # For the first attempt, only 
-  # the last 4 digits of SSN required
-
-  # If the entire SSN is provided, 
-  # it will still be accepted
-
-  :ssn => '1234'}})
-
-p new_customer # => https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.create(:body => request_body)
+customer # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.create({
-        "firstName": "Bob",
-        "lastName": "Merchant",
-        "email": "bmerchant@nomail.net",
-        "ipAddress": "10.10.10.10",
-        "type": "personal",
-        "address1": "99-99 33rd St",
-        "city": "Some City",
-        "state": "NY",
-        "postalCode": "11101",
-        "dateOfBirth": "1970-01-01",
+var requestBody = {
+  firstName: 'Jane',
+  lastName: 'Merchant',
+  email: 'janeMerchant@email.com',
+  type: 'business',
+  address1: '99-99 33rd St',
+  city: 'Some City',
+  state: 'NY',
+  postalCode: '11101',
+  dateOfBirth: '1970-01-01',
+  ssn: '1234',
+  businessClassification: '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  businessType: 'llc',
+  businessName: 'Jane Corp',
+  ein: '12-3456789'
+};
 
-        // For the first attempt, only 
-        // the last 4 digits of SSN required
-
-        // If the entire SSN is provided, 
-        // it will still be accepted
-        "ssn": "1234"
-      })
-      .then(function(data) {
-          console.log(data); // https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-      });
-});
+appToken
+  .post('customers', requestBody)
+  .then(res => res.headers.get('location')); // => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 ```
 ```python
+request_body = {
+  'firstName': 'Jane',
+  'lastName': 'Merchant',
+  'email': 'janeMerchant@email.com',
+  'type': 'business',
+  'address1': '99-99 33rd St',
+  'city': 'Some City',
+  'state': 'NY',
+  'postalCode': '11101',
+  'dateOfBirth': '1970-01-01',
+  'ssn': '1234',
+  'businessClassification': '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  'businessType': 'llc',
+  'businessName': 'Jane Corp',
+  'ein': '12-3456789'
+}
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = app_token.post('customers', request_body)
+customer.headers['location'] # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 customers_api = dwollaswagger.CustomersApi(client)
-
-new_customer = customers_api.create(body = {'firstName': 'Bob', 
-                                            'lastName': 'Merchant',
-                                            'email': 'bmerchant@nomail.net',
-                                            'type': 'personal',
-                                            'address': '99-99 33rd St',
-                                            'city': 'Some City', 
-                                            'state': 'NY',
-                                            'postalCode': '11101',
-                                            'dateOfBirth': '1970-01-01', 
-
-                                            # For the first attempt, only 
-                                            # the last 4 digits of SSN required
-
-                                            # If the entire SSN is provided, 
-                                            # it will still be accepted
-                                            'ssn': '1234'})
-
-print(new_customer) # => https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
+customer = customers_api.create(body = request_body)
+customer # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 ```
 ```php
 <?php
 $customersApi = new DwollaSwagger\CustomersApi($apiClient);
 
 $new_customer = $customersApi->create([
-  'firstName' => 'Bob',
+  'firstName' => 'Jane',
   'lastName' => 'Merchant',
-  'email' => 'bmerchant@nomail.net',
-  'type' => 'personal',
+  'email' => 'janeMerchant@email.com',
+  'type' => 'business',
   'address' => '99-99 33rd St',
   'city' => 'Some City',
   'state' => 'NY',
   'postalCode' => '11101',
   'dateOfBirth' => '1970-01-01',
-
-  # For the first attempt, only 
-  # the last 4 digits of SSN required
-
-  # If the entire SSN is provided, 
-  # it will still be accepted
-  'ssn' => '1234'
+  'ssn' => '1234',
+  'businessClassification' => '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  'businessType' => 'llc',
+  'businessName' => 'Jane Corp',
+  'ein' => '12-3456789'
 ]);
 
 print($new_customer); # => https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
@@ -137,9 +143,9 @@ CustomersApi cApi = new CustomersApi(a);
 
 CreateCustomer newCustomerData = new CreateCustomer();
 
-myNewCust.setFirstName("Bob");
+myNewCust.setFirstName("Jane");
 myNewCust.setLastName("Merchant");
-myNewCust.setEmail("bmerchant@nomail.com");
+myNewCust.setEmail("janeMerchant@email.com");
 myNewCust.setType("personal");
 myNewCust.setAddress("99-99 33rd St");
 myNewCust.setCity("Some City");
@@ -156,7 +162,9 @@ catch (Exception e) {
 }
 ```
 
-When the customer is created, you’ll receive the customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
+When the customer is created, you’ll receive the customer URL in the location header. 
+
+**Important:** There are various reasons a Verified Customer will result in a status other than `verified` which you will want to account for after the Customer is created. Reference the Customer verification resource article for more information on [handling verification statuses](https://developers.dwolla.com/resources/customer-verification/handling-verification-statuses.html).
 
 <nav class="pager-nav">
     <a href="./01-access-token.html">Back: Generate an access token</a>

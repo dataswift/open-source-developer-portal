@@ -10,43 +10,60 @@ title:  "Step 5: Attach a verified funding source"
 
 # Step 5: Attach a verified funding source
 
-Next you will attach a verified funding source for Joe Buyer, which will be done using Instant Account Verification (IAV). This method will give Joe Buyer the ability to add and verify his bank account in a matter of seconds by authenticating with his online banking credentials. Once Joe Buyer reaches the page in your application to add a bank account you'll ask Dwolla’s server to [generate an IAV token](http://docsv2.dwolla.com/#generate-an-iav-token-customer). 
+Next you will attach a verified funding source for Joe Buyer, which will be done using Instant Account Verification (IAV). This method will give Joe Buyer the ability to add and verify his bank account in a matter of seconds by authenticating with his online banking credentials. Once Joe Buyer reaches the page in your application to add a bank account you'll ask Dwolla’s server to [generate an IAV token](http://docsv2.dwolla.com/#generate-an-iav-token). 
 
-Generate a single-use IAV token for our Customer, Joe Buyer:
+##### Generate a single-use IAV token for our Customer, Joe Buyer:
 
 ```raw
-curl -X POST 
-\ -H "Content-Type: application/vnd.dwolla.v1.hal+json"
-\ -H "Accept: application/vnd.dwolla.v1.hal+json"
-\ -H "Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q"
-\ "https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+POST https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token
+Content-Type: application/vnd.dwolla.v1.hal+json
+Accept: application/vnd.dwolla.v1.hal+json
+Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
 HTTP/1.1 200 OK
-{  
-   "_links":{  
-      "self":{  
-         "href":"https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
-      }
-   },
-   "token":"lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+
+{
+  "_links": {
+    "self": {
+      "href": "https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C/iav-token"
+    }
+  },
+  "token": "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 }
 ```
 ```ruby
-# coming soon
+customer_url = 'https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'
+
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.post "#{customer_url}/iav-token"
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.get_customer_iav_token(customer_url)
+customer.token # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.getCustomerIavToken({id: '247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'})
-    .then(function(data) {
-       console.log(data.obj.token);
-    });
-});
+// Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
+var customerUrl = 'https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C';
+
+appToken
+  .post(`${customerUrl}/iav-token`)
+  .then(res => res.body.token); // => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
 ```
 ```python
-# coming soon
+customer_url = 'http://api.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C'
+customers_api = dwollaswagger.CustomersApi(client)
+
+token = customers_api.get_customer_iav_token(customer_url)
+print token['token'] # => 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL'
 ```
 ```php
-// coming soon
+<?php
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
+
+$fsToken = $customersApi->getCustomerIavToken("https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C");
+$fsToken->token; # => "lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL"
+?>
 ```
 
 Then, you’ll pass this single-use IAV token to the client-side of your application where it will be used in the JavaScript function `dwolla.iav.start`. This token will be used to authenticate the request asking Dwolla to render the IAV flow. Before calling this function you'll want to include `dwolla.js` in the HEAD of your page. 
@@ -69,14 +86,22 @@ Next, you'll add in a container to the body of your page where you want to rende
 
 Now that you have `dwolla.js` initialized on the page and the container created where you'll render the IAV flow, you'll create a JavaScript function that responds to Joe clicking the "Add bank" button on your page. Once Joe clicks "Add Bank", your application will call `dwolla.iav.start()` passing in the following arguments: the iavContainer element where IAV will render, a string value of your single-use IAV token, and a callback function that will handle any error or response.
 
-```js
+```javascriptnoselect
 <script type="text/javascript">
 $('#start').click(function() {
   var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
-  dwolla.configure('uat');
-  dwolla.iav.start('iavContainer', iavToken, function(err, res) {
-    console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
-  });
+  dwolla.configure('sandbox');
+  dwolla.iav.start(iavToken, {
+  container: 'iavContainer',
+  stylesheets: [
+    'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
+    'http://myapp.com/iav/someStylesheet.css'
+  ],
+  microDeposits: false,
+  fallbackToMicroDeposits: false
+}, function(err, res) {
+  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
+});
 });
 </script>
 ```

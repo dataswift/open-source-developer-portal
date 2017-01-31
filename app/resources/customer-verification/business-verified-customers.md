@@ -16,124 +16,127 @@ description: "How to verify a customer before sending a bank transfer with Dwoll
 To create a verified business Customer, use the [create a customer](https://docsv2.dwolla.com/#create-a-customer) endpoint:
 
 ```raw
-POST /customers
+POST https://api-uat.dwolla.com/customers
 Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
-Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
-
+Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
 {
   "firstName": "Jane",
-  "lastName": "Doe",
-  "email": "janedoe@nomail.com",
-  "ipAddress": "10.10.10.10",
+  "lastName": "Merchant",
+  "email": "janeMerchant@email.com",
+  "ipAddress": "127.0.0.1",
   "type": "business",
-  "address1": "1234 Main St.",
-  "city": "Ridgewood",
+  "address": "99-99 33rd St",
+  "city": "Some city",
   "state": "NY",
-  "postalCode": "11385",
+  "postalCode": "11101",
   "dateOfBirth": "1970-01-01",
-  "ssn": "1516",
-  "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
+  "ssn": "1234",
+  "businessClassification": "9ed38155-7d6f-11e3-83c3-5404a6144203",
   "businessType": "llc",
   "businessName":"Jane Corp",
   "ein":"12-3456789"
 }
 
 HTTP/1.1 201 Created
-Location: https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+Location: https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
 ```
 ```ruby
-new_customer = DwollaSwagger::CustomersApi.create({:body => {
-      "firstName" => "Jane",
-       "lastName" => "Doe",
-          "email" => "janedoe@nomail.com",
-      "ipAddress" => "10.10.10.10",
-           "type" => "business",
-       "address1" => "1234 Main St.",
-           "city" => "Ridgewood",
-          "state" => "NY",
-     "postalCode" => "11385",
-    "dateOfBirth" => "1970-01-01",
-            "ssn" => "1516",
-          "businessClassification" => "9ed3f677-7d6f-11e3-96a2-5404a6144203",
-          "businessType" => "llc",
-          "businessName" => "Jane Corp",
-          "ein" => "12-3456789"
-}})
+request_body = {
+  :firstName => 'Jane',
+  :lastName => 'Merchant',
+  :email => 'janeMerchant@email.com',
+  :type => 'business',
+  :address1 => '99-99 33rd St',
+  :city => 'Some City',
+  :state => 'NY',
+  :postalCode => '11101',
+  :dateOfBirth => '1970-01-01',
+  :ssn => '1234',
+  :businessClassification => '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  :businessType => 'llc',
+  :businessName => 'Jane Corp',
+  :ein => '12-3456789',
+}
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.post "customers", request_body
+customer.headers[:location] # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 
-p new_customer # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.create(:body => request_body)
+customer # => "https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-  dwolla.customers.create({
-      "firstName": "Jane",
-      "lastName": "Doe",
-      "email": "janedoe@nomail.com",
-      "ipAddress": "10.10.10.10",
-      "type": "business",
-      "address1": "1234 Main St.",
-      "city": "Some City",
-      "state": "NY",
-      "postalCode": "11385",
-      "dateOfBirth": "1970-01-01",
-      "ssn": "1516",
-      "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
-      "businessType": "llc",
-      "businessName": "Jane Corp",
-      "ein": "12-3456789"
-    })
-    .then(function(data) {
-        console.log(data); // https://api-uat.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-    });
-});
+var requestBody = {
+  firstName: 'Jane',
+  lastName: 'Merchant',
+  email: 'janeMerchant@email.com',
+  type: 'business',
+  address1: '99-99 33rd St',
+  city: 'Some City',
+  state: 'NY',
+  postalCode: '11101',
+  dateOfBirth: '1970-01-01',
+  ssn: '1234',
+  businessClassification: '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  businessType: 'llc',
+  businessName: 'Jane Corp',
+  ein: '12-3456789'
+};
 
+appToken
+  .post('customers', requestBody)
+  .then(res => res.headers.get('location')); // => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 ```
 ```python
+request_body = {
+  'firstName': 'Jane',
+  'lastName': 'Merchant',
+  'email': 'janeMerchant@email.com',
+  'type': 'business',
+  'address1': '99-99 33rd St',
+  'city': 'Some City',
+  'state': 'NY',
+  'postalCode': '11101',
+  'dateOfBirth': '1970-01-01',
+  'ssn': '1234',
+  'businessClassification': '9ed38155-7d6f-11e3-83c3-5404a6144203',
+  'businessType': 'llc',
+  'businessName': 'Jane Corp',
+  'ein': '12-3456789'
+}
+
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = app_token.post('customers', request_body)
+customer.headers['location'] # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 customers_api = dwollaswagger.CustomersApi(client)
-
-new_customer = customers_api.create(body = {
-  "firstName": "Jane",
-  "lastName": "Doe",
-  "email": "jane@nomail.com",
-  "ipAddress": "10.10.10.10",
-  "type": "business",
-  "address1": "1234 Main St.",
-  "city": "Ridgewood",
-  "state": "NY",
-  "postalCode": "11385",
-  "dateOfBirth": "1970-01-01",
-  "ssn": "1516",
-  "businessClassification": "9ed3f677-7d6f-11e3-96a2-5404a6144203",
-  "businessType": "llc",
-  "businessName": "Jane Corp",
-  "ein": "12-3456789"
-})
-
-print(new_customer) # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+customer = customers_api.create(body = request_body)
+customer # => 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 ```
 ```php
 <?php
-$customersApi = DwollaSwagger\CustomersApi($apiClient);
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
 
-$newCustomer = $customersApi->create(array (
+$new_customer = $customersApi->create([
   'firstName' => 'Jane',
-  'lastName' => 'Doe',
-  'email' => 'janedoe@nomail.com',
-  'ipAddress' => '10.10.10.10',
+  'lastName' => 'Merchant',
+  'email' => 'janeMerchant@email.com',
   'type' => 'business',
-  'address1' => '1234 Main St.',
-  'city' => 'Ridgewood',
+  'address' => '99-99 33rd St',
+  'city' => 'Some City',
   'state' => 'NY',
-  'postalCode' => '11385',
+  'postalCode' => '11101',
   'dateOfBirth' => '1970-01-01',
-  'ssn' => '1516',
-  'businessClassification' => '9ed3f677-7d6f-11e3-96a2-5404a6144203',
+  'ssn' => '1234',
+  'businessClassification' => '9ed38155-7d6f-11e3-83c3-5404a6144203',
   'businessType' => 'llc',
   'businessName' => 'Jane Corp',
   'ein' => '12-3456789'
-));
+]);
 
-print($newCustomer); # => https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
+print($new_customer); # => https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C
 ?>
 ```
 
@@ -148,67 +151,67 @@ Businesses may need to provide additional information to help verify their ident
 Let’s check to see if the Customer was successfully verified or not. We are going to use the location of the Customer resource that we just created, which is in `new_customer`.
 
 ```raw
-GET https://api.dwolla.com/customers/FC451A7A-AE30-4404-AB95-E3553FCD733F
-Content-Type: application/vnd.dwolla.v1.hal+json
+GET https://api-uat.dwolla.com/customers/07D59716-EF22-4FE6-98E8-F3190233DFB8
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
-HTTP 200 OK
 {
   "_links": {
     "self": {
-      "href": "https://api-uat.dwolla.com/customers/5F8A457F-9883-4598-8449-27C5DC1119C5"
-    },
-    "funding-sources": {
-      "href": "https://api-uat.dwolla.com/customers/5F8A457F-9883-4598-8449-27C5DC1119C5/funding-sources"
-    },
-    "transfers": {
-      "href": "https://api-uat.dwolla.com/customers/5F8A457F-9883-4598-8449-27C5DC1119C5/transfers"
-    },
-    "verify-with-document": {
-      "href": "https://api-uat.dwolla.com/customers/5F8A457F-9883-4598-8449-27C5DC1119C5/documents"
+      "href": "https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C"
     }
   },
-  "id": "5F8A457F-9883-4598-8449-27C5DC1119C5",
+  "id": "AB443D36-3757-44C1-A1B4-29727FB3111C",
   "firstName": "Jane",
   "lastName": "Doe",
   "email": "janedoe@nomail.com",
-  "type": "business",
-  "status": "document",
-  "created": "2016-01-08T20:27:12.340Z"
+  "type": "unverified",
+  "status": "unverified",
+  "created": "2015-09-03T23:56:10.023Z"
 }
 ```
 ```ruby
-retrieved_customer = DwollaSwagger::CustomersApi.get_customer(new_customer)
+customer_url = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 
-p retrieved_customer.verified # => false
-```
-```javascript
-dwolla.then(function(dwolla) {
-    dwolla.customers.getCustomer({id:'5F8A457F-9883-4598-8449-27C5DC1119C5'}).then(function(data) {
-        console.log(data.obj._embedded.status); // document
-    })
-})
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+customer = app_token.get customer_url
+customer.firstName # => "Jane"
 
-```
-```python
-customers_api = dwollaswagger.CustomersApi(client)
-
-retrieved_customer = customers_api.get_customer(new_customer)
-
-print(retrieved_customer.verified) # => false
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+customer = DwollaSwagger::CustomersApi.get_customer(customer_url)
+customer.firstName # => "Jane"
 ```
 ```php
 <?php
-$customersApi = DwollaSwagger\CustomersApi($apiClient);
+$customerUrl = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C';
 
-$retrievedCustomer = $customersApi->getCustomer($newCustomer);
+$customersApi = new DwollaSwagger\CustomersApi($apiClient);
 
-print($newCustomer->verified); # => false
+$customer = $customersApi->getCustomer($customerUrl);
+$customer->firstName; # => "Jane"
 ?>
 ```
+```python
+customer_url = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 
-Our Customer is created successfully, but there is a verification status of “document”. Continue reading for instructions on handling Customer verification statuses and guidelines for providing additional information to verify this type of Customer.
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+customer = app_token.get(customer_url)
+customer.body['firstName']
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+customers_api = dwollaswagger.CustomersApi(client)
+customer = customers_api.get_customer(customer_url)
+customer.firstName # => 'Jane'
+```
+```javascript
+var customerUrl = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C';
+
+appToken
+  .get(customerUrl)
+  .then(res => res.body.firstName); // => 'Jane'
+```
+
+Our Customer is created successfully, but there is a verification status of “document”. Continue reading for instructions on [handling Customer verification statuses](/resources/customer-verification/handling-verification-statuses.html) and guidelines for providing additional information to verify this type of Customer.
 
 * * *
 

@@ -101,10 +101,18 @@ Now that you have initialized dwolla.js on your page you can configure and creat
 <script type="text/javascript">
 $('#start').click(function() {
   var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
-  dwolla.configure('uat');
-  dwolla.iav.start(iavToken, 'iavContainer', function(err, res) {
-    console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
-  });
+  dwolla.configure('sandbox');
+  dwolla.iav.start('8zN400zyPUobbdmeNfhTGH2Jh5JkFREJa9YBI8SLXp0ERXNTMT', {
+  container: 'iavContainer',
+  stylesheets: [
+    'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
+    'http://myapp.com/iav/someStylesheet.css'
+  ],
+  microDeposits: false,
+  fallbackToMicroDeposits: false
+}, function(err, res) {
+  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
+});
 });
 </script>
 ```

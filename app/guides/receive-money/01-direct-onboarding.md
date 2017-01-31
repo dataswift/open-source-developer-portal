@@ -129,9 +129,13 @@ $fundingSources->_embedded->{'funding-sources'}[0]->name); # => "Joe Buyer - Che
 ```python
 account_url = 'https://api.dwolla.com/accounts/ca32853c-48fa-40be-ae75-77b37504581b'
 
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+funding_sources = account_token.get('%s/funding-sources' % account_url)
+funding_sources.body['_embedded']['funding-sources'][0]['name'] # => 'Joe Buyer - Checking 1234'
+
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
 fs_api = dwollaswagger.FundingsourcesApi(client)
 funding_sources = fs_api.get_account_funding_sources(account_url)
-
 funding_sources._embedded['funding-sources'][0]['name'] # => Joe Buyer - Checking 1234
 ```
 ```javascript

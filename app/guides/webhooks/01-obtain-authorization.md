@@ -15,7 +15,7 @@ To subscribe to webhooks, you must first obtain client authorization via OAuth. 
 
 To generate an application access token, you'll need to initiate a POST request to `https://uat.dwolla.com/oauth/v2/token` in our UAT (Sandbox) environment or `https://www.dwolla.com/oauth/v2/token` in our production environment. The `Content-Type: application/json` header should be included if passing your client_id, client_secret, and grant_type via a JSON-encoded request body.
 
-**NOTE**: Currently, the Dwolla/Swagger SDKs do not contain the capability to do this, so you must use an external REST client. We are working on resolving this. 
+**NOTE**: Currently, the Dwolla/Swagger SDKs do not contain the capability to do this, so you must use an external REST client. 
 
 #### Request:
 ```noselect
@@ -35,8 +35,7 @@ Content-Type: application/json
 {
   "access_token": "(...)",
   "token_type": "bearer",
-  "expires_in": 3600,
-  "scope": "AccountInfoFull|ManageAccount|Contacts|Transactions|Balance|Send|Request|Funding"
+  "expires_in": 3600
 }
 ```
 
