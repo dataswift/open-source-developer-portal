@@ -26,7 +26,7 @@ Create a URL to send the user to in order to create a new Dwolla Direct account.
 
 ### Step B: Redirect back to your application
 
-The user is then redirected back to your application with an authorization code. This authorization code is then exchanged for an OAuth access token for the user’s newly created account. Your application should store the newly created account ID for later sends to this user.
+The user is then redirected back to your application with an authorization code. This authorization code is then [exchanged for an OAuth account access token](https://docsv2.dwolla.com/#finish-user-authorization) for the user’s newly created account. Your application should store the newly created account ID for later sends to this user.
 
 ##### Example redirect with authorization code:
 

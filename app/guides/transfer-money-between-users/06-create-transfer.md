@@ -23,7 +23,7 @@ Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
             "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
         },
         "destination": {
-            "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
+            "href": "https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31"
         }
     },
     "amount": {
@@ -36,57 +36,76 @@ HTTP/1.1 201 Created
 Location: https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 ```
 ```ruby
-transfer_request = {
+request_body = {
   :_links => {
-      :destination => {:href => 'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747'},
-      :source => {:href => 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'}
+    :source => {
+      :href => "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
+    },
+    :destination => {
+      :href => "https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31"
+    }
   },
-  :amount => {:currency => 'USD', :value => 225.00}
+  :amount => {
+    :currency => "USD",
+    :value => "225.00"
+  }
 }
 
-xfer = DwollaSwagger::TransfersApi.create({:body => transfer_request})
-p xfer # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
+# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+transfer = app_token.post "transfers", request_body
+transfer.headers[:location] # => "https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
+
+# Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
+transfer = DwollaSwagger::TransfersApi.create(:body => request_body)
+transfer # => "https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388"
 ```
 ```javascript
-dwolla.then(function(dwolla) {
-    dwolla.transfers.create({
-      "_links": {
-          "destination": {
-              "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
-          },
-          "source": {
-              "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
-          }
-      },
-      "amount": {
-          "currency": "USD",
-          "value": "225.00"
-      }
-      }).then(function(data) {
-          console.log(data.obj); // https://api.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388
-      })
-})t.
+var requestBody = {
+  _links: {
+    source: {
+      href: 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'
+    },
+    destination: {
+      href: 'https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31'
+    }
+  },
+  amount: {
+    currency: 'USD',
+    value: '225.00'
+  }
+};
+
+// For white label applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+appToken
+  .post('transfers', requestBody)
+  .then(res => res.headers.get('location')); // => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 ```
 ```python
-transfer_request = {
-    "_links": {
-        "source": {
-            "href": "https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197"
-        },
-        "destination": {
-            "href": "https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747"
-        }
+request_body = {
+  '_links': {
+    'source': {
+      'href': 'https://api-uat.dwolla.com/funding-sources/80275e83-1f9d-4bf7-8816-2ddcd5ffc197'
     },
-    "amount": {
-        "currency": "USD",
-        "value": "225.00"
+    'destination': {
+      'href': 'https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31'
     }
+  },
+  'amount': {
+    'currency': 'USD',
+    'value': '225.00'
+  }
 }
 
-transfers_api = dwollaswagger.TransfersApi(client)
-xfer = transfers_api.create(body=transfer_request)
+# Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
+# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+transfer = app_token.post('transfers', request_body)
+transfer.headers['location'] # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 
-print(xfer) # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+# Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
+transfers_api = dwollaswagger.TransfersApi(client)
+transfer = transfers_api.create(body = request_body)
+transfer # => 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 ```
 ```php
 <?php
@@ -99,7 +118,7 @@ $transfer_request = array (
     ),
     'destination' => 
     array (
-      'href' => 'https://api-uat.dwolla.com/customers/C7F300C0-F1EF-4151-9BBE-005005AC3747',
+      'href' => 'https://api-uat.dwolla.com/funding-sources/375c6781-2a17-476c-84f7-db7d2f6ffb31',
     ),
   ),
   'amount' => 

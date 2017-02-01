@@ -58,7 +58,7 @@ HTTP/1.1 200 OK
 customer_url = 'https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C'
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
-customer = account_token.post "#{customer_url}/funding-sources-token"
+customer = app_token.post "#{customer_url}/funding-sources-token"
 customer.token # => "Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg"
 
 # Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
@@ -69,7 +69,7 @@ customer.token # => "Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg"
 // Using dwolla-v2 - https://github.com/Dwolla/dwolla-v2-node
 var customerUrl = 'https://api-uat.dwolla.com/customers/28138609-30ff-4607-b28c-4a3872f8fd4a';
 
-accountToken
+appToken
   .post(`${customerUrl}/funding-sources-token`)
   .then(function(res) {
     res.body.token; // => 'Z9BvpNuSrsI7Ke1mcGmTT0EpwW34GSmDaYP09frCpeWdq46JUg'

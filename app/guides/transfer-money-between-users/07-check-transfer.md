@@ -42,11 +42,11 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 }
 ```
 ```ruby
-transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
+transfer_url = 'https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388'
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
 # For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
-transfer = account_token.get transfer_url
+transfer = app_token.get transfer_url
 transfer.status # => "pending"
 
 # Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
@@ -68,7 +68,7 @@ transfer_url = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
 # For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
-transfer = account_token.get(transfer_url)
+transfer = app_token.get(transfer_url)
 transfer.body['status'] # => 'pending'
 
 # Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
@@ -80,7 +80,7 @@ transfer.status # => 'pending'
 var transferUrl = 'https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388';
 
 // For white label applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
-accountToken
+appToken
   .get(transferUrl)
   .then(res => res.body.status); // => 'pending'
 ```

@@ -14,7 +14,7 @@ In this experience, the end user is sent to Dwolla to create an account and then
 
 ### Step A. Construct OAuth authorization request URL
 
-Create a URL to send the user to in order to create a new Dwolla Direct account.  When the user has created a Direct account, they’ll be prompted to give your application permission to access their account, and if they agree, they will be redirected back to your application.  More detail for implementing the OAuth flow can be found in the [API documentation](https://docsv2.dwolla.com/#oauth).
+Create a URL to send the user to in order to create a new Dwolla Direct account.  When the user has created a Direct account, they’ll be prompted to give your application permission to access their data based on the scopes requested, and if they agree, they will be redirected back to your application.  More detail on implementing the OAuth flow can be found in the [Dwolla OAuth 2.0 guide](/guides/auth/authorization-code-flow.html).
 
 Be sure to request the `Send` and `Funding` scopes in the initial authorization request. By requesting the `Send` and `Funding` scopes Dwolla will prompt the user within the OAuth flow to attach a verified bank, which is needed in order to send money.
 
@@ -27,7 +27,7 @@ Example URL:
 
 ### Step B. Redirect back to your application and generate access token
 
-The customer will complete their profile and attach a verified funding source.  After that, they will be prompted to grant your application permission to access the new account and transfer funds from it.  Once the customer agrees, they’ll be redirected back to the redirect_uri you specified in the previous step with a `code` querystring parameter -- this is an authorization code.  The last step in the OAuth process is to exchange this authorization code for an access token and refresh token pair.
+The customer will complete their profile and attach a verified funding source.  After that, they will be prompted to grant your application permission to access the new account and transfer funds from it.  Once the customer agrees, they’ll be redirected back to the redirect_uri you specified in the previous step with a `code` querystring parameter -- this is an authorization code.  The last step in the OAuth process is to [exchange this authorization code](https://docsv2.dwolla.com/#finish-user-authorization) for an access token and refresh token pair.
 
 #### Example redirect with authorization code:
 

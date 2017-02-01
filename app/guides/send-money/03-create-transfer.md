@@ -10,7 +10,7 @@ title:  "Step 3: Create a transfer"
 
 # Step 3: Create a transfer
 
-Create a [transfer](https://docsv2.dwolla.com/#transfers) by specifying your funding source as the **source** and the Customer or Account as the **destination**.
+Create a [transfer](https://docsv2.dwolla.com/#transfers) by specifying your funding source as the **source** and the Customer or Account as the **destination**. If the destination is a Customer, it is recommended that you send to the funding source that belongs to the Customer as opposed to the Customer resource itself.
 
 #### Request and response (view schema in 'raw')
 

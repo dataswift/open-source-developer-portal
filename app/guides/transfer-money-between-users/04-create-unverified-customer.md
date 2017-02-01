@@ -12,7 +12,7 @@ title:  "Step 4: Creating an unverified customer"
 
 Now that we’ve created a customer for Jane Merchant and associated a funding source, we’ll do the same for Joe Buyer, but this time we’ll create an `Unverified Customer`, and a verified funding source which is capable of sending money.
 
-Provide the user’s full name, email address, and IP address to create the customer. More detail is available in [API docs](https://docsv2.dwolla.com/#customers). 
+Provide the user’s full name, email address, and IP address to create the Customer. More detail is available in [API docs](https://docsv2.dwolla.com/#customers). 
 
 ```raw
 POST https://api-uat.dwolla.com/customers
@@ -80,7 +80,8 @@ $customersApi = new DwollaSwagger\CustomersApi($apiClient);
 $new_customer = $customersApi->create([
   'firstName' => 'Joe',
   'lastName' => 'Buyer',
-  'email' => 'jbuyer@mail.net'
+  'email' => 'jbuyer@mail.net',
+  'ipAddress' => '99.99.99.99'
 ]);
 
 print($new_customer); # => https://api-uat.dwolla.com/customers/247B1BD8-F5A0-4B71-A898-F62F67B8AE1C

@@ -89,7 +89,7 @@ Now that you have `dwolla.js` initialized on the page and the container created 
 ```javascriptnoselect
 <script type="text/javascript">
 $('#start').click(function() {
-  var iavToken = '4adF858jPeQ9RnojMHdqSD2KwsvmhO7Ti7cI5woOiBGCpH5krY';
+  var iavToken = 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL';
   dwolla.configure('sandbox');
   dwolla.iav.start(iavToken, {
   container: 'iavContainer',

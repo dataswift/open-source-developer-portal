@@ -59,7 +59,7 @@ request_body = {
 }
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
-customer = account_token.post customer_url, request_body
+customer = app_token.post customer_url, request_body
 customer.id # => "132681fa-1b4d-4181-8ff2-619ca46235b1"
 
 # Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
@@ -84,7 +84,7 @@ var requestBody = {
   ssn: "202-99-1516"
 };
 
-accountToken
+appToken
   .post(customerUrl, requestBody)
   .then(function(res) {
     res.body.id; // => '132681fa-1b4d-4181-8ff2-619ca46235b1'
@@ -108,7 +108,7 @@ request_body = {
 }
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
-customer = account_token.post('customers', request_body)
+customer = app_token.post('customers', request_body)
 customer.body.id # => '132681fa-1b4d-4181-8ff2-619ca46235b1'
 
 # Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python
@@ -172,7 +172,7 @@ Location: https://api-uat.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc05
 customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
 
 file = Faraday::UploadIO.new('mclovin.jpg', 'image/jpeg')
-document = account_token.post "#{customer_url}/documents", file: file, documentType: 'license'
+document = app_token.post "#{customer_url}/documents", file: file, documentType: 'license'
 document.headers[:location] # => "https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0"
 ```
 ```javascript
@@ -187,7 +187,7 @@ body.append('file', fs.createReadStream('mclovin.jpg'), {
 });
 body.append('documentType', 'license');
 
-accountToken
+appToken
   .post(`${customerUrl}/documents`, requestBody)
   .then(function(res) {
     res.headers.get('location'); // => "https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0"
@@ -197,7 +197,7 @@ accountToken
 customer_url = 'https://api.dwolla.com/customers/132681fa-1b4d-4181-8ff2-619ca46235b1'
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
-document = account_token.post('%s/documents' % customer_url, file = open('mclovin.jpg', 'rb'), documentType = 'license')
+document = app_token.post('%s/documents' % customer_url, file = open('mclovin.jpg', 'rb'), documentType = 'license')
 document.headers['location'] # => 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 ```
 ```php
@@ -255,7 +255,7 @@ Authorization: Bearer tJlyMNW6e3QVbzHjeJ9JvAPsRglFjwnba4NdfCzsYJm7XbckcR
 document_url = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
-document = account_token.get document_url
+document = app_token.get document_url
 document.failureReason # => "ScanNotReadable"
 
 # Using DwollaSwagger - https://github.com/Dwolla/dwolla-swagger-ruby
@@ -265,7 +265,7 @@ document.failureReason # => "ScanNotReadable"
 ```javascript
 var documentUrl = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0';
 
-accountToken
+appToken
   .get(document_url)
   .then(function(res) {
     res.body.failureReason; // => "ScanNotReadable"
@@ -275,7 +275,7 @@ accountToken
 document_url = 'https://api.dwolla.com/documents/11fe0bab-39bd-42ee-bb39-275afcc050d0'
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
-documents = account_token.get(document_url)
+documents = app_token.get(document_url)
 documents.body['failureReason'] # => 'ScanNotReadable'
 
 # Using dwollaswagger - https://github.com/Dwolla/dwolla-swagger-python

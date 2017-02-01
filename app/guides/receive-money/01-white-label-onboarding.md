@@ -10,11 +10,11 @@ title:  "Step 1: White label onboarding"
 
 # Step 1: Create a customer using the white label solution
 
-### Step A: Generate an OAuth account access token
+### Step A: Generate an OAuth access token
 
-Navigate to the <a href="https://dashboard-uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
+Navigate to the <a href="https://dashboard-uat.dwolla.com/applications" target="_blank">applications page</a> to generate an access token. 
 
-Before selecting the "Create token" button, make sure your created application has the following scopes enabled: `Send`, `Funding`, `Transactions`, and `ManageCustomers`. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing Customers. More detail for implementing the OAuth flow can be found in the [API documentation](https://docsv2.dwolla.com/#oauth).
+Before selecting the "Create token" button, make sure your created application has the following scopes enabled: `Send`, `Funding`, `Transactions`, and `ManageCustomers`. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing Customers. More detail on implementing the OAuth flow can be found in the [Dwolla OAuth 2.0 guide](/guides/auth/client-credentials-flow.html).
 
 ### Step B: Create a Customer
 
