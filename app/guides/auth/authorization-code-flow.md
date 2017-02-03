@@ -29,7 +29,7 @@ Requested scopes must also be enabled on your application settings, otherwise Dw
 | Transactions | Access the user's transfer data. |
 | Send | Transfer money on the user's behalf. |
 | Funding | Access names of funding sources the user has connected to Dwolla, access available balance information for Dwolla Balance, add new funding sources, verify funding sources, initiate transfers to and from funding sources. |
-| ManageCustomers | Includes create Customers, manage their funding sources, and allow related money movement. <br/> **Note:** This is a privileged scope available within our [White Label API](https://www.dwolla.com/white-label?b=apidocs) (v2). While fully available in our testing environment, White Label integrations will not be permitted to launch in production without first agreeing to a paid contract. [Contact sales](https://www.dwolla.com/contact?b=apidocs) to learn more. |
+| ManageCustomers | Includes create Customers, manage their funding sources, and allow related money movement. <br/> **Note:** This is a privileged scope available within our [Access API](https://www.dwolla.com/white-label?b=apidocs) (v2). While fully available in our testing environment, White Label integrations will not be permitted to launch in production without first agreeing to a paid contract. [Contact sales](https://www.dwolla.com/contact?b=apidocs) to learn more. |
 
 * * *
 
@@ -51,7 +51,7 @@ https://uat.dwolla.com/oauth/v2/authenticate?client_id={client_id}&response_type
 ##### Request parameters
 | Parameter | Required | Type | Description |
 |-----------|----------|----------------|-------------|
-| client_id | yes | string | Application key. |
+| client_id | yes | string | Application key. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application key. |
 | response_type | yes | string | This must always be set to `code`. |
 | redirect_uri | yes | string | URL where the user will be redirected to afterwards. The value of this parameter must match one of the values that appear in your [application details](https://www.dwolla.com/applications) page. (We compare: protocol, subdomain, domain, tld, and file path. Querystring parameters are ignored) |
 | scope | yes | string | Permissions you are requesting.  See [below](#oauth-scopes) for list of available scopes.  Scopes are delimited by a pipe ("&#124;") |
@@ -104,8 +104,8 @@ Including the `Content-Type: application/x-www-form-urlencoded` header, the requ
 ##### Request parameters
 | Parameter | Required | Type | Description |
 |-----------|----------|----------------|-------------|
-| client_id | yes | string | Application key. |
-| client_secret | yes | string | Application secret. |
+| client_id | yes | string | Application key. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application key. |
+| client_secret | yes | string | Application secret. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application secret. |
 | code | yes | string | The authorization code included in the redirect URL. Single use `code` with an expiration of 60 seconds. |
 | grant_type | yes | string | This must be set to `authorization_code`. |
 | redirect_uri | yes | string | The same redirect_uri specified in the initiation step. |
@@ -127,11 +127,11 @@ not applicable
 ```python
 import dwollav2
 
-# you can find your consumer key and secret at dwolla.com/applications
-consumer_key = '...'
-consumer_secret = '...'
-client = dwollav2.Client(id = consumer_key,
-                         secret = consumer_secret,
+# Navigate to https://www.dwolla.com/applications (production) or https://dashboard-uat.dwolla.com/applications (Sandbox) for your application key and secret.
+app_key = '...'
+app_secret = '...'
+client = dwollav2.Client(key = app_key,
+                         secret = app_secret,
                          environment = 'sandbox') # optional - defaults to production
 
 state = binascii.b2a_hex(os.urandom(15))
@@ -171,10 +171,10 @@ auth.callback(req.query) // pass the code and optional state to the callback
 # config/initializers/dwolla.rb
 require 'dwolla_v2'
 
-# see dwolla.com/applications or uat.dwolla.com/applications (sandbox) for your consumer key and secret
-consumer_key = "..."
-consumer_secret = "..."
-$dwolla = DwollaV2::Client.new(id: consumer_key, secret: consumer_secret) do |config|
+# Navigate to https://www.dwolla.com/applications (production) or https://dashboard-uat.dwolla.com/applications (Sandbox) for your application key and secret.
+app_key = "..."
+app_secret = "..."
+$dwolla = DwollaV2::Client.new(key: app_key, secret: app_secret) do |config|
   config.environment = :sandbox # optional - defaults to production
 end
 
@@ -220,8 +220,8 @@ Including the `Content-Type: application/x-www-form-urlencoded` header, the requ
 ##### Request parameters
 | Parameter | Required | Type | Description |
 |-----------|----------|----------------|-------------|
-| client_id | yes | string | Application key. |
-| client_secret | yes | string | Application secret. |
+| client_id | yes | string | Application key. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application key. |
+| client_secret | yes | string | Application secret. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application secret. |
 | refresh_token | yes | string | A valid refresh token. |
 | grant_type | yes | string | This must be set to `refresh_token`. |
 
