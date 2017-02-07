@@ -73,8 +73,8 @@ samples:
 
 
         var client = new dwolla.Client({
-          id: process.env.DWOLLA_ID,
-          secret: process.env.DWOLLA_SECRET,
+          key: process.env.DWOLLA_APP_KEY,
+          secret: process.env.DWOLLA_APP_SECRET,
           environment: 'sandbox',
         });
 
@@ -87,7 +87,7 @@ samples:
 
         require 'dwolla_v2'
 
-        $dwolla = DwollaV2::Client.new(id: ENV["DWOLLA_ID"], secret: ENV["DWOLLA_SECRET"]) do |config|
+        $dwolla = DwollaV2::Client.new(key: ENV["DWOLLA_APP_KEY"], secret: ENV["DWOLLA_APP_SECRET"]) do |config|
           config.environment = :sandbox
         end
 
@@ -99,8 +99,8 @@ samples:
         # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python
 
         client = dwollav2.Client(
-          id = os.environ['DWOLLA_ID'],
-          secret = os.environ['DWOLLA_SECRET'],
+          key = os.environ['DWOLLA_APP_KEY'],
+          secret = os.environ['DWOLLA_APP_SECRET'],
           environment = 'sandbox'
         )
 

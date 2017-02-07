@@ -26,8 +26,8 @@ Including the `Content-Type: application/x-www-form-urlencoded` header, the requ
 ##### Request parameters
 | Parameter | Required | Type | Description |
 |-----------|----------|----------------|-------------|
-| client_id | yes | string | Application key. |
-| client_secret | yes | string | Application secret. |
+| client_id | yes | string | Application key. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application key |
+| client_secret | yes | string | Application secret. Navigate to `https://www.dwolla.com/applications` (production) or `https://dashboard-uat.dwolla.com/applications` (Sandbox) for your application secret. |
 | grant_type | yes | string | This must be set to `client_credentials`. |
 
 #### Example request
