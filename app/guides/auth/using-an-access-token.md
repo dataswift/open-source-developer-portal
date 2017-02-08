@@ -9,7 +9,7 @@ title: Dwolla OAuth 2.0
 description: Obtain an OAuth access token, used to access data in the Dwolla API on behalf of a user or application.
 ---
 
-## Making a request to API v2
+## Making a request to the Access API
 Once your application obtains an access token, it can be used to access protected resources in the Dwolla API. If using an account access token, access to protected resources is limited to the scopes contained on an access token, and whether or not the token is valid (expired or revoked token).
 
 Here is an example of an API request. Note that OAuth access tokens are passed via the Authorization HTTP header:

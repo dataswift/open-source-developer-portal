@@ -15,7 +15,7 @@ A Traditional account can be established prior to interacting with your applicat
 
 ##### Traditional CIP Verified
 
-A Traditional CIP Verified Dwolla account maintains full access to the Dwolla platform and is able to transact with any account type. Since this account type requires additional identity vetting by Dwolla, users need to provide standard Know Your Customer (KYC) information: name, date of birth, address, and last four digits of SSN. In addition to the above, a commercial account will need to provide business name, address, and EIN. For white label integrations, the Partner will need a Traditional CIP Verified account in order to create Customers.
+A Traditional CIP Verified Dwolla account maintains full access to the Dwolla platform and is able to transact with any account type. Since this account type requires additional identity vetting by Dwolla, users need to provide standard Know Your Customer (KYC) information: name, date of birth, address, and last four digits of SSN. In addition to the above, a commercial account will need to provide business name, address, and EIN. For Access API integrations, the Partner will need a Traditional CIP Verified account in order to create Customers.
 
 ##### Dwolla Direct
 

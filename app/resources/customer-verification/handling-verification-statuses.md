@@ -14,7 +14,7 @@ description: "How to verify a customer before sending a bank transfer with Dwoll
 There are various reasons a Customer will result in a status other than `verified` which you will want to account for after the Customer is created. For example, the `retry` status can occur when an individual mis-keys or uses incorrect identifying information upon Customer creation. 
 
 #### Testing verification statuses in Sandbox: 
-By submitting `verified`, `retry`, `document`, or `suspended` in the firstName parameter, you can create a new verified Customer with that status. To get a verified Customer with the `retry` status to `verified`, you need to POST to /customers/{id} with `verified` or anything else and the verified Customer will get `verified`.  The full SSN is required in the when updating a Customer with a `retry` verification status.  If only the last four of the SSN is submitted, Dwolla returns "invalid SSN", and initiating a POST again with a Full SSN will result in a `document` status.
+By submitting `verified`, `retry`, `document`, or `suspended` in the firstName parameter, you can create a new Verified Customer with that status. To get a Verified Customer with the `retry` status to `verified`, you need to POST to /customers/{id} with `verified` or anything else and the verified Customer will get `verified`.  The full SSN is required in the when updating a Customer with a `retry` verification status.  If only the last four of the SSN is submitted, Dwolla returns "invalid SSN", and initiating a POST again with a Full SSN will result in a `document` status.
 
 ### Handling status: `retry`
 

@@ -21,11 +21,11 @@ There are several reasons bank transfers can fail, a few of which are outlined b
 
 Bank accounts will automatically be removed from the Dwolla system for all ACH return codes except an `R01`. If subscribed to webhooks, your application will receieve a webhook with the `funding_source_removed` event along with the `transfer_failed` event.
 
-When a bank transfer fails from a verified account (e.g. [Traditional CIP Verified](/resources/account-types/traditional-accounts.html) or [White Label Verified Customer](/resources/account-types/white-label-accounts.html) to a recipient), funds will return to the sending account’s Dwolla balance. For other transfer scenarios, funds will return to the source bank account. 
+When a bank transfer fails from a verified account (e.g. [Traditional CIP Verified](/resources/account-types/traditional-accounts.html) or [Access API Verified Customer](/resources/account-types/access-api-accounts.html) to a recipient), funds will return to the sending account’s Dwolla balance. For other transfer scenarios, funds will return to the source bank account. 
 
 ### Retrieving the reason for a failed bank transfer
 
-When a bank transfer fails its status will be updated to `failed`. If your application is subscribed to webhooks, you’ll receive either the `transfer_failed` event if the transfer belongs to a Dwolla account or the `customer_transfer_failed` event if the transfer belongs to a White Label Customer. The event contains a links to the associated account as well as the transfer resource. To get the return code and reason for the transfer failure you’ll first retrieve the transfer by its ID. 
+When a bank transfer fails its status will be updated to `failed`. If your application is subscribed to webhooks, you’ll receive either the `transfer_failed` event if the transfer belongs to a Dwolla account or the `customer_transfer_failed` event if the transfer belongs to an Access API Customer. The event contains a links to the associated account as well as the transfer resource. To get the return code and reason for the transfer failure you’ll first retrieve the transfer by its ID. 
 
 #### Request and response (view schema in 'raw')
 ```raw
@@ -74,7 +74,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 transfer_url = 'https://api.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388'
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby (Recommended)
-# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+# For Access API applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 transfer = account_token.get transfer_url
 transfer.status # => "failed"
 
@@ -87,7 +87,7 @@ transfer = DwollaSwagger::TransfersApi.by_id('https://api-uat.dwolla.com/transfe
 ```javascript
 var transferUrl = 'https://api.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388';
 
-// For white label applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+// For Access API applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 accountToken
   .get(transferUrl)
   .then(res => res.body.status); // => 'failed'
@@ -96,7 +96,7 @@ accountToken
 transfer_url = 'https://api.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388'
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
-# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+# For Access API applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 fees = account_token.get(transfer_url)
 fees.body['status'] # => 'failed'
 
@@ -137,7 +137,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 transfer_url = 'https://api-uat.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388'
 
 # Using DwollaV2 - https://github.com/Dwolla/dwolla-v2-ruby
-# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+# For Access API applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 failure = account_token.get "#{transfer_url}/failure"
 failure.code # => "R1"
 ```
@@ -155,14 +155,14 @@ print($failureReason->status); # => "R01"
 transfer_url = 'https://api-uat.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388'
 
 # Using dwollav2 - https://github.com/Dwolla/dwolla-v2-python (Recommended)
-# For white label applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+# For Access API applications, an app_token can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 failure = account_token.get('%s/failure' % transfer_url)
 failure.body['code'] # => 'R1'
 ```
 ```javascript
 var transferUrl = 'https://api-uat.dwolla.com/transfers/8997ebed-69be-e611-80ea-0aa34a9b2388';
 
-// For white label applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
+// For Access API applications, an appToken can be used for this endpoint. (https://docsv2.dwolla.com/#application-access-token)
 accountToken
   .get(`${transferUrl}/failure`)
   .then(res => res.body.code); // => 'R1'

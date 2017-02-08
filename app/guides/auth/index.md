@@ -27,7 +27,7 @@ Before you can get started with making OAuth requests, you’ll need to first re
 The OAuth 2 protocol defines four main authorization grant types, more commonly referred to as OAuth flows. Dwolla implements two of the four grant types depending on how your application accesses data within the API.
 
 * **Flow 1 (Co-branded):** - Using the [authorization code grant flow](/guides/auth/authorization-code-flow.html), your application will redirect the user to Dwolla (typically via a web browser) to authenticate and authorize your application. If the user grants permission, your application will be issued an access token that is used to make requests to the API on the user's behalf. This is a browser-based flow with interaction between an end-user, a third-party application, and the Dwolla API; also known as 3-legged OAuth. 
-* **Flow 2 (White Label and/or Webhooks):** - Using the [client credentials grant flow](/guides/auth/client-credentials-flow.html), your application will obtain authorization to interact with the API on its own behalf. This is a server-to-server flow with interaction between an application and the Dwolla API; also known as 2-legged OAuth.
+* **Flow 2 (Access API and/or Webhooks):** - Using the [client credentials grant flow](/guides/auth/client-credentials-flow.html), your application will obtain authorization to interact with the API on its own behalf. This is a server-to-server flow with interaction between an application and the Dwolla API; also known as 2-legged OAuth.
 
 <nav class="pager-nav">
     <a href="" style="display:none;"></a>

@@ -5,10 +5,10 @@ guide:
     name: receive-money
     step: 1a
 type: guide
-title:  "Step 1: White label onboarding"
+title:  "Step 1: Access API onboarding"
 ---
 
-# Step 1: Create a customer using the white label solution
+# Step 1: Create a customer using the Access API
 
 ### Step A: Generate an OAuth access token
 

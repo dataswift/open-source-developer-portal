@@ -13,7 +13,7 @@ description: "Programmatically verify a bank to initiate a bank transfer."
 Instant Account Verification (IAV) gives you the ability to add and verify a Customer's bank account in a matter of seconds, which is much faster than the multiple days required for micro-deposits to transfer and then be verified by the Customer. Your application will utilize the client-side `dwolla.js` JavaScript library to render the IAV flow within a container in your application. 
 
 <ol class="alerts">
-    <li class="alert icon-alert-info">This article will walk through IAV functionality using dwolla.js which is only available for white label integrations. For more information about Dwolla White Label, please <a href="https://www.dwolla.com/contact">contact sales</a>.</li>
+    <li class="alert icon-alert-info">This article will walk through IAV functionality using dwolla.js which is only available for Access API integrations. For more information about the Access API, please <a href="https://www.dwolla.com/contact">contact sales</a>.</li>
 </ol>
 
 ### Step 1: Generate a single-use IAV token for a Customer

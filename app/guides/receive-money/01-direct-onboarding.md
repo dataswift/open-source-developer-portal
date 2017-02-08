@@ -10,7 +10,7 @@ title:  "Step 1: Direct onboarding"
 
 # Step 1: Create a Dwolla Direct account for the payer
 
-In this experience, the end user is sent to Dwolla to create an account and then returned to your application upon completing the OAuth flow. If you prefer that your customers not create Dwolla accounts, choose the white label solution.
+In this experience, the end user is sent to Dwolla to create an account and then returned to your application upon completing the OAuth flow. If you prefer that your customers not create Dwolla accounts, choose the Access API.
 
 ### Step A. Construct OAuth authorization request URL
 
@@ -67,7 +67,7 @@ Content-Type: application/json
 
 ### Step C. Get list of the user Account's funding sources
 
-Using the access token we just receieved, we’ll need to get the funding source ID of the bank account we’d like to use to fund the transfer.  
+Using the access token we just received, we’ll need to get the funding source ID of the bank account we’d like to use to fund the transfer.  
 
 Use the [List an account's funding sources](https://docsv2.dwolla.com/#list-funding-sources-for-an-account) endpoint to fetch a list of the payer’s funding sources.  You first need to fetch [the root](https://docsv2.dwolla.com/#root) resource to determine the URL to get the account’s funding source list from.
 
