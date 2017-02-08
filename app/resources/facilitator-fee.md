@@ -17,7 +17,7 @@ The facilitator fee is a feature allowing for a flat rate amount to be removed f
 * The sum of fees cannot exceed 50% of the original transfer amount
 * A facilitator fee must be at least $0.01
 * Multiple facilitator fees can be associated with a single payment
-* You must clearly communicate the fee and its payment terms to the Dwolla user and obtain the Dwolla user’s express consent to charge the fee.
+* You must clearly communicate the fee and its payment terms to your end-user and obtain the user’s express consent to charge the fee.
 
 ### Charging fees on transfers
 
@@ -148,7 +148,7 @@ Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 Since a fee is a separate transfer in itself, it will show up in the transfer listing of either the [Account](https://docsv2.dwolla.com/#list-an-account39s-transfers) or [Customer](https://docsv2.dwolla.com/#list-a-customer39s-transfers) resource, depending on which party is sending or receiving the fee. To correlate a fee to the transfer that the fee was charged on, a key of `created-from-transfer` will be returned in the list of links on a unique transfer resource. The `created-from-transfer` key can also be used to differentiate a fee from other transfer types.
 
 **Refunding fees:**
-Within API v2, an endpoint does not exist to `refund` a processed transfer from the receiving user or account back to the sending party—this includes fees if any were charged.  Refunds occur by the destination user initiating a separate transfer in reverse from the funding source in which they received the funds. As a facilitator who received funds from the fee, you must determine if the charged user will incur the cost of the fee or be refunded for the original fee amount charged.
+Within the Access API, an endpoint does not exist to `refund` a processed transfer from the receiving user or account back to the sending party—this includes fees if any were charged.  Refunds occur by the destination user initiating a separate transfer in reverse from the funding source in which they received the funds. As a facilitator who received funds from the fee, you must determine if the charged user will incur the cost of the fee or be refunded for the original fee amount charged.
 
 ```noselect
 GET https://api-uat.dwolla.com/transfers/416a2857-c887-4cca-bd02-8c3f75c4bb0e

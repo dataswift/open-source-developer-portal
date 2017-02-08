@@ -17,19 +17,19 @@ In this guide, we’ll cover the key points of collecting money from your custom
 - Associate a verified funding source (bank or credit union account) with the customer
 - Transfer funds from the customer’s linked account 
 
-*Prerequisite*: complete the [Getting started guide](/guides/sandbox-setup) and have [Traditional CIP-Verified Dwolla account](/resources/account-types.html).
+*Prerequisite*: complete the [Getting started guide](/guides/sandbox-setup).
 
 ### Choose the experience your want for your customers
 
-Dwolla offers two different paths for you to onboard your customers onto the payment platform. If you want to keep Dwolla in the background, choose our white label solution. Or tap into Dwolla’s co-branded OAuth experience. [Contact sales](https://www.dwolla.com/contact) for information about pricing for each option. 
+Dwolla offers two different paths for you to onboard your customers onto the payment platform. If you want to keep Dwolla in the background, choose our Access API. Otherwise, tap into Dwolla’s co-branded OAuth experience. [Contact sales](https://www.dwolla.com/contact) for information about pricing for each option. 
 
-Regardless of which option you implement, the first step is to create senders for your transfer, along with a funding source where the money will be pulled from. Dwolla’s branded experience prompts your senders for their bank or credit union account information. Otherwise, if you choose to implement the white label solution, your application will need to capture these fields to pass through to Dwolla for secure storage.
+Regardless of which option you implement, the first step is to create senders for your transfer, along with a funding source where the money will be pulled from. Dwolla’s Co-branded experience prompts your senders for their bank or credit union account information. Otherwise, if you choose to integrate with the Access API, your application will need to capture these fields to pass through to Dwolla for secure storage.
 
 <nav class="decision-nav">
     <div>
         <a href="01-white-label-onboarding.html">
             <div class="icon-decision-nav-white-label"></div>
-            White label
+            Access API
         </a>
         <p>You capture customer data and pass it to Dwolla.</p>
     </div>

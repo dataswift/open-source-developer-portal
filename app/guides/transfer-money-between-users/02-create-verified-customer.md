@@ -8,7 +8,7 @@ guide:
 title:  "Step 2: Create a verified customer"
 ---
 
-# Step 2: Create a verified Customer
+# Step 2: Create a Verified Customer
 
 First, we’ll create a `Verified Customer` for Jane Merchant.
 

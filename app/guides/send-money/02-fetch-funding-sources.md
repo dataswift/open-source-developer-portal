@@ -14,7 +14,7 @@ No matter which method you used to set up your customers, the remaining steps of
 
 | Solution | Recipient|
 |----------|----------|
-|White label solution|Customer|
+|Access API|Customer|
 |Co-branded|Account|
 
 Now that you’ve created a Customer or an Account and associated its funding source, you can initiate your first transfer. The transfer requires the following information:

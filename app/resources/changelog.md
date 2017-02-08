@@ -11,7 +11,7 @@ description: "Keep track of changes to the Dwolla API and official SDKs."
 	<h3>2016-12-01</h3>
 	<h4><em>Added</em></h4>
 	<ul class="bullet">
-	    <li>Release support for a new <code>clearing</code> request parameter when <a href="https://docsv2.dwolla.com/#initiate-a-transfer">initiating a transfer</a>. Clearing is a JSON object that supports specifying same-day and standard ACH clearing per API request. <b>Note:</b> The clearing request parameter is a premium feature available for Dwolla <a href="https://www.dwolla.com/white-label">White Label</a> partners.</li>
+	    <li>Release support for a new <code>clearing</code> request parameter when <a href="https://docsv2.dwolla.com/#initiate-a-transfer">initiating a transfer</a>. Clearing is a JSON object that supports specifying same-day and standard ACH clearing per API request. <b>Note:</b> The clearing request parameter is a premium feature available for Dwolla <a href="https://www.dwolla.com/white-label">Access API</a> partners.</li>
 	</ul>
 	<h3>2016-12-01</h3>
 	<h4><em>DEPRECATED</em></h4>

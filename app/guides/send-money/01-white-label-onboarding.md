@@ -5,10 +5,10 @@ guide:
     name: send-money
     step: 1a
 type: guide
-title:  "Step 1: White label onboarding"
+title:  "Step 1: Access API onboarding"
 ---
 
-# Step 1: Create recipients using white label solution
+# Step 1: Create recipients using the Access API
 
 In this experience, end users create their accounts entirely within your application and you prompt for their bank or credit union account information. Dwolla will securely store this sensitive information.
 

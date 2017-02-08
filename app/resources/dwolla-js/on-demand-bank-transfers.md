@@ -10,9 +10,9 @@ description: "Quickly integrate instant bank verification for developers using t
 # Dwolla.js
 
 ## Using Dwolla.js for On-demand bank transfers
-On-demand bank transfers allow Dwolla white label partners to receive variable totals from a payer’s bank account via an ACH transaction—perfect for companies with usage-based business models, such as utilities or advertising platforms. No other third-party gateways or merchant accounts required, just your Dwolla integration and payer authorization.
+On-demand bank transfers allow Dwolla Access API partners to receive variable totals from a payer’s bank account via an ACH transaction—perfect for companies with usage-based business models, such as utilities or advertising platforms. No other third-party gateways or merchant accounts required, just your Dwolla integration and payer authorization.
 
-This is an account level setting for a white label partner. When enabled, the end user is presented with text on the bank selection screen within the IAV flow giving authorization to Dwolla for future variable payments.
+This is an account level setting for an Access API partner. When enabled, the end user is presented with text on the bank selection screen within the IAV flow giving authorization to Dwolla for future variable payments.
 
 ![Screenshot of On-demand](/images/on-demand-iav.png "On-demand bank transfers")
 

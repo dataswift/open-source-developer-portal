@@ -10,10 +10,10 @@ description: "Quickly integrate instant bank verification for developers using t
 # Dwolla.js
 
 ## Using Dwolla.js for Instant Account Verification (IAV)
-For white label partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function `dwolla.iav.start()`, the white label partner application can render the IAV flow within a specified container. `dwolla.iav.start()` allows for customization through configurable options such as: `stylesheets` which represents a list of CSS stylesheets for styling the IAV flow, `microDeposits` which presents the micro-deposit method of bank verification as an option throughout the IAV flow, and `fallbackToMicroDeposits` which gives the user the option fallback to selecting the micro-deposit method of bank verification within the IAV flow.
+For Access API partners, `dwolla.js` has the added function of facilitating Instant Account Verification (IAV) on their Customer's bank or credit union account. By calling a separate function `dwolla.iav.start()`, the Access API partner application can render the IAV flow within a specified container. `dwolla.iav.start()` allows for customization through configurable options such as: `stylesheets` which represents a list of CSS stylesheets for styling the IAV flow, `microDeposits` which presents the micro-deposit method of bank verification as an option throughout the IAV flow, and `fallbackToMicroDeposits` which gives the user the option fallback to selecting the micro-deposit method of bank verification within the IAV flow.
 
 <ol class="alerts">
-    <li class="alert icon-alert-info">Read more about how to use dwolla.js to quickly add and verify a white label Customer’s bank account in the <a href="/resources/funding-source-verification/instant-account-verification.html">funding source verification</a> resource article.</li>
+    <li class="alert icon-alert-info">Read more about how to use dwolla.js to quickly add and verify an Access API Customer’s bank account in the <a href="/resources/funding-source-verification/instant-account-verification.html">funding source verification</a> resource article.</li>
 </ol>
 
 ### dwolla.iav.start()

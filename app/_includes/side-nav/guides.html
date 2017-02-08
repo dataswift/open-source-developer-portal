@@ -14,7 +14,7 @@
                 {% elsif page.url contains 'webhooks' %}
                     Webhooks
                 {% elsif page.url contains 'migrate-to-v2' %}
-                    Migrate to v2
+                    Migrate to the Access API
                 {% elsif page.url contains 'auth' %}
                     Dwolla OAuth 2.0
                 {% else %}
@@ -41,7 +41,7 @@
                 <a href="/guides/webhooks/">Webhooks</a>
             {% endunless %}
             {% unless page.url contains '/guides/migrate-to-v2/' %}
-                <a href="/guides/migrate-to-v2/">Migrate to v2</a>
+                <a href="/guides/migrate-to-v2/">Migrate to the Access API</a>
             {% endunless %}
             {% unless page.url contains '/guides/auth/' %}
                 <a href="/guides/auth/">Dwolla OAuth 2.0</a>

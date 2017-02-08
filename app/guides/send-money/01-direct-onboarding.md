@@ -5,10 +5,10 @@ type: guide
 guide:
     name: send-money
     step: 1b
-title:  "Step 1: Direct onboarding"
+title:  "Step 1: Co-branded onboarding"
 ---
 
-# Step 1: Direct onboarding
+# Step 1: Create a Dwolla Direct account for the recipient
 
 In this experience, the user on-boarding process of Dwolla account creation and adding a bank account is built into our co-branded OAuth flow.
 

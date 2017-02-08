@@ -11,7 +11,7 @@ description: Send money online between customers by utilizing our open bank tran
 
 # Overview: Transfer money between your users
 
-The most common scenario for this guide is to facilitate marketplace or peer-to-peer transfers between your customers. This guide only outlines the steps involved using Dwolla's white label solution.
+The most common scenario for this guide is to facilitate marketplace or peer-to-peer transfers between your customers. This guide only outlines the steps involved using Dwolla’s Access API.
 
 In this guide, we’ll cover the key points of transferring money:
 
@@ -26,7 +26,7 @@ In this guide, we’ll cover the key points of transferring money:
 
 Before you begin, be sure your [Sandbox accounts](/guides/sandbox-setup) are already set up. 
 
-### Verified and unverified Customers
+### Verified and Unverified Customers
 Here are some rules to keep in mind:
 
 1. With a transfer of money, at least one party must complete the [identity verification process](/resources/customer-verification.html), either the sender or the receiver. It’s your decision about which party completes this process, based on your business model, and you may want to have both parties complete the identity verification process.

@@ -8,7 +8,7 @@ description: "How to verify a customer before sending a bank transfer with Dwoll
 
 # Customer verification
 
-This article will walk through the customer verification workflow for white label integrations. For more information about Dwolla White Label, please [contact sales](https://www.dwolla.com/contact).
+This article will walk through the customer verification workflow for Access API integrations. For more information about the Access API, please [contact sales](https://www.dwolla.com/contact).
 
 A “Customer” represents an individual or business that you intend to transact with. 
 In any transfer, at least one party—either the sender or the recipient—must complete the identity verification process described below. In cases where a Customer is only sending funds to or receiving funds from your full Dwolla account, the Customer is not required to complete the process set out below because you have already completed it.
