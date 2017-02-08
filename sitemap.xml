@@ -79,6 +79,9 @@
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/07-faq.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/resources/account-types/access-api-accounts.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/account-types.html</loc>
   </url>
   <url>
@@ -121,34 +124,34 @@
     <loc>https://developers.dwolla.com/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
+    <loc>https://developers.dwolla.com/guides/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/auth/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
+    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
+    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
+    <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
@@ -206,9 +209,6 @@
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/auth/using-an-access-token.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/resources/account-types/white-label-accounts.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/404.html</loc>
