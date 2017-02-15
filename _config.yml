@@ -23,7 +23,7 @@ show_drafts: false
 markdown: redcarpet
 
 redcarpet:
-  extensions: ['fenced_code_blocks', 'smart', 'tables']
+  extensions: ['fenced_code_blocks', 'smart', 'tables', 'with_toc_data']
 
 highlighter: rouge
 
