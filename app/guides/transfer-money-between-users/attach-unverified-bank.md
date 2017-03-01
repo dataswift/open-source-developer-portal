@@ -15,7 +15,7 @@ Next, we’ll add Jane Merchant’s bank or credit union account as an unverifie
 The example below shows sample bank information, but you will include actual bank name, routing, and account numbers after prompting your customer for this information within your application. Possible values for `type` can be either “checking” or “savings”. More detail is available in [API docs](https://docsv2.dwolla.com/#create-a-funding-source-for-a-customer). 
 
 ```raw
-POST https://api.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources
+POST https://api-uat.dwolla.com/customers/AB443D36-3757-44C1-A1B4-29727FB3111C/funding-sources
 Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 0Sn0W6kzNicvoWhDbQcVSKLRUpGjIdlPSEYyrHqrDDoRnQwE7Q
@@ -96,6 +96,6 @@ print($new_fs); # => https://api-uat.dwolla.com/funding-sources/375c6781-2a17-47
 The created funding source URL is returned in the location header.
 
 <nav class="pager-nav">
-    <a href="./02-create-verified-customer.html">Back: Create a verified customer</a>
-    <a href="04-create-unverified-customer.html">Next step: Create an unverified customer</a>
+    <a href="./create-verified-customer.html">Back: Create a verified customer</a>
+    <a href="create-unverified-customer.html">Next step: Create an unverified customer</a>
 </nav>

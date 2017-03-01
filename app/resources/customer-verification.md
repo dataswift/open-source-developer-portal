@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: resources
-type: article
+type: access-api-article
 title:  "Customer verification"
 description: "How to verify a customer before sending a bank transfer with Dwolla's ACH API."
 ---

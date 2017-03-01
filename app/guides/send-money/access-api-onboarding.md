@@ -12,10 +12,8 @@ title:  "Step 1: Access API onboarding"
 
 In this experience, end users create their accounts entirely within your application and you prompt for their bank or credit union account information. Dwolla will securely store this sensitive information.
 
-### Step A. Generate an OAuth account access token
-Navigate to the <a href="https://dashboard-uat.dwolla.com/applications" target="_blank">applications page</a> to generate an account access token. 
-
-Before selecting the "Create token" button, make sure your created application has the following scopes enabled: `Send`, `Funding`, `Transactions`, and `ManageCustomers`. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing Customers. More detail for implementing the OAuth flow can be found in [API docs](https://docsv2.dwolla.com/#oauth).
+### Step A. Obtain an application access token
+Your application will exchange its `client_id`, `client_secret`, and `grant_type=client_credentials` for an [application access token](https://docsv2.dwolla.com/#application-authorization). An application access token can then be used to make calls to the Dwolla API on behalf of your application for Access API related endpoints.
 
 ### Step B. Create a Customer
 
@@ -116,9 +114,9 @@ catch (Exception e) {
 }
 ```
 
-When the Customer is created, you’ll receive the Customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
+When the Customer is created, you’ll receive the Customer URL in the location header. 
 
-*Important*: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s  ability to detect fraud. Sending random, hardcoded, or incorrect information in the ipAddress field may cause delays or throttling of requests.
+*Important*: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s  ability to detect fraud.
 
 ### Step C. Attach a funding source to the Customer
 
@@ -210,5 +208,5 @@ The created funding source URL is returned in the location header.
 
 <nav class="pager-nav">
     <a href="./">Back: Overview</a>
-    <a href="02-fetch-funding-sources.html">Next step: Fetch funding sources</a>
+    <a href="fetch-funding-sources.html">Next step: Fetch funding sources</a>
 </nav>

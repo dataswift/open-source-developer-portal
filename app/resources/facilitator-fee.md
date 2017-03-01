@@ -8,7 +8,7 @@ description: "As a platform, earn revenue by collecting a portion of the transfe
 
 # Facilitator Fee
 
-The facilitator fee is a feature allowing for a flat rate amount to be removed from a payment as a fee, and sent to the creator of the Dwolla application. The fee does not affect the original payment amount, and exists as a separate [Transfer resource](https://docsv2.dwolla.com/#transfer-resource) with a unique transfer ID.
+The facilitator fee is a feature allowing for a flat rate amount to be removed from a payment as a fee, and sent to the creator of the Dwolla application. The fee does not affect the original payment amount, and exists as a separate Transfer resource with a unique transfer ID.
 
 #### Items to note before charging fees:
 
@@ -21,7 +21,7 @@ The facilitator fee is a feature allowing for a flat rate amount to be removed f
 
 ### Charging fees on transfers
 
-Fees are programmatically set on an individual transfer API request. Within a transfer request you can specify an optional `fees` request parameter, which is an array of fee objects that can represent many unique fee transfers. If your platform wishes to charge a percentage of the total transfer amount then your application will need to compute the percentage prior to initiating the transfer request. **Note:** Fees must be deducted from one of the funding sources that is involved in either sending or receiving the funds for a transfer (not an alternative funding source).
+Fees are programmatically set on an individual transfer API request. Within a transfer request you can specify an optional `fees` request parameter, which is an array of fee objects that can represent many unique fee transfers. If your platform wishes to charge a percentage of the total transfer amount then your application will need to compute the percentage prior to initiating the transfer request. **Note:** Fees must be deducted from one of the accounts that is involved in either sending or receiving the funds for a transfer (not an alternative account).
 
 A fee object is made up of a `_links` and an `amount` JSON object. The `_links` object contains `charge-to`, which represents the associated source or destination [Customer](https://docsv2.dwolla.com/#customers) or [Account](https://docsv2.dwolla.com/#accounts) resource that will assume the fee. The `amount` object contains `value` and `currency` keys corresponding to the fee amount and `USD` respectively.
 
@@ -43,7 +43,7 @@ A fee object is made up of a `_links` and an `amount` JSON object. The `_links` 
 #### Example transfer request:
 
 ```noselect
-POST /transfers
+POST https://api-uat.dwolla.com/transfers
 Accept: application/vnd.dwolla.v1.hal+json
 Content-Type: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY

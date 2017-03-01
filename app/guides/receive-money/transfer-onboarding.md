@@ -5,7 +5,7 @@ guide:
     name: receive-money
     step: 1b
 type: guide
-title:  "Step 1: Direct onboarding"
+title:  "Step 1: Transfer onboarding"
 ---
 
 # Step 1: Create a Dwolla Direct account for the payer
@@ -14,20 +14,21 @@ In this experience, the end user is sent to Dwolla to create an account and then
 
 ### Step A. Construct OAuth authorization request URL
 
-Create a URL to send the user to in order to create a new Dwolla Direct account.  When the user has created a Direct account, they’ll be prompted to give your application permission to access their data based on the scopes requested, and if they agree, they will be redirected back to your application.  More detail on implementing the OAuth flow can be found in the [Dwolla OAuth 2.0 guide](/guides/auth/authorization-code-flow.html).
+Create a URL to send the user to in order to create a new Dwolla Direct account.  When the user has created a Direct account, they’ll be prompted to give your application permission to access their data based on the scopes requested, and if they agree, they will be redirected back to your application.  More detail on implementing the OAuth flow can be found in the [Authorization](/guides/auth/authorization-code-flow.html).
 
 Be sure to request the `Send` and `Funding` scopes in the initial authorization request. By requesting the `Send` and `Funding` scopes Dwolla will prompt the user within the OAuth flow to attach a verified bank, which is needed in order to send money.
 
-URL Format:
+**URL Format:**
+
 `https://www.dwolla.com/oauth/v2/authenticate?client_id={client_id}&response_type=code&redirect_uri={redirect_uri}&scope={scope}`
 
-Example URL:
+**Example URL:**
 
 `https://uat.dwolla.com/oauth/v2/authenticate?client_id=PO%2BSzGAsZCE4BTG7Cw4OAL40Tpf1008mDjGBSVo6QLNfM4mD%2Ba&response_type=code&redirect_uri=https://example.com/return&scope=Send%7CTransactions%7CFunding&dwolla_landing=register`
 
 ### Step B. Redirect back to your application and generate access token
 
-The customer will complete their profile and attach a verified funding source.  After that, they will be prompted to grant your application permission to access the new account and transfer funds from it.  Once the customer agrees, they’ll be redirected back to the redirect_uri you specified in the previous step with a `code` querystring parameter -- this is an authorization code.  The last step in the OAuth process is to [exchange this authorization code](https://docsv2.dwolla.com/#finish-user-authorization) for an access token and refresh token pair.
+The customer will complete their account registration and attach a verified funding source.  After that, they will be prompted to grant your application permission transfer money on their behalf.  Once the customer grants authorization, they’ll be redirected back to the redirect_uri you specified in the previous step with a `code` querystring parameter -- this is an authorization code.  The last step in the OAuth process is to [exchange this authorization code](https://docsv2.dwolla.com/transfer/#account-authorization) for an access token and refresh token pair.
 
 #### Example redirect with authorization code:
 
@@ -69,10 +70,10 @@ Content-Type: application/json
 
 Using the access token we just received, we’ll need to get the funding source ID of the bank account we’d like to use to fund the transfer.  
 
-Use the [List an account's funding sources](https://docsv2.dwolla.com/#list-funding-sources-for-an-account) endpoint to fetch a list of the payer’s funding sources.  You first need to fetch [the root](https://docsv2.dwolla.com/#root) resource to determine the URL to get the account’s funding source list from.
+Use the [List an account's funding sources](https://docsv2.dwolla.com/transfer/#list-funding-sources-for-an-account) endpoint to fetch a list of the payer’s funding sources.  You first need to fetch [the root](https://docsv2.dwolla.com/transfer/#root) resource to determine the URL to get the account’s funding source list from.
 
 ```raw
-GET https://api.dwolla.com/accounts/ca32853c-48fa-40be-ae75-77b37504581b/funding-sources
+GET https://api-uat.dwolla.com/accounts/ca32853c-48fa-40be-ae75-77b37504581b/funding-sources
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer 2U2HdYXyQfdZN4hQeQKstadbmqC40mrsVMmzi6Up62R36eFTHW
 
@@ -289,5 +290,5 @@ print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-
 
 <nav class="pager-nav">
     <a href="./">Back: Overview</a>
-    <a href="02-check-transfer.html">Next step: Check transfer status</a>
+    <a href="check-transfer.html">Next step: Check transfer status</a>
 </nav>

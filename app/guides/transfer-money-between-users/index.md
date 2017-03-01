@@ -22,9 +22,9 @@ In this guide, we’ll cover the key points of transferring money:
  - Transfer funds from the sender’s funding source to the recipient’s funding  source
 
 
-### Get set up with Sandbox accounts
+### Before you begin
 
-Before you begin, be sure your [Sandbox accounts](/guides/sandbox-setup) are already set up. 
+You need to have a [Sandbox account](/guides/sandbox-setup) already set up. 
 
 ### Verified and Unverified Customers
 Here are some rules to keep in mind:
@@ -34,9 +34,9 @@ Here are some rules to keep in mind:
 
 In this guide, we’ll create two Customers: one to represent a seller and one to represent a buyer. In this scenario, the seller, Jane Merchant, is a `Verified Customer` with an unverified funding source. The buyer, Joe Buyer, is an `Unverified Customer` with a verified funding source.
 
-Please note: This is a suggested approach and there are other ways you can implement your marketplace transfers. For instance, both the sender and the receiver (or buyer and seller) could be `Verified Customers`, and both could have verified funding sources. Or, you could have the sender undergo identity verification but not the recipient.  
+**Please note:** This is a suggested approach and there are other ways you can implement your marketplace transfers. For instance, both the sender and the receiver (or buyer and seller) could be `Verified Customers`, and both could have verified funding sources. Or, you could have the sender undergo identity verification but not the recipient.  
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-access-token.html">Next step: Generate an access token</a>
+<a href="obtain-access-token.html">Next step: Obtain an access token</a>
 </nav>

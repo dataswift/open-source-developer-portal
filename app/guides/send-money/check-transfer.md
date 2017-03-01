@@ -106,6 +106,6 @@ print($transfer->status); # => "pending"
 That’s it! You’ve successfully transferred money to a recipient. Please continue to the Webhooks guide for information on implementing notifications for your customers about the status of the transfer.
 
 <nav class="pager-nav">
-    <a href="03-create-transfer.html">Back: Create a transfer</a>
+    <a href="create-transfer.html">Back: Create a transfer</a>
     <a href="/guides/webhooks">Next guide: Webhooks</a>
 </nav>

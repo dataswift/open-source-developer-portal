@@ -138,6 +138,6 @@ print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-
 
 
 <nav class="pager-nav">
-    <a href="05-attach-verified-bank.html">Back: Attach a verified funding source</a>
-    <a href="07-check-transfer.html">Next step: Check the status of your transfer</a>
+    <a href="attach-verified-bank.html">Back: Attach a verified funding source</a>
+    <a href="check-transfer.html">Next step: Check the status of your transfer</a>
 </nav>

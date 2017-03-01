@@ -11,12 +11,12 @@
                     Transfer money between users
                 {% elsif page.url contains 'sandbox-setup' %}
                     Getting started in Sandbox
+                {% elsif page.url contains 'auth' %}
+                    Authorization
                 {% elsif page.url contains 'webhooks' %}
                     Webhooks
                 {% elsif page.url contains 'migrate-to-v2' %}
                     Migrate to the Access API
-                {% elsif page.url contains 'auth' %}
-                    Dwolla OAuth 2.0
                 {% else %}
                     Please select a guide
                 {% endif %}
@@ -37,24 +37,24 @@
             {% unless page.url contains '/guides/transfer-money-between-users/' %}
                 <a href="/guides/transfer-money-between-users/">Transfer money between users</a>
             {% endunless %}
+            {% unless page.url contains '/guides/auth/' %}
+                <a href="/guides/auth/">Authorization</a>
+            {% endunless %}
             {% unless page.url contains '/guides/webhooks/' %}
                 <a href="/guides/webhooks/">Webhooks</a>
             {% endunless %}
             {% unless page.url contains '/guides/migrate-to-v2/' %}
                 <a href="/guides/migrate-to-v2/">Migrate to the Access API</a>
             {% endunless %}
-            {% unless page.url contains '/guides/auth/' %}
-                <a href="/guides/auth/">Dwolla OAuth 2.0</a>
-            {% endunless %}
         </nav>
     </section>
 
     {% include side-nav/guide-send-money.html %}
     {% include side-nav/guide-receive-money.html %}
-    {% include side-nav/guide-webhooks.html %}
     {% include side-nav/guide-transfer-money-between-users.html %}
-    {% include side-nav/guide-migrate-to-v2.html %}
     {% include side-nav/guide-auth.html %}
+    {% include side-nav/guide-webhooks.html %}
+    {% include side-nav/guide-migrate-to-v2.html %}
     {% include side-nav/guide-offsite-gateway.html %}
     <section class="side-nav__options" {% unless page.url contains '/guides/' %}style="display:none"{% endunless %}>
         <h6>API v1 Resources</h6>

@@ -30,12 +30,28 @@
             {% endif %}
         {% endfor %}
         </ul>
-    </section>
-    <section class="side-nav__options" {% unless page.url contains '/resources/' %}style="display:none"{% endunless %}>
-        <h6>API v1 Resources</h6>
+        <h6>Access API Articles</h6>
         <ul>
-            <li><a href="/guides/offsite-gateway/"><span>Off-site Gateway</span></a></li>
-            <li class="external-link"><a href="https://docs.dwolla.com/" target="_blank"><span class="icon-sidenav-option">API v1 reference docs</span></a></li>
+        {% for item in site.pages %}
+
+            {% if item.section == 'resources' and item.type == 'access-api-article' %}
+            <li>
+                {% capture second_level_dir %}{{ page.url | remove_first: '/resources/' | split:'/' | first }}{% endcapture %}
+                {% capture file_name %}{{ item.url | remove_first: '/resources/' | remove_first: '.html' }}{% endcapture %}
+                <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+                    {{ item.title }}
+                </a>
+                <ul>
+                    {% assign pages = site.pages | sort:'weight'  %}
+                    {% for subItem in pages %}
+                        {% if subItem.section == item.title and subItem.type == 'article' %}
+                            <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+        {% endfor %}
         </ul>
     </section>
 </nav>

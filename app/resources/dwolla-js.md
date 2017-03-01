@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: resources
-type: article
+type: access-api-article
 title:  "Dwolla.js"
 description: "Quickly integrate instant bank verification for developers using the Dwolla ACH API."
 ---

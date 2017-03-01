@@ -14,7 +14,7 @@ You can check the status of the newly created transfer by retrieving the transfe
 
 #### Request and response (view schema in `raw`)
 ```raw
-GET https://api.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
+GET https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY
 
@@ -88,6 +88,6 @@ appToken
 That’s it!  You’ve successfully transferred money from Joe Buyer to Jane Merchant. Please continue to the Webhooks guide for information on implementing notifications for your customers about the transfer.
 
 <nav class="pager-nav">
-    <a href="06-create-transfer.html">Back: Overview</a>
+    <a href="create-transfer.html">Back: Overview</a>
     <a href="/guides/webhooks">Next guide: Webhooks</a>
 </nav>
