@@ -109,5 +109,5 @@ Add a bank or skip to complete the OAuth process
 
 <nav class="pager-nav">
     <a href="authorization-code-flow.html">Back: Authorization code flow</a>
-    <a href="using-an-access-token.htmll">View: Using an access token</a>
+    <a href="using-an-access-token.html">View: Using an access token</a>
 </nav>

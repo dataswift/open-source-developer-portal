@@ -7,7 +7,7 @@ weight: 1
 description: "Manage OAuth access tokens for Dwolla's bank transfer API."
 ---
 
-# OAuth refresh strategies
+# OAuth refresh strategies - Transfer
 
 ## Refresh on demand or handle failure 
 

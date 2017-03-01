@@ -105,12 +105,12 @@ catch (Exception e) {
 }
 ```
 
-When the customer is created, you’ll receive the customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
+When the customer is created, you’ll receive the customer URL in the location header.
 
 **Important**: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud. 
 
 
 <nav class="pager-nav">
-    <a href="./03-attach-unverified-bank.html">Back: Attach an unverified funding source</a>
-    <a href="05-attach-verified-bank.html">Next step: Attach a verified funding source</a>
+    <a href="./attach-unverified-bank.html">Back: Attach an unverified funding source</a>
+    <a href="attach-verified-bank.html">Next step: Attach a verified funding source</a>
 </nav>

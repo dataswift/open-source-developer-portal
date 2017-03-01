@@ -22,20 +22,8 @@ description: "Getting started with Dwolla's bank transfer API."
         <p>A walkthrough of the ACH transfer process, including transfer statuses and processing times.</p>
     </li>
     <li>
-        <h3><a href="/resources/customer-verification.html">Customer verification</a></h3>
-        <p>Account verification statuses and how to respond when additional information is required.</p>
-    </li>
-    <li>
-        <h3><a href="/resources/dwolla-js.html">Dwolla.js</a></h3>
-        <p>Securely transmit bank information from your application using our client-side JavaScript library.</p>
-    </li>
-    <li>
         <h3><a href="/resources/facilitator-fee.html">Facilitator Fee</a></h3>
         <p>Collect a portion of the transfer amount on payments facilitated between two users.</p>
-    </li>
-    <li>
-        <h3><a href="/resources/funding-source-verification.html">Funding source verification</a></h3>
-        <p>Methods to verify funding sources, including Instant Account Verification and micro-deposits.</p>
     </li>
     <li>
         <h3><a href="/resources/oauth-refresh-strategies.html">OAuth refresh strategies</a></h3>
@@ -44,5 +32,20 @@ description: "Getting started with Dwolla's bank transfer API."
     <li>
         <h3><a href="/resources/testing.html">Testing</a></h3>
         <p>Simulate various test cases with the use of sentinel values or actionable buttons in Dwolla’s Sandbox environment.</p>
+    </li>
+</ul>
+<h1>Access API Articles</h1>
+<ul class="article-list">
+    <li>
+        <h3><a href="/resources/customer-verification.html">Customer verification</a></h3>
+        <p>Account verification statuses and how to respond when additional information is required.</p>
+    </li>
+    <li>
+        <h3><a href="/resources/dwolla-js.html">Dwolla.js</a></h3>
+        <p>Securely transmit bank information from your application using our client-side JavaScript library.</p>
+    </li>
+    <li>
+        <h3><a href="/resources/funding-source-verification.html">Funding source verification</a></h3>
+        <p>Methods to verify funding sources, including Instant Account Verification and micro-deposits.</p>
     </li>
 </ul>

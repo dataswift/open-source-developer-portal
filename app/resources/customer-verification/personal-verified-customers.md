@@ -7,8 +7,6 @@ weight: 0
 description: "How to verify a customer before sending a bank transfer with Dwolla's ACH API."
 ---
 
-# Customer verification
-
 ## Personal verified Customers
 
 ### Create a verified personal Customer
@@ -16,7 +14,7 @@ description: "How to verify a customer before sending a bank transfer with Dwoll
 To create a verified personal Customer, use the [create a customer](https://docsv2.dwolla.com/#create-a-customer) endpoint:
 
 ```raw
-POST /customers
+POST https://api-uat.dwoola.com/customers
 Content-Type: application/vnd.dwolla.v1.hal+json
 Accept: application/vnd.dwolla.v1.hal+json
 Authorization: Bearer pBA9fVDBEyYZCEsLf/wKehyh1RTpzjUj5KzIRfDi0wKTii7DqY

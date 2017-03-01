@@ -15,7 +15,7 @@ No matter which method you used to set up your customers, the remaining steps of
 | Solution | Recipient|
 |----------|----------|
 |Access API|Customer|
-|Co-branded|Account|
+|Transfer|Account|
 
 Now that you’ve created a Customer or an Account and associated its funding source, you can initiate your first transfer. The transfer requires the following information:
 
@@ -128,5 +128,5 @@ print($fundingSources->_embedded) # => PHP associative array of _embedded conten
 
 <nav class="pager-nav">
     <a href="./">Back to Overview</a>
-    <a href="03-create-transfer.html">Next step: Create a transfer</a>
+    <a href="create-transfer.html">Next step: Create a transfer</a>
 </nav>

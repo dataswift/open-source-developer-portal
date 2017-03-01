@@ -167,6 +167,6 @@ When the customer is created, you’ll receive the customer URL in the location 
 **Important:** There are various reasons a Verified Customer will result in a status other than `verified` which you will want to account for after the Customer is created. Reference the Customer verification resource article for more information on [handling verification statuses](https://developers.dwolla.com/resources/customer-verification/handling-verification-statuses.html).
 
 <nav class="pager-nav">
-    <a href="./01-access-token.html">Back: Generate an access token</a>
-    <a href="03-attach-unverified-bank.html">Next step: Attach an unverified funding source</a>
+    <a href="./obtain-access-token.html">Back: Obtain an access token</a>
+    <a href="attach-unverified-bank.html">Next step: Attach an unverified funding source</a>
 </nav>

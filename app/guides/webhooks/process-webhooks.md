@@ -61,6 +61,6 @@ Let's recap. From the event we can retrieve the `transfer` and then take a look 
 That's it! You’ve learned the basics of webhooks. 
 
 <nav class="pager-nav">
-    <a href="./03-validating-webhooks.html">Back: Validating webhooks</a>
+    <a href="./validating-webhooks.html">Back: Validating webhooks</a>
     <a href="" style="display:none;"></a>
 </nav>

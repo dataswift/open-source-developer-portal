@@ -10,11 +10,9 @@ title:  "Step 1: Access API onboarding"
 
 # Step 1: Create a customer using the Access API
 
-### Step A: Generate an OAuth access token
+### Step A: Obtain an application access token
 
-Navigate to the <a href="https://dashboard-uat.dwolla.com/applications" target="_blank">applications page</a> to generate an access token. 
-
-Before selecting the "Create token" button, make sure your created application has the following scopes enabled: `Send`, `Funding`, `Transactions`, and `ManageCustomers`. Once you select the Create token button, you'll receive an access and refresh token pair that contains the proper scopes for creating and managing Customers. More detail on implementing the OAuth flow can be found in the [Dwolla OAuth 2.0 guide](/guides/auth/client-credentials-flow.html).
+Your application will exchange its `client_id`, `client_secret`, and `grant_type=client_credentials` for an application access token. An application access token can then be used to make calls to the Dwolla API on behalf of your application for Access API related endpoints.
 
 ### Step B: Create a Customer
 
@@ -116,10 +114,9 @@ catch (Exception e) {
 }
 ```
 
-When the Customer is created, you’ll receive the Customer URL in the location header. If using an SDK, the location will be returned to you upon calling `create()`.
+When the Customer is created, you’ll receive the Customer URL in the location header. 
 
-**Important**: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud. Sending random, hardcoded, or incorrect information in the ipAddress field will cause delays or throttling of requests.
-
+**Important**: Provide the IP address of the end-user accessing your application as the ipAddress parameter. This enhances Dwolla’s ability to detect fraud.
 
 ### Step C: Attach a funding source to the Customer
 
@@ -234,7 +231,7 @@ Great! The funding source should now be verified.
 
 ### Step E: Create a transfer
 
-Once the customer has verified their funding source, we can transfer funds from their bank account to your Dwolla account.   You’ll need to supply your access token from step A, the customer’s ID from step B, and the customer’s funding source ID from step C:
+Once the customer has verified their funding source, we can transfer funds from their bank account to your Dwolla account. You’ll need to supply your access token from step A, the customer’s ID from step B, and the customer’s funding source ID from step C:
 
 ```raw
 POST https://api-uat.dwolla.com/transfers
@@ -373,5 +370,5 @@ print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-
 
 <nav class="pager-nav">
     <a href="./">Back: Overview</a>
-    <a href="02-check-transfer.html">Next step: Check transfer status</a>
+    <a href="check-transfer.html">Next step: Check transfer status</a>
 </nav>

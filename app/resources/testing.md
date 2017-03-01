@@ -9,11 +9,10 @@ description: "In the Dwolla Sandbox environment, simulate various test cases usi
 # Testing
 
 ## Overview
-The Sandbox environment allows you to test the Dwolla API without any real-world impact, meaning that no real personal identifying information or financial data is used and bank transfer processing does not run as it would in production. Since dummy data is utilized in the Sandbox environment, Dwolla provides a way to simulate various test cases by providing either sentinel values that can be used when making API requests or buttons that trigger certain actions (e.g. simulate bank transfer processing).
+The Sandbox environment allows you to test the Dwolla Access API without any real-world impact, meaning that no real personal identifying information or financial data is used and bank transfer processing does not run as it would in production. Since dummy data is utilized in the Sandbox environment, Dwolla provides a way to simulate various test cases by providing either sentinel values that can be used when making API requests or buttons that trigger certain actions (e.g. simulate bank transfer processing).
 
 ### Simulate bank transfer processing
 The Sandbox environment does not replicate any bank transfer processes, so a pending transfer will not clear or fail automatically after a few business days as it would in production. The transfer will simply remain in the pending state indefinitely. 
-
 
 ![Screenshot of process bank transfers button](/images/process-bank-transfers.png "Process bank transfers button")
 

@@ -113,6 +113,6 @@ Joe Buyer will complete the IAV flow by authenticating with his online banking c
 Great! Joe Buyer’s funding source is now verified and ready to send money.
 
 <nav class="pager-nav">
-    <a href="./04-create-unverified-customer.html">Back: Create an unverified customer</a>
-    <a href="06-create-transfer.html">Next step: Create a transfer</a>
+    <a href="./create-unverified-customer.html">Back: Create an unverified customer</a>
+    <a href="create-transfer.html">Next step: Create a transfer</a>
 </nav>

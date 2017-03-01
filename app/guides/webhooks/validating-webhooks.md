@@ -13,7 +13,7 @@ description: Webhooks for payments within your application by utilizing our open
 
 Assume that your integration is an online marketplace, and that a customer just placed an order on your site. A few days after the customer initiated their payment, your application receives this webhook.
 
-The `topic` field of an event holds [a description](http://docsv2.dwolla.com/#events) of the event, which is similar the subject of an e-mail message.  The `webhook` itself contains _links the the resource impacted by the event that can be used to retrieve more information about the webhook you have received. 
+The `topic` field of an event holds [a description](http://docsv2.dwolla.com/#events) of the event, which is similar the subject of an e-mail message.  The `webhook` itself contains _links to the resource impacted by the event that can be used to retrieve more information about the webhook you have received. 
 
 **NOTE**: The `event` must be retrieved with a `client_credentials` granted access_token.
 
@@ -104,6 +104,6 @@ end
 ```
 
 <nav class="pager-nav">
-    <a href="02-create-subscription.html">Back: Create a webhook subscription</a>
-    <a href="04-process-webhooks.html">Next step: Processing webhooks</a>
+    <a href="create-subscription.html">Back: Create a webhook subscription</a>
+    <a href="process-webhooks.html">Next step: Processing webhooks</a>
 </nav>
