@@ -1,79 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/01-access-token.html</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/01-api-v2-principles.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/01-direct-onboarding.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/01-direct-onboarding.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/01-obtain-authorization.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/01-white-label-onboarding.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/01-white-label-onboarding.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/02-check-transfer.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/02-create-subscription.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/02-create-verified-customer.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/02-fetch-funding-sources.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/02-making-requests.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/03-attach-unverified-bank.html</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/03-authentication.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/03-create-transfer.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/03-validating-webhooks.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/04-check-transfer.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/04-create-unverified-customer.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/04-process-webhooks.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/04-sdk-support.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/05-attach-verified-bank.html</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/05-v1-to-v2-endpoint-changes.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/06-create-transfer.html</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/06-other-notable-changes.html</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/07-check-transfer.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/07-faq.html</loc>
@@ -82,10 +25,22 @@
     <loc>https://developers.dwolla.com/resources/account-types/access-api-accounts.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/receive-money/access-api-onboarding.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/access-api-onboarding.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/account-types.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/dwolla-js/add-a-bank-account.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/attach-unverified-bank.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/attach-verified-bank.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/auth/authorization-code-flow.html</loc>
@@ -100,7 +55,31 @@
     <loc>https://developers.dwolla.com/resources/changelog.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/receive-money/check-transfer.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/check-transfer.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/check-transfer.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/guides/auth/client-credentials-flow.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/webhooks/create-subscription.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/create-transfer.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/create-transfer.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/create-unverified-customer.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/create-verified-customer.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/customer-verification.html</loc>
@@ -115,6 +94,9 @@
     <loc>https://developers.dwolla.com/resources/facilitator-fee.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/send-money/fetch-funding-sources.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification.html</loc>
   </url>
   <url>
@@ -124,28 +106,16 @@
     <loc>https://developers.dwolla.com/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/auth/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
+    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/migrate-to-v2/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/send-money/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/auth/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/</loc>
@@ -154,10 +124,22 @@
     <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
+    <loc>https://developers.dwolla.com/guides/receive-money/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification/instant-account-verification.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/dwolla-js/instant-account-verification.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification/micro-deposit-verification.html</loc>
@@ -169,6 +151,12 @@
     <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/transfer-money-between-users/obtain-access-token.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/webhooks/obtain-authorization.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/resources/dwolla-js/on-demand-bank-transfers.html</loc>
   </url>
   <url>
@@ -176,6 +164,9 @@
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/oauth-refresh-strategies/preemptively-refresh.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/webhooks/process-webhooks.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/bank-transfer-workflow/processing-times.html</loc>
@@ -208,22 +199,31 @@
     <loc>https://developers.dwolla.com/resources/bank-transfer-workflow/transfer-failures.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/receive-money/transfer-onboarding.html</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/send-money/transfer-onboarding.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/guides/auth/using-an-access-token.html</loc>
   </url>
   <url>
+    <loc>https://developers.dwolla.com/guides/webhooks/validating-webhooks.html</loc>
+  </url>
+  <url>
     <loc>https://developers.dwolla.com/404.html</loc>
-    <lastmod>2016-10-18T15:36:30-05:00</lastmod>
+    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/base/preview.html</loc>
-    <lastmod>2016-10-18T15:36:30-05:00</lastmod>
+    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2016-11-29T18:06:07-06:00</lastmod>
+    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2016-10-18T15:36:30-05:00</lastmod>
+    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
   </url>
 </urlset>
