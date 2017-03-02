@@ -25,10 +25,10 @@
     <loc>https://developers.dwolla.com/resources/account-types/access-api-accounts.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/access-api-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/access-api-onboarding.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/access-api-onboarding.html</loc>
+    <loc>https://developers.dwolla.com/guides/receive-money/access-api-onboarding.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/account-types.html</loc>
@@ -55,10 +55,10 @@
     <loc>https://developers.dwolla.com/resources/changelog.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/receive-money/check-transfer.html</loc>
+    <loc>https://developers.dwolla.com/guides/send-money/check-transfer.html</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/send-money/check-transfer.html</loc>
+    <loc>https://developers.dwolla.com/guides/receive-money/check-transfer.html</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/transfer-money-between-users/check-transfer.html</loc>
@@ -106,19 +106,22 @@
     <loc>https://developers.dwolla.com/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
+    <loc>https://developers.dwolla.com/guides/migrate-to-v2/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/migrate-to-v2/</loc>
+    <loc>https://developers.dwolla.com/guides/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/transfer-money-between-users/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/auth/</loc>
+    <loc>https://developers.dwolla.com/guides/webhooks/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/resources/</loc>
+    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/guides/auth/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/guides/sandbox-setup/</loc>
@@ -127,13 +130,10 @@
     <loc>https://developers.dwolla.com/guides/receive-money/</loc>
   </url>
   <url>
-    <loc>https://developers.dwolla.com/guides/offsite-gateway/</loc>
-  </url>
-  <url>
-    <loc>https://developers.dwolla.com/guides/</loc>
-  </url>
-  <url>
     <loc>https://developers.dwolla.com/guides/send-money/</loc>
+  </url>
+  <url>
+    <loc>https://developers.dwolla.com/resources/</loc>
   </url>
   <url>
     <loc>https://developers.dwolla.com/resources/funding-source-verification/instant-account-verification.html</loc>
@@ -212,18 +212,18 @@
   </url>
   <url>
     <loc>https://developers.dwolla.com/404.html</loc>
-    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
+    <lastmod>2017-03-02T10:52:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
+    <lastmod>2017-03-02T10:52:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
+    <lastmod>2017-03-02T10:52:48+00:00</lastmod>
   </url>
   <url>
     <loc>https://developers.dwolla.com/lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-02-28T14:38:41-06:00</lastmod>
+    <lastmod>2017-03-02T10:52:48+00:00</lastmod>
   </url>
 </urlset>
