@@ -1,6 +1,6 @@
 dist:
     options:
-        remote: git@github.com:Dwolla/developer-portal.git
+        remote: git@github.com:Hub-of-all-Things/open-source-developer-portal.git
         branch: gh-pages
         commit: true
         push: true
