@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: Introduction
-type: article
+section: api-docs
+type: api-docs-introduction
 title:  "License"
 description: "License"
 ---
