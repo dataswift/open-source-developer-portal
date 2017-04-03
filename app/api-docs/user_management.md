@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: api-docs
-type: api-docs-endpoints
+type: api-docs-endpoint
 title:  "User Management"
 description: "User Management"
 ---
