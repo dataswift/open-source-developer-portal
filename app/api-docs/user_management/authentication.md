@@ -6,15 +6,26 @@ title:  "Funding source verification"
 description: "Programmatically verify a bank to initiate a bank transfer."
 ---
 
-# Funding source verification
+# Authentication
 
-Before an Access API Customer is eligible to transfer money from their bank or credit union account they need to verify ownership of the account, either via Instant Account Verification (IAV) or micro-deposits. This article demonstrates how to verify a bank or credit union account using either of these options. **Please note:** IAV within dwolla.js is a premium feature only available for Access API customers. For more information about the Access API and IAV, please [contact sales](https://www.dwolla.com/contact).
+For both the Data import and export, the virtualised database will required permissions to ensure that a User has authorised certain API consumers to add or read the data from the various Tables within the database. For this, separate “Apps” that represent API User accounts will be present within each User’s PDS. Each App will own several permission sets within the database, which will determine which Tables the API consumers are able to access, in addition to the permissions the API consumers have on those Tables.
 
-In this article we use the example of verifying an Access API Customer's bank account and detail the interaction between Dwolla, your application, and the Access API Customer.
+### Acquiring Access Token
+    
+The tokens used are JWT tokens and you can see the values set by the HAT (such as the issuer) at jwt.io. To acquire an access token, you should make a GET request to /user/access_token endpoint and the request should contain headers with username and pass (password). The response will contain the access token and user ID.
 
-* * *
+### Validating Access Token
+    
+Tokens are signed by the HAT’s public key using RSA algorithm so that their authenticity can be independently verified. To make sure the provided access token works with the specific HAT, make a GET request containing a header with X-Auth-Token to /users/access_token/validate endpoint. In case of a valid access token, your response will say "message": "Authenticated" and in a case of an invalid access token, you will get "message": "The supplied authentication is invalid" and "cause": "...".
 
-#### View:
+###HTTP Request
+   
+GET http://hat.hubofallthings.net/
 
-*   [Micro-deposit verification](/resources/funding-source-verification/micro-deposit-verification.html)
-*   [Instant account verification](/resources/funding-source-verification/instant-account-verification.html)
+### Query Parameters
+
+ |              |                                                                                                           |
+ |--------------|-----------------------------------------------------------------------------------------------------------|
+ | access_token | your access token used to authenticate                                                                    |
+ | username     | username used for authentication together with password, instead of access_token (user and platform only) |
+ | pass         | password used for authentication together with username, instead of access_token (user and platform only) |
