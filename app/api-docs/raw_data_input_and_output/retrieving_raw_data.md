@@ -6,15 +6,7 @@ title:  "Funding source verification"
 description: "Programmatically verify a bank to initiate a bank transfer."
 ---
 
-# Funding source verification
+# Retrieving Raw Data
+  Sometimes you might find it useful to extract Data Values. You can get all Data that has been stored in a specific Table (including its Fields and subTables), listed by associated Record ID (one Record per list item), and the full nested structure of Fields and subTables. Similarly, you can query the Data by Field (individual JSON Property) to get a list of all items that are stored in that Field. You can also get all values associated with a Record ID, in the form of the full, nested structure of Tables, subTables, Fields and Values. You can retrieve Data Values by specifying Table, Field or Record ID and making a GET request to /table/table_ID/values, /field/field_ID/values or /record/record_ID/values respectively.
 
-Before an Access API Customer is eligible to transfer money from their bank or credit union account they need to verify ownership of the account, either via Instant Account Verification (IAV) or micro-deposits. This article demonstrates how to verify a bank or credit union account using either of these options. **Please note:** IAV within dwolla.js is a premium feature only available for Access API customers. For more information about the Access API and IAV, please [contact sales](https://www.dwolla.com/contact).
-
-In this article we use the example of verifying an Access API Customer's bank account and detail the interaction between Dwolla, your application, and the Access API Customer.
-
-* * *
-
-#### View:
-
-*   [Micro-deposit verification](/resources/funding-source-verification/micro-deposit-verification.html)
-*   [Instant account verification](/resources/funding-source-verification/instant-account-verification.html)
+Raw data retrieval is only available for the Owner user for the use by the personal HAT User Interface. It may, however, be useful in development to better understand how the HAT works as well as to help you structure your data.

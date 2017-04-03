@@ -17,4 +17,37 @@ The Raw Data level provides a flexible substrate for users to import a varying r
 * Table Relationships
 * Data Record Relationships
 
-INSERT TABLE HERE
+<table>
+  <tr>
+    <th colspan="4">Table: "Kitchen"; Source: "Fibaro"</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Table Field 1</td>
+    <td rowspan="2">Table Field 2</td>
+    <td colspan="2">SubTable: "Kitchen Electricity"</td>
+  </tr>
+  <tr>
+    <td>Table Field 3</td>
+    <td>Table Field 4</td>
+  </tr>
+  <tr>
+    <td>Value 1</td>
+    <td>Value 2</td>
+    <td>Value 3</td>
+    <td>Value 4</td>
+  </tr>
+  <tr>
+    <td>Value 1'</td>
+    <td>Value 2'</td>
+    <td>Value 3'</td>
+    <td>Value 4'</td>
+  </tr>
+  <tr>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+</table>
+
+
