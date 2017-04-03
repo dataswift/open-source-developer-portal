@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: api-docs-endpoint
-type: access-api-article
+section: api-docs
+type: api-docs-endpoints
 title:  "Funding source verification"
 description: "Programmatically verify a bank to initiate a bank transfer."
 ---

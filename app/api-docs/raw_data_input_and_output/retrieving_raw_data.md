@@ -1,9 +1,9 @@
 ---
 layout: twoColumn
-section: raw_data_input_and_output
-type: access-api-article
-title:  "Funding source verification"
-description: "Programmatically verify a bank to initiate a bank transfer."
+section: Raw Data Input and Output
+type: article
+title:  "Retrieving Raw Data"
+description: "Retrieving Raw Data"
 ---
 
 # Retrieving Raw Data

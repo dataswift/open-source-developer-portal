@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: user_management
-type: access-api-article
+type: 
 title:  "Funding source verification"
 description: "Programmatically verify a bank to initiate a bank transfer."
 ---
