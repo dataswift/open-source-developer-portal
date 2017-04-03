@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/endpoints.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/about_the_hat.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/user_management/authentication.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_field.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_records.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_sources.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_tables.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_value.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/user_management/direct_data_credit_and_debit_accounts.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//</loc>
@@ -10,10 +31,22 @@
     <loc>http://developers.hubofallthings.com//api-docs/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/introduction/instant-account-verification.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/license.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/introduction/micro-deposit-verification.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/retrieving_raw_data.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/sharing_and_direct_data_debits.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/the_api.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/user_management.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
