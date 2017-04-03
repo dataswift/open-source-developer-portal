@@ -3,11 +3,11 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: docs-next
-description: Dwolla Developer Portal
+name: hat-docs
+description: Hub of All Things Developer Portal
 author:
-  name: Dwolla
-  email: api@dwolla.com
+  name: HATDeX
+  email: support@hatdex.org
 
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
@@ -28,6 +28,6 @@ redcarpet:
 highlighter: rouge
 
 # Sitemap
-url: https://developers.dwolla.com
+url: http://developers.hubofallthings.com/
 gems:
   - jekyll-sitemap

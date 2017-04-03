@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Dwolla API Documentation
+title: Documentation
 bodyClass: home
-description: Developer docs for our RESTful API for ACH transfers.
+description: Developer docs for our Hub of All Things API.
 
 sampleRuby: >
     ```ruby
@@ -186,31 +186,33 @@ sampleJavascript: >
     </section>
     <section class="cnt-one-col__banner banner">
         <div class="page-wrap">
-            <img class="top-image" alt="" src="https://cdn.dwolla.com/images/cms/icons/headers/header-access-api.svg">
-            <h1>Simple and powerful API for ACH transfers</h1>
-            <a href="/guides/" class="btn primary large">View all guides</a>
+            <img class="top-image" alt="" src="/images/header-access-api.svg">
+            <h1>Your own private data account.</h1>
+            <a href="/api-docs/" class="btn primary large">View all API docs</a>
         </div>
         <div class="banner__background"></div>
     </section>
     <section class="hover-box cnt-one-col__hover-box page-wrap">
-        <h2>Try it out</h2>
+        <h2>Learn more about HAT</h2>
 
-        <div style="text-align: left">
-            {{ page.sampleRuby | markdownify }}
-            {{ page.sampleJavascript | markdownify }}
-            {{ page.sampleRaw | markdownify }}
-            {{ page.samplePython | markdownify }}
-            {{ page.samplePHP | markdownify }}
-        </div>
+      <!--<div style="text-align: left">
+          {/{ page.sampleRuby | markdownify }}
+          {/{ page.sampleJavascript | markdownify }}
+          {/{ page.sampleRaw | markdownify }}
+          {/{ page.samplePython | markdownify }}
+          {/{ page.samplePHP | markdownify }}
+      </div>-->
+
+        <iframe width="100%" height="500" style="margin: 25px 0 50px 0;" src="https://www.youtube.com/embed/DAn2HB7FfmM?showinfo=0" frameborder="0" allowfullscreen></iframe>
 
         <section class="split-options">
             <div>
-                <h3 class="icon-home-sandbox">Set up Sandbox</h3>
-                <a href="/guides/sandbox-setup/" class="btn secondary large">Get started</a>
+                <h3 class="icon-home-sandbox">Get a HAT</h3>
+                <a href="https://hatters.hubofallthings.com/" class="btn secondary large">Get started</a>
             </div>
             <div>
                 <h3 class="icon-home-dev-community">Developer community</h3>
-                <a href="https://discuss.dwolla.com/c/api-support" class="btn secondary large">Get answers</a>
+                <a href="http://forum.hatcommunity.org/c/developers" class="btn secondary large">Get answers</a>
             </div>
         </section>
     </section>
@@ -218,5 +220,3 @@ sampleJavascript: >
         {% include reach-out.html %}
     </div>
 </div>
-
-{% include status-widget.html %}

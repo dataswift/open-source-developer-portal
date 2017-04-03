@@ -34,7 +34,7 @@ body > header {
 
             .logo {
                 width: 135px;
-                height: 26px;
+                height: 58px;
                 margin-top: 6px;
                 display: inline-block;
                 text-indent: 100%;
@@ -47,6 +47,7 @@ body > header {
             .hamburger {
                 display: none;
                 float: right;
+                margin-top: 12px;
 
                 a {
                     margin-right: 15px;
@@ -72,7 +73,7 @@ body > header {
     }
 
     nav a {
-       margin-right: 30px; 
+       margin-right: 30px;
     }
 
     a {
@@ -81,7 +82,7 @@ body > header {
         font-weight: 600;
 
         &:hover {
-            opacity: 0.85; 
+            opacity: 0.85;
         }
 
         &:last-child {
@@ -95,7 +96,7 @@ body > header {
 
     .header__primary {
         padding: 25px 0;
-        @include linear-gradient($gradient-tilt, $color-gradient-orange, $color-gradient-red);
+        @include linear-gradient($gradient-tilt-header, $color-gradient-red, $color-gradient-orange);
 
         .page-wrap {
             & > div {
@@ -110,6 +111,7 @@ body > header {
         nav {
             float: right;
             transition: height $slide-time, margin $slide-time;
+            margin-top: 12px;
 
             @include breakpoint($size-tablet-small) {
                 width: 100%;

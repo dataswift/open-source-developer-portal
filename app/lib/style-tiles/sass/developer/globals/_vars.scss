@@ -1,7 +1,7 @@
 // ---- BREAKPOINTS -----
 $size-desktop-small: 1084px;
-$size-tablet: 768px;
-$size-tablet-small: 725px;
+$size-tablet: 900px;
+$size-tablet-small: 855px;
 $size-mobile: 600px;
 $size-mobile-small: 350px;
 
@@ -15,14 +15,17 @@ $base-font-size: 14px;
 
 // ------ COLORS -------
 //primary
-$color-orange: #ff7404;
-$color-blue: #2395d6;
+$color-orange: #3e4956; // black - this is terrible too #f66200;
+$color-blue: #b85a59; // light red - This is terrible #2395d6;
 $color-white: #fff;
 $color-grey-light: #f6fafc;
 $color-grey: #eef3f6;
 $color-grey-med: #ccd6dd;
 $color-grey-dark: #6f828e;
 $color-black: #3e4956;
+$color-light-red: #b85a59;
+$color-green: #58b467;
+$color-red: #b83433;
 
 //greys
 $color-grey-2: #e2e9ed;
@@ -32,19 +35,16 @@ $color-grey-med-3: #9daeb8;
 $color-grey-dark-2: #596974;
 $color-black-dark: #27303d;
 
-//money status
-$color-green: #58b467;
-$color-red: #c63c32;
-
 //alerts
 $color-alert-yellow: #f1dc8f;
 $color-alert-red: #e8b1ad;
 
 //gradients
 $gradient-tilt: 90deg;
-$gradient-tilt-banner: 156deg;
-$color-gradient-orange: #ff8929;
-$color-gradient-red: #ce5951;
+$gradient-tilt-header: 45deg;
+$gradient-tilt-banner: 90deg;
+$color-gradient-orange: #3e4956; //#f66200;
+$color-gradient-red: #b83433;
 $color-gradient-purple: #7863a9;
 
 //shadows

@@ -1,6 +1,6 @@
 {
-  "name": "docs-next",
-  "version": "0.0.0",
+  "name": "hat-docs",
+  "version": "0.0.1",
   "dependencies": {
     "normalize-css": "~3.0.1",
     "jquery": "~1.11.1",

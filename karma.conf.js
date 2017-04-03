@@ -9,8 +9,8 @@ module.exports = function(config) {
         files: [
             'app/_bower_components/jquery/dist/jquery.js',
 
-            'app/js/dwolla.js',
-            'app/js/dwolla/**/*.js',
+            'app/js/hat.js',
+            'app/js/hat/**/*.js',
 
             'app/js/test/helpers/helpers.js',
             'app/js/test/helpers/*.js',

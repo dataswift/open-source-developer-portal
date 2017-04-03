@@ -32,7 +32,7 @@
         }
 
         @include breakpoint($size-tablet-small){
-            background: $color-blue;
+            background: $color-red;
         }
 
         &:after {
@@ -42,7 +42,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            @include linear-gradient($gradient-tilt-banner, rgba($color-blue, 0.85), rgba($color-gradient-purple, 0.85));
+            @include linear-gradient($gradient-tilt-banner, rgba($color-gradient-red, 0.95), rgba($color-black, 0.5));
 
             @include breakpoint($size-mobile){
                 display: none;
