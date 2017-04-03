@@ -24,8 +24,8 @@ GET http://hat.hubofallthings.net/
 
 ### Query Parameters
 
- |              |                                                                                                           |
- |--------------|-----------------------------------------------------------------------------------------------------------|
- | access_token | your access token used to authenticate                                                                    |
- | username     | username used for authentication together with password, instead of access_token (user and platform only) |
- | pass         | password used for authentication together with username, instead of access_token (user and platform only) |
+| Parameter    | Description                                                                                               |
+|--------------|-----------------------------------------------------------------------------------------------------------|
+| access_token | your access token used to authenticate                                                                    |
+| username     | username used for authentication together with password, instead of access_token (user and platform only) |
+| pass         | password used for authentication together with username, instead of access_token (user and platform only) |
