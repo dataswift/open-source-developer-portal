@@ -1,9 +1,9 @@
 ---
 layout: twoColumn
-section: user_management
-type: 
-title:  "Funding source verification"
-description: "Programmatically verify a bank to initiate a bank transfer."
+section: "User Management"
+type: article
+title:  "Direct Data Credit and Debit Accounts"
+description: "Direct Data Credit and Debit Accounts"
 ---
 
 # Direct Data Credit and Debit Accounts

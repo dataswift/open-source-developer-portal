@@ -2,8 +2,8 @@
 layout: twoColumn
 section: api-docs
 type: api-docs-endpoints
-title:  "Funding source verification"
-description: "Programmatically verify a bank to initiate a bank transfer."
+title:  "Sharing and Direct Data Debits"
+description: "Sharing and Direct Data Debits"
 ---
 
 # Sharing and Direct Data Debits

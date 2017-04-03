@@ -2,8 +2,8 @@
 layout: twoColumn
 section: api-docs
 type: api-docs-endpoints
-title:  "Funding source verification"
-description: "Programmatically verify a bank to initiate a bank transfer."
+title:  "Raw Data Input and Output"
+description: "Raw Data Input and Output"
 ---
 
 # Raw Data Input and Output 
