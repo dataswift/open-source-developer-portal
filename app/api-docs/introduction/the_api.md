@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: introduction
+section: Introduction
 type: article
 title:  "The API"
 description: "The API"

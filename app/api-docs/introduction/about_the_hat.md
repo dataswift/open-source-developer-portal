@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: introduction
+section: Introduction
 type: article
 title:  "About the HAT"
 description: "About the HAT"

@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: User Management
+section: "User Management"
 type: article
 title:  "Authentication"
 description: "Authentication"
