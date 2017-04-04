@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - 2.1
+
+before_install:
+  - npm install -g grunt-cli
+
+install:
+  - bundle install --jobs=3 --retry=3
+  - npm install
+
+script:
+  - grunt deploy
+
+branches:
+  only:
+    - master       # Run deploy on push to master
