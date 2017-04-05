@@ -35,6 +35,17 @@ If you're trying to deploy changes to the actual Hub of All Things repo, you'll 
 
 Otherwise, if you're deploying to your own repo, make sure you edit the `buildcontrol.dist.options.remote` to be the URL of your git repo. You'll probably also want to edit `app/CNAME` to use your own CNAME.
 
+## Automagic Deployment (to gh-pages with Travis CI on push to master)
+
+1. Enable Travis CI on this repository
+2. Run `ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.COM"` to generate a new RSA key (don't use an existing one)
+3. Copy id_rsa.pub to the repository deployment keys page
+4. Copy id_rsa to the repository root
+5. Navigate to the repository root and run `travis login --org` to login to Travis CLI and `travis encrypt-file id_rsa` to encrypt your new private key
+6. Copy the openssl line from the command output to .travis.yml and change the output file to deploy_key
+7. Delete id_rsa (leave id_rsa.enc)
+8. Commit, push and watch the magic!
+
 ## License
 
 The MIT License (MIT)
