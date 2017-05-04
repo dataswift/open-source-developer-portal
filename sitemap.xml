@@ -7,7 +7,7 @@
     <loc>http://developers.hubofallthings.com//api-docs/user_management/authentication.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/b_heard_case.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/use_cases/b_heard_case.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//api-docs/case_studies.html</loc>
@@ -34,13 +34,13 @@
     <loc>http://developers.hubofallthings.com//api-docs/user_management/direct_data_credit_and_debit_accounts.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/find_developer_partners_for_collaboration.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/other_resources/find_developer_partners_for_collaboration.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/hat_code_of_practice_security_requirement.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/other_resources/hat_code_of_practice_security_requirement.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/how_long_will_it_take_to_create_something_on_the_hat.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/use_cases/how_long_will_it_take_to_create_something_on_the_hat.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//api-docs/how_to_build_a_data_plug.html</loc>
@@ -61,7 +61,10 @@
     <loc>http://developers.hubofallthings.com//api-docs/license.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/noggin_case.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/use_cases/noggin_case.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//api-docs/other_resources.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output.html</loc>
@@ -82,10 +85,13 @@
     <loc>http://developers.hubofallthings.com//api-docs/tutorials.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//api-docs/use_cases.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//api-docs/user_management.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/what_can_you_make_on_the_hat.html</loc>
+    <loc>http://developers.hubofallthings.com//api-docs/use_cases/what_can_you_make_on_the_hat.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//api-docs/what_is_hat_and_why_build_on_it.html</loc>
