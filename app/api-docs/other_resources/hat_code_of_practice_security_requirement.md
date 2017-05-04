@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: api-docs
-type: api-docs-introduction
+section: "Other Resources"
+type: article
 title:  "HAT Code of Practice Security Requirement"
 description: "HAT Code of Practice Security Requirement"
 ---

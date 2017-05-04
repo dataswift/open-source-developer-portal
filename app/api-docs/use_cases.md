@@ -2,8 +2,8 @@
 layout: twoColumn
 section: api-docs
 type: api-docs-introduction
-title:  "B.Heard Case"
-description: "B.Heard Case"
+title:  "Use Cases"
+description: "Use Cases"
 ---
 
 # Coming Soon

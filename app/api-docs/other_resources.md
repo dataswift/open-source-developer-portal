@@ -2,8 +2,8 @@
 layout: twoColumn
 section: api-docs
 type: api-docs-introduction
-title:  "Noggin Case"
-description: "Noggin Case"
+title:  "Other Resources"
+description: "Other Resources"
 ---
 
 # Coming Soon

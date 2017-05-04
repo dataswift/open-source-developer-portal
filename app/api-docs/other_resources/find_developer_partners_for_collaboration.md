@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: api-docs
-type: api-docs-introduction
+section: "Other Resources"
+type: article
 title:  "Find Developer Partners for Collaboration"
 description: "Find Developer Partners for Collaboration"
 ---

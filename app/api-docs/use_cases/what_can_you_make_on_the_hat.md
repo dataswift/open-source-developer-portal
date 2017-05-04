@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: api-docs
-type: api-docs-introduction
+section: "Use Cases"
+type: article
 title:  "What can you make on the HAT?"
 description: "What can you make on the HAT?"
 ---
