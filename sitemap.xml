@@ -28,6 +28,9 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//sitemap/</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//api-docs/</loc>
   </url>
   <url>
@@ -50,18 +53,18 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-04-02T17:59:55+08:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-04-02T17:59:55+08:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-04-02T17:59:55+08:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-04-03T02:31:29+08:00</lastmod>
+    <lastmod>2017-05-04T07:35:24-04:00</lastmod>
   </url>
 </urlset>
