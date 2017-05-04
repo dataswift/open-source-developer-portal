@@ -1,22 +1,23 @@
 <nav class="header__secondary js-two-col-nav-toggle">
-    {% if page.url == '/index.html' %}
-        <div>
+  {% if page.url == '/index.html' %}
+  <div>
     {% else %}
-        <div class="js-two-col-header-secondary">
-    {% endif %}
-        <div class="page-wrap">
-            <a href="/api-docs/" {% if page.url contains '/api-docs/' %} class="active"{% endif %}>API docs</a>
-            <a href="https://github.com/Hub-of-all-Things">Repositories</a>
-            <div class="custom-select custom-select--blue js-global-language-select">
-                <select name="select" class="js-language-select">
-                    <option value="raw">raw</option>
-                    <option value="php">php</option>
-                    <option value="ruby">ruby</option>
-                    <option value="python">python</option>
-                    <option value="javascript">javascript</option>
-                </select>
-                <div class="arrow"></div>
-            </div>
+    <div class="js-two-col-header-secondary">
+      {% endif %}
+      <div class="page-wrap">
+        <a href="/api-docs/" {% if page.url contains '/api-docs/' %} class="active"{% endif %}>API docs</a>
+        <a href="https://github.com/Hub-of-all-Things" class="no-nav js-two-col-no-toggle">Repositories</a>
+        <a href="/sitemap" class="no-nav js-two-col-no-toggle{% if page.url contains '/sitemap/' %} active{% endif %}">Sitemap</a>
+        <div class="custom-select custom-select--blue js-global-language-select">
+          <select name="select" class="js-language-select">
+            <option value="raw">raw</option>
+            <option value="php">php</option>
+            <option value="ruby">ruby</option>
+            <option value="python">python</option>
+            <option value="javascript">javascript</option>
+          </select>
+          <div class="arrow"></div>
         </div>
+      </div>
     </div>
 </nav>
