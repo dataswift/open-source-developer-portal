@@ -3,10 +3,10 @@
     <ul>
     {% for item in site.pages %}
 
-        {% if item.section == 'api-docs' and item.type == 'api-docs-introduction' %}
+        {% if item.section == 'documentation' and item.type == 'documentation-introduction' %}
         <li>
-            {% capture second_level_dir %}{{ page.url | remove_first: '/api-docs/' | split:'/' | first }}{% endcapture %}
-            {% capture file_name %}{{ item.url | remove_first: '/api-docs/' | remove_first: '.html' }}{% endcapture %}
+            {% capture second_level_dir %}{{ page.url | remove_first: '/documentation/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/documentation/' | remove_first: '.html' }}{% endcapture %}
             <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
                 {{ item.title }}
             </a>
@@ -26,10 +26,10 @@
     <ul>
     {% for item in site.pages %}
 
-        {% if item.section == 'api-docs' and item.type == 'api-docs-endpoint' %}
+        {% if item.section == 'documentation' and item.type == 'documentation-endpoint' %}
         <li>
-            {% capture second_level_dir %}{{ page.url | remove_first: '/api-docs/' | split:'/' | first }}{% endcapture %}
-            {% capture file_name %}{{ item.url | remove_first: '/api-docs/' | remove_first: '.html' }}{% endcapture %}
+            {% capture second_level_dir %}{{ page.url | remove_first: '/documentation/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/documentation/' | remove_first: '.html' }}{% endcapture %}
             <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
                 {{ item.title }}
             </a>

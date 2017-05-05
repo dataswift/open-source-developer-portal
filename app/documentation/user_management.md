@@ -1,12 +1,12 @@
 ---
 layout: twoColumn
-section: api-docs
-type: api-docs-endpoint
+section: documentation
+type: documentation-endpoint
 title:  "User Management"
 description: "User Management"
 ---
 
-# User Managment
+# User Management
 
 The HAT and its personal data ecosystem are designed to allow individual HAT Users to collect, contextualise and exchange our personal Data. The enabling technology for the HAT sits within the HAT Personal Data Platform (HATPDP, mostly referred to as “HAT”). With their Data, individuals can buy apps to analyse, view, create scenarios, trade or make important decisions based on our own Data for a smarter and more effective life. HAT is therefore a fully scalable platform that allows firms to offer individuals services for our personal data, and yet enables us as individuals to personalise that data to our own needs. Therefore, there are 4 Account roles defined within the HAT:
 

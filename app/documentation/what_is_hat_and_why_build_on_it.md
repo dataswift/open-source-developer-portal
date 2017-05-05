@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-section: api-docs
-type: api-docs-introduction
+section: documentation
+type: documentation-introduction
 title:  "What is the HAT and why build on it?"
 description: "What is the HAT and why build on it?"
 ---
