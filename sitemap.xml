@@ -1,100 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/about_the_hat.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/about_the_hat.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/user_management/authentication.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/user_management/authentication.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/use_cases/b_heard_case.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/case_studies.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/case_studies.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/certification.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/certification.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_field.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_field.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_records.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_records.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_sources.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_sources.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_tables.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_tables.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_value.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/data_value.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/user_management/direct_data_credit_and_debit_accounts.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/user_management/direct_data_credit_and_debit_accounts.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/other_resources/hat_code_of_practice_security_requirement.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/other_resources/find_developer_partners_for_collaboration.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/other_resources/hat_code_of_practice_security_requirement.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/use_cases/how_long_will_it_take_to_create_something_on_the_hat.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/how_to_build_a_data_plug.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/how_to_build_a_data_plug.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//documentation/</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/</loc>
+    <loc>http://developers.hubofallthings.com//documentation/knowing_the_hat_tech_ecosystem.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/knowing_the_hat_tech_ecosystem.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/license.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/other_resources.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/use_cases/noggin_case.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/other_resources.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/retrieving_raw_data.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/sharing_and_direct_data_debits.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/raw_data_input_and_output/retrieving_raw_data.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/the_api.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/sharing_and_direct_data_debits.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/tools_available.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/the_api.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/tutorials.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/tools_available.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/user_management.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//api-docs/tutorials.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/use_cases.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/user_management.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/use_cases/what_can_you_make_on_the_hat.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//api-docs/what_is_hat_and_why_build_on_it.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/what_is_hat_and_why_build_on_it.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
