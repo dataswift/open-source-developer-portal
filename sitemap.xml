@@ -7,12 +7,6 @@
     <loc>http://developers.hubofallthings.com//documentation/user_management/authentication.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//documentation/case_studies.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//documentation/certification.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_field.html</loc>
   </url>
   <url>
@@ -40,10 +34,10 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//documentation/</loc>
+    <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//sitemap/</loc>
+    <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/knowing_the_hat_tech_ecosystem.html</loc>
