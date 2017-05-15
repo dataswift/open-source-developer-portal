@@ -8,8 +8,7 @@ description: "Core HAT App Functionality"
 
 
 # Core Hate App Functionalities
-
-## All HAT applications could have up to 4 ‘core HAT functionalities:
+All HAT applications could have up to 4 ‘core HAT functionalities:
 
 ### HAT Single Sign-on. 
 Single-provision “login with the HAT” functionality that allows HAT users to shares certain data (e.g. name, email address) with the application. 
