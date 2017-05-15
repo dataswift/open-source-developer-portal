@@ -6,7 +6,7 @@ title:  "Developer's Portal"
 description: "Developer's Portal"
 ---
 
-#Developer's Portal
+# Developers' Portal
 
 The Developers Portal is the common starting point for most HAT platform participants. It is accessible via http://developers.hubofallthings.com/.
 
