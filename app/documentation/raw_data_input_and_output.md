@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-endpoint
+type: documentation-api1
 title:  "Raw Data Input and Output"
 description: "Raw Data Input and Output"
 ---

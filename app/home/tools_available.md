@@ -1,9 +1,7 @@
 ---
 layout: twoColumn
-section: documentation
-type: documentation-introduction
 title:  "Tools Available"
-description: "Tools available for you to build on the HAT"
+description: "Tools Available"
 ---
 
 # Tools Available for you to build on the HAT 

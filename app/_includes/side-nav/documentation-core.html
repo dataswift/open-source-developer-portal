@@ -1,5 +1,5 @@
 <section>
-    <h6>Introduction</h6>
+  <h6><a href="/documentation/">Introduction</a></h6>
     <ul>
     {% for item in site.pages %}
 
@@ -22,11 +22,11 @@
         {% endif %}
     {% endfor %}
     </ul>
-    <h6>Endpoints</h6>
+    <h6>API V1</h6>
     <ul>
     {% for item in site.pages %}
 
-        {% if item.section == 'documentation' and item.type == 'documentation-endpoint' %}
+        {% if item.section == 'documentation' and item.type == 'documentation-api1' %}
         <li>
             {% capture second_level_dir %}{{ page.url | remove_first: '/documentation/' | split:'/' | first }}{% endcapture %}
             {% capture file_name %}{{ item.url | remove_first: '/documentation/' | remove_first: '.html' }}{% endcapture %}
@@ -45,9 +45,27 @@
         {% endif %}
     {% endfor %}
     </ul>
-    <h6>Other Resources</h6>
-    <ul>
-      <li class="external-link"><a href="https://hatters.hubofallthings.com" target="_blank"><span class="icon-sidenav-option">Get a HAT</span></a></li>
-      <li class="external-link"><a href="http://forum.hatcommunity.org/c/developers" target="_blank"><span class="icon-sidenav-option">Developer Forum</span></a></li>
-    </ul>
+  <h6>API V2 - Coming Soon!</h6>
+  <ul>
+    {% for item in site.pages %}
+
+    {% if item.section == 'documentation' and item.type == 'documentation-api2' %}
+    <li>
+      {% capture second_level_dir %}{{ page.url | remove_first: '/documentation/' | split:'/' | first }}{% endcapture %}
+      {% capture file_name %}{{ item.url | remove_first: '/documentation/' | remove_first: '.html' }}{% endcapture %}
+      <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+      <ul>
+        {% assign pages = site.pages | sort:'weight'  %}
+        {% for subItem in pages %}
+        {% if subItem.section == item.title and subItem.type == 'article' %}
+        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
 </section>

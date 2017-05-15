@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-endpoint
+type: documentation-api1
 title:  "Sharing and Direct Data Debits"
 description: "Sharing and Direct Data Debits"
 ---

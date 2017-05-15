@@ -1,7 +1,5 @@
 ---
 layout: twoColumn
-section: documentation
-type: documentation-introduction
 title:  "Knowing the HAT Tech Ecosystem"
 description: "Knowing the HAT Tech Ecosystem"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-endpoint
+type: documentation-api1
 title:  "User Management"
 description: "User Management"
 ---

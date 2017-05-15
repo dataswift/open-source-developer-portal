@@ -1,0 +1,94 @@
+<section>
+  <h6><a href="/home/">What is the HAT and why build on it?</a></h6>
+    <ul>
+    {% for item in site.pages %}
+
+        {% if item.section == 'home' and item.type == 'home-why' %}
+        <li>
+            {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+            <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+                {{ item.title }}
+            </a>
+            <ul>
+                {% assign pages = site.pages | sort:'weight'  %}
+                {% for subItem in pages %}
+                    {% if subItem.section == item.title and subItem.type == 'article' %}
+                        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  <h6><a href="/home/knowing_the_hat_tech_ecosystem.html">Knowing the HAT Tech Ecosystem</a></h6>
+    <ul>
+    {% for item in site.pages %}
+
+        {% if item.section == 'home' and item.type == 'home-knowing' %}
+        <li>
+            {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+            <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+                {{ item.title }}
+            </a>
+            <ul>
+                {% assign pages = site.pages | sort:'weight'  %}
+                {% for subItem in pages %}
+                    {% if subItem.section == item.title and subItem.type == 'article' %}
+                        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  <h6><a href="/home/tools_available.html">Tools Available</a></h6>
+  <ul>
+    {% for item in site.pages %}
+
+    {% if item.section == 'home' and item.type == 'home-tools' %}
+    <li>
+      {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+      {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+      <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+      <ul>
+        {% assign pages = site.pages | sort:'weight'  %}
+        {% for subItem in pages %}
+        {% if subItem.section == item.title and subItem.type == 'article' %}
+        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  <h6><a href="/home/what_can_you_make_on_the_hat.html">What can you make on the HAT?</a></h6>
+  <ul>
+    {% for item in site.pages %}
+
+    {% if item.section == 'home' and item.type == 'home-what' %}
+    <li>
+      {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+      {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+      <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+      <ul>
+        {% assign pages = site.pages | sort:'weight'  %}
+        {% for subItem in pages %}
+        {% if subItem.section == item.title and subItem.type == 'article' %}
+        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>

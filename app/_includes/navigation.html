@@ -5,8 +5,10 @@
     <div class="js-two-col-header-secondary">
       {% endif %}
       <div class="page-wrap">
-        <a href="/documentation/what_is_hat_and_why_build_on_it.html" class="no-nav js-two-col-no-toggle{% if page.url contains '/documentation/what_is_hat_and_why_build_on_it' %} active{% endif %}">Home</a>
+        <a href="/home/" {% if page.url contains '/home/' %} class="active"{% endif %}>Home</a>
         <a href="/documentation/" {% if page.url contains '/documentation/' %} class="active"{% endif %}>Documentation</a>
+        <a href="/support/" {% if page.url contains '/support/' %} class="active"{% endif %}>Support</a>
+        <a href="/tutorials/" {% if page.url contains '/tutorials/' %} class="active"{% endif %}>Tutorials</a>
         <a href="https://github.com/Hub-of-all-Things" class="no-nav js-two-col-no-toggle">Repositories</a>
         <div class="custom-select custom-select--blue js-global-language-select">
           <select name="select" class="js-language-select">

@@ -1,9 +1,7 @@
 ---
 layout: twoColumn
-section: documentation
-type: documentation-introduction
-title:  "What is the HAT and why build on it?"
-description: "What is the HAT and why build on it?"
+title:  "What is the HAT and why Build on It?"
+description: "What is the HAT and why Build on It?"
 ---
 
 # What is the HAT and why Build on It?
