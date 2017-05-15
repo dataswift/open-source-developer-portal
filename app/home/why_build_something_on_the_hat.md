@@ -42,7 +42,7 @@ The HAT is built by some of the best technical developers and engineers in the w
 
 HAT PDMAs (Private Data Microservice Accounts) also feature data and metadata analysis tools that can be leveraged by app developers for some specialised tasks, like machine learning and personalisation.
 
-Businesses would otherwise have to plumb and combine all kinds of data sets from disparate sources to make personal data usable and deal with issues of privacy, security as well. Details see the [ecosystem architecture] (https://github.com/Hub-of-all-Things/HAT), and the [tools available](https://github.com/Hub-of-all-Things/HAT2.0).
+Businesses would otherwise have to plumb and combine all kinds of data sets from disparate sources to make personal data usable and deal with issues of privacy, security as well. Details see the [ecosystem architecture](knowing_ecosystem.html), and the [tools available](core_hat.html).
 
 Leveraging the tools and existing processes, now developers can focus on data exchange and engagement with HATs simply through a few API calls.
 
