@@ -7,8 +7,7 @@ description: "About HCF"
 ---
 
 
-# title
-HCF
+# HCF
 
 The HAT Community Foundation, as the non-profit regulatory body governing the HAT Foundation, has four functions – the growth, innovation, representation, and regulation of the HAT Platform. The below section elaborates on its function as a regulator.
 
