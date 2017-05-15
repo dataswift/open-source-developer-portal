@@ -25,20 +25,3 @@ description: "What is the HAT and why Build on It?"
     </li>
 </ul>
 
-<!--
-<h1>Endpoints</h1>
-<ul class="article-list">
-    <li>
-        <h3><a href="/documentation/raw_data_input_and_output.html">Raw Data I/O</a></h3>
-        <p>The Raw Data level provides a flexible substrate for users to import a varying range of data. This is achieved through a virtualised database.</p>
-    </li>
-    <li>
-        <h3><a href="/documentation/sharing_and_direct_data_debits.html">Sharing and Direct Data Debits</a></h3>
-        <p>The HAT’s Direct Data Debit (D3) System work like a direct debit in a bank: we can decide exactly what Data to share, for how long, to whom such data may be exchanged, and what return may be offered in the exchange.</p>
-    </li>
-    <li>
-        <h3><a href="/documentation/user_management.html">User Management</a></h3>
-        <p>There are 4 Account roles defined within the HAT.</p>
-    </li>
-</ul>
--->
