@@ -20,7 +20,7 @@ description: "What is the HAT and why Build on It?"
         <p>Find general information about the API available on every HAT.</p>
     </li>
     <li>
-        <h3><a href="hat_core.html">Tools Available</a></h3>
+        <h3><a href="HAT_core.html">Tools Available</a></h3>
         <p>The HAT API is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
     </li>
 </ul>
