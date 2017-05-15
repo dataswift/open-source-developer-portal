@@ -2,22 +2,22 @@
 layout: twoColumn
 section: "HAT Application"
 type: article
-title:  "Trading Platform Services"
-description: "Trading Platform Services"
+title:  "DEX Services"
+description: "DEX Services"
 ---
 
-# Trading Platform Services
+# DEX Services
 
-Trading Platform Services are offered by HATDeX and operate in the background of all trading platform applications. These services include: 
+DEX Services are offered by HATDeX and enable applications to become multi-sided markets to trade data between their users and other organizations. These services therefore give HAT applications a trading platform capability: 
 
 ### Offer registration
 HATDeX can register offers from a Trading Platform application and make registered offers available elsewhere in the ecosystem; 
 
 ### Offer status tracking 
-HATDeX can report the status of data offers made by Trading Platform applications, including which an offer has been claimed or rejected by HAT Users; 
+HATDeX can report the status of data offers made by Trading Platform applications, including which offer has been claimed or rejected by HAT Users; 
 
 ### Billing rules 
-HATDeX can facilitate cross-platform billing, such as for offers onboarded from Platform A, but claimed via Platform B; 
+HATDeX can facilitate cross-platform billing, such as for offers onboarded from Application A, but claimed via Application B; 
 
 ### Data Debit requirement registration
 HATDeX can take agreed Data Offers from Data Trading Platforms, configure Data Debit on HATs, and enable the full data exchange at the HAT level; 
