@@ -19,4 +19,4 @@ We have heard many cool applications that could mix HAT data into other services
 
 * A government gateway app that collects our basic information for accessing public service, but only under our consent.
 
-Still need more ideas? Check out what cool apps our partners have been building
+Still need more ideas? Check out what [cool apps other innovators have been building](http://innovation.hubofallthings.com/c/innovation)
