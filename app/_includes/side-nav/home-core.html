@@ -1,0 +1,94 @@
+<section>
+  <h6>What is the HAT and why build on it?</h6>
+    <ul>
+    {% for item in site.pages %}
+
+        {% if item.section == 'home' and item.type == 'home-why' %}
+        <li>
+            {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+            <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+                {{ item.title }}
+            </a>
+            <ul>
+                {% assign pages = site.pages | sort:'weight'  %}
+                {% for subItem in pages %}
+                    {% if subItem.section == item.title and subItem.type == 'article' %}
+                        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  <h6>Knowing the HAT Tech Ecosystem</h6>
+    <ul>
+    {% for item in site.pages %}
+
+        {% if item.section == 'home' and item.type == 'home-knowing' %}
+        <li>
+            {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+            {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+            <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+                {{ item.title }}
+            </a>
+            <ul>
+                {% assign pages = site.pages | sort:'weight'  %}
+                {% for subItem in pages %}
+                    {% if subItem.section == item.title and subItem.type == 'article' %}
+                        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+  <h6>Tools Available</h6>
+  <ul>
+    {% for item in site.pages %}
+
+    {% if item.section == 'home' and item.type == 'home-tools' %}
+    <li>
+      {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+      {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+      <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+      <ul>
+        {% assign pages = site.pages | sort:'weight'  %}
+        {% for subItem in pages %}
+        {% if subItem.section == item.title and subItem.type == 'article' %}
+        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  <h6>What can you make on the HAT?</h6>
+  <ul>
+    {% for item in site.pages %}
+
+    {% if item.section == 'home' and item.type == 'home-what' %}
+    <li>
+      {% capture second_level_dir %}{{ page.url | remove_first: '/home/' | split:'/' | first }}{% endcapture %}
+      {% capture file_name %}{{ item.url | remove_first: '/home/' | remove_first: '.html' }}{% endcapture %}
+      <a href="{{ item.url }}" {% if page.url == item.url or second_level_dir == file_name %}class="active"{% endif %}>
+        {{ item.title }}
+      </a>
+      <ul>
+        {% assign pages = site.pages | sort:'weight'  %}
+        {% for subItem in pages %}
+        {% if subItem.section == item.title and subItem.type == 'article' %}
+        <li><a href="{{ subItem.url }}" {% if page.url == subItem.url %}class="active"{% endif %}>{{ subItem.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</section>

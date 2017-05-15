@@ -1,184 +1,8 @@
 ---
 layout: page
-title: Dwolla API Documentation
+title: Documentation
 bodyClass: home
-description: Developer docs for our RESTful API for ACH transfers.
-
-sampleRuby: >
-    ```ruby
-
-    require 'dwolla_v2'
-
-
-    $dwolla = DwollaV2::Client.new(id: ENV["DWOLLA_ID"], secret: ENV["DWOLLA_SECRET"]) do |config|
-        config.environment = :sandbox
-    end
-
-
-    account_token = $dwolla.tokens.new access_token: "GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N"
-
-
-    request_body = {
-      :_links => {
-        :source => {
-          :href => "https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e"
-        },
-        :destination => {
-          :href => "https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d"
-        }
-      },
-      :amount => {
-        :currency => "USD",
-        :value => "1.00"
-      }
-    }
-
-
-    transfer = account_token.post "transfers", request_body
-
-    transfer.headers[:location] # => "https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388"
-
-    ```
-
-sampleRaw: >
-    ```raw
-
-    curl -X POST -H "Authorization: Bearer GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N" \
-    -H "Content-Type: application/vnd.dwolla.v1.hal+json" \
-    -H "Accept: application/vnd.dwolla.v1.hal+json" \
-    -d '{
-        "_links": {
-            "source": {
-                "href": "https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e"
-
-            },
-            "destination": {
-                "href": "https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d"
-            }
-        },
-        "amount": {
-            "currency": "USD",
-            "value": "1.00"
-        }
-    }' 'https://api-uat.dwolla.com/transfers' -v
-
-    ```
-
-samplePython: >
-    ```python
-
-    import dwollav2
-
-
-    client = dwollav2.Client(
-      id = os.environ['DWOLLA_ID'],
-      secret = os.environ['DWOLLA_SECRET'],
-      environment = 'sandbox'
-    )
-
-
-    account_token = client.Token(access_token = 'GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N')
-
-
-    request_body = {
-      '_links': {
-        'source': {
-          'href': 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e'
-        },
-        'destination': {
-          'href': 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d'
-        }
-      },
-      'amount': {
-        'currency': 'USD',
-        'value': '1.00'
-      }
-    }
-
-
-    transfer = account_token.post('transfers', request_body)
-
-    transfer.headers['location'] # => 'https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388'
-
-    ```
-
-samplePHP: >
-    ```php
-
-    <?php
-
-    DwollaSwagger\Configuration::$auth_token = 'GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N';
-
-
-    $apiClient = new DwollaSwagger\ApiClient("https://api-uat.dwolla.com/");
-
-
-    $transfer_request = array (
-      '_links' =>
-      array (
-        'source' =>
-        array (
-          'href' => 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e',
-        ),
-        'destination' =>
-        array (
-          'href' => 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d',
-        ),
-      ),
-      'amount' =>
-      array (
-        'currency' => 'USD',
-        'value' => '9.00',
-      ),
-    );
-
-
-    $transferApi = new DwollaSwagger\TransfersApi($apiClient);
-
-
-    $myAccount = $transferApi->create($transfer_request);
-
-    print($xfer); # => https://api-uat.dwolla.com/transfers/d76265cd-0951-e511-80da-0aa34a9b2388
-
-    ?>
-
-    ```
-
-sampleJavascript: >
-    ```javascript
-
-    var dwolla = require('dwolla-v2');
-
-
-    var client = new dwolla.Client({id: "...", secret: "..."});
-
-
-    var accountToken = new client.Token({access_token: "GnlMMOlLLTTwRRC44gGPkjfsVbVtwzkptDVdIB0fwGwLnV481N"});
-
-
-    var requestBody = {
-      _links: {
-        source: {
-          href: 'https://api-uat.dwolla.com/funding-sources/118b08b9-e1eb-48b7-94ad-866989b0764e'
-        },
-        destination: {
-          href: 'https://api-uat.dwolla.com/funding-sources/2fa64102-185d-443d-9001-dda9bc37651d'
-        }
-      },
-      amount: {
-        currency: 'USD',
-        value: '1.00'
-      }
-    };
-
-
-    accountToken
-      .post('transfers', requestBody)
-      .then(function(res) {
-        res.headers.get('location'); // => 'https://api-uat.dwolla.com/transfers/74c9129b-d14a-e511-80da-0aa34a9b2388'
-      });
-
-    ```
+description: Developer docs for our Hub of All Things API.
 ---
 <div class="cnt-one-col">
     <section class="cnt-two-col__nav js-two-col-nav">
@@ -186,31 +10,25 @@ sampleJavascript: >
     </section>
     <section class="cnt-one-col__banner banner">
         <div class="page-wrap">
-            <img class="top-image" alt="" src="https://cdn.dwolla.com/images/cms/icons/headers/header-access-api.svg">
-            <h1>Simple and powerful API for ACH transfers</h1>
-            <a href="/guides/" class="btn primary large">View all guides</a>
+            <img class="top-image" alt="" src="/images/header-access-api.svg">
+            <h1>Your own private data account.</h1>
+            <a href="/documentation/" class="btn primary large">View all documentation</a>
         </div>
         <div class="banner__background"></div>
     </section>
     <section class="hover-box cnt-one-col__hover-box page-wrap">
-        <h2>Try it out</h2>
+        <h2>Learn more about HAT</h2>
 
-        <div style="text-align: left">
-            {{ page.sampleRuby | markdownify }}
-            {{ page.sampleJavascript | markdownify }}
-            {{ page.sampleRaw | markdownify }}
-            {{ page.samplePython | markdownify }}
-            {{ page.samplePHP | markdownify }}
-        </div>
+        <iframe width="100%" height="500" style="margin: 25px 0 50px 0;" src="https://www.youtube.com/embed/DAn2HB7FfmM?showinfo=0" frameborder="0" allowfullscreen></iframe>
 
         <section class="split-options">
             <div>
-                <h3 class="icon-home-sandbox">Set up Sandbox</h3>
-                <a href="/guides/sandbox-setup/" class="btn secondary large">Get started</a>
+                <h3 class="icon-home-sandbox">Get a HAT</h3>
+                <a href="https://hatters.hubofallthings.com/" class="btn secondary large">Get started</a>
             </div>
             <div>
                 <h3 class="icon-home-dev-community">Developer community</h3>
-                <a href="https://discuss.dwolla.com/c/api-support" class="btn secondary large">Get answers</a>
+                <a href="http://forum.hatcommunity.org/c/developers" class="btn secondary large">Get answers</a>
             </div>
         </section>
     </section>
@@ -218,5 +36,3 @@ sampleJavascript: >
         {% include reach-out.html %}
     </div>
 </div>
-
-{% include status-widget.html %}
