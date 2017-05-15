@@ -1,4 +1,10 @@
-
+---
+layout: twoColumn
+section: home
+type: home-knowing
+title:  "Knowing the Ecosystem"
+description: "Knowing the Ecosystem"
+---
 
 # Knowing the Ecosystem
 The HAT Platform operates through four main bodies;
