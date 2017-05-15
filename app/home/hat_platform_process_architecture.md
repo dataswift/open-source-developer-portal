@@ -2,8 +2,8 @@
 layout: twoColumn
 section: home
 type: home-knowing
-title:  "HAT Ecosystem Architecture and Processes"
-description: "HAT Ecosystem Architecture and Processes"
+title:  "The Architecture Diagram"
+description: "The Architecture Diagram"
 ---
 
 # The HAT architecture diagram
