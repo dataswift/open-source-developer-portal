@@ -4,94 +4,10 @@ title:  "Tools Available"
 description: "Tools Available"
 ---
 
-# Tools Available for you to build on the HAT 
+#Tools Available
 
-## The most up to date stable version of HAT core is [HAT 2.0] ([https://github.com/Hub-of-all-Things/HAT2.0](https://github.com/Hub-of-all-Things/HAT2.0))
+In the current architecture, a Kubernetes cluster is created to run HATs. Kubernetes is used to manage all HATs and their databases running as separate, isolated Docker containers across a number of Elastic Compute Cloud EC2 instances. Each HAT communicates with the outside world via APIs and can be accessed by the owner and authorized applications from the outside world, including Rumpel interface. HAT data is persisted in encrypted Elastic Block Store EBS units and backed up using EBS Snapshots, to make sure individuals data is not lost even in the case of outages.
 
-In the current architecture, a [Kubernetes](http://k8s.io) cluster is created to run HATs. Kubernetes is used to manage all HATs and their databases running as separate, isolated [Docker](https://docker.com) containers across a number of Elastic Compute Cloud [EC2](https://aws.amazon.com/ec2) instances. Each HAT communicates with the outside world via [APIs](https://en.wikipedia.org/wiki/Application_programming_interface) and can be accessed by the owner and authorized applications from the outside world, including Rumpel interface. HAT data is persisted in encrypted Elastic Block Store [EBS](https://aws.amazon.com/ebs) units and backed up using EBS Snapshots, to make sure individuals' data is not lost even in the case of outages.
+Currently available Data Plugs are run using a separate set of cloud resources, managed by http://hubofallthings.com using the same orchestration tools and similar infrastructure. Further Data Plugs, developed by third-parties can be hosted separately and talk to individual HATs via the provided APIs.
 
-Currently available Data Plugs are run using a separate set of cloud resources, managed by [http://hubofallthings.com](http://hubofallthings.com) using the same orchestration tools and similar infrastructure. Further Data Plugs, developed by third-parties can be hosted separately and talk to individual HATs via the provided APIs.
-
-Each database contains a data [schema](https://github.com/Hub-of-all-Things/hat-database-schema), allowing for storing any individual's data from any source without loosing the structure specific to the source, at the same time allowing the individual to relate their data to the context of their personal life and provide a common semantic structure for third parties to use such data.
-
-## Off-the-shelf HATs
-
-if you'd like to start playing with some off the shelf hats, they are available from various of HAT Service Providers [[http://hatters.hubofallthings.com/](http://hatters.hubofallthings.com/)]. Or, you can deploy own-branded HAT through API calls (HAT as a Service - [http://www.hatdex.org/hat-as-a-service/](http://www.hatdex.org/hat-as-a-service/)); or even build on alternative infrastructure ([http://www.hatdex.org/hat-milliner-service/](http://www.hatdex.org/hat-milliner-service/)).
-
-## API
-
-HAT APIs were developed to exercise user managed control of your personal data. REST APIs for the HAT schema can be used by web, mobile and other clients to interact with the HAT, allowing the user to control their data and applications benefit from it. API documentation can be found at [http://hub-of-all-things.github.io/doc](http://hub-of-all-things.github.io/doc).
-
-We also provide convenience wrappers [Hat Client Scala Play](https://github.com/Hub-of-all-Things/hat-client-scala-play) around HAT HTTP APIs and contains the most up-to-date set of typesafe HAT Data Models and Play-JSON based serializers and deserializers for them.
-
-For those who would like to build an app to interact with HATs’ personal data, it is a matter of calling HAT APIs for data I/O. A developers' portal [[http://developers.hubofallthings.com/](http://developers.hubofallthings.com/)] is available for tools available, documentations[link to api doc], zero-touch onboarding HATs, Apps, and other services in a sandbox environment.
-
-The access to data in any HAT is via data offers. Once a data offer is agreed, specified data points from a HAT will be prepared for the data shopper as data debit (all data is within one bundle of a data debit), and retrievable through an API endpoint on that HAT that has accepted the offer.
-
-A “development” free option for organisations who don’t really want commit to any development but still interaction with customer via HATs. Organisations can become a Data Buyer to shop personal data [link to the tool to come], in a similar way one would shop at Amazon.
-
-## Data Plugs
-
-Data Plugs are bits of software allowing to retrieve individual's data (well basically our personal data) from data sources on internet (e.g. Facebook) into the HAT.
-
-DataPlugs in the HAT ecosystem are self-contained services that act between a service providing data and a HAT. We have a [project](https://github.com/Hub-of-all-Things/DataPlugs) provides reusable libraries and structures for building such DataPlugs as well as examples of already built ones：
-
-**Facebook Data Plug**
-
-[https://github.com/Hub-of-all-Things/DataPlugFacebook](https://github.com/Hub-of-all-Things/DataPlugFacebook)
-
-Facebook Data Plug uses the Graph API to get data out of Facebook’s platform to the individual’s HAT. The Graph API is a “social graph”, which represents all data on Facebook as:
-
-*   nodes, which are Things like, for example, a user or a page;
-*   fields, which contain info about the Things like, for example, user’s name or birthday;
-*   edges, which connect the Things like, for example, comments on user’s photos Currently supported nodes within the HAT are: Facebook user’s profile (such as name, age, etc), posts and events. Future development will feature more updates from a user's such as likes, check-ins, travels and other connect services like Spotify. More information about Facebook Graph API can be found [here](https://developers.facebook.com/docs/graph-api/reference).
-
-**Dropbox Photo Data Plug**
-
-[https://github.com/Hub-of-all-Things/DataPlugDropbox](https://github.com/Hub-of-all-Things/DataPlugDropbox)
-
-Dropbox Data Plug currently uses Dropbox API to create metalinks to individual’s photos on Dropbox. This allows user to view his/her photos directly from the HAT, while the photos themselves are kept in the Dropbox storage. More information about the Dropbox API can be found [here](https://www.dropbox.com/developers/documentation/http/documentation).
-
-**iCal Calendar Data Plug**
-
-[https://github.com/Hub-of-all-Things/DataPlugCalendar](https://github.com/Hub-of-all-Things/DataPlugCalendar)
-
-Calendar Data Plug employs iCalendar file format allowing individuals to collect their calendar information back into their hats. iCalendar Data synchronisation within the HAT is initialised by entering user’s ics calendar url into the form and submitting it. It depends on your calendar provider how you can obtain the URL. For example, for Google calendar visit [this](https://support.google.com/calendar/answer/37648?hl=en). Currently iCal Celendar Data Plug extracts a simple set of individual’s calendar event information, using ical.js ([https://github.com/mozilla-comm/ical.js](https://github.com/mozilla-comm/ical.js)) library: event name, event start and end dates, “last updated” timestamp, event location, attendees, summary, description and organiser. For more information about iCalendar, please visit [this](https://en.wikipedia.org/wiki/ICalendar).
-
-**Weather Data Plug**
-
-The weather data plug is a Rumpel built-in function. It collects weather conditions at individual’s live location or a pre-defined location. It calls weather services from Weather Underground. Weather underground API documentation can be found [here](https://www.wunderground.com/weather/api/d/docs).
-
-## Rumpel
-
-[Harriet Project](http://hubofallthings.com/Harriet) team initiated the creation of [RUMPEL](https://github.com/Hub-of-all-Things/rumpel) - a hyper data browser for your HAT data. No one else can use RUMPEL to view your HAT data except yourself, as the HAT owner. It is compatible with all computer Operating Systems and it excludes all third parties, advertisements and ‘hard selling’. It is also being made available as an open source programme, under Mozilla Public License. Personal Data is a combination of various information: your location on your phone, your Facebook postings, the music you listen to, etc. But we have never seen all of this data in one place! So when we do not have a way of seeing our data, we do not feel precious about it. It is like seeing bits of your clothing all over the place, but only when they come together in your wardrobe do you realise you have some good stuff and you can mix and match for your own benefit. Rumpel therefore fulfils this important psychological function with your Personal Data - making it your own HyperData Browser (our personal data wardrobe) with good data visualisations of your own data and allowing you to create bundles and collections. And in so doing, Rumpel must be able to "spin straw to gold" - to make the human being feel her / his data has value to herself / himself.
-
-There are many people who want to sell their data because they think it is valuable to firms. What they do not understand is that an exchange of a precious commodity can happen only when both sides value the data. If Rumpel can make you see real value of the data to yourself, you will demand more in exchange for it. But more importantly, the firms would also find your contextualised data more valuable!
-
-To find out more about Rumpel, click [here](https://rumpel.hubofallthings.com/#/about)
-
-## RumpelLite
-
-RumpelLite is the dashboard for your HAT on iOS. You can do with Rumpel Lite to
-
-*   Download and configure a HAT - private, personal data containers for storing consumer information generated on the internet #### Securely store and maintain your own personal information
-*   Gather and capture information that's created about you by internet services like Facebook and Twitter
-*   Monitor and retain iOS sensor data about your location • Store and publish text-based notes and updates
-
-## MarketSquare
-
-MarketSquare is the public facing ‘App Store’, the service provided by HCF so that HATs can come together as a community and engage with the wider stakeholder community of the HAT ecosystem. On Marketsquare, HAT users can browse apps, hat providers, data offers, and build sub groups of HATs interested to engage with a cause or build new functionalities on the HAT. HAT users can keep up to date with the latest news, and chat with other HAT users.
-
-MarketSquare is also one of the places where data shoppers sign up to ask for HAT data and HAT users can browse these offers and decide which are relevant and if they are willing to exchange their data in return for the benefits.
-
-Developers also go to MarketSquare to get their data plugs validated and published. Data plugs are services created by developers who wish to bring more and different types of data into the HAT. If a data plug has been created by a developer, they come into Marketsquare and register it for approval. Once approved, HAT users can use these data plugs to bring their data into their HATs. HAT users can also vote for the quality of the data plug by voting on it.
-
-Click [here](https://marketsquare.hubofallthings.com/about) to find out more about MarketSquare.
-
-We also provide convenience wrappers [Scala API wrappers for the HAT MarketSquare](https://github.com/Hub-of-all-Things/marketsquare-client-scala-play#scala-api-wrappers-for-the-hat-marketsquare) around HAT MarketSquare HTTP APIs and contains the most up-to-date set of typesafe MarketSquare Data Models and Play-JSON based serializers and deserializers for them.
-
-It relies on Play-WS for an asynchronous HTTP client.
-
-## Forum
-
-We would like to encourage you to ask any questions you have and share your thoughts about your HAT experience. You can do this by joining [the HAT forum](http://forum.hatcommunity.org).
+Each database contains a data schema, allowing for storing any individuals data from any source without loosing the structure specific to the source, at the same time allowing the individual to relate their data to the context of their personal life and provide a common semantic structure for third parties to use such data.
