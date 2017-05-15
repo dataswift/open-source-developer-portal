@@ -91,12 +91,6 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//documentation/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
@@ -106,16 +100,22 @@
     <loc>http://developers.hubofallthings.com//tutorials/</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//support/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//documentation/</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//home/knowing_ecosystem.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/hatdex/milliner_service.html</loc>
@@ -172,6 +172,9 @@
     <loc>http://developers.hubofallthings.com//documentation/user_management.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//home/what_can_you_make.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//home/what_is_hat.html</loc>
   </url>
   <url>
@@ -179,18 +182,18 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-05-15T14:39:29+00:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-05-15T14:39:29+00:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-05-15T14:39:29+00:00</lastmod>
+    <lastmod>2017-05-04T07:35:02-04:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-05-15T14:39:29+00:00</lastmod>
+    <lastmod>2017-05-04T07:35:24-04:00</lastmod>
   </url>
 </urlset>
