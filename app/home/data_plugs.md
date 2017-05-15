@@ -12,7 +12,7 @@ Data Plugs are bits of software allowing to retrieve individual's data (well bas
 
 DataPlugs in the HAT ecosystem are self-contained services that act between a service providing data and a HAT. We have a [project](https://github.com/Hub-of-all-Things/DataPlugs) provides reusable libraries and structures for building such DataPlugs as well as examples of already built ones：
 
-*** Facebook Data Plug
+### Facebook Data Plug
 
 [https://github.com/Hub-of-all-Things/DataPlugFacebook](https://github.com/Hub-of-all-Things/DataPlugFacebook)
 
@@ -23,13 +23,13 @@ Facebook Data Plug uses the Graph API to get data out of Facebook’s platform t
 
 Currently supported nodes within the HAT are: Facebook user’s profile (such as name, age, etc), posts and events. Future development will feature more updates from a user's such as likes, check-ins, travels and other connect services like Spotify. More information about Facebook Graph API can be found [here](https://developers.facebook.com/docs/graph-api/reference).
 
-*** Dropbox Photo Data Plug
+### Dropbox Photo Data Plug
 
 [https://github.com/Hub-of-all-Things/DataPlugDropbox](https://github.com/Hub-of-all-Things/DataPlugDropbox)
 
 Dropbox Data Plug currently uses Dropbox API to create metalinks to individual’s photos on Dropbox. This allows user to view his/her photos directly from the HAT, while the photos themselves are kept in the Dropbox storage. More information about the Dropbox API can be found [here](https://www.dropbox.com/developers/documentation/http/documentation).
 
-*** iCal Calendar Data Plug
+### iCal Calendar Data Plug
 
 [https://github.com/Hub-of-all-Things/DataPlugCalendar](https://github.com/Hub-of-all-Things/DataPlugCalendar)
 
