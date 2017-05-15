@@ -5,14 +5,14 @@ description: "What is the HAT and why Build on It?"
 ---
 
 <h1>Introduction</h1>
-<p>Welcome to the Hub-of-All-Things API!</p>
+<p>Welcome to the Hub-of-All-Things Developers' Portal!</p>
 
-<p>Hub-of-All-Things is a platform for a Multi-Sided Market powered by the Internet of Things.</p>
+<p>The HAT is a privacy-preserving framework for transacting personal data between Internet apps and services and their users or customers. Applications that are built on the HAT store their users' personal data in containerised databases that are owned and controlled by the users themselves. HAT-enabled applications then access that data through 'data debits' that give them access in return for the services they provide..</p>
 
 <p>The HAT code is publicly available on <a href="http://github.com/Hub-of-all-Things/HAT2.0">GitHub</a></p>
 <ul class="article-list">
     <li>
-        <h3><a href="/documentation/about_the_hat.html">About the HAT</a></h3>
+        <h3><a href="/home/what_is_hat.html">What is the HAT and why build on it?</a></h3>
         <p>Learn more about the Hub of All Things, and the technology behind it.</p>
     </li>
     <li>
