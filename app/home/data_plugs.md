@@ -8,9 +8,23 @@ description: "Data Plugs"
 
 # Data Plugs 
 
-Data Plugs are bits of software allowing to retrieve individual's data (well basically our personal data) from data sources on internet (e.g. Facebook) into the HAT. 
+Data Plugs are bits of software allowing to retrieve individual's data (well basically our personal data) from data sources on internet (e.g. Facebook) into the HAT. HAT Data Plugs available are written in Scala/Play.
 
-DataPlugs in the HAT ecosystem are self-contained services that act between a service providing data and a HAT. We have a [project](https://github.com/Hub-of-all-Things/DataPlugs) provides reusable libraries and structures for building such DataPlugs as well as examples of already built ones：
+DataPlugs in the HAT ecosystem are self-contained services that act between a service providing data and a HAT. This project provides reusable libraries and structures for building such DataPlugs as well as examples of already built ones.
+
+### How to build a new DataPlug (twitter data plug)
+
+[https://github.com/Hub-of-all-Things/DataPlugs/blob/master/README.md](https://github.com/Hub-of-all-Things/DataPlugs/blob/master/README.md)
+
+Taking Twitter as an example, this plug implemented a data plug built on the Scala/Play framework 
+
+- `commonPlay` as a set of various reusable blocks of code and libraries
+- `dataplug` the core components of any DataPlug
+
+using convenience API wrappers served as HAT Library Artifacts:
+
+- `hat-client-scala-play` as a Scala wrapper around the HAT HTTP API
+- `marketsquare-client-scala-play` as a Scala wrapper around the HATDeX MarketSquare HTTP API
 
 ### Facebook Data Plug
 
