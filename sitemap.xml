@@ -10,9 +10,6 @@
     <loc>http://developers.hubofallthings.com//home/hat_application/basic_hat_app_functionality.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/challenges_in_building_something_similar.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_field.html</loc>
   </url>
   <url>
@@ -79,16 +76,16 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/</loc>
+    <loc>http://developers.hubofallthings.com//sitemap/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//tutorials/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//sitemap/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//tutorials/</loc>
+    <loc>http://developers.hubofallthings.com//support/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/</loc>
@@ -97,10 +94,10 @@
     <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/hatdex/milliner_service.html</loc>
@@ -155,6 +152,9 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/user_management.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/what_is_hat.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/why_build_something_on_the_hat.html</loc>
