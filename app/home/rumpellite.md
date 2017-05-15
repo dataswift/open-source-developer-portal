@@ -13,3 +13,5 @@ description: "RumpelLite"
 * Securely store and maintain your own personal information
 * Gather and capture information that's created about you by internet services like Facebook and Twitter
 * Monitor and retain iOS sensor data about your location • Store and publish text-based notes and updates
+
+It is made available as an open source programme, under Mozilla Public License.
