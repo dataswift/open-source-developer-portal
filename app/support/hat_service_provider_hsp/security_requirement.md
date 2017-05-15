@@ -57,13 +57,13 @@ Please note that where a specific standard, protocol or manufacturer program is 
 #### What procedures are in place for investigating security breaches
 
 # Business Continuity
-## What continuity plans are in place to cover loss of staff resource and expertise
-## What continuity plans are in place in the event of loss of, or severe disruption to/loss of premises
-## When was the business continuity/disaster recovery plan last tested
-## What data back-up procedure is in place and encryption
-## What are the recovery timescales
+#### What continuity plans are in place to cover loss of staff resource and expertise
+#### What continuity plans are in place in the event of loss of, or severe disruption to/loss of premises
+#### When was the business continuity/disaster recovery plan last tested
+#### What data back-up procedure is in place and encryption
+#### What are the recovery timescales
 
 # Additional Data Protection Terms
 
-## If you are being asked to respond to deliver or potentially deliver a hosted service, please state whether this is physical or Cloud provision?
-## Physically, where is the data kept. Is it ever located outside of the UK / EU?  - INFORMATION ONLY
+#### If you are being asked to respond to deliver or potentially deliver a hosted service, please state whether this is physical or Cloud provision?
+#### Physically, where is the data kept. Is it ever located outside of the UK / EU?  - INFORMATION ONLY
