@@ -82,19 +82,16 @@
     <loc>http://developers.hubofallthings.com//support/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//tutorials/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/knowing_the_hat_tech_ecosystem.html</loc>
+    <loc>http://developers.hubofallthings.com//tutorials/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
@@ -151,9 +148,6 @@
     <loc>http://developers.hubofallthings.com//documentation/the_api.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/tools_available.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//home/hat_application/trading_platform_services.html</loc>
   </url>
   <url>
@@ -161,9 +155,6 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/user_management.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/what_can_you_make_on_the_hat.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/why_build_something_on_the_hat.html</loc>
