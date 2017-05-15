@@ -7,7 +7,7 @@ description: "What is the HAT and why Build on It?"
 <h1>HAT Developers' Home</h1>
 <p>Welcome to the Hub-of-All-Things Developers' Portal!</p>
 
-<p>The HAT is a privacy-preserving framework for transacting personal data between Internet apps and services and their users or customers. Applications that are built on the HAT store their users' personal data in containerised databases that are owned and controlled by the users themselves. HAT-enabled applications then access that data through 'data debits' that give them access in return for the services they provide..</p>
+<p>The HAT is a privacy-preserving framework for transacting personal data between Internet apps and services and their users or customers. Applications that are built on the HAT store their users' personal data in containerised databases that are owned and controlled by the users themselves i.e. the HAT Private "Microserver" Data Account (PDMA). HAT-enabled applications then access that data through 'data debits' that give them access in return for the services they provide..</p>
 
 <p>The HAT code is publicly available on <a href="http://github.com/Hub-of-all-Things/HAT2.0">GitHub</a></p>
 <ul class="article-list">
