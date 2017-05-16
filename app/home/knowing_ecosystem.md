@@ -7,6 +7,7 @@ description: "Knowing the Ecosystem"
 ---
 
 # Knowing the Ecosystem
+
 The HAT Platform operates through four main bodies:
 
 1. HAT users

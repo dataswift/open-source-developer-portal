@@ -6,4 +6,7 @@ title:  "How Long Will it Take to Create Something on the HAT?"
 description: "How Long Will it Take to Create Something on the HAT?"
 ---
 
-# Coming Soon!
+# How Long Will it Take to Create Something on the HAT?
+If you are building Data plugs, it depends on the complexity of the data source. For example, Monzo plug was done in a day, while twitter data plug with a much complicated data structure was done in two weeks.
+
+If you are building a comprehensive app including data plugs, a dashboard for users, with data trading capability may take up to 1 month.
