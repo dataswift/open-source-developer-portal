@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
-title:  "HAT Certification and Rating Scheme"
-description: "HAT Certification and Rating Scheme"
+title:  "HAT Certification/Rating Scheme"
+description: "HAT Certification/Rating Scheme"
 ---
 
 # Coming Soon!

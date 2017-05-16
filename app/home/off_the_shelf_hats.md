@@ -10,4 +10,4 @@ description: "Off-the-shelf HATs"
 
 If you are an organization needing to deploy X HATs to conduct a survey, or to collect individual's data in a privacy preserving way, You can commission a short term provisioning of HATs e.g. yourusersname.HATURL.net to do so.
 
-As end users, HATs can also be available to purchase 'off-the=shelf' at [HATTERS](https://hatters.hubofallthings.com)
+HATs can also be available to purchase 'off-the-shelf' at [HATTERS](https://hatters.hubofallthings.com)
