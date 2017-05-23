@@ -6,52 +6,13 @@ title:  "Data"
 description: "Data v2"
 ---
 
-# Authentication
+# Data
 
-Authentication happens the usual HAT way: with username and password sent inside headers, which responds with an Access Token used for further API calls
+Plain Data APIs consume any JSON:
 
-### HTTP Request
-   
-GET Authenticate
-https://testing.hubat.net/users/access_token
+   * records posted as an array get saved into separate records
+   * individual values are saved as-is
+   * "endpoint" for the data is softly-defined, with the developer choosing a path within the namespace they are authorized to use
+   * data can be retrieved using permitted credentials for the individual endpoints
+   * deleting of data records is supported by accepting a list of previously saved record IDs
 
-`Authenticate with the HAT to get Access Token used in future requests`
-
-### Headers
-
-| Parameter    | Description                                                                                               |
-|--------------|-----------------------------------------------------------------------------------------------------------|
-| Accept       | application/json                                                                                          |
-| username     | username used for authentication together with password, instead of access_token (user and platform only) |
-| password     | password used for authentication together with username, instead of access_token (user and platform only) |
-
-```postman
-
-"request": {
-						"url": "https://{{hat}}/users/access_token",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "username",
-								"value": "{{username}}",
-								"description": ""
-							},
-							{
-								"key": "password",
-								"value": "{{password}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "Authenticate with the HAT to get Access Token used in future requests"
-					}
-
-```

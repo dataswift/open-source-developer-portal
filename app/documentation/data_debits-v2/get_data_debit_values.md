@@ -1,16 +1,16 @@
 ---
 layout: twoColumn
-section: Data - v2
+section: Data Debits - v2
 type: article
-title:  "Filter data records up to a maximum number"
-description: "Filter data records up to a maximum number"
+title:  "Get Data Debit values"
+description: "Get Data Debit values"
 ---
 
-## GET - Filter data records up to a maximum number
-   
+## GET - Get Data Debit values
+
 `https://testing.hubat.net/api/v2/data/rumpel/locations?take=3`
 
-Getting the 3 most recent data records
+Propose a data debit with the bundle of data and validity
 
 ### Headers
 

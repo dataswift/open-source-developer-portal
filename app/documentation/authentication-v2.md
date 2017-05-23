@@ -19,39 +19,14 @@ https://testing.hubat.net/users/access_token
 
 ### Headers
 
-| Parameter    | Description                                                                                               |
-|--------------|-----------------------------------------------------------------------------------------------------------|
-| Accept       | application/json                                                                                          |
-| username     | username used for authentication together with password, instead of access_token (user and platform only) |
-| password     | password used for authentication together with username, instead of access_token (user and platform only) |
+#### Accept
+application/json
 
-```postman
+#### username
+testing
 
-"request": {
-						"url": "https://{{hat}}/users/access_token",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "username",
-								"value": "{{username}}",
-								"description": ""
-							},
-							{
-								"key": "password",
-								"value": "{{password}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "Authenticate with the HAT to get Access Token used in future requests"
-					}
+#### password
+labai-geras-slaptazodis
 
-```
+
+# POSTMAN EXAMPLE HERE
