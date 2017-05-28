@@ -32,5 +32,28 @@ application/json
 
 ```
 
-# POSTMAN EXAMPLE HERE
+```postman
 
+"request": {
+						"url": "https://{{hat}}/api/v2/data/rumpel/nudge",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{accessToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"time\",\n    \"nudge\": \"Share APIs with the world\",\n    \"time\": \"2017-04-30T14:21:52+01:00\"\n}"
+						},
+						"description": "An example of a nudge created separately, but to be attached to a note"
+					}
+
+```

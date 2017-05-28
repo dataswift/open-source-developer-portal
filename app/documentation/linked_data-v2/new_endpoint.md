@@ -34,4 +34,28 @@ application/json
 
 ```
 
-#Postman Example Here
+```postman
+
+"request": {
+						"url": "https://{{hat}}/api/v2/combinator/notables",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "{{accessToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"endpoint\": \"rumpel/notable\",\n\t\t\"links\": [\n\t\t\t{\"endpoint\": \"rumpel/nudge\"}\n\t\t]\n\t}\n]"
+						},
+						"description": "Endpoints queries need to explicitly list any potentially linked data they would want to retrieve"
+					}
+
+```
