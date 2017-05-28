@@ -10,4 +10,87 @@
 ]
 
 
-</code></pre></div></div><h1 id=postman-example-here>Postman Example Here</h1><hr><section class=copyright><div class=page-wrap><div><span>© 2017 HAT Data Exchange Ltd.</span> <a href=/sitemap>Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://hubofallthings.com/main/cookie-policy/">Cookie Policy</a></div></div></section></section></div></div></div><script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script><script>window.jQuery || document.write('<script src="/_bower_components/jquery/jquery.min.js"><\/script>')</script><script src=/js/script.44e4.js></script></body></html>
+</code></pre></div></div><div class="code-snippet js-code-snippet language-raw"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-raw data-lang=raw>curl --request POST \
+  --url https:///api/v2/combinator/notables \
+  --header 'content-type: application/json' \
+  --header 'x-auth-token: ' \
+  --data '&quot;[\n\t{\n\t\t\&quot;endpoint\&quot;: \&quot;rumpel/notable\&quot;,\n\t\t\&quot;links\&quot;: [\n\t\t\t{\&quot;endpoint\&quot;: \&quot;rumpel/nudge\&quot;}\n\t\t]\n\t}\n]&quot;'
+</code></pre></div></div><div class="code-snippet js-code-snippet language-javascript"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-javascript data-lang=javascript>var settings = {
+  &quot;async&quot;: true,
+  &quot;crossDomain&quot;: true,
+  &quot;url&quot;: &quot;https:///api/v2/combinator/notables&quot;,
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;headers&quot;: {
+    &quot;content-type&quot;: &quot;application/json&quot;,
+    &quot;x-auth-token&quot;: &quot;&quot;
+  },
+  &quot;processData&quot;: false,
+  &quot;data&quot;: &quot;\&quot;[\\n\\t{\\n\\t\\t\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/notable\\\&quot;,\\n\\t\\t\\\&quot;links\\\&quot;: [\\n\\t\\t\\t{\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/nudge\\\&quot;}\\n\\t\\t]\\n\\t}\\n]\&quot;&quot;
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+</code></pre></div></div><div class="code-snippet js-code-snippet language-php"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-php data-lang=php>&lt;?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL =&gt; &quot;https:///api/v2/combinator/notables&quot;,
+  CURLOPT_RETURNTRANSFER =&gt; true,
+  CURLOPT_ENCODING =&gt; &quot;&quot;,
+  CURLOPT_MAXREDIRS =&gt; 10,
+  CURLOPT_TIMEOUT =&gt; 30,
+  CURLOPT_HTTP_VERSION =&gt; CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST =&gt; &quot;POST&quot;,
+  CURLOPT_POSTFIELDS =&gt; &quot;\&quot;[\\n\\t{\\n\\t\\t\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/notable\\\&quot;,\\n\\t\\t\\\&quot;links\\\&quot;: [\\n\\t\\t\\t{\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/nudge\\\&quot;}\\n\\t\\t]\\n\\t}\\n]\&quot;&quot;,
+  CURLOPT_HTTPHEADER =&gt; array(
+    &quot;content-type: application/json&quot;,
+    &quot;x-auth-token: &quot;
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo &quot;cURL Error #:&quot; . $err;
+} else {
+  echo $response;
+}
+</code></pre></div></div><div class="code-snippet js-code-snippet language-python"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-python data-lang=python>import http.client
+
+conn = http.client.HTTPSConnection(&quot;&quot;)
+
+payload = &quot;\&quot;[\\n\\t{\\n\\t\\t\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/notable\\\&quot;,\\n\\t\\t\\\&quot;links\\\&quot;: [\\n\\t\\t\\t{\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/nudge\\\&quot;}\\n\\t\\t]\\n\\t}\\n]\&quot;&quot;
+
+headers = {
+    'content-type': &quot;application/json&quot;,
+    'x-auth-token': &quot;&quot;
+    }
+
+conn.request(&quot;POST&quot;, &quot;/api/v2/combinator/notables&quot;, payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode(&quot;utf-8&quot;))
+</code></pre></div></div><div class="code-snippet js-code-snippet language-ruby"><button class="btn alternative">copy</button><div class=code-snippet__selector><nav><button class=selector_switch id=raw>raw</button> <button class=selector_switch id=php>php</button> <button class=selector_switch id=ruby>ruby</button> <button class=selector_switch id=python>python</button> <button class=selector_switch id=javascript>javascript</button></nav></div><div class="code-snippet__cnt highlight"><pre><code class=language-ruby data-lang=ruby>require 'uri'
+require 'net/http'
+
+url = URI(&quot;https:///api/v2/combinator/notables&quot;)
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request[&quot;content-type&quot;] = 'application/json'
+request[&quot;x-auth-token&quot;] = ''
+request.body = &quot;\&quot;[\\n\\t{\\n\\t\\t\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/notable\\\&quot;,\\n\\t\\t\\\&quot;links\\\&quot;: [\\n\\t\\t\\t{\\\&quot;endpoint\\\&quot;: \\\&quot;rumpel/nudge\\\&quot;}\\n\\t\\t]\\n\\t}\\n]\&quot;&quot;
+
+response = http.request(request)
+puts response.read_body
+</code></pre></div></div><hr><section class=copyright><div class=page-wrap><div><span>© 2017 HAT Data Exchange Ltd.</span> <a href=/sitemap>Sitemap</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://hubofallthings.com/main/cookie-policy/">Cookie Policy</a></div></div></section></section></div></div></div><script src=//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js></script><script>window.jQuery || document.write('<script src="/_bower_components/jquery/jquery.min.js"><\/script>')</script><script src=/js/script.44e4.js></script></body></html>
