@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Linked Data - v2
+section: "Linked Data"
 type: article
 title:  "Retrieve linked data points as per registered endpoint "
 description: "Retrieve linked data points as per registered endpoint "

@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data Debit - v2
+section: "Data Debits"
 type: article
 title:  "Disable a Data Debit "
 description: "Disable a Data Debit"

@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data Debits - v2
+section: "Data Debits"
 type: article
 title:  "Get Data Debit values"
 description: "Get Data Debit values"

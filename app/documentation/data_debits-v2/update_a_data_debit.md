@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data Debits - v2
+section: "Data Debits"
 type: article
 title:  "Update a data debit "
 description: "Update a data debit "

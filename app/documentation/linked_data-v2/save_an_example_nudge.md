@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Linked Data - v2
+section: "Linked Data"
 type: article
 title:  "Save an example nudge"
 description: "Save an example nudge"

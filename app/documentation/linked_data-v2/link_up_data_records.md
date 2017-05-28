@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Linked Data - v2
+section: "Linked Data"
 type: article
 title:  "Link up data records"
 description: "Link up data records"

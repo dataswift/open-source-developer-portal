@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data - v2
+section: "Data"
 type: article
 title:  "Bulk-upload a large chunk of data to the same endpoint"
 description: "Bulk-upload a large chunk of data to the same endpoint"

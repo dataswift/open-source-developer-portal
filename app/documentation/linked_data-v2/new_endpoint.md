@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Linked Data - v2
+section: "Linked Data"
 type: article
 title:  "New endpoint for linked data retrieval "
 description: "New endpoint for linked data retrieval "

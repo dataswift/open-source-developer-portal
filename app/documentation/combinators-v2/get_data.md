@@ -19,8 +19,26 @@ Data for registered endpoints can be collected like with the plain data routes, 
 {{accessToken}}
 
 
-# POSTMAN EXAMPLE HERE
-# POSTMAN EXAMPLE HERE
+```postman
+
+"request": {
+						"url": "https://{{hat}}/api/v2/combinator/android/locations?take=5",
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{accessToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Data for registered endpoints can be collected like with the plain data routes, but prefixing the path with `endpoint/` instead of `data/, however using same filters such as the one for limiting the number of results returned"
+					}
+
+```
 
 # Example - Get data for the morning commute 
 
@@ -31,5 +49,23 @@ Data for registered endpoints can be collected like with the plain data routes, 
 #### X-Auth-Token
 {{accessToken}}
 
-# POSTMAN EXAMPLE HERE
-# POSTMAN EXAMPLE HERE
+```postman
+
+"request": {
+						"url": "https://{{hat}}/api/v2/combinator/locations/morningcommute",
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{accessToken}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Data for registered endpoints can be collected like with the plain data routes, but prefixing the path with `endpoint/` instead of `data/, however using same filters such as the one for limiting the number of results returned"
+					}
+
+```

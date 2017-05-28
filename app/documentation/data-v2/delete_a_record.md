@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data - v2
+section: "Data"
 type: article
 title:  "Delete A Record"
 description: "Delete A Record"

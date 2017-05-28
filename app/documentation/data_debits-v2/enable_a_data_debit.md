@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data Debit - v2
+section: "Data Debits"
 type: article
 title:  " Enable a Data Debit "
 description: " Enable a Data Debit"

@@ -29,4 +29,33 @@ testing
 labai-geras-slaptazodis
 
 
-# POSTMAN EXAMPLE HERE
+```postman
+
+"request": {
+						"url": "https://{{hat}}/users/access_token",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "{{username}}",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "{{password}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Authenticate with the HAT to get Access Token used in future requests"
+					}
+
+```

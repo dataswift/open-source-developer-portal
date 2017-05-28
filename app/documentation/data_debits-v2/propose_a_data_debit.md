@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data Debits - V2
+section: "Data Debits"
 type: article
 title:  "Propose a Data Debit"
 description: "Propose a Data Debit"

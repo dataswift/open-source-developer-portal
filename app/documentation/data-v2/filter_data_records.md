@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: Data - v2
+section: "Data"
 type: article
 title:  "Filter data records up to a maximum number"
 description: "Filter data records up to a maximum number"
