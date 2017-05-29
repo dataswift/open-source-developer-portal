@@ -17,8 +17,6 @@ The HAT’s Direct Data Debit (D3) System work like a direct debit in a bank: we
 
 All Direct Debit API calls contain all the information defined in Direct Debit Structure. If you want to propose a new Direct Debit, you have to include the mandatory information in the API request. Direct Debit structure is explained in the table below.
 
-INSERT TABLE HERE
-
 ###Proposing Direct Data Debit
    
 For a Direct Data Debit to be created, it first needs to be proposed to the user, who can then choose whether or not they would like to enable it.
