@@ -12,7 +12,7 @@ description: "Documentation Introduction"
 <p>The HAT code is publicly available on <a href="http://github.com/Hub-of-all-Things/HAT2.0">GitHub</a></p>
 <ul class="article-list">
     <li>
-        <h3><a href="/documentation/about_the_hat.html">About the HAT</a></h3>
+        <h3><a href="/home/what_is_hat.html">About the HAT</a></h3>
         <p>Learn more about the Hub of All Things, and the technology behind it.</p>
     </li>
     <li>
