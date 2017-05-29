@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: "HATDex"
+section: "HATDeX"
 type: article
 title:  "Milliner Service"
 description: "Milliner Service"

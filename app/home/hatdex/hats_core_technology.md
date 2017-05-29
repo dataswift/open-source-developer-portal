@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: "HATDex"
+section: "HATDeX"
 type: article
 title:  "HAT's Core Technology"
 description: "HAT's Core Technology"

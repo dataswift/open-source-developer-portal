@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: "HATDex"
+section: "HATDeX"
 type: article
 title:  "DEX Technology"
 description: "DEX Technology"
