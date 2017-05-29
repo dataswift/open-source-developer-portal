@@ -8,4 +8,4 @@ description: "The Architecture Diagram"
 
 # The HAT Process architecture diagram
 
-![HAT Ecosystem Architecture and Processes](https://github.com/Hub-of-all-Things/open-source-developer-portal/raw/new-portal/app/images/hat-architecture.png "HAT Ecosystem Architecture and Processes")
+![HAT Ecosystem Architecture and Processes](https://raw.githubusercontent.com/Hub-of-all-Things/open-source-developer-portal/master/app/images/hat-architecture.png "HAT Ecosystem Architecture and Processes")
