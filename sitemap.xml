@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://developers.hubofallthings.com//home/1_knowing_ecosystem.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/2_hat_users.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/3_hat_application.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/4_hat_community_foundation.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/5_hatdex.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//home/hat_community_foundation/About_HCF.html</loc>
   </url>
   <url>
@@ -100,12 +115,6 @@
     <loc>http://developers.hubofallthings.com//support/hap_application.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/hat_application.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hat_community_foundation.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//home/hat_platform_process_architecture.html</loc>
   </url>
   <url>
@@ -113,12 +122,6 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/hat_application/hat_service_provisioning.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hat_users.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hatdex.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/hatdex/hats_core_technology.html</loc>
@@ -133,7 +136,7 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//documentation/</loc>
+    <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//tutorials/</loc>
@@ -142,13 +145,10 @@
     <loc>http://developers.hubofallthings.com//support/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//sitemap/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//home/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/knowing_ecosystem.html</loc>
+    <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
@@ -160,10 +160,10 @@
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/hat_community_foundation/marketsquare.html</loc>
+    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/hatdex/milliner_service.html</loc>
@@ -257,18 +257,18 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-05-30T00:51:05+00:00</lastmod>
+    <lastmod>2017-05-30T01:02:08+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-05-30T00:51:05+00:00</lastmod>
+    <lastmod>2017-05-30T01:02:08+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-05-30T00:51:05+00:00</lastmod>
+    <lastmod>2017-05-30T01:02:08+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-05-30T00:51:05+00:00</lastmod>
+    <lastmod>2017-05-30T01:02:08+00:00</lastmod>
   </url>
 </urlset>
