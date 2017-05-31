@@ -6,5 +6,5 @@ title:  "HAT Applications"
 description: "HAT Applications"
 ---
 
-# Certification and Rating for HAP
-The self-certification process for potential HAT Application Providers and a Rating System are still under development.
+# Certification and Rating for HAT Applications
+The self-certification process for potential HAT Application Providers and a Rating System for apps built on hat are still under development.
