@@ -2,8 +2,8 @@
 layout: twoColumn
 section: support
 type: support-certification
-title:  "HAP Application"
-description: "HAP Application"
+title:  "HAT Application"
+description: "HAT Application"
 ---
 
 # Certification and Rating for HAP
