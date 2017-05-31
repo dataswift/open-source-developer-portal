@@ -1,6 +1,6 @@
 ---
 layout: twoColumn
-section: "HAP Application"
+section: "HAT Applications"
 type: article
 title:  "Rating Scheme"
 description: "Rating Scheme"
