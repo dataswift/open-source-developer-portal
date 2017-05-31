@@ -5,9 +5,9 @@ description: "Tutorials Introduction"
 ---
 
 <h1>Totorials</h1>
-<p>Welcome to the Hub-of-All-Things Totorials!</p>
+<p>Welcome to the Hub-of-All-Things Tutorials!</p>
 
-<p>Hub-of-All-Things Totorials helps you to: </p>
+<p>Hub-of-All-Things Tutorials helps you to: </p>
 
 <ul class="article-list">
     <li>
