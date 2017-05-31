@@ -8,7 +8,7 @@ description: "What can you make on the HAT?"
 
 # What can you make on the HAT?
 
-Every aspect within the ecosystem presents opportunities for innovators. The most common form is an app. Some of our existing partners are making cool apps on HAT already, for example [b.heard[(https://www.bheard.com/) and [Noggin](https://www.nogginasia.com/). 
+Every aspect within the ecosystem presents opportunities for innovators. The most common form is an app. Some of our existing partners are making cool apps on HAT already, for example [b.heard](https://www.bheard.com/) and [Noggin](https://www.nogginasia.com/). 
 
 ## A HAT App
 In a nutshell, it may communicate with users’ hats, request data access to those hats, and in exchange, making an attractive offer or providing some benefits to the hat owner. An app may consists a few functions, can also be built independently, including
