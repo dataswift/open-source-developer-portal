@@ -4,7 +4,7 @@ title:  "HAT Certification/Rating Scheme"
 description: "HAT Certification/Rating Scheme"
 ---
 
-<h1>Totorials</h1>
+<h1>Support for HAT Applications and Service Providers</h1>
 <p>Welcome to the Hub-of-All-Things HAT Certification / Rating Scheme!</p>
 
 
