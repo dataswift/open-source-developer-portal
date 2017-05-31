@@ -20,7 +20,7 @@ description: "Tutorials Introduction"
     </li>
     <li>
         <h3><a href="/tutorials/tutorials_on_using_the_hat.html">Tutorials on using the HAT</a></h3>
-        <p>Totorials on using the HAT for other applications - Coming soon</p>
+        <p>Tutorials on using the HAT for other applications - Coming soon</p>
     </li>
 </ul>
 
