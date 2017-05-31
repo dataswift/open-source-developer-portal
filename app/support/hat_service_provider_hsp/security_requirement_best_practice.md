@@ -17,8 +17,8 @@ Here we provide a best practice from HATDeX (A HAT Service Provider), with detai
 
 Data at rest is stored in two forms:
 
-- Files are stored in AWS S3 Key-Value Store. 
-- Data is stored in AWS Relational Data Store (RDS) Database Servers.
+* Files are stored in AWS S3 Key-Value Store. 
+* Data is stored in AWS Relational Data Store (RDS) Database Servers.
 
 File storage is configured with server-side encryption using AES-256 encryption. Storage policy enforces any file uploaded into the storage to be encrypted.
 
@@ -54,9 +54,7 @@ A user password or its hash is never shared with other entities; other entities 
 
 ## Server and Network Management
 
-### How often are servers penetrat
-
-ion tested
+### How often are servers penetration tested
 
 Third-party penetration testing is currently estimated to start in 3rd quarter of 2017 and to take place half-yearly or after significant changes to the infrastructure as deemed necessary.
 
