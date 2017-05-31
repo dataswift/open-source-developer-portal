@@ -4,7 +4,7 @@ title:  "Tutorials Introduction"
 description: "Tutorials Introduction"
 ---
 
-<h1>Totorials</h1>
+<h1>Tutorials</h1>
 <p>Welcome to the Hub-of-All-Things Tutorials!</p>
 
 <p>Hub-of-All-Things Tutorials helps you to: </p>
