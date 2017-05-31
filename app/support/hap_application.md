@@ -2,7 +2,7 @@
 layout: twoColumn
 section: support
 type: support-certification
-title:  "HAT Application"
+title:  "HAT Applications"
 description: "HAT Application"
 ---
 
