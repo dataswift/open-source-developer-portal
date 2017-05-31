@@ -16,7 +16,7 @@ description: "What is the HAT and why Build on It?"
         <p>Learn more about the Hub of All Things, and benefits of building on the HAT.</p>
     </li>
     <li>
-        <h3><a href="knowing_ecosystem.html">Knowing the HAT Tech Ecosystem</a></h3>
+        <h3><a href="1_knowing_ecosystem.html">Knowing the HAT Tech Ecosystem</a></h3>
         <p>Find general information about the API available on every HAT.</p>
     </li>
     <li>
