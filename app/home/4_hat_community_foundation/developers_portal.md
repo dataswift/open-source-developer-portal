@@ -8,7 +8,7 @@ description: "Developer's Portal"
 
 # Developers' Portal
 
-The Developers' Portal is the common starting point for most HAT platform participants. It is accessible via http://developers.hubofallthings.com/.
+The Developers' Portal is the common starting point for most HAT Platform participants. It is accessible via http://developers.hubofallthings.com/.
 
 The Developers' Portal houses all of the supporting documentation and resources a developer or development team may need to build services and apps on that HAT, including a technical description of the ecosystem, developer tools, libraries, API documentation, HATDeX services, and sample codes.
 
