@@ -6,8 +6,8 @@ title:  "Security Requirement"
 description: "Security Requirement"
 ---
 
-# Security Requirement Best Practice
-The list of requirement and expected minimum recommended best practice is available at the HAT Certification Check List. Any HAT Service Provider that is not using a HCF sertified HAT Provisioning service is required to complete the questions below. A HAT Service Provider should provide the actual technical details to the questions. An example can be found at the best practice section.
+# Security Requirements Best Practices
+The list of requirement and expected minimum recommended best practice is available at the HAT Certification Check List. Any HAT Service Provider that is not using a HCF certified HAT Provisioning service is required to complete the questions below. A HAT Service Provider should provide the actual technical details to the questions. An example can be found at the best practice section.
 
 # HAT Provisioning Security Checklist
 Please note that where a specific standard, protocol or manufacturer program is referenced below, the HCF will consider an equivalent to that stated, however it is the responsibility of the Participating Party to demonstrate the equivalence. Should this equivalence not be satisfactorily demonstrated, the HCF reserves the right to score accordingly and may result in a sub satisfactory score.
@@ -20,16 +20,16 @@ Please note that where a specific standard, protocol or manufacturer program is 
 
 ## Password Policy
 
-* Define what password strength policy is
+* Define what your password strength policy is
 * What encryption is used to secure username / password login
 
 ## Server and Network Management
 
-* How often are servers penetrat
+* How often are servers penetratation tested
 * How often are the servers patched
 * What is the firewall policy (specify all open ports)
 * What Intrusion Detection devices are in use
-* How are network and virtual machines segregated
+* How are networks and virtual machines segregated
 
 ## Antivirus
 
