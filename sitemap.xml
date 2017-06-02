@@ -1,46 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://developers.hubofallthings.com//home/1_knowing_ecosystem.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/01-sign-up.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/2_hat_users.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/dex/01-statistics.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/3_hat_application.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/01-upload.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/4_hat_community_foundation.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/02-access-management.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/5_hatdex.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/02-create-hat.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/4_hat_community_foundation/About_HCF.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/03-contents.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/HAT_core.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/03-register-hat.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/3_hat_application/about_hat_app.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/04-search.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/2_hat_users/about_hat_users.html</loc>
+    <loc>http://developers.hubofallthings.com//home/knowing/1_knowing_ecosystem.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/5_hatdex/about_hatdex.html</loc>
+    <loc>http://developers.hubofallthings.com//home/knowing/2_hat_users.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/api.html</loc>
+    <loc>http://developers.hubofallthings.com//home/knowing/3_hat_application.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/knowing/4_hat_community_foundation.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/knowing/5_hatdex.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/tools/HAT_core.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/tools/api.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/authentication-v2.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/user_management/authentication.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/3_hat_application/basic_hat_app_functionality.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/batch_data_upload.html</loc>
@@ -64,7 +73,7 @@
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_field.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/data_plugs.html</loc>
+    <loc>http://developers.hubofallthings.com//home/tools/data_plugs.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_records.html</loc>
@@ -80,12 +89,6 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/data-v2/delete_a_record.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/4_hat_community_foundation/developers_portal.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/5_hatdex/dex_technology.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/user_management/direct_data_credit_and_debit_accounts.html</loc>
@@ -112,19 +115,7 @@
     <loc>http://developers.hubofallthings.com//documentation/data-v2/get_data_records.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/hap_application.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hat_platform_process_architecture.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//support/hat_service_provider_hsp.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/3_hat_application/hat_service_provisioning.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/5_hatdex/hats_core_technology.html</loc>
+    <loc>http://developers.hubofallthings.com//home/knowing/hat_platform_process_architecture.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//tutorials/how_long_will_it_take_to_create_something_on_the_hat.html</loc>
@@ -136,22 +127,34 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//sitemap/</loc>
+    <loc>http://developers.hubofallthings.com//guides/dex/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//tutorials/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//support/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_applications/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//documentation/license.html</loc>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/hat_service_provider/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//sitemap/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//tutorials/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/link_up_data_records.html</loc>
@@ -160,19 +163,13 @@
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/4_hat_community_foundation/marketsquare.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/marketsquare.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/5_hatdex/milliner_service.html</loc>
+    <loc>http://developers.hubofallthings.com//home/tools/marketsquare.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/new_endpoint.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/off_the_shelf_hats.html</loc>
+    <loc>http://developers.hubofallthings.com//home/tools/off_the_shelf_hats.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/data_debits-v2/propose_a_data_debit.html</loc>
@@ -184,10 +181,10 @@
     <loc>http://developers.hubofallthings.com//documentation/combinators-v2/propose_endpoint.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/hap_application/rating_scheme.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_applications/rating_scheme.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/hap_application/rating_scheme_best_practice.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_applications/rating_scheme_best_practice.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output.html</loc>
@@ -202,16 +199,10 @@
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/retrieving_raw_data.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/rumpel.html</loc>
+    <loc>http://developers.hubofallthings.com//home/tools/rumpel.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/2_hat_users/rumpel_lite_ios_app.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/2_hat_users/rumpel_the_generic_dashboard.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/rumpellite.html</loc>
+    <loc>http://developers.hubofallthings.com//home/tools/rumpellite.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/save_an_example_nudge.html</loc>
@@ -220,22 +211,16 @@
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/save_an_example_record.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/hat_service_provider_hsp/security_requirement.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_service_provider/security_requirement.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//support/hat_service_provider_hsp/security_requirement_best_practice.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_service_provider/security_requirement_best_practice.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/sharing_and_direct_data_debits.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/some_cool_apps.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//documentation/the_api.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/3_hat_application/trading_platform_services.html</loc>
+    <loc>http://developers.hubofallthings.com//home/why/some_cool_apps.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//tutorials/tutorials_on_using_the_hat.html</loc>
@@ -247,28 +232,28 @@
     <loc>http://developers.hubofallthings.com//documentation/user_management.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/what_can_you_make.html</loc>
+    <loc>http://developers.hubofallthings.com//home/why/what_can_you_make.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/what_is_hat.html</loc>
+    <loc>http://developers.hubofallthings.com//home/why/what_is_hat.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/why_build_something_on_the_hat.html</loc>
+    <loc>http://developers.hubofallthings.com//home/why/why_build_something_on_the_hat.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-06-01T08:37:25+00:00</lastmod>
+    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-06-01T08:37:25+00:00</lastmod>
+    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-06-01T08:37:25+00:00</lastmod>
+    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-06-01T08:37:25+00:00</lastmod>
+    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
   </url>
 </urlset>
