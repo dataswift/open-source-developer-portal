@@ -20,7 +20,7 @@ The HAT solves user authentication and account provisioning out-of-the-box, lett
 
 ### Security
 
-Remove as much of the cyber security risk your customers face as is humanly possible. Your users' personal information Ð no matter how sensitive Ð will be stored in private, containerised databases that are protected by the most sophisticated security and encryption protocols possible. What's more, the containerisation of these databases de-incentivises cyber attack, as each breach yields only one record's net return.
+Remove as much of the cyber security risk your customers face as is humanly possible. Your users' personal information - no matter how sensitive - will be stored in private, containerised databases that are protected by the most sophisticated security and encryption protocols possible. What's more, the containerisation of these databases de-incentivises cyber attack, as each breach yields only one record's net return.
 
 ### API-as-a-backend
 
@@ -36,13 +36,13 @@ HAT-enabled applications benefit from a rapidly-growing pool of consumer Interne
 
 ### Top-tier engineering and developers
 
-The HAT is built by some of the best technical developers and engineers in the world. Grow your world-changing consumer technology alongside them, by joining our internal developers' community; leverage them for advice and insight, and vet your technology against their expertise.
+The HAT is built by some of the best technical developers and engineers in the world. Grow your world-changing consumer technology alongside them by joining our internal developers' community; leverage them for advice and insight, and vet your technology against their expertise.
 
 ### Middleware
 
-HAT PDMAs (Private Data Microservice Accounts) also feature data and metadata analysis tools that can be leveraged by app developers for some specialised tasks, like machine learning and personalisation.
+HAT PMDAs (Private Microservice Data  Accounts) also feature data and metadata analysis tools that can be leveraged by app developers for some specialised tasks, like machine learning and personalisation.
 
-Businesses would otherwise have to plumb and combine all kinds of data sets from disparate sources to make personal data usable and deal with issues of privacy, security as well. Details see the [ecosystem architecture](knowing_ecosystem.html), and the [tools available](HAT_core.html).
+Businesses would otherwise have to plumb and combine all kinds of data sets from disparate sources to make personal data usable, and deal with issues of privacy and security as well. For more details, see the [ecosystem architecture](1_knowing_ecosystem.html), and the [tools available](HAT_core.html).
 
-Leveraging the tools and existing processes, now developers can focus on data exchange and engagement with HATs simply through a few API calls.
+Leveraging the tools and existing processes, developers can now focus on data exchange and engagement with HATs simply through a few API calls.
 
