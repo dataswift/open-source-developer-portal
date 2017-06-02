@@ -33,10 +33,10 @@ $(document).ready(function () {
         current_language;
 
     if (!sessionStorage.getItem('current_language')) {
-        $('.js-language-select').val('ruby');
-        updateSnippets('ruby');
-        sessionStorage.setItem('current_language', 'ruby');
-        updateBodySelectors('ruby');
+        $('.js-language-select').val('javascript');
+        updateSnippets('javascript');
+        sessionStorage.setItem('current_language', 'javascript');
+        updateBodySelectors('javascript');
     } else {
         current_language = sessionStorage.getItem('current_language');
         updateSnippets(current_language);

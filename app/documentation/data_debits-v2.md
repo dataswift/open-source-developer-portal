@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-api2
+type: API v2
 title:  "Data Debits"
 description: "Data Debits"
 ---

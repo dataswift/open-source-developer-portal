@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-api1
+type: API v1 - Deprecated
 title:  "User Management"
 description: "User Management"
 ---

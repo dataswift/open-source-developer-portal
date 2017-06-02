@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: documentation
-type: documentation-api1
+type: API v1 - Deprecated
 title:  "Raw Data Input and Output"
 description: "Raw Data Input and Output"
 ---
