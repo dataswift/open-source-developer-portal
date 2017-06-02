@@ -20,25 +20,36 @@ description: "What is the HAT and why Build on It?"
 </ul>
 
 <h1>Articles</h1>
-<p>The HAT code is publicly available on <a href="http://github.com/Hub-of-all-Things/HAT2.0">GitHub</a></p>
 
 <ul class="article-list">
     <li>
-        <h3><a href="what_is_hat.html">What is the HAT and why build on it?</a></h3>
-        <p>Learn more about the Hub of All Things infrastructure and the benefits of building on it.</p>
+        <h3><a href="why/what_is_hat.html">About the HAT</a></h3>
+        <p>Learn more about the Hub of All Things, and the technology behind it.</p>
     </li>
     <li>
-        <h3><a href="1_knowing_ecosystem.html">Know the HAT Tech Ecosystem</a></h3>
+        <h3><a href="knowing/1_knowing_ecosystem.html">Know the HAT Tech Ecosystem</a></h3>
         <p>Find general information about the API available on every HAT.</p>
     </li>
     <li>
-        <h3><a href="HAT_core.html">Tools Available</a></h3>
+        <h3><a href="tools/HAT_core.html">Tools Available</a></h3>
         <p>The HAT API is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
     </li>
+</ul>
 
+<h1>Support for HAT Applications and Service Providers</h1>
+
+<ul class="article-list">
     <li>
-        <h3><a href="/home/what_is_hat.html">About the HAT</a></h3>
-        <p>Learn more about the Hub of All Things, and the technology behind it.</p>
+        <h3><a href="hat_applications/">HAT Applications</a></h3>
+        <p>Find out more about the HAT application rating and certification</p>
+    </li>
+    <li>
+        <h3><a href="hat_service_provider_hsp/">HAT Service Providers</a></h3>
+        <p>Find out more about the certification process and security requirement for HAT Service Providers</p>
+    </li>
+    <li>
+        <h3><a href="hat_service_provider_hsp/security_requirement_best_practice.html">Provisioning Best Practices</a></h3>
+        <p>Find out more about the certification process and security requirement for HAT Service Providers</p>
     </li>
 </ul>
 
