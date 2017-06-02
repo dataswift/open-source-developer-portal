@@ -25,9 +25,6 @@
     <loc>http://developers.hubofallthings.com//guides/file-storage/04-search.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/knowing/1_knowing_ecosystem.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//home/knowing/2_hat_users.html</loc>
   </url>
   <url>
@@ -41,9 +38,6 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/tools/HAT_core.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/tools/api.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/authentication-v2.html</loc>
@@ -88,7 +82,13 @@
     <loc>http://developers.hubofallthings.com//documentation/raw_data_input_and_output/data_value.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//home/tools/databuyer.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//documentation/data-v2/delete_a_record.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/tools/dex.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/user_management/direct_data_credit_and_debit_accounts.html</loc>
@@ -115,46 +115,40 @@
     <loc>http://developers.hubofallthings.com//documentation/data-v2/get_data_records.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//home/hat_applications.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//home/knowing/hat_platform_process_architecture.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//tutorials/how_long_will_it_take_to_create_something_on_the_hat.html</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//tutorials/how_to_build_a_data_plug.html</loc>
+    <loc>http://developers.hubofallthings.com//home/hat_service_provider.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/dex/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hat_applications/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//documentation/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/</loc>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/file-storage/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/hat_service_provider/</loc>
+    <loc>http://developers.hubofallthings.com//guides/dex/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//tutorials/</loc>
+    <loc>http://developers.hubofallthings.com//guides/file-storage/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/knowing.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/link_up_data_records.html</loc>
@@ -164,6 +158,9 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//home/tools/marketsquare.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/tools/milliner.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/linked_data-v2/new_endpoint.html</loc>
@@ -223,9 +220,6 @@
     <loc>http://developers.hubofallthings.com//home/why/some_cool_apps.html</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//tutorials/tutorials_on_using_the_hat.html</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//documentation/data_debits-v2/update_a_data_debit.html</loc>
   </url>
   <url>
@@ -242,18 +236,22 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
+    <lastmod>2017-06-02T21:14:50+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
+    <lastmod>2017-06-02T21:14:50+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
+    <lastmod>2017-06-02T21:14:50+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//lib/icons/dist/ss-glyphish-outlined/documentation.html</loc>
+    <lastmod>2017-06-02T21:14:50+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-06-02T19:22:32+00:00</lastmod>
+    <lastmod>2017-06-02T21:14:50+00:00</lastmod>
   </url>
 </urlset>
