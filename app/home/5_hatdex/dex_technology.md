@@ -10,5 +10,5 @@ description: "DEX Technology"
 
 The DEX (data exchange) service of HATDeX consists of: 
 * Financial clearance for entities within the ecosystem, including accounts, billing and payment UI. 
-* Data Exchange processes and statistics, including HAT Access Control, Data Debit Control, Data Transaction Logging, and statistics across the ecosystem. These processes log all activities in the HAT ecosystem, responds to HAT requests to create Data Debits, installs Data Plugs, holds data transactions, verifies exchanges and quickly, accurately and securely sends and receives data between parties. It reports the ecosystem statistics as well as integrating datasets and data services for third parties into the system. 
+* Data Exchange processes and statistics, including HAT Access Control, Data Debit Control, Data Transaction Logging, and statistics across the ecosystem. Those processes log all activities in the HAT ecosystem, respond to HAT requests to create Data Debits, install Data Plugs, hold data transactions, verify exchanges and quickly, accurately and securely send and receive data between parties. It reports the ecosystem statistics as well as integrating datasets and data services for third parties into the system. 
 * Trading Platform Service (details of which are in the Application's Trading Platform Capability section of this document).
