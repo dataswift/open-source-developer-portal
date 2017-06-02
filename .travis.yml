@@ -3,7 +3,8 @@ rvm:
 - 2.1
 sudo: required
 before_install:
-- openssl aes-256-cbc -K $encrypted_dedbe4f77d92_key -iv $encrypted_dedbe4f77d92_iv -in travis_hat_dev_portal.enc -out travis_hat_dev_portal -d
+- openssl aes-256-cbc -K $encrypted_634f038e8b4c_key -iv $encrypted_634f038e8b4c_iv
+  -in travis_hat_dev_portal.enc -out travis_hat_dev_portal -d
 - chmod 600 travis_hat_dev_portal
 - eval `ssh-agent -s`
 - ssh-add travis_hat_dev_portal
