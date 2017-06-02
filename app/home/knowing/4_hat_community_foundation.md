@@ -1,10 +1,9 @@
 ---
 layout: twoColumn
-section: home
-type: Knowing the HAT Tech Ecosystem
-title:  "HAT Community Foundation"
-description: "HAT Community Foundation"
-weight: 4
+section: "Knowing the Ecosystem"
+type: article
+title: HAT Community Foundation
+description: HAT Community Foundation
 ---
 
 #HAT Community Foundation

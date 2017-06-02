@@ -4,7 +4,7 @@ section: home
 type: Tools
 title:  "MarketSquare"
 description: "MarketSquare"
-weight: 6
+weight: 7
 ---
 
 # MarketSquare

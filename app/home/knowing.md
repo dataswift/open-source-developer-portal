@@ -2,7 +2,7 @@
 layout: twoColumn
 section: home
 type: Knowing the HAT Tech Ecosystem
-title:  "Knowing the Ecosystem"
+title: "Knowing the Ecosystem"
 description: "Knowing the Ecosystem"
 weight: 1
 ---

@@ -36,6 +36,11 @@
             color: $color-black;
         }
 
+        i.material-icons {
+            margin-left: -60px;
+            margin-right: 32px;
+        }
+
         &--large {
             @include flexbox;
             @include flex-direction(column);

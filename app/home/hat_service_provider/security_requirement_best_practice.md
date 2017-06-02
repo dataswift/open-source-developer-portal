@@ -7,9 +7,8 @@ description: "Security Requirement Best Practice"
 ---
 
 # Security Requirement Best Practice
-Here we provide a best practice from HATDeX (A HAT Service Provider), with details of how HATDeX provides its solution to meet minimum recommended best practice.
 
-# HAT Provisioning Security Checklist 
+Here we provide a best practice from HATDeX (A HAT Service Provider), with details of how HATDeX provides its solution to meet minimum recommended best practice.
 
 ## Encryption
 
@@ -40,7 +39,7 @@ Data in-use is stored in a PostgreSQL database. Such data is not encrypted clien
 
 ### Define what password strength policy is
 
-The HAT uses a *zxcvbn*-based password strength policy (published in USENIX Security'16 - https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/wheeler). *zxcvbn* is a password strength estimator inspired by password crackers. Through pattern matching and conservative estimation, it recognises and weighs 30,000 common passwords, common names and surnames according to US census data, popular English words from Wikipedia and US television and movies, and other common patterns such as dates, repeats (aaa), sequences (abcd), keyboard patterns (qwertyuiop), and l33t speak.
+The HAT uses a *zxcvbn*-based password strength policy (published in [USENIX Security'16](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/wheeler)). *zxcvbn* is a password strength estimator inspired by password crackers. Through pattern matching and conservative estimation, it recognises and weighs 30,000 common passwords, common names and surnames according to US census data, popular English words from Wikipedia and US television and movies, and other common patterns such as dates, repeats (aaa), sequences (abcd), keyboard patterns (qwertyuiop), and l33t speak.
 
 The policy builds on a computational password complexity score instead of rules like "passwords must contain three of {lower, upper, numbers, symbols}" for a more secure alternative. It allows many password styles to flourish so long as it detects sufficient complexity – passphrases are rated highly given enough uncommon words, keyboard patterns are ranked based on length and number of turns, and capitalisation adds more complexity when it's unpredictable.
 
@@ -123,20 +122,16 @@ Accessibility to the HAT data for this research project is only applicable to th
 
 Staff do not have access to personal data hosted within the platform.
 
-### Who is the Data Protection Officer or Caldicott Guardian (if NHS)
-
-FirstName Lastname (replace by the actual CIO name) is the Data Protection Officer.
-
 ## Data Audit and Access Control
 
 ### What audit logs for access and deletion of data are available
 
 Audit logs are grouped into four categories: 
 
-- AWS operation Audit Trail:
-- Access logs against AWS S3 buckets for platform file operations:
-- System-level logs against VMs running Application Servers:
-- Application logs (only tracking the fact of an operation, not the contents of requests, e.g. data or passwords):
+- AWS operation Audit Trail
+- Access logs against AWS S3 buckets for platform file operations
+- System-level logs against VMs running Application Servers
+- Application logs (only tracking the fact of an operation, not the contents of requests, e.g. data or passwords)
 	
 
 ### How long are audit logs kept for
@@ -197,15 +192,3 @@ All compute, storage and database resources are located within a single configur
 ## What are the recovery timescales
 
 Recovery and scaling is virtually instantaneous in case of partial underlying infrastructure failures, transparent to the users and done without technical staff involvement. Using infrastructure blueprints major outages can be recovered from within hours of the underlying infrastructure becoming available.
-
-# Additional Data Protection Terms
-
-## If you are being asked to respond to deliver or potentially deliver a hosted service, please state whether this is physical or Cloud provision?
-
-Cloud
-
-## Physically, where is the data kept. Is it ever located outside of the UK / EU?  - INFORMATION ONLY
-
-Data held within the infrastructure is never transferred outside the designated region - currently EU only, as detailed above. Further guarantees are dependent on the underlying infrastructure provider's compliance with the agreement of not moving data outside the designated region:
-
-AWS customers designate in which physical region their data and their servers will be located. AWS will not move customers' content from the selected Regions without notifying the customer, unless required to comply with the law or requests of governmental entities.

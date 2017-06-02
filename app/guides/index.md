@@ -33,6 +33,22 @@ description: "Documentation Introduction"
         <h3>User Management</h3>
         <p>There are 4 Account roles defined within the HAT.</p>
     </a>
+    <a href="" class="grid-nav__item">
+        <h3><i class="material-icons">settings_input_component</i> Building a Data Plug</h3>
+        <p>How to build a new Data Plug for claiming data into a HAT using an example</p>
+        <h4>Coming Soon</h4>
+    </a>
+    <a href="" class="icon-logo-databuyer grid-nav__item">
+        <h3>Requesting Data from HAT users</h3>
+        <p>Requesting Data from HAT users using the Data Buyer service</p>
+        <h4>Coming Soon</h4>
+    </a>
+    <a href="" class="icon-logo-rumpel grid-nav__item">
+        <h3>Customising Rumpel</h3>
+        <p>How to re-brand Rumpel for your own users</p>
+        <h4>Coming Soon</h4>
+    </a>
+
     
     
 </nav>

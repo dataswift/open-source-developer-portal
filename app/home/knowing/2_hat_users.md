@@ -1,10 +1,9 @@
 ---
 layout: twoColumn
-section: home
-type: Knowing the HAT Tech Ecosystem
-title:  "HAT Users"
+section: "Knowing the Ecosystem"
+type: article
+title: HAT Users
 description: "HAT Users"
-weight: 2
 ---
 
 # Hat Users

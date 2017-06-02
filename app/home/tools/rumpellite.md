@@ -4,7 +4,7 @@ section: home
 type: Tools
 title:  "RumpelLite"
 description: "RumpelLite"
-weight: 4
+weight: 3
 ---
 
 # Rumpel Lite: Rumpel on iOS

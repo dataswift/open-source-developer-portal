@@ -1,10 +1,9 @@
 ---
 layout: twoColumn
-section: home
-type: Knowing the HAT Tech Ecosystem
-title:  "HAT Application"
-description: "HAT Application"
-weight: 3
+section: "Knowing the Ecosystem"
+type: article
+title: HAT Applications
+description: "HAT Applications"
 ---
 
 # Hat Application
