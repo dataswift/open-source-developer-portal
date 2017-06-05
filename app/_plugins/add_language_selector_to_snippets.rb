@@ -54,7 +54,7 @@ module Jekyll
           def generate_code_block(code, lang, nohide, selector)
             code = "<pre>#{code}</pre>"
 
-            lang = lang + 'nohide' if nohide
+            lang = lang + ' nohide' if nohide
 
             # Button
             button = "<button class=\"btn alternative\">copy</button>"

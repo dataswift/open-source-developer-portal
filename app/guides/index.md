@@ -9,6 +9,10 @@ description: "Documentation Introduction"
         <h3>Hub of All Things</h3>
         <p>Hub-of-All-Things is a platform for a Multi-Sided Market powered by the Internet of Things.</p>
     </div>
+     <a href="/guides/hat_login" class="icon-logo-hat grid-nav__item">
+        <h3>Log in with HAT</h3>
+        <p>Allow your users to log in with their HAT</p>
+    </a>
     <a href="/guides/provisioning" class="icon-logo-milliner grid-nav__item">
         <h3>HAT Provisioning/Sandbox</h3>
         <p>HAT provisioning in a test cluster using Milliner</p>
