@@ -17,7 +17,7 @@ File upload happens in three steps:
 
 Uploading metadata is simple: call `POST /api/v2/files/upload` with the file details:
 
-```curl
+```shellnoselect
    curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
     	-H "Content-Type: application/json" \
     	-d '{
@@ -32,7 +32,7 @@ Uploading metadata is simple: call `POST /api/v2/files/upload` with the file det
 
 Only `name` and `source` properties are mandatory - all others are optional. You can also attach `dateCreated` and `lastUpdated` fields with Unix timestamps to set them accordingly. If everything is successful, the HAT will respond with a copy of the metadata as well as additional information:
 
-```
+```jsonnoselect
 {
   "fileId": "testtestfile-12.png",
   "name": "testFile.png",
@@ -58,7 +58,7 @@ Only `name` and `source` properties are mandatory - all others are optional. You
 
 Importantly, it includes the unique file identifier for the HAT `fileId` and `contentUrl` indicating where the file should be uploaded. The upload `contentUrl` is signed and has limited duration validity, most likely 5 minutes, after which it becomes invalid. Then uploading itself could be done as (*note:* `x-amz-server-side-encryption` header is mandatory):
 
-```curl
+```shellnoselect
 curl -v -T ${LOCAL_FILE} \
   -H "x-amz-server-side-encryption: AES256"\
   "https://hat-storage-test.s3.amazonaws.com/HAT_ADDRESS/testtestfile-12.png?AWSAccessKeyId=AKIAJSOXH3FJPB43SWGQ&Expires=1487871442&Signature=CTRdDW8nKBqNcuwK0ssH77zjkec%3D"
@@ -66,7 +66,7 @@ curl -v -T ${LOCAL_FILE} \
 
 Finally, to mark the file "Completed", call `PUT /api/v2/files/file/:fileId/complete`. It will again respond with file metadata:
 
-```
+```jsonnoselect
 {
   "fileId": "postmantestfile-12.png",
   "name": "testFile.png",
@@ -96,5 +96,5 @@ Finally, files can be deleted (by *owner* only!) by calling `DELETE /api/v2/file
 
 <nav class="pager-nav">
 <a href="./">Overview</a>
-<a href="02-access-management.html">Next step: Access Management</a>
+<a href="02-access-management.html">Next Step: Access Management</a>
 </nav>

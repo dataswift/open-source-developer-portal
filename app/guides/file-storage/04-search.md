@@ -20,7 +20,7 @@ HAT files can be looked up by any part of metadata attached to them:
 
 To search for files call `POST /api/v2/files/search` sending file template to match against. All calls must be authenticated with the user's token and only files the user is allowed to access are returned (all files for the HAT owner!):
 
-```curl
+```curlnoselect
     curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
     	-H "Content-Type: application/json" \
     	-d '{
@@ -36,5 +36,5 @@ To search for files call `POST /api/v2/files/search` sending file template to ma
 
 <nav class="pager-nav">
 <a href="03-contents.html">Previous Step: Content Access</a>
-<a href="./">Next step: Overview</a>
+<a href="./">Next Step: Overview</a>
 </nav>

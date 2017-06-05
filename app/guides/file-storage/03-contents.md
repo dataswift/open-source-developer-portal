@@ -14,5 +14,5 @@ description: HAT File Content Listing
 
 <nav class="pager-nav">
 <a href="02-access-management.html">Previous Step: Access Management</a>
-<a href="04-search.html">Next step: Search</a>
+<a href="04-search.html">Next Step: Search</a>
 </nav>

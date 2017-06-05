@@ -35,5 +35,5 @@ The steps in logging in with a HAT are:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-send-hat-login.html">Next step: Send user for HAT login</a>
+<a href="01-send-hat-login.html">Next Step: Send user for HAT login</a>
 </nav>

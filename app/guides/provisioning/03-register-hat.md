@@ -34,5 +34,5 @@ The only parameter passed to DEX is `hatAddress` containing the fully-qualified 
 
 <nav class="pager-nav">
 <a href="02-create-hat.html">Previous Step: Start the HAT</a>
-<a href="./">Next step: Overview</a>
+<a href="./">Next Step: Overview</a>
 </nav>

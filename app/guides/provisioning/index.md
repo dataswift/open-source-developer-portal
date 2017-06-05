@@ -21,5 +21,5 @@ This guide outlines how Milliner integrates with your infrastructure for HAT pro
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-sign-up.html">Next step: Sign user up</a>
+<a href="01-sign-up.html">Next Step: Sign user up</a>
 </nav>

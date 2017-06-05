@@ -32,6 +32,6 @@ This guide details how HAT handles file management in 4 key aspects:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-upload.html">Next step: Upload</a>
+<a href="01-upload.html">Next Step: Upload</a>
 </nav>
 

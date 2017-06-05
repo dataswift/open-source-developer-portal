@@ -17,5 +17,5 @@ Note the complete address is served via SSL, contains the name of the HAT as wel
 
 <nav class="pager-nav">
 <a href="01-send-hat-login.html">Previous Step: Send user for HAT login</a>
-<a href="03-verify-authenticate.html">Next step: Verify and authenticate user</a>
+<a href="03-verify-authenticate.html">Next Step: Verify and authenticate user</a>
 </nav>

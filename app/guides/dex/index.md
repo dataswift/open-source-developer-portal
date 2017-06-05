@@ -28,5 +28,5 @@ The core aspects are:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="01-statistics.html">Next step: HAT Ecosystem Statistics</a>
+<a href="01-statistics.html">Next Step: HAT Ecosystem Statistics</a>
 </nav>

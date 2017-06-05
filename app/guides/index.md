@@ -25,9 +25,9 @@ description: "Documentation Introduction"
         <h3>DEX Public Services</h3>
         <p>How to use key DEX Services for application management</p>
     </a>
-    <a href="/documentation/raw_data_input_and_output.html" class="icon-logo-hat grid-nav__item">
+    <a href="/guides/raw_data_io" class="icon-logo-hat grid-nav__item">
         <h3>Raw Data I/O</h3>
-        <p>The Raw Data level provides a flexible substrate for users to import a varying range of data. This is achieved through a virtualised database.</p>
+        <p>The Raw Data level provides a flexible substrate for users and develoeprs to import a varying range of data.</p>
     </a>
     <a href="/documentation/sharing_and_direct_data_debits.html" class="icon-logo-hat grid-nav__item">
         <h3>Sharing and Direct Data Debits</h3>
@@ -52,8 +52,4 @@ description: "Documentation Introduction"
         <p>How to re-brand Rumpel for your own users</p>
         <h4>Coming Soon</h4>
     </a>
-
-    
-    
 </nav>
-

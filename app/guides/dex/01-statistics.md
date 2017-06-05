@@ -44,5 +44,5 @@ Which responds with aggregated statistics:
 
 <nav class="pager-nav">
 <a href="./">Previous step: Overview</a>
-<a href="02-data-plug-management.html">Next step: Data Plug Management</a>
+<a href="02-data-plug-management.html">Next Step: Data Plug Management</a>
 </nav>

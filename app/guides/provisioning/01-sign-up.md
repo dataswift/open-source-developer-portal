@@ -90,5 +90,5 @@ Alternatively, the response will signal an error through HTTP response status an
 
 <nav class="pager-nav">
 <a href="./">Overview</a>
-<a href="02-create-hat.html">Next step: Start the HAT</a>
+<a href="02-create-hat.html">Next Step: Start the HAT</a>
 </nav>

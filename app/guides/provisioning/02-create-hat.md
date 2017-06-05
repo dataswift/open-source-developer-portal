@@ -45,5 +45,5 @@ The three key parameters for creating a HAT include:
 
 <nav class="pager-nav">
 <a href="01-sign-up">Previous Step: Sign user up</a>
-<a href="03-register-hat.html">Next step: Register HAT with DEX</a>
+<a href="03-register-hat.html">Next Step: Register HAT with DEX</a>
 </nav>

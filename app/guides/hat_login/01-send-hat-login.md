@@ -23,5 +23,5 @@ If you redirect the user to an existing HAT, they will proceed to the next step.
 
 <nav class="pager-nav">
 <a href="./">Overview</a>
-<a href="02-login-ui.html">Next step: User Logs in</a>
+<a href="02-login-ui.html">Next Step: User Logs in</a>
 </nav>
