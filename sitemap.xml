@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://developers.hubofallthings.com//guides/hat_login/01-send-hat-login.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//guides/provisioning/01-sign-up.html</loc>
   </url>
   <url>
@@ -16,10 +19,16 @@
     <loc>http://developers.hubofallthings.com//guides/provisioning/02-create-hat.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//guides/hat_login/02-login-ui.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//guides/file-storage/03-contents.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/provisioning/03-register-hat.html</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/hat_login/03-verify-authenticate.html</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/file-storage/04-search.html</loc>
@@ -127,22 +136,25 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//documentation/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//home/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//guides/file-storage/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//documentation/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/hat_login/</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//guides/dex/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
@@ -236,22 +248,22 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-06-02T21:29:35+00:00</lastmod>
+    <lastmod>2017-06-05T14:15:30+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-06-02T21:29:35+00:00</lastmod>
+    <lastmod>2017-06-05T14:15:30+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-06-02T21:29:35+00:00</lastmod>
+    <lastmod>2017-06-05T14:15:30+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-06-02T21:29:35+00:00</lastmod>
+    <lastmod>2017-06-05T14:15:30+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/ss-glyphish-outlined/documentation.html</loc>
-    <lastmod>2017-06-02T21:29:35+00:00</lastmod>
+    <lastmod>2017-06-05T14:15:30+00:00</lastmod>
   </url>
 </urlset>
