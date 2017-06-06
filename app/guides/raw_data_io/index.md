@@ -6,7 +6,9 @@ guide:
     name: raw_data_io
     step: overview
 title: Overview
-description: Raw Data I/O Overview
+description: The Raw Data level provides a flexible substrate for users and develoeprs to import a varying range of data
+product: hat
+weight: 2
 ---
 
 One of the core design principles of the HAT has been its ability to store any structure data. In *v2* of the API this ability got overhauled to simplify data input and minimise setup required before data can be saved.

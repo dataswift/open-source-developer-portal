@@ -1,0 +1,27 @@
+---
+layout: twoColumn
+---
+
+{% assign section = "guides" %}
+{% assign filteredPages = site.pages | where:"section", "guides" | sort:'weight' %}
+
+<nav class="grid-nav">
+	
+	<div class="icon-logo-hat-large grid-nav__item grid-nav__item--large">
+		<h3>Hub of All Things</h3>
+		<p>Hub-of-All-Things is a platform for a Multi-Sided Market powered by the Internet of Things.</p>
+	</div>
+
+	{% for page in filteredPages %}
+		{% if page.guide.step == "overview" %}
+			{% capture expectedUrl %}/{{ section }}/{{ page.guide.name }}{% endcapture %}
+			<a href="{{expectedUrl}}" class="icon-logo-{{page.product}} grid-nav__item">
+				<h3>{{page.type}}</h3>
+				<p>{{page.description}}</p>
+			</a>
+		{% endif %}
+	{% endfor %}
+</nav>
+
+{{ content }}
+

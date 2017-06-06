@@ -6,7 +6,9 @@ guide:
     name: provisioning
     step: overview
 title:  HAT provisioning with Milliner
-description: Create a new HAT using Milliner API call
+description: HAT provisioning in a test cluster using Milliner
+product: milliner
+weight: 6
 ---
 
 The HAT Milliner Service is the HAT deployment software used in the HATs-on-Demand and HATs-as-a-Service. It was developed by HATDeX to allow more dynamic configuration of HAT deployment such as for example, default allocated storage for each HAT, mechanism for starting and managing HAT and rules for HAT backup and recovery.

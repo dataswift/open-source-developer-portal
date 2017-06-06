@@ -6,7 +6,9 @@ guide:
     name: file-storage
     step: overview
 title:  HAT File Storage
-description: HAT File Storage
+description: File storage and permission management on the HAT
+product: hat
+weight: 5
 ---
 
 # HAT File Storage

@@ -7,6 +7,8 @@ guide:
     step: overview
 title: HAT Data Exchange services
 description: How to use key DEX Services for application management
+product: dex
+weight: 5
 ---
 
 The DEX (data exchange) service of HATDeX consists of:

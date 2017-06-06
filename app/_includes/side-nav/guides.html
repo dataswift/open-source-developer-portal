@@ -17,14 +17,13 @@
             <div class="icon icon-side-nav-collapse-minus"></div>
         </div>
         <nav id="js-sidenav-dropdown-nav">
-
-            {% for pageGroup in pages %}
-                {% capture expectedUrl %}/{{ section }}/{{ pageGroup.items.first.guide.name }}{% endcapture %}
-                {% unless page.url contains expectedUrl %}
-                    <a href="{{expectedUrl}}">{{pageGroup.name}}</a>
-                {% endunless %}
+            {% assign guides = filteredPages | sort:'weight' %}
+            {% for page in guides %}
+                {% if page.guide.step == "overview" %}
+                    {% capture expectedUrl %}/{{ section }}/{{ page.guide.name }}{% endcapture %}
+                    <a href="{{expectedUrl}}">{{page.type}}</a>
+                {% endif %}
             {% endfor %}
-
         </nav>
     </section>
 

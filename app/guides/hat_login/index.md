@@ -7,6 +7,8 @@ guide:
     step: overview
 title: Log in with HAT
 description: Allow your users to log in with their HAT
+product: hat
+weight: 1
 ---
 
 The HAT is an API-only service, meaning it does not enforce a specific Application or User Interface to expose the data to the user. Instead, authentication happens using the HAT APIs and the [Javascript Web Token](https://jwt.io) (JWT). Each HAT runs as a separate server and has a publicly-reachable address (such as `https://test.hubofallthings.net`). All calls in this documentation are therefore executed against an individual HAT. The same login mechanism is used across all applications in the ecosystem, including:
