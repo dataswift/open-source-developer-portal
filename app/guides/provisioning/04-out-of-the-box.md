@@ -9,9 +9,9 @@ title: HATs out of the box
 description: HAT provisioning out of the box with Milliner
 ---
 
-The guide illustrated the ease of provisioning HATs in a secure environment and with individual databases for each user. In particular, HATs for testing purposes can be created as required using the customisable (Milliner frontend)[https://hubat.net] interface in addition to the commercially available ones via (HATTERS)[https://hatters.hubofallthings.com]:
+The guide illustrated the ease of provisioning HATs in a secure environment and with individual databases for each user. In particular, HATs for testing purposes can be created as required using the customisable [Milliner frontend](https://hubat.net) interface in addition to the commercially available ones via [HATTERS](https://hatters.hubofallthings.com):
 
-https://hubat.net
+[https://hubat.net](https://hubat.net)
 
 You just need to use `HUBAT` as your invitation code!
 
@@ -19,7 +19,7 @@ You just need to use `HUBAT` as your invitation code!
 
 Milliner provisions HAT infrastructure based on industry's best practices. Currently its tooling is focused on the Amazon AWS capabilities as the most advanced ones in the industry, however it could be adapted to different cloud providers with necessary features.
 
-![infrastructure-overview](images/milliner-architecture.png)
+![infrastructure-overview](/images/milliner-architecture.png)
 
 The repository consists of a set of nested templates that deploy the following:
 
@@ -35,5 +35,7 @@ The repository consists of a set of nested templates that deploy the following:
  - Centralized container logging with [Amazon CloudWatch Logs](http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html).
  - CloudTrail based logging for security-related events such as role and security group changes, root account activity, as well as changes to CloudTrail settings
 
-
-
+<nav class="pager-nav">
+<a href="03-register-hat.html">Previous Step: Register HAT with DEX</a>
+<a href="./">Next Step: Overview</a>
+</nav>
