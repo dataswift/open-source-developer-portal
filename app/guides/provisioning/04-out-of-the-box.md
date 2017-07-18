@@ -21,7 +21,7 @@ Milliner provisions HAT infrastructure based on industry's best practices. Curre
 
 ![infrastructure-overview](/images/milliner-architecture.png)
 
-The repository consists of a set of nested templates that deploy the following:
+The solution consists of a set of nested templates that deploy the following:
 
  - A tiered VPC with public, private and database subnets, spanning an AWS region and two availability zones.
  - Security groups controlling what services can be reached and from where
