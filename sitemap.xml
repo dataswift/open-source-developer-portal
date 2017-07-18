@@ -58,6 +58,9 @@
     <loc>http://developers.hubofallthings.com//guides/raw_data_io/04-next-steps.html</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//guides/provisioning/04-out-of-the-box.html</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//guides/file-storage/04-search.html</loc>
   </url>
   <url>
@@ -166,16 +169,25 @@
     <loc>http://developers.hubofallthings.com//</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//guides/dex/</loc>
+    <loc>http://developers.hubofallthings.com//guides/customising-rumpel/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//documentation/</loc>
   </url>
   <url>
+    <loc>http://developers.hubofallthings.com//guides/</loc>
+  </url>
+  <url>
     <loc>http://developers.hubofallthings.com//guides/data-debits/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/data-bundling/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//guides/requesting-data-databuyer/</loc>
+  </url>
+  <url>
+    <loc>http://developers.hubofallthings.com//home/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/hat_login/</loc>
@@ -184,25 +196,16 @@
     <loc>http://developers.hubofallthings.com//guides/provisioning/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//home/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//guides/raw_data_io/</loc>
-  </url>
-  <url>
-    <loc>http://developers.hubofallthings.com//guides/data-bundling/</loc>
+    <loc>http://developers.hubofallthings.com//guides/dex/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//guides/file-storage/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/customising-rumpel/</loc>
-  </url>
-  <url>
     <loc>http://developers.hubofallthings.com//guides/building-data-plug/</loc>
   </url>
   <url>
-    <loc>http://developers.hubofallthings.com//guides/requesting-data-databuyer/</loc>
+    <loc>http://developers.hubofallthings.com//guides/raw_data_io/</loc>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//sitemap/</loc>
@@ -296,22 +299,22 @@
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//404.html</loc>
-    <lastmod>2017-06-06T20:59:31+00:00</lastmod>
+    <lastmod>2017-07-18T19:26:28+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/base/preview.html</loc>
-    <lastmod>2017-06-06T20:59:31+00:00</lastmod>
+    <lastmod>2017-07-18T19:26:28+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/developer/preview.html</loc>
-    <lastmod>2017-06-06T20:59:31+00:00</lastmod>
+    <lastmod>2017-07-18T19:26:28+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/guides/preview.html</loc>
-    <lastmod>2017-06-06T20:59:31+00:00</lastmod>
+    <lastmod>2017-07-18T19:26:28+00:00</lastmod>
   </url>
   <url>
     <loc>http://developers.hubofallthings.com//lib/icons/dist/ss-glyphish-outlined/documentation.html</loc>
-    <lastmod>2017-06-06T20:59:31+00:00</lastmod>
+    <lastmod>2017-07-18T19:26:28+00:00</lastmod>
   </url>
 </urlset>
