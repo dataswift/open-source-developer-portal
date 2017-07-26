@@ -26,3 +26,4 @@ deploy:
   acl: public_read
   on:
     repo: Hub-of-all-Things/open-source-developer-portal
+  skip_cleanup: true
