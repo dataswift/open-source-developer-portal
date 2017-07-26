@@ -1,24 +1,28 @@
 language: ruby
 rvm:
-  - 2.1
+- 2.1
 before_install:
-  - git config --global user.email "travis@example.com"
-  - git config --global user.name "Travis CI"
-  - openssl aes-256-cbc -K $encrypted_634f038e8b4c_key -iv $encrypted_634f038e8b4c_iv -in travis_hat_dev_portal.enc -out travis_hat_dev_portal -d
-  - chmod 600 travis_hat_dev_portal
-  - eval `ssh-agent -s`
-  - ssh-add travis_hat_dev_portal
-  - wget https://raw.githubusercontent.com/creationix/nvm/v0.33.2/nvm.sh -O ~/.nvm/nvm.sh
-  - source ~/.nvm/nvm.sh
-  - nvm install 6 # for Node v6
-  - node --version
-  - npm install -g grunt-cli
+- wget https://raw.githubusercontent.com/creationix/nvm/v0.33.2/nvm.sh -O ~/.nvm/nvm.sh
+- source ~/.nvm/nvm.sh
+- nvm install 6
+- node --version
+- npm install -g grunt-cli
 install:
-  - bundle install --jobs=3 --retry=3
-  - npm install
-  - npm install -g httpsnippet
+- bundle install --jobs=3 --retry=3
+- npm install
+- npm install -g httpsnippet
 script:
-  - grunt deploy
+- grunt build
 branches:
   only:
-    - master
+  - master
+deploy:
+  provider: s3
+  access_key_id: AKIAJYKCFAGJAAGE2MKQ
+  secret_access_key:
+    secure: P7452hp1aPlgEQdOOYhmBjBTcKh+dgMyYWEI1JvBoHg2BE66r4VH9JNIzVZYVXVBVaps1mabyk7CL/qqrTmOz7ejeF4pmb2LU9nC1RQNigly81lVLdTwCVNJyh6L+xC+zfmae8rqPq5dysG7FUQ7m2OjuyolAwEEuD37sjmr9Y4j37BNUhpKTuCfYDCV6REyq6M+WJGnsriWiOxImkDQIv5uTOtzE1ogU/CSe823TjYhwqT/f/aDKXBFGYN4HehfhpgzPUxyDb3kPllsFLhMgPKWK95hpjP2BfgHNlwJ6K/83PfDPWV6qP7UhmhjSI7N1JMfdKsKS5yGjtfvvwD0+2cfn2aZ7AFU65pgd2yrpQKJfSu/Nfpog2O4ee+BO0WOw44p8/rehwdeUwa/JqbDVR9ZFIYpZ37EEdPS0J25bPan7HSEmNDuSAKIpwocb9U8cVTle/GAax3dNKPbPQ5uSdOAznljA8hswGvqwyADHiFgZYRaymD2Vg6MFmWJ2qifKflemg7VhYwPTRp6M8ODMKunMICDdWx3ly32i3pBl5f8oRxYrPA/sMJ7uaut2aWuJeQEXNoFkH+s51cXRXf8MEdsJ7v5rKk3k7LSA0TO6JkrOUysJoG2oJwGHIW/Bw/KFoDJuRqsJmtrPlsi8iNQtvBZoSVW8NI6351kFREK1Yw=
+  bucket: developers-test.hubofallthings.com
+  local-dir: dist
+  acl: public_read
+  on:
+    repo: Hub-of-all-Things/open-source-developer-portal
