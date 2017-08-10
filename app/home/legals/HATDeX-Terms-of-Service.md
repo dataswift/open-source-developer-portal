@@ -58,13 +58,13 @@ HATDeX shall allow you to access and use MarketSquare in accordance with the Ter
 3. At the moment of validation, HATDeX may require you to pay for its Services and/or the purchase of additional services, such as increased storage space and other features, connected with your HAT Account (the services for which HATDeX requires a payment are collectively referred to as the **"Paid Services"**).
 4. Information on validation and pricing is available at [https://hatters.hubofallthings.com]
 5. When HATDeX requires a payment for the provision of the Paid Services, the following rules apply:
-  1.  The initial term for the provision of the Paid services begins on the date that HATDeX makes such services available to you and continues for the period selected by the User at the moment of purchase. If you do not choose a period, the initial term will be 30 days. Regardless of whether you choose the duration of the term or not, the term will automatically renew upon expiration, unless you provide HATDeX with notice of non-renewal.
-  2. Unless agreed otherwise, HATDeX will charge your payment instrument monthly beginning on the date HATDeX first provides the Paid Services to you. HATDeX has the right to suspend the provision of the Paid Services in case of rejection of the charges to your payment instrument.
-  3.  You can provide HATDeX with notice of non-renewal anytime through the procedure available in your HAT Account. After receiving your notice of non-renewal, HATDeX will continue to provide you with the Paid Services that you had purchased until the date of expiration of the term as defined in Article 6.5.a (the "**Date of Effective Termination of the Paid Services**"). HATDeX will suspend the provision of the Paid Services that you decided not to renew on the Date of Effective Termination of the Paid Services. When you provide HATDeX with notice of non-renewal, HATDeX will not charge to your payment instrument any amount in relation to the Paid Services due to events occurring on or after the Date of Effective Termination of the Paid Services. These Terms will continue to apply following your notice of non-renewal until the Date of Effective Termination of the Paid Services.
-  4.  Unless otherwise expressly stated in the Terms or the invoices for the Paid Services, all amounts due to HATDeX under this Article do not include any tax on value added, goods, services, sales, use, property, excise and any other tax, import or export duty or levy imposed on or in connection with the Paid Services (collectively, "**Tax**"). When required by the law to collect a Tax, HATDeX will include such a Tax in your invoice and you must either pay such a Tax or provide evidence of your exemption from the Tax.
-  5. Any obligation to pay any Tax that you, as a User, may be required to pay under any applicable law shall be borne exclusively by you. You agree to cooperate with HATDeX by providing accurate and adequate information, as determined by HATDeX, to determine whether any Tax is due in connection with the provision or use of the Paid Services.
-  6.  All payments to HATDeX for the provision of the Paid Services shall be made without any withholding or deduction for any Tax, unless you are legally required to make a withholding or deduction.
-  7. HATDeX has the right to change the fees for its Paid Services. However, HATDeX will notify you before making any changes to the fees.
+    1.  The initial term for the provision of the Paid services begins on the date that HATDeX makes such services available to you and continues for the period selected by the User at the moment of purchase. If you do not choose a period, the initial term will be 30 days. Regardless of whether you choose the duration of the term or not, the term will automatically renew upon expiration, unless you provide HATDeX with notice of non-renewal.
+    2. Unless agreed otherwise, HATDeX will charge your payment instrument monthly beginning on the date HATDeX first provides the Paid Services to you. HATDeX has the right to suspend the provision of the Paid Services in case of rejection of the charges to your payment instrument.
+    3.  You can provide HATDeX with notice of non-renewal anytime through the procedure available in your HAT Account. After receiving your notice of non-renewal, HATDeX will continue to provide you with the Paid Services that you had purchased until the date of expiration of the term as defined in Article 6.5.a (the "**Date of Effective Termination of the Paid Services**"). HATDeX will suspend the provision of the Paid Services that you decided not to renew on the Date of Effective Termination of the Paid Services. When you provide HATDeX with notice of non-renewal, HATDeX will not charge to your payment instrument any amount in relation to the Paid Services due to events occurring on or after the Date of Effective Termination of the Paid Services. These Terms will continue to apply following your notice of non-renewal until the Date of Effective Termination of the Paid Services.
+    4.  Unless otherwise expressly stated in the Terms or the invoices for the Paid Services, all amounts due to HATDeX under this Article do not include any tax on value added, goods, services, sales, use, property, excise and any other tax, import or export duty or levy imposed on or in connection with the Paid Services (collectively, "**Tax**"). When required by the law to collect a Tax, HATDeX will include such a Tax in your invoice and you must either pay such a Tax or provide evidence of your exemption from the Tax.
+    5. Any obligation to pay any Tax that you, as a User, may be required to pay under any applicable law shall be borne exclusively by you. You agree to cooperate with HATDeX by providing accurate and adequate information, as determined by HATDeX, to determine whether any Tax is due in connection with the provision or use of the Paid Services.
+    6.  All payments to HATDeX for the provision of the Paid Services shall be made without any withholding or deduction for any Tax, unless you are legally required to make a withholding or deduction.
+    7. HATDeX has the right to change the fees for its Paid Services. However, HATDeX will notify you before making any changes to the fees.
 
 ## DATA OFFERS
 
@@ -95,12 +95,12 @@ HATDeX shall allow you to access and use MarketSquare in accordance with the Ter
 2. Our Services are protected by intellectual property rights in accordance with UK and foreign laws. These Terms do not grant you any right, title or interest in any of our Services, in HATDeX's trademarks, logos and other intellectual property rights and in the content of other users of the Services.
 3. HATDeX respects intellectual property rights. To this end, HATDeX allows anyone to file notices of alleged copyright infringements in relation to the use of the Services. When HATDeX considers a copyright infringement claim to be founded, it reserves the right to delete or disable content alleged to be infringing and suspend or terminate the HAT Accounts of the infringers.
 4.  HATDeX's designated agent for notice of alleged copyright infringement on the Services is:
-```
-    Copyright Agent
-    8 Comberton Road
-    Barton
-    Cambridge CB237BA
-```
+    ```
+        Copyright Agent
+        8 Comberton Road
+        Barton
+        Cambridge CB237BA
+    ```
 
 ## SOFTWARE
 
@@ -115,13 +115,13 @@ Some of our Services allow you to download and use client software ("**Software*
 ## SUSPENSION OF OUR SERVICES
 
 1.  HATDeX may suspend in whole or in part the provision of its Services to you at any time without incurring any liability if:
-  1. HATDeX reasonably believes that you acted or are acting in breach of the Terms, including the Acceptable Use Policy;
-  2.  HATDeX reasonably believes that the User acted or is acting in breach of any applicable law;
-  3. you fail to cooperate with HATDeX's investigations of suspected breaches or technical faults;
-  4.  HATDeX reasonably believes that a User's HAT Account has been accessed by an unauthorised third party or its security has been compromised in any other manner;
-  5. HATDeX considers the suspension to be reasonably necessary to protect its network, its customers, its commercial interests or any other essential interest;
-  6. HATDeX is required by law or by a governmental authority to suspend its Services;
-  7.  you fail to validate your account within 30 days in accordance with Article 6;
+    1. HATDeX reasonably believes that you acted or are acting in breach of the Terms, including the Acceptable Use Policy;
+    2.  HATDeX reasonably believes that the User acted or is acting in breach of any applicable law;
+    3. you fail to cooperate with HATDeX's investigations of suspected breaches or technical faults;
+    4.  HATDeX reasonably believes that a User's HAT Account has been accessed by an unauthorised third party or its security has been compromised in any other manner;
+    5. HATDeX considers the suspension to be reasonably necessary to protect its network, its customers, its commercial interests or any other essential interest;
+    6. HATDeX is required by law or by a governmental authority to suspend its Services;
+    7.  you fail to validate your account within 30 days in accordance with Article 6;
 2.  HATDeX will give you reasonable advance notice of a suspension and will offer you the opportunity to cure the grounds underlying the suspension, when this appears to be possible in HATDeX's judgment.
 3. If the suspension is based on one of the grounds listed under letters a, b, c and f of this Article, HATDeX has the right to continue to charge you the fees for the Paid Services during the suspension in accordance with Article
 
@@ -137,14 +137,14 @@ While HATDeX strives to provide Services of the highest attainable quality, it c
 ## LIMITATION OF LIABILITY
 
 1. To the fullest extent permitted by law, except for any liability for HATDeX's or its affiliates' fraud, fraudulent misrepresentation or gross negligence, HATDeX, its affiliates, suppliers or distributors shall not be liable for:
-  1.  any indirect, special, incidental, exemplary, or consequential loss or damages of any kind;
-  2. any loss of profit or income;
-  3. any loss of business or business opportunity;
-  4. any loss or corruption of data;
-  5.  any anticipated savings or revenue;
-  6.  any punitive damages;
-  7.  any loss of goodwill or reputation; or
-  8. any other loss that could have been avoided by the damaged party's use of reasonable diligence.
+    1. any indirect, special, incidental, exemplary, or consequential loss or damages of any kind;
+    2. any loss of profit or income;
+    3. any loss of business or business opportunity;
+    4. any loss or corruption of data;
+    5. any anticipated savings or revenue;
+    6. any punitive damages;
+    7. any loss of goodwill or reputation; or
+    8. any other loss that could have been avoided by the damaged party's use of reasonable diligence.
 2. This is regardless of whether or not HATDeX or any of its affiliates has been warned of the possibility of such damages, and even if a remedy fails of its essential purpose.
 3. HATDeX will not be in breach of the Terms if the failure to perform any of its obligations is due to an event beyond its control, such as significant failure of a part of the power grid, significant failure of the Internet, natural disaster, war, riot, insurrection, epidemic, strikes, terrorism, or other events of a magnitude or type for which precautions are not generally taken in the industry.
 4. The maximum aggregate liability of HATDeX, its affiliates, suppliers and distributors shall not exceed £ 20.
