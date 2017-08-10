@@ -10,6 +10,7 @@ dist:
               - _bower_components/jquery/jquery.min.js
               - favicon.ico
               - 'apple-touch*.png'
+              - 'legals/**/*.md'
           dest: '<%= yeoman.dist %>'
 stageCss:
   files:
