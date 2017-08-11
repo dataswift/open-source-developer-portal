@@ -1,4 +1,4 @@
-**HAT (HubofallThings) Terms of Service**
+# HAT (HubofallThings) Terms of Service
 
 The HAT Terms of Service (the **"Terms"**) are made between HAT Data Exchange Ltd, UK (**"HATDeX"**) and the user who uses the HAT and its services (collectively the **"Services"**) as defined under Article 2 (the **"User"**).
 
