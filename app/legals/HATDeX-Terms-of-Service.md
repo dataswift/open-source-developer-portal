@@ -4,11 +4,11 @@ The HAT Terms of Service (the **"Terms"**) are made between HAT Data Exchange Lt
 
 ## The Agreement
 
-The Terms cover your use and access to the Services. The Terms include the present agreement, MarketSquare Privacy Policy, explaining how we collect and use your information, and HATDeX's Acceptable Use Policy, outlining your responsibilities when using our Services. By using our Services, you agree to be bound by these Terms. If you are using our Services on behalf of an organisation, you agree to these Terms on behalf of such organisation.
+The Terms cover your use and access to the Services. The Terms include the present agreement, MarketSquare Privacy Policy, explaining how we collect and use your information, and HATDeX&#39;s Acceptable Use Policy, outlining your responsibilities when using our Services. By using our Services, you agree to be bound by these Terms. If you are using our Services on behalf of an organisation, you agree to these Terms on behalf of such organisation.
 
 ## Definitions
 
-- **"Acceptable Use Policy"** means HATDeX's Acceptable Use Policy applicable as of the date of your acceptance of the Terms.
+- **"Acceptable Use Policy"** means HATDeX&#39;s Acceptable Use Policy applicable as of the date of your acceptance of the Terms.
 - **"Cash Data Offer"** means a Data Offer whose reward is a online payment in UK Pound Sterling.
 - **"Data Offer"** means a HATDeX-approved offer by a Data Shopper to acquire data from a User in return for cash, one or more vouchers or one or more services.
 - **"Data Plug"** means a HATDeX-approved data transfer, authorised on MarketSquare, from a third-party platform to your HAT.
@@ -17,7 +17,7 @@ The Terms cover your use and access to the Services. The Terms include the prese
 - **"Date of Effective Termination of the Paid Services"** means the date of expiration of the term, as defined in Article 6.5.a, in which a user exercises its right to give notice of non-renewal in accordance with Article 6.5.c.
 - **"HAT Account"** means your account on the HAT identified by a username and protected by a password.
 - **"HATDeX"** means HAT Data Exchange Ltd, UK.
-- **"HAT Database"** or the **"HAT"** means the User's HubofAllThings database containing a data schema allowing for (i) the storage of data from any source without losing the structure specific to any such source, (ii) the combination of such data, and (iii) the provision of a structure for third party access to such data upon authorisation of the User.
+- **"HAT Database"** or the **"HAT"** means the User&#39;s HubofAllThings database containing a data schema allowing for (i) the storage of data from any source without losing the structure specific to any such source, (ii) the combination of such data, and (iii) the provision of a structure for third party access to such data upon authorisation of the User.
 - **"Indemnitees"** means, collectively, HATDeX, its affiliates, suppliers and distributors or any of their respective employees, agents, or suppliers.
 - **"Paid Services"** means the Services for which HATDeX requires a payment.
 - **"Privacy Policy"** means MarketSquare Privacy Policy applicable as of the date of your acceptance of the Terms.
@@ -34,7 +34,7 @@ The Terms cover your use and access to the Services. The Terms include the prese
 
 Our Services are not intended for and may not be used by people under the age of 18. By using our Services and accepting these Terms, you declare that you are at least 18 years old.
 
-## HATDeX's Obligations
+## HATDeX&#39;s Obligations
 
 HATDeX shall allow you to access and use MarketSquare in accordance with the Terms. HATDeX will comply with all the laws applicable to its provision of the Services.
 
@@ -82,7 +82,7 @@ HATDeX shall allow you to access and use MarketSquare in accordance with the Ter
 
 ## Test Services
 
-1. HATDeX occasionally releases services that are still in the testing or evaluation phase (**"Test Services"**). Test Services are marked as 'beta', 'preview', 'early access', 'evaluation' or similar terms.
+1. HATDeX occasionally releases services that are still in the testing or evaluation phase (**"Test Services"**). Test Services are marked as &#39;beta&#39;, &#39;preview&#39;, &#39;early access&#39;, &#39;evaluation&#39; or similar terms.
 2. You acknowledge that the Test Services may not be as reliable as other services or features provided by HATDeX and subject to these Terms.
 3. You acknowledge that your use of the Test Services may expose you to unusual risks of operational failures.
 4. HATDeX may terminate the Test Services at any time, without any notice.
@@ -92,9 +92,9 @@ HATDeX shall allow you to access and use MarketSquare in accordance with the Ter
 ## Intellectual Property Rights
 
 1.  When using the Services, you retain any right, title or interest in your trade secrets, inventions, trademarks, copyright and other intellectual property.
-2. Our Services are protected by intellectual property rights in accordance with UK and foreign laws. These Terms do not grant you any right, title or interest in any of our Services, in HATDeX's trademarks, logos and other intellectual property rights and in the content of other users of the Services.
+2. Our Services are protected by intellectual property rights in accordance with UK and foreign laws. These Terms do not grant you any right, title or interest in any of our Services, in HATDeX&#39;s trademarks, logos and other intellectual property rights and in the content of other users of the Services.
 3. HATDeX respects intellectual property rights. To this end, HATDeX allows anyone to file notices of alleged copyright infringements in relation to the use of the Services. When HATDeX considers a copyright infringement claim to be founded, it reserves the right to delete or disable content alleged to be infringing and suspend or terminate the HAT Accounts of the infringers.
-4.  HATDeX's designated agent for notice of alleged copyright infringement on the Services is:
+4.  HATDeX&#39;s designated agent for notice of alleged copyright infringement on the Services is:
     ```
         Copyright Agent
         8 Comberton Road
@@ -117,12 +117,12 @@ Some of our Services allow you to download and use client software ("**Software*
 1.  HATDeX may suspend in whole or in part the provision of its Services to you at any time without incurring any liability if:
     1. HATDeX reasonably believes that you acted or are acting in breach of the Terms, including the Acceptable Use Policy;
     2.  HATDeX reasonably believes that the User acted or is acting in breach of any applicable law;
-    3. you fail to cooperate with HATDeX's investigations of suspected breaches or technical faults;
-    4.  HATDeX reasonably believes that a User's HAT Account has been accessed by an unauthorised third party or its security has been compromised in any other manner;
+    3. you fail to cooperate with HATDeX&#39;s investigations of suspected breaches or technical faults;
+    4.  HATDeX reasonably believes that a User&#39;s HAT Account has been accessed by an unauthorised third party or its security has been compromised in any other manner;
     5. HATDeX considers the suspension to be reasonably necessary to protect its network, its customers, its commercial interests or any other essential interest;
     6. HATDeX is required by law or by a governmental authority to suspend its Services;
     7.  you fail to validate your account within 30 days in accordance with Article 6;
-2.  HATDeX will give you reasonable advance notice of a suspension and will offer you the opportunity to cure the grounds underlying the suspension, when this appears to be possible in HATDeX's judgment.
+2.  HATDeX will give you reasonable advance notice of a suspension and will offer you the opportunity to cure the grounds underlying the suspension, when this appears to be possible in HATDeX&#39;s judgment.
 3. If the suspension is based on one of the grounds listed under letters a, b, c and f of this Article, HATDeX has the right to continue to charge you the fees for the Paid Services during the suspension in accordance with Article
 
 ## Termination
@@ -136,7 +136,7 @@ While HATDeX strives to provide Services of the highest attainable quality, it c
 
 ## Limitation of Liability
 
-1. To the fullest extent permitted by law, except for any liability for HATDeX's or its affiliates' fraud, fraudulent misrepresentation or gross negligence, HATDeX, its affiliates, suppliers or distributors shall not be liable for:
+1. To the fullest extent permitted by law, except for any liability for HATDeX&#39;s or its affiliates&#39; fraud, fraudulent misrepresentation or gross negligence, HATDeX, its affiliates, suppliers or distributors shall not be liable for:
     1. any indirect, special, incidental, exemplary, or consequential loss or damages of any kind;
     2. any loss of profit or income;
     3. any loss of business or business opportunity;
@@ -144,7 +144,7 @@ While HATDeX strives to provide Services of the highest attainable quality, it c
     5. any anticipated savings or revenue;
     6. any punitive damages;
     7. any loss of goodwill or reputation; or
-    8. any other loss that could have been avoided by the damaged party's use of reasonable diligence.
+    8. any other loss that could have been avoided by the damaged party&#39;s use of reasonable diligence.
 2. This is regardless of whether or not HATDeX or any of its affiliates has been warned of the possibility of such damages, and even if a remedy fails of its essential purpose.
 3. HATDeX will not be in breach of the Terms if the failure to perform any of its obligations is due to an event beyond its control, such as significant failure of a part of the power grid, significant failure of the Internet, natural disaster, war, riot, insurrection, epidemic, strikes, terrorism, or other events of a magnitude or type for which precautions are not generally taken in the industry.
 4. The maximum aggregate liability of HATDeX, its affiliates, suppliers and distributors shall not exceed £ 20.
@@ -157,7 +157,7 @@ You declare that HATDeX is not legally prohibited to provide you with the Servic
   
 1.  If HATDeX, its affiliates, suppliers and distributors or any of their employees, agents, or suppliers (the **"Indemnitees"**) face a legal claim by a third party arising out of your negligence, breach of Terms or any applicable law, breach of your agreement with your customers, you will bear the costs associated with the claim and any damages award, fine, or any other amount that is imposed on the Indemnitees in relation to the claim.
 2. The obligation under the previous paragraph includes claims arising out of the acts or omissions of your employees or agents, any other person that you authorised to access the Services, and any person who gains unauthorised access to the Services due to your failure to use reasonable security measures.
-3.  HATDeX will choose legal counsel to defend the claim and will inform you on the choice. You agree to cooperate with HATDeX's in the defence of the claim. We may settle the claim only with your consent. However, you cannot unreasonably withhold, delay, condition or withdraw such consent.
+3.  HATDeX will choose legal counsel to defend the claim and will inform you on the choice. You agree to cooperate with HATDeX&#39;s in the defence of the claim. We may settle the claim only with your consent. However, you cannot unreasonably withhold, delay, condition or withdraw such consent.
 
 ## Governing Law
 
@@ -171,7 +171,7 @@ These Terms are governed by English law except for its conflicts of laws princip
 
 ## Waiver, Severability and Assignment
 
-HATDeX's failure to enforce a provision of the Terms does not waive its right to do so later. If a provision is found unenforceable, the remaining provisions of the Terms will remain in full effect and an enforceable term will be substituted reflecting our intent as closely as possible. You may not assign any of your rights under these Terms, and any such attempt will be void. HATDeX may assign its rights to any of its affiliates or subsidiaries, or to any successor in interest of any business associated with the Services.
+HATDeX&#39;s failure to enforce a provision of the Terms does not waive its right to do so later. If a provision is found unenforceable, the remaining provisions of the Terms will remain in full effect and an enforceable term will be substituted reflecting our intent as closely as possible. You may not assign any of your rights under these Terms, and any such attempt will be void. HATDeX may assign its rights to any of its affiliates or subsidiaries, or to any successor in interest of any business associated with the Services.
 
 ## Modifications to the Terms
 

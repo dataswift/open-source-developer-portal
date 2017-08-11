@@ -1,4 +1,4 @@
-# HAT (HubofallThings) Terms of Service
+# HAT (Hub of All Things) Terms of Service
 
 The HAT Terms of Service (the **"Terms"**) are made between HAT Data Exchange Ltd, UK (the **"HATDeX"**) and the user who uses the HAT and its services (collectively the **"Services"**) as defined under Article 2 (the **"User"**).
 
@@ -200,15 +200,15 @@ HATDeX may revise these Terms from time to time, and will always post the most c
 
 These Terms constitute the entire agreement between you and HATDeX with respect to the subject matter of these Terms, and supersede and replace any other prior or contemporaneous agreements, or terms and conditions applicable to the subject matter of these Terms. These Terms create no third-party beneficiary rights.
 
-# PART II: ADDITIONAL RULES GOVERNING THE PROVISION OF SERVICES BY HATDEX AS A HAT PLATFORM PROVIDER
+# Part II: Additional Rules Governing the Provision of services by HATDeX as a HAT Platform Provider
 
-## Scope of application of part ii
+## Scope of application of part II
 
 The rules contained in this part apply exclusively to the provision of the Services when HATDeX is a HAT Platform Provider. Therefore, these rules do not apply to the provision of the HAT Milliner Service. These rules are additional to the rules contained in Part I and do not exclude their application to the Services when HATDeX is a HAT Platform Provider.
 
 ## Hatdex&#39;s rights
 
-You authorise HATDeX to exercise any right necessary for creating and supporting all third-party services necessary for HATDeX to operate as a HAT Platform Provider (**"HPP Third-party Services"**), including, but not limited to, the AWS subscription and the provision of chat services.
+You authorise HATDeX to exercise any right necessary for creating and supporting all third-party services necessary for HATDeX to operate as a HAT Platform Provider ( **"HPP Third-party Services"**), including, but not limited to, the AWS subscription and the provision of chat services.
 
 ## Fee increases
 
