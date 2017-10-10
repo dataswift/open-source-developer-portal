@@ -4,7 +4,7 @@ dist:
           dot: true
           cwd: '<%= yeoman.app %>'
           src:
-              - 'images/**/*'
+              - '**/images/**/*'
               - 'fonts/**/*'
               - '!**/_*{,/**}'
               - _bower_components/jquery/jquery.min.js
