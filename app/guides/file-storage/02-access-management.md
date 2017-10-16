@@ -23,5 +23,5 @@ By default, the user who saved the file onto the HAT is allowed to see the file'
 
 <nav class="pager-nav">
 <a href="01-upload.html">Previous Step: Upload</a>
-<a href="03-content.html">Next Step: Content Access</a>
+<a href="03-contents.html">Next Step: Content Access</a>
 </nav>
