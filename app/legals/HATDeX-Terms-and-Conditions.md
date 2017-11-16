@@ -1,182 +1,157 @@
-# HATDeX Terms of Service
+**HAT Owner Agreement**
 
-The HAT Terms of Service (the **"Terms"**) are made between HAT Data Exchange Ltd, UK ("**HATDeX"**) and the user who uses the website MarketSquare and the services it offers (collectively the **"Services"**) as defined under Article 2 (the "**User**").
+_[Note: this agreement applies to all owners of HATs, no matter which provider they obtained the HAT from]_
 
-## The Agreement
+# Introduction
 
-The Terms cover your use and access to the Services. The Terms include the present agreement, MarketSquare Privacy Policy, explaining how we collect and use your information, and HATDeX&#39;s Acceptable Use Policy, outlining your responsibilities when using our Services. By using our Services, you agree to be bound by these Terms. If you are using our Services on behalf of an organisation, you agree to these Terms on behalf of such organisation.
+This Owner agreement, the HAT Privacy Policy ( [http://www.hatdex.org/privacy-policy-hat/](http://www.hatdex.org/privacy-policy-hat/)), the HAT Acceptable Use Policy ( [http://www.hatdex.org/acceptable-use-policy/](http://www.hatdex.org/acceptable-use-policy/)) and all other policies posted on the HATDeX Platform set out the terms on which HAT Data Exchange Limited offers you access to and use of our site, the Platform, services and applications (together the &quot; **Services**&quot;).  We may change this Owner Agreement from time to time in accordance with the terms of this Agreement.
 
-## Definitions
+We recommend you read this Owner Agreement before using the HATDeX Platform. If you do not agree with our Terms, you must not use the HATDeX Platform.
 
-- **"Acceptable Use Policy"** means HATDeX&#39;s Acceptable Use Policy applicable as of the date of your acceptance of the Terms.
-- **"Cash Data Offer"** means a Data Offer whose reward is a online payment in UK Pound Sterling.
-- **"Data Offer"** means a HATDeX-approved offer by a Data Shopper to acquire data from a User in return for cash, one or more vouchers or one or more services.
-- **"Data Plug"** means a HATDeX-approved data transfer, authorised on MarketSquare, from a third-party platform to your HAT.
-- **"Data Shopper"** means any user having a Data Shopper Account.
-- **"Data Shopper Account"** means a MarketSquare account allowing its owner to issue Data Offers and/or Data Plugs in accordance with the MarketSquare Data Shopper Terms of Service.
-- **"Date of Effective Termination of the Paid Services"** means the date of expiration of the term, as defined in Article 6.5.a, in which a user exercises its right to give notice of non-renewal in accordance with Article 6.5.c.
-- **"HAT Account"** means your account on the HAT identified by a username and protected by a password.
-- **"HATDeX"** means HAT Data Exchange Ltd, UK.
-- **"HAT Database"** or the **"HAT"** means the User&#39;s HubofAllThings database containing a data schema allowing for (i) the storage of data from any source without losing the structure specific to any such source, (ii) the combination of such data, and (iii) the provision of a structure for third party access to such data upon authorisation of the User.
-- **"Indemnitees"** means, collectively, HATDeX, its affiliates, suppliers and distributors or any of their respective employees, agents, or suppliers.
-- **"Paid Services"** means the Services for which HATDeX requires a payment.
-- **"Privacy Policy"** means MarketSquare Privacy Policy applicable as of the date of your acceptance of the Terms.
-- **"Service Data Offer"** means a Data Offer whose reward is the provision of one or more services.
-- **"Services"** means the website MarketSquare and the services it offers.
-- **"Tax"** means any tax on value added, goods, services, sales, use, property, excise and any other tax, import or export duty or levy imposed on or in connection with the provision of use of the Paid Services.
-- **"Terms"** means the present agreement, which incorporates MarketSquare Privacy Policy and our Acceptable Use Policy.
-- **"Test Services"** means services that are still in the testing or evaluation phase, subject to the rules contained in Article 9.
-- **"User"** means a user of one or more of the Services.
-- **"Voucher Data Offer"** means a Data Offer whose reward is one or more vouchers allowing Users to obtain free access to or a discount on products or services.
-- **"Your Things"** means the data with which you fill your HAT Database, including, but not limited to, personal data, files, email messages, contacts, geolocation information.
+# **1.** About us
 
-## Age
+The HATDeX Platform is operated, and the Services are provided, by HAT Data Exchange Ltd (&quot;**we**&quot;, &quot;**us**&quot; or &quot;**our**&quot;).  We are a private limited company registered in England and Wales under company number 09821157and have our registered office at The Cottages, 8 Comberton Road, Barton, Cambridge, CB23 7BA.
 
-Our Services are not intended for and may not be used by people under the age of 18. By using our Services and accepting these Terms, you declare that you are at least 18 years old.
+To contact us, please email [contact@HATDeX.org](mailto:contact@hatdex.org) or write to HAT Data Exchange Ltd, The Cottages, 8 Comberton Road, Barton, Cambridge, CB23 7BA.
 
-## HATDeX&#39;s Obligations
+# **2.** About HAT Accounts
 
-HATDeX shall allow you to access and use MarketSquare in accordance with the Terms. HATDeX will comply with all the laws applicable to its provision of the Services.
+A &quot;**HAT Account&quot;** is a private micro-server account that can be used to collect, store and ultimately control data.  You can claim your data from multiple sources and then view, manage and decide how the data will be used and potentially shared. You can also use a HAT Account as a type of universal user account to control other applications and services that are HAT enabled.
 
-## Your Obligations
+When operating your HAT Account, you interact with the HATDeX Platform. In doing so, you must comply with the HAT Acceptable Use Policy [[http://www.hatdex.org/acceptable-use-policy/](http://www.hatdex.org/acceptable-use-policy/)].
 
-1. You agree to comply with all applicable laws, including the applicable data protection laws, and the Terms.
-2. You agree that you are responsible for your conduct when using the Services  and for the content of the data that you upload, copy, download or share.
-3. You agree that HATDeX bears no responsibility for your conduct on MarketSquare and for the content of the data that you upload, copy, download or share.
-4. You ensure that all the information that you enter in your HAT account is accurate, current and complete.
-5. You agree not to share the password of your HAT Account with anyone.
-6.  When you authorise third parties to access Your Things through application settings or data debits, you give HATDeX your permission to share Your Things with such third parties. You have the right to withdraw your authorisation to share any of Your Things with any third party at any time. When you do so, HATDeX will immediately stop any unauthorised sharing.
-7.  You grant HATDeX the right to conduct any activity necessary for the maintenance and support of the Services.
-8. You agree to cooperate with HATDeX, when this is necessary to investigate service outages or suspected breaches of the Terms or the applicable law.
-9. You agree that we may use your feedback or suggestions without any obligation to compensate you for them.
-10. You agree to notify HATDeX immediately of any unauthorised use of the Services through your HAT Account and any other breach of security.
+# **3.** Security and other matters affecting your use of your HAT Account
 
-## Creation and Validation of Your HAT Data Account
+We are neither a data controller nor a data processor for purposes of data protection law. We simply enable you to claim, hold and share your data.
 
-1.  In order to use our Services, you need to create a HAT Account.
-2.  Within 30 days from creating your HAT account, you need to validate your HAT account.
-3. At the moment of validation, HATDeX may require you to pay for its Services and/or the purchase of additional services, such as increased storage space and other features, connected with your HAT Account (the services for which HATDeX requires a payment are collectively referred to as the **"Paid Services"**).
-4. Information on validation and pricing is available at [https://hatters.hubofallthings.com]
-5. When HATDeX requires a payment for the provision of the Paid Services, the following rules apply:
-    1.  The initial term for the provision of the Paid services begins on the date that HATDeX makes such services available to you and continues for the period selected by the User at the moment of purchase. If you do not choose a period, the initial term will be 30 days. Regardless of whether you choose the duration of the term or not, the term will automatically renew upon expiration, unless you provide HATDeX with notice of non-renewal.
-    2. Unless agreed otherwise, HATDeX will charge your payment instrument monthly beginning on the date HATDeX first provides the Paid Services to you. HATDeX has the right to suspend the provision of the Paid Services in case of rejection of the charges to your payment instrument.
-    3.  You can provide HATDeX with notice of non-renewal anytime through the procedure available in your HAT Account. After receiving your notice of non-renewal, HATDeX will continue to provide you with the Paid Services that you had purchased until the date of expiration of the term as defined in Article 6.5.a (the "**Date of Effective Termination of the Paid Services**"). HATDeX will suspend the provision of the Paid Services that you decided not to renew on the Date of Effective Termination of the Paid Services. When you provide HATDeX with notice of non-renewal, HATDeX will not charge to your payment instrument any amount in relation to the Paid Services due to events occurring on or after the Date of Effective Termination of the Paid Services. These Terms will continue to apply following your notice of non-renewal until the Date of Effective Termination of the Paid Services.
-    4.  Unless otherwise expressly stated in the Terms or the invoices for the Paid Services, all amounts due to HATDeX under this Article do not include any tax on value added, goods, services, sales, use, property, excise and any other tax, import or export duty or levy imposed on or in connection with the Paid Services (collectively, "**Tax**"). When required by the law to collect a Tax, HATDeX will include such a Tax in your invoice and you must either pay such a Tax or provide evidence of your exemption from the Tax.
-    5. Any obligation to pay any Tax that you, as a User, may be required to pay under any applicable law shall be borne exclusively by you. You agree to cooperate with HATDeX by providing accurate and adequate information, as determined by HATDeX, to determine whether any Tax is due in connection with the provision or use of the Paid Services.
-    6.  All payments to HATDeX for the provision of the Paid Services shall be made without any withholding or deduction for any Tax, unless you are legally required to make a withholding or deduction.
-    7. HATDeX has the right to change the fees for its Paid Services. However, HATDeX will notify you before making any changes to the fees.
+It is your responsibility to (a) protect against unauthorised access to your HAT Account, (b) not share and otherwise ensure no-one else uses your HAT Account, (c) keep your password or other access information secret (your password and log in details are personal to you and should not be given to anyone else or used to provide shared access), and (d) generally maintain good internet security.
 
-## Data Offers
+If the email account you give us is compromised this could allow access to your HAT Account by third parties. If your email account is compromised it could be used to ask us to reset a password and gain access to your HAT Account. If you think that your email account has been compromised you should change your HAT Account credentials, and in particular make sure your compromised email account does not allow access to your HAT Account. You should also tell us as soon as possible after you become aware of this, so that we can try to help you keep your HAT Account secure and, if necessary, warn anyone else using the HATDeX Platform who could be affected.
 
-1. When you accept a Data Offer, you expressly authorise HATDeX to share the data for which the offer is made with the Data Shopper issuing the Offer.
-2. HATDeX will only share your data with the third party issuing the offer.
-3. When you accept a Cash Data Offer, HATDeX will credit the price paid by the Data Shopper on your payment instrument within 30 days from the date of your request.
-4. When you accept a Voucher Data Offer, you will receive a code allowing you to use one or more vouchers on the website of the Data Shopper who issued the Voucher Data Offer.
-5. The Data Shopper agrees not to use the data received as a result of a Data Offer for purposes different from those stated in the "purpose" field of the Data Offer page. This includes a duty not to share the data with other third parties, unless expressly stated in the "purpose" field. However, HATDeX bears no responsibility for any use of your data by Data Shoppers or third parties for purposes other than those stated in the "purpose" field of the Data Offer page.
+### Data Plugs
 
-## Data Plugs
+A Data Plug is a service that enables you to authorise the transfer of your data from a third party platform to your HAT Account.  You agree that you will only authorise a Data Plug when you are not prohibited under this Owner Agreement or any applicable law from obtaining the data concerned. We reserve the right not to authorise or to cancel any Data Plug for which you have not the right to obtain the data or that is in violation of the Terms or any applicable law. You can decide to interrupt a Data Plug at any time. The Data Plug will stop obtaining and transferring the data concerned as soon as you interrupt the Data Plug.
 
-1. When you authorise a Data Plug, you authorise the Data Plug to obtain data in possession of a third party and transfer it to your HAT.
-2. You agree that you will only authorise a Data Plug when you are not prohibited under these Terms, the HAT Terms of Service or any applicable law from obtaining the data concerned. HATDeX reserves the right not to authorise or to cancel any Data Plug for which you have not the right to obtain the data or that is in violation of the Terms, the MarketSquare Data Shopper Terms of Service or any applicable law.
-3. You can decide to interrupt a Data Plug at any time. The Data Plug will stop obtaining and transferring the data concerned as soon as you interrupt the Data Plug.
+### Sharing your data
 
-## Test Services
+You may also be able to share the data contained in your HAT account with your friends and family who have a HAT account on a &#39;T HAT to HAT basis&#39;.
 
-1. HATDeX occasionally releases services that are still in the testing or evaluation phase (**"Test Services"**). Test Services are marked as &#39;beta&#39;, &#39;preview&#39;, &#39;early access&#39;, &#39;evaluation&#39; or similar terms.
-2. You acknowledge that the Test Services may not be as reliable as other services or features provided by HATDeX and subject to these Terms.
-3. You acknowledge that your use of the Test Services may expose you to unusual risks of operational failures.
-4. HATDeX may terminate the Test Services at any time, without any notice.
-5. You agree to provide prompt feedback regarding your experience with the Test Services in a form reasonably requested by HATDeX. You agree that HATDeX may use your feedback for any purpose, including product development purposes
-6. You agree to provide prompt feedback on your experience with the Test Services when requested by HATDeX. Your agree that HATDeX may use your feedback for any purpose, including product development purposes.
+Please think carefully about what you share because once it has been transferred you will no longer have control of the data.
 
-## Intellectual Property Rights
+# **4.** Rules applying to HAT Owner Services
 
-1.  When using the Services, you retain any right, title or interest in your trade secrets, inventions, trademarks, copyright and other intellectual property.
-2. Our Services are protected by intellectual property rights in accordance with UK and foreign laws. These Terms do not grant you any right, title or interest in any of our Services, in HATDeX&#39;s trademarks, logos and other intellectual property rights and in the content of other users of the Services.
-3. HATDeX respects intellectual property rights. To this end, HATDeX allows anyone to file notices of alleged copyright infringements in relation to the use of the Services. When HATDeX considers a copyright infringement claim to be founded, it reserves the right to delete or disable content alleged to be infringing and suspend or terminate the HAT Accounts of the infringers.
-4.  HATDeX&#39;s designated agent for notice of alleged copyright infringement on the Services is:
-    ```
-        Copyright Agent
-        8 Comberton Road
-        Barton
-        Cambridge CB237BA
-    ```
+We make available to you various Owner Services (the &quot;HAT Owner Services&quot;), compatible with different computer Operating Systems, to enable you to manage your HAT Account.  Some of the HAT Owner Services are also made available as an open source programme for others to build on.
 
-## Software
+Owner Services are web or mobile applications that allow the HAT owner to view the data in their HAT account. Except for performance improvements, Owner Services do not store any HAT personal data.
 
-Some of our Services allow you to download and use client software ("**Software**") which may be updated automatically. As long as you comply with these Terms, you have a limited, non-exclusive, non-transferable, revocable licence to use the Software, solely to access and use the Services. To the extent any component of the Software may be offered under an open source licence, HATDeX will make that licence available to you and the provisions of that licence may expressly override some of these Terms. Unless the following restrictions are prohibited by law, you agree not to:
+HAT Owner Services extensions are additional software, developed by us or third parties, that can modify and/or enhance the functionality of the HAT Dashboards (the &quot;Extensions&quot;).  Extensions may require the collection and processing of your personal and browsing data. You agree that we may, without notice, look for available updates to Extensions, download them and install them automatically.  We reserve the right to disable or remove Extensions that do not comply with the Terms or any applicable law.
 
-1. reverse engineer the Software;
-2. decompile the Software;
-3. use the Software for any purpose other than accessing or using the Services;
-4. attempt any of the above conduct;
-5. assist anyone in carrying out or attempting any of the above conduct.
+# **5.** Rules applying to Data Debits
 
-## Suspension of Our Services
+A Data Debit is an extraction of data from a HAT Account, with consent from the HAT Owner.  For more information on Data Debits, check ( [https://developers.hubofallthings.com/guides/data-debits/](https://developers.hubofallthings.com/guides/data-debits/))
 
-1.  HATDeX may suspend in whole or in part the provision of its Services to you at any time without incurring any liability if:
-    1. HATDeX reasonably believes that you acted or are acting in breach of the Terms, including the Acceptable Use Policy;
-    2.  HATDeX reasonably believes that the User acted or is acting in breach of any applicable law;
-    3. you fail to cooperate with HATDeX&#39;s investigations of suspected breaches or technical faults;
-    4.  HATDeX reasonably believes that a User&#39;s HAT Account has been accessed by an unauthorised third party or its security has been compromised in any other manner;
-    5. HATDeX considers the suspension to be reasonably necessary to protect its network, its customers, its commercial interests or any other essential interest;
-    6. HATDeX is required by law or by a governmental authority to suspend its Services;
-    7.  you fail to validate your account within 30 days in accordance with Article 6;
-2.  HATDeX will give you reasonable advance notice of a suspension and will offer you the opportunity to cure the grounds underlying the suspension, when this appears to be possible in HATDeX&#39;s judgment.
-3. If the suspension is based on one of the grounds listed under letters a, b, c and f of this Article, HATDeX has the right to continue to charge you the fees for the Paid Services during the suspension in accordance with Article
+### Data Acquirers and Data Offers
 
-## Termination
+A **Data Acquirer** is a corporation, company, partnership, LLP or any other incorporated entity or sole trader acting in a business capacity.  Data Acquirers can make **Data Debit Requests** that set out the terms on which the Data Acquirer is willing to acquire access to your data in return for cash or other benefits.
 
-1. You have the right to terminate this agreement at any time by deleting your HAT Account. The deletion of your account takes place in a manner similar to emptying the recycle bin on a computer. However, you accept that removed content may persist in backup copies for a reasonable period of time. HATDeX bears no responsibility for the loss of data resulting from the deletion of your account. If you have purchased Paid Services your deletion of the HAT Account will constitute notice of non-renewal in accordance with Article 6.5.c.
-2. HATDeX may terminate this agreement without notice at any time for any reason.
+When you agree to a Data Debit Request, you expressly authorise us to share the data for which the request is made with the Data Acquirer issuing the Data Debit request. We will only share your data with the third party issuing the request. When cash is being paid, we will credit the price paid by the Data Acquirer on your payment instrument within [5] working days from the date of acceptance (subject to any terms set by the Data Acquirer about a minimum number of participants being satisfied).
 
-## Warranties
+### Applications
 
-While HATDeX strives to provide Services of the highest attainable quality, it cannot guarantee that it will always be able to do so. To the fullest extent permitted by the law, HATDeX and its affiliates, suppliers and distributors make no warranties, either express or implied, about the Services. The Services are provided on an "AS IS" basis. HATDeX also disclaim any warranties of merchantability, fitness for a particular purpose and non-infringement.
+We also make various applications (or &quot;apps&quot;) available on the HATDeX Platform.  Such applications are licensed and not sold to you and your licence to use the application will be dependent on your acceptance of additional terms (including in some instances payment terms) contained in an End User Licence Agreement that you will need to accept before using the application.
 
-## Limitation of Liability
+# **6.** Your data
 
-1. To the fullest extent permitted by law, except for any liability for HATDeX&#39;s or its affiliates&#39; fraud, fraudulent misrepresentation or gross negligence, HATDeX, its affiliates, suppliers or distributors shall not be liable for:
-    1. any indirect, special, incidental, exemplary, or consequential loss or damages of any kind;
-    2. any loss of profit or income;
-    3. any loss of business or business opportunity;
-    4. any loss or corruption of data;
-    5. any anticipated savings or revenue;
-    6. any punitive damages;
-    7. any loss of goodwill or reputation; or
-    8. any other loss that could have been avoided by the damaged party&#39;s use of reasonable diligence.
-2. This is regardless of whether or not HATDeX or any of its affiliates has been warned of the possibility of such damages, and even if a remedy fails of its essential purpose.
-3. HATDeX will not be in breach of the Terms if the failure to perform any of its obligations is due to an event beyond its control, such as significant failure of a part of the power grid, significant failure of the Internet, natural disaster, war, riot, insurrection, epidemic, strikes, terrorism, or other events of a magnitude or type for which precautions are not generally taken in the industry.
-4. The maximum aggregate liability of HATDeX, its affiliates, suppliers and distributors shall not exceed £ 20.
+To find out more about how and what we do with the information and content you submit to your HAT Account and the HATDeX Platform ( **Your Data** ), please read our Privacy Notice available at [http://www.hatdex.org/privacy-policy-hat/](http://www.hatdex.org/privacy-policy-hat/)
 
-## Export Matters
+You agree to comply with all applicable laws, including (but not limited to) applicable privacy and data protection laws.
 
-You declare that HATDeX is not legally prohibited to provide you with the Services and that you are neither located in nor a national of any country that is embargoed or restricted under applicable export laws. You agree that you will not use, import or export the Services in any manner which would cause HATDeX or its affiliates to breach any applicable export control laws, rules, or regulations. You agree that you will not allow access to or use of the Services by any persons or organisation  that is located in or is a national of any country that is embargoed or restricted under applicable export laws.
+# **7.** Intellectual property rights in Your Data
 
-## Indemnification
-  
-1.  If HATDeX, its affiliates, suppliers and distributors or any of their employees, agents, or suppliers (the **"Indemnitees"**) face a legal claim by a third party arising out of your negligence, breach of Terms or any applicable law, breach of your agreement with your customers, you will bear the costs associated with the claim and any damages award, fine, or any other amount that is imposed on the Indemnitees in relation to the claim.
-2. The obligation under the previous paragraph includes claims arising out of the acts or omissions of your employees or agents, any other person that you authorised to access the Services, and any person who gains unauthorised access to the Services due to your failure to use reasonable security measures.
-3.  HATDeX will choose legal counsel to defend the claim and will inform you on the choice. You agree to cooperate with HATDeX&#39;s in the defence of the claim. We may settle the claim only with your consent. However, you cannot unreasonably withhold, delay, condition or withdraw such consent.
+When using the HATDeX Platform, you retain any right, title or interest in Your Data, including any trade secrets, inventions, trademarks, copyright and other intellectual property. We get no rights over Your Data except for the limited rights necessary to deliver the Services.
 
-## Governing Law
+# **8.** Intellectual property rights in the Hat Platform
 
-These Terms are governed by English law except for its conflicts of laws principles, unless otherwise required by a mandatory law of any other jurisdiction.
+The HATDeX Platform is protected by intellectual property rights in accordance with English and other jurisdiction&#39;s laws. This Owner Agreement does not grant you any right, title or interest in or to the HATDeX Platform, in our trademarks, logos and other intellectual property rights or in the content of other users of the HATDeX Platform.
 
-## Dispute Settlement
+# **9.** Our obligations and limitations on our liability
 
-1. HATDeX wants to address your concerns without needing a formal legal case. If a dispute arises out of the Terms, before filing a claim against HATDeX, you agree to attempt to resolve the dispute informally by contacting info@HATDeX.org. HATDeX will make any effort to achieve an amicable solution to the dispute. If the dispute is not resolved informally within 15 days from the date of the first email concerning such a dispute, you and HATDeX are entitled to start legal proceedings.
-2. Any dispute arising out of the Terms, which is not resolved amicably in accordance with the preceding paragraph, is subject to the exclusive jurisdiction of the competent English Court.
-3. You may only resolve disputes with us on an individual basis and may not bring a claim as a plaintiff or a class member in a class, consolidated or representative action. Class arbitrations, class actions, private attorney general actions and consolidation with other arbitrations are not allowed.
+We will provide your HAT Account and the HATDeX Platform in accordance with this Owner Agreement and all applicable laws, including (but not limited to) applicable privacy and data protection laws.
 
-## Waiver, Severability and Assignment
+Except as set out in this Owner Agreement and to the fullest extent permitted by law, we make no warranties, either express or implied, about the HATDeX Platform that is provided &#39;as is&#39;.
 
-HATDeX&#39;s failure to enforce a provision of the Terms does not waive its right to do so later. If a provision is found unenforceable, the remaining provisions of the Terms will remain in full effect and an enforceable term will be substituted reflecting our intent as closely as possible. You may not assign any of your rights under these Terms, and any such attempt will be void. HATDeX may assign its rights to any of its affiliates or subsidiaries, or to any successor in interest of any business associated with the Services.
+We do not exclude or limit our liability or the liability of our officers, and/or employees, our agents, affiliates, distributors and/or contractors (as well as their officers, employees, agents, affiliates and/or contractors) for (a) death or personal injury caused by negligence, or (b) fraudulent misrepresentation.
 
-## Modifications to the Terms
+To the fullest extent permitted by law, we or any the parties identified above shall not under this Owner Agreement be liable for (a) any indirect, special, incidental, exemplary, or consequential loss or damages of any kind, (b) any loss of profit or income, (c) any loss of business or business opportunity, (d) any loss or corruption of data, (e) any anticipated savings or revenue, (f) any punitive damages, (g) any loss of goodwill or reputation, (h) any other loss that could have been avoided by the damaged party&#39;s use of reasonable diligence.
 
-HATDeX may revise these Terms at any time, and will always post the most current version on its website. If a revision meaningfully reduces your rights, we will notify you (by, for example, sending a message to the email address associated with your account, posting on our blog or on this page). By continuing to use or access the Services after the revisions come into effect, you agree to be bound by the revised Terms..
+We will not be in breach of this Owner Agreement if the failure to perform any of our obligations is due to an event beyond our control, such as failure of part of the power grid,ISP equipment failure, host equipment failure, communications network failure, power failure, legal restrictions and censorship, failure of the Internet, natural disaster, war, riot, insurrection, epidemic, strikes, terrorism, or other events of a magnitude or type for which it is not possible for us to take precautions against.
 
-## Entire Agreement
+If despite the exclusions and limitation above we are found liable by a court of law or regulatory authority for any loss or damage which arises out of or in connection in any way connected with our performance of this Owner Agreement, then our maximum total aggregate liability will in no event exceed the greater of £50 or the total payments you have made to us over the previous 12 months.
 
-These Terms constitute the entire agreement between you and HATDeX with respect to the subject matter of these Terms, and supersede and replace any other prior or contemporaneous agreements, or terms and conditions applicable to the subject matter of these Terms. These Terms create no third-party beneficiary rights.
+# **10.** Test Services
+
+Please note that we occasionally release services that we would like to test or evaluate on the Platform - they will be marked as &#39;beta&#39;, &#39;preview&#39;, &#39;early access&#39;, &#39;evaluation&#39; or similar terms (&quot; **Test Services**&quot;). You acknowledge that such Test Services may not be as reliable as our normal HAT services or features provided by us and subject to this Owner Agreement.
+
+# **11.** Downloading or using software for HAT Services
+
+Some of our HAT Services allow you to download and use client software (&quot; **Software**&quot;), which may be updated automatically. As long as you comply with this Owner Agreement, you have a limited, non-exclusive, non-transferable, revocable licence to use the Software, solely to access and use the HAT Services and Platform. To the extent any component of the Software may be offered under an open source licence, we will make that licence available to you and the provisions of that licence may expressly override some of this Owner Agreement. Unless the following restrictions are prohibited by law, you agree not to (a) reverse engineer the Software, (b) decompile the Software, (c) use the Software for any purpose other than accessing or using the HATDeX Platform, (d) attempt any of the above restricted activities, and/or (e) assist anyone in carrying out or attempting to carry out any of the above restricted activities.
+
+# **12.** We may make changes to the terms
+
+We may revise our Terms from time to time, and will post the most current version on our website when the revised Terms become effective.
+
+Also, if there are any changes to our Terms that affect your legal rights as a holder of a HAT Account or user of DataBuyer, we will notify you by sending a message to the email address associated with your account at least [30] days before the changes take effect. By continuing to use or access the HATDeX Platform after any revisions come into effect, you agree to be bound by the revised Terms.  If you do not agree to any revisions, you must stop using the HATDeX Platform before the revisions come into effect and, if applicable, we will give you a prorated refund of any amounts you have prepaid to access the HATDeX Platform after the date you cancel your account.
+
+# **13.** Changes to the HATDeX Platform
+
+We may update and change the HATDeX Platform from time to time to, amongst other things, reflect changes to our users&#39; needs and our business priorities. We will try to give you reasonable notice of any major changes.
+
+# **14.** Maintenance and outages
+
+We reserve the right to conduct activities necessary for the maintenance and support of the HATDeX Platform. You agree to reasonably cooperate with us to investigate service outages or suspected breaches of the Terms or applicable laws.
+
+# **15.** Suspension and termination
+
+We may suspend your access and/or use of your HAT Account or HATDeX Platform or terminate our agreement with you if (a) you are in material breach of this Owner Agreement or you fail to cooperate with our investigations relating to the provision of the HATDeX Platform, (b) to prevent significant harm to the HATDeX Platform or other users, and/or (c) we are required by law or by a governmental authority to suspend access and/or use of the HATDeX Platform. If you received a free HAT Account, we reserve to also terminate your account if you did not log into your HAT Account at least once a week after your first 90 days of Account opening. We will provide you with reasonable notice if we suspend or terminate your access and/or use of the HATDeX Platform.
+
+We may at our discretion decide to cease providing access and/or use of the HATDeX Platform in the jurisdiction where you reside or from where you are attempting to access and/or use the HATDeX Platform.  In such an instance we will provide you with a prorata refund of any prepaid payments you have made for your HAT Account.
+
+You may terminate your HAT Account by (a) sending notice in writing to [contact@hatdex.org] confirming such termination (please note it may take up to [10] days for us to action your request to terminate your account) or (b) clicking on the deactivation link in HAT Dashboard and thereafter ceasing to use the HATDeX Platform (this feature is coming soon).
+
+Whenever possible we will provide you with notice and a reasonable opportunity to export Your Data from your HAT Account.
+
+Upon termination of this Owner Agreement, (a) the rights granted by us to you will cease immediately, and (b) any provision of the Terms which expressly or by implication is intended to come into or continue in force on or after termination will survive.
+
+Suspension or termination by us of this Owner Agreement shall not affect any of our rights, remedies, obligations or liabilities that have accrued up to the date of suspension or termination, including the right to claim damages in respect of any breach of this Owner Agreement which existed at or before the date of suspension or termination or expiry.
+
+# **16.** Age
+
+If you are least 18 years old, you can register for a HAT Account. If you are under 18, your a parent or guardian must sign on your behalf and the adult HAT will be linked to the minor&#39;s HAT. Please note that not all HAT Providers are able to provide HATs for minors. Please check that your HAT Provider has that provision before you sign up a minor for a HAT, or if you are below 18 years old.
+
+# **17.** Waiver, Severability &amp; Assignment
+
+If we fail or delay to enforce a provision of the Terms, this failure or delay is not a waiver of our right to do so later on. If a provision of the Terms is found to be unenforceable by a court, such provision shall be modified and interpreted so as best to accomplish the objectives of the original provision to the fullest extent permitted by law. The remaining provisions of the Terms will remain in full force and effect. You may not assign any of your rights or obligations under this Owner Agreement, whether by operation of law or otherwise, and any such attempt will be null and void. We may assign any of rights and obligations under this Owner Agreement without your consent. Also, we may assign this Owner Agreement in their entirety, without your consent, to our successor in interest in connection with a merger, reorganization, or sale of all or substantially all assets or equity. This Owner Agreement shall bind and inure to our benefit, our successors and permitted assigns.
+
+# **18.** Entire Agreement &amp; Third Parties
+
+This Owner Agreement constitute the entire agreement between you and us when it comes to the subject matter of this Owner Agreement, and supersede and replace any other prior or contemporaneous agreements, or terms and conditions applicable to the subject matter of this Owner Agreement.There are no third party beneficiaries to this Owner Agreement Agreement and the provisions of the U.K. Contracts (Rights of Third Parties) Act 1999 are hereby excluded.
+
+# **19.** What happens if there is a dispute between us?
+
+Our approach is to resolve any disputes between us without going to court and you agree that in the case of any disputes, we will resolve such a dispute in the following escalation process. If you only want to raise a complaint, then please contact us at info@hatdex.org.
+
+**Step 1:** You contact us at [info@HATDeX.org](mailto:info@HATDeX.org) or we contact you using the email address that you selected when registering for a HAT Account. The purpose of the notice is to let each other know of the dispute and provide information as to what it is about. We or you will acknowledge receipt of such notice as soon as reasonably practicable and, in any event, no more than [7 days] from the day that the notice is received (&quot;**Notification Date**&quot;).
+
+**Step 2:** We discuss together and make all reasonable efforts to try and resolve the dispute between us.
+
+**Step 3:** You can write to HAT Community Foundation (the &quot;**Regulator**&quot;) which is the regulator of the HATDeX Platform at the following email address: [contact@hatcommunity.org](mailto:contact@hatcommunity.org). The Regulator is a not-for-profit company whose role is to regulate the HAT Platform for the public benefit.
+
+**Step 4:** If we are not able to resolve the dispute between us within 30 working days from the Notification Date, then either of us will be entitled to go take proceedings in a court of law.
+
+# **20.** Disputes with Data Acquirers
+
+We require all Data Acquirers to sign up to terms and conditions designed to ensure that they only process Your Data in accordance with good practice and the law. If you believe they have breached their agreement with you or broken the law, you may have the right to sue them directly. However we have no liability
+
+# **21.** Law &amp; Jurisdiction
+
+This Owner Agreement is governed by English law and you can bring legal proceedings in respect of the Services in the English courts. If you live in Scotland you can bring legal proceedings in respect of the services in either the Scottish or the English courts. If you live in Northern Ireland, you can bring legal proceedings in respect of the services in either the Northern Irish or the English courts.

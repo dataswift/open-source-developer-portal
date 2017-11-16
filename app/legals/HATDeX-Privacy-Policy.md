@@ -1,154 +1,141 @@
-# Rumpel Lite iOS Application Terms of Service
+# Privacy Notice – HAT Owner Services and HAT accounts
 
-The Rumpel Lite iOS Application Terms of Service (the **"Terms"**) are made between HAT Data Exchange Ltd, UK (**"HATDeX"**) and the end-user who uses Rumpel Lite iOS Application (respectively the **"User"** and **"Rumpel Lite"**).
+This Privacy Notice sets out the basis on which we will treat:
 
-## The agreement
+- personal data (&quot;personal data&quot;) collected by or submitted to the HAT dashboard and extensions of HAT dashboards such as HAT Wrapper Services and Rumpel (the &quot;Owner Services&quot;); and
+- personal data (&quot;HAT personal data&quot;) uploaded to a user&#39;s HAT private micro-server account (&quot;HAT Account&quot;).
 
-The Terms govern the provision of Rumpel Lite and its services (collectively, the &quot;Services&quot;). The Terms include the present agreement, Rumpel Lite&#39;s Privacy Policy, explaining how we collect and use the User&#39;s information, and the HATDeX Acceptable Use Policy, outlining the responsibilities of the User when using our Services. By using our Services, the User agrees to be bound by these Terms. If an individual User is using our Services on behalf of an organisation, they agree to these Terms on behalf of such organisation.
+The Owner Services are web or mobile applications that allow the HAT owner to view the data in their HAT account. Except when used for performance improvements, the Owner Services do not store any HAT personal data.
 
-## Definitions
+Note there is a separate privacy notice dealing with personal data collected when you interact with our websites.
 
-- **"Acceptable Use Policy"** means our Acceptable Use Policy available at http://www.hatdex.org/acceptable-use-policy/ applicable as of the date of your acceptance of the Terms.
-- **"Extensions"** means additional software, developed by HATDeX or third parties, which can modify and/or enhance the functionality of Rumpel Lite.
-- **"HAT Account"** means your account on the HAT identified by a username and protected by a password.
-- **"HATDeX"** means HAT Data Exchange Ltd, UK.
-- **"HAT Database"** or the **"HAT"** means the User&#39;s HubofAllThings database, containing a data schema allowing for (i) the storage of data from any source without losing the structure specific to any such source, (ii) the combination of such data, and (iii) the provision of a structure for third-party access to such data upon authorisation of the User.
-- **"Indemnitees"** means collectively HATDeX, its affiliates, suppliers and distributors of any of their respective employees, agents, or suppliers.
-- **"Licence"** means the open-source software licence for Rumpel Lite.
-- **"Privacy Policy"** means Rumpel Lite&#39;s Privacy Policy available at https://rumpel.hubofallthings.com/ applicable as of the date of your acceptance of the Terms.
-- **"Rumpel Lite"** means the Rumpel Lite iOS Application developed by HATDeX.
-- **"Services"** means the the provision of Rumpel Lite and its services to the exclusion of the services falling within the scope of the HAT Terms of Service and the MarketSquare Terms of Service.
-- **"Software"** means client software provided by HATDeX for the purpose of using its Services.
-- **"Test Services"** means services that are still in the testing or evaluation phase, subject to the rules contained in Article 9.
-- **"User"** means a user who uses Rumpel.
+## Who we are
 
-## Relationship with other agreements
+For the purpose of the Data Protection Act 1998 (the &quot;Act&quot;), the data controller for the Owner Services is HAT Data Exchange Ltd (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;).  We are a private limited company registered in England and Wales under company number 09821157 and have our registered office at The Cottages, 8 Comberton Road, Barton, Cambridge, CB23 7BA.
 
-1. The open-source software licence for Rumpel Lite (the **"Licence"**) https://github.com/Hub-of-all-Things/HyperDataBrowser/blob/master/LICENSE constitutes a separate written agreement. To the extent that the Licence expressly supersedes these Terms, it governs the User&#39;s relationship with HATDeX for the use of the Services.
+## HAT Owner usage of owner services
 
-2. The Services within the scope of these Terms are those associated with the use of Rumpel Lite. They do not include the provision of the HAT and MarketSquare, which are governed respectively by the HAT Terms of Service and MarketSquare Terms of Service.
+You can only access the Owner Services if you are the holder of a HAT Account (HAT Owner&quot;).
 
-## Age
+Regarding the personal data, such as your name and email address (and if applicable payment information), that you provide during account creation, we will only use this to provide your HAT Account and associated Owner Services.  For the purposes of the Act, we will be the data controller of this personal data.
 
-Our Services are not intended for and may not be used by people under the age of 18. By using our Services and accepting these Terms, you declare that you are at least 18 years old.
+You are in control of all the HAT personal data within your HAT Account.  This means you decide what HAT personal data is collected, how and why it is processed, how long it is stored and when it is deleted or shared with anyone else.
 
-## HATDeX&#39;s obligations
+We commit to using appropriate technical and organisational measures to prevent unauthorised access to or accidental loss, destruction or damage to your HAT personal data contained in your HAT Account. We do not control or have insight into the type of HAT personal data you collect or process in your HAT Account, we encourage HAT Owners to familiarise themselves with the security standards and check these are appropriate to your intended activities.
 
-HATDeX shall provide to you the Services in accordance with the Terms. HATDeX will comply with all the laws applicable to its provision of the Services.
+You can control any data exposure of your HAT Personal Data and the associated functionality of your HAT Account using the HAT Owner Services. We classify data exposure and functionality using the 5 levels described below and you can find more information, including additional information on setting the levels at [http://www.hatdex.org/general-platform-operating-procedures/](http://www.hatdex.org/general-platform-operating-procedures/).
 
-## The obligations of the user
+#### HAT Level 0, zero exposure/functionality
 
-1. The User agrees to comply with all applicable laws, including the applicable data protection laws, and the Terms.
-1. The User agrees that they are responsible for their own conduct when using the Services and for the content of the data that they upload, copy, download, access or share.
-1. The User agrees that HATDeX bears no responsibility for the User&#39;s conduct when using the Services and for the content of the data that they upload, copy, download, access or share.
-1. The User grants HATDeX the right to conduct any activity necessary for the maintenance and support of the Services.
-1. The User agrees to cooperate with HATDeX when it is necessary to investigate service outages or suspected breaches of the Terms or the applicable law.
-1. The User agrees that HATDeX may use the User&#39;s feedback or suggestions without any obligation to compensate you for them.
-1. The User agrees to notify HATDeX immediately of any unauthorised use of the User&#39;s HAT Account or the Services and/or any other breach of security.
+Data stored in your HAT Account is private and cannot be accessed by any third party or services.  Even we will not know if the HAT Account is operational, so you will need to tell us if the HAT Account is down or experiencing problems.  You will only be able to view the data through a service or other access mechanism you create. This option is only open to advanced developers/HAT owners.
 
-## Hat account and rumpel lite
+#### HAT Level 1, minimal exposure/functionality [Owner Services only]
 
-In order to use Rumpel Lite&#39;s Services or some of its functions, you may need to create a HAT Account. The creation and use of your HAT Account is regulated by the HAT Terms of Use.
+Data stored in your HAT Account is private and only you can access and view the data using Owner Services.  Non-personally identifiable metadata will be reported as part of the HAT ecosystem statistics.
 
-## Test services
-  
-1. HATDeX occasionally releases services that are still in the testing or evaluation phase (**"Test Services"**). Test Services are marked as &#39;beta&#39;, &#39;preview&#39;, &#39;early access&#39;, &#39;evaluation&#39; or similar terms.
-1. The User acknowledges that the Test Services may not be as reliable as other services or features provided by HATDeX and subject to these Terms.
-1. The User acknowledges that their use of the Test Services may expose them to unusual risks of operational failures.
-1. HATDeX may terminate the Test Services at any time, without any notice.
-1. The User agrees to provide prompt feedback on your experience with the Test Services when requested by HATDeX. The User agrees that HATDeX may use their feedback for any purpose, including product development purposes.
-1. The User agrees not to disclose any information regarding the Test Services to third parties and not to use such information for any purpose other than providing feedback to HATDeX.
+#### HAT Level 2, low exposure/functionality [Owner Services and data plugs]
 
-## Intellectual property rights
+Data stored in your HAT Account is private and you can access and view the data using Owner Services.  Non-personally identifiable metadata will be reported as part of the HAT ecosystem statistics.
 
-1. When using Rumpel Lite&#39;s Services, the User retains any right, title or interest in their trade secrets, inventions, trademarks, copyright and other intellectual property.
-2. The Services are protected by intellectual property rights in accordance with UK and foreign laws. These Terms do not grant the User any right, title or interest in any of our Services, in HATDeX&#39;s trademarks, logos and other intellectual property rights and in the content of other users of the Services in addition to the rights, titles and interests provided for under the Licence.
-3. HATDeX respects intellectual property rights. To this end, HATDeX allows anyone to file notices of alleged copyright infringements in relation to the use of the Services. When HATDeX considers a copyright infringement claim to be founded, it reserves the right to delete or disable content alleged to be infringing and suspend or terminate the HAT Accounts of the infringers.
-4. HATDeX&#39;s designated agent for notice of alleged copyright infringement on the Services is:
-    ```
-        Copyright Agent
-        8 Comberton Road Barton
-        Cambridge CB237BA
-    ```
+You can collect and bring data, including personal data, into your HAT Account using data plugs you authorise and control.  When executing the functionality of the data plug personal data may be processed in transit on our system, but will not be stored or processed for any reason other than to bring the data into your HAT Account.
 
-## Software
+#### HAT Level 3, medium exposure/functionality [Owner Services, data plugs and data debits]
 
-The production, reproduction and sharing in whole or in part of Rumpel Lite&#39;s software (**"Software"**) is governed by the Licence. You agree to use the Software in accordance with the Licence. Unless the following restrictions are prohibited by law, the User agrees not to:
+Data stored in your HAT Account is private and you can access and view the data using Owner Services.  Non-personally identifiable metadata will be reported as part of the HAT ecosystem statistics.
 
-1. reverse engineer Rumpel Lite software in any manner not compatible with the Licence;
-2. decompile or otherwise extract the source code of the Software;
-3. use the Software for any purpose contrary to these Terms or the Licence;
-4. attempt any of the above conduct;
-5. assist anyone in carrying out or attempting any of the above conduct.
+You can collect and bring data, including personal data, into your HAT Account using data plugs you authorise and control.  When executing the functionality of the data plug personal data may be processed in transit on our system, but will not be stored or processed for any reason other than to bring the data into your HAT Account.
 
-## Software updates
+You can authorise the sharing of your data, including personal data, with third parties such as your friends and family or in response to data offers through data debits.  We will follow the instructions you give us regarding the data, which will be encrypted while in transit via, or stored on our systems and only viewable or accessible by the third party with whom you have agreed to share the data.
 
-The Software may download and install updates automatically from HATDeX. Such updates are designed to improve Rumpel Lite by fixing bugs, adding new functions or introducing a new version of the software. By accepting these Terms, you allow HATDeX to deliver to you these updates.
+#### HAT Level 4, high exposure/functionality [Owner Services, data plugs and rolling data debits]
 
-## Third-party content
+Data stored in your HAT Account is private and you can access and view the data using HAT Owner Services.  Non-personally identifiable metadata will be reported as part of the HAT ecosystem statistics.
 
-1. The Services may include hyperlinks to third-party websites or content. HATDeX has no control over such third-party websites or content.
-2. The User acknowledges that HATDeX bears no responsibility for any consequence deriving from accessing, downloading, copying, sharing, storing or otherwise using third-party websites or content.
-3. You agree that HATDeX is not liable for any loss or damage that you may incur as a result of the above conduct as well as your reliance on the accuracy of such third-party websites or content.
+You can collect and bring data, including personal data, into your HAT Account using data plugs you authorise and control. We will not process such data – we will merely enable it to transit through our system – it may be stored but only as necessary in order to bring the data into your HAT Account.
 
-## Rumpel lite&#39;s extensions
+You can authorise the sharing of your data, including personal data, with third parties such as your friends and family or in response to data offers.  We will follow the instructions you give us regarding the data, which will be encrypted while in transit via, or stored on our systems and only viewable or accessible by the third party with whom you have agreed to share the data.  Such instructions can include an authorisation **for the ongoing bundling and sharing** of your personal data with a third party you have approved for a defined period of time.
 
-1. Rumpel Lite&#39;s extensions are additional software, developed by HATDeX or third parties, that can modify and/or enhance the functionality of Rumpel Lite (the **"Extensions"**).
-2. Extensions may require the collection and processing of your personal and browsing data.
-1. The User agrees that Rumpel Lite, without notice, may look for available updates to Extensions, download them and install them automatically.
-2. HATDeX reserves the right to disable or remove Extensions that do not comply with the Terms or any applicable law.
+## Data collected and use from the Owner Services
 
-## Termination
+For all users of the Owner Services, with regard to each of your visits, we will collect the following non-identifiable data:
 
-1. You have the right to terminate this agreement at any time by uninstalling Rumpel Lite.
-2. HATDeX may terminate this agreement without notice at any time for any reason.
+- technical information, including the internet protocol (IP) address used to connect your computer to the internet, your login data, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform;
+- data about your visit, including the full URL, clickstream to, through and from our site (including date and time), products you viewed or searched for, page response times, download errors, length of visits to certain pages, page interaction data (such as scrolling, clicks, and mouse-overs), methods used to browse away from the page, and any phone number used to call our customer service number.
 
-## Warranties
+We will use data that you give to us:
 
-While HATDeX strives to provide Services of the highest attainable quality, it cannot guarantee that it will always be able to do so. To the fullest extent permitted by the law, HATDeX and its affiliates, suppliers and distributors make no warranties, either express or implied, about the Services. The Services are provided on an **"AS IS"** basis. HATDeX also disclaim any warranties of merchantability, fitness for a particular purpose and non-infringement.
+- to carry out our obligations arising from any contracts entered into between you and us and to provide you with the information and Owner Services that you request from us;
+- to provide you with information about other Services we offer that are similar to those that you have already purchased or enquired about;
+- to notify you about changes to our services; and
+- to ensure that content from the website is presented in the most effective manner for you and for your computer.
 
-## Limitation of liability
+We will use personal data that we collect about you:
 
-1. To the fullest extent permitted by law, except for any liability for HATDeX&#39;s or its affiliates&#39; fraud, fraudulent misrepresentation or gross negligence, HATDeX, its affiliates, suppliers or distributors shall not be liable for:
-    a. any indirect, special, incidental, exemplary, or consequential loss or damages of any kind;
-    b. any loss of profit or income;
-    c. any loss of business or business opportunity;
-    d. any loss or corruption of data;
-    e. any anticipated savings or revenue;
-    f. any punitive damages;
-    g. any loss of goodwill or reputation; or
-    h. any other loss that could have been avoided by the damaged party&#39;s use of reasonable diligence.
-1. This is regardless of whether or not HATDeX or any of its affiliates has been warned of the possibility of such damages, and even if a remedy fails of its essential purpose.
-1. HATDeX will not be in breach of the Terms if the failure to perform any of its obligations is due to an event beyond its control, such as a failure of the power grid or part of it, failure of the Internet, natural disaster, war, riot, insurrection, epidemic, strikes, terrorism, or other events of a magnitude or type which cannot be generally foreseen in the industry.
-1. The maximum aggregate liability of HATDeX, its affiliates, suppliers and distributors shall not exceed £ 20.
+- to administer the Owner Services and for internal operations, including troubleshooting, data analysis, testing, research, statistical and survey purposes;
+- to improve the Owner Services to ensure that content is presented in the most effective manner for you and for your computer;
+- to allow you to participate in interactive features of the Owner Services, when you choose to do so;
+- as part of our efforts to keep the Owner Services safe and secure;
+- to measure or understand the effectiveness of advertising we serve to you and others, and to deliver relevant advertising to you;
+- to make suggestions and recommendations to you and other users of the Owner Services about goods or Owner Services that may interest you or them.
 
-## Export matters
+We will never provide any personal data that specifically identifies you to third parties to use for direct advertising or promotional purposes.
 
-The User declares that HATDeX is not legally prohibited to provide them with the Services and that they are neither located in nor a national of any country that is embargoed or restricted under applicable export laws. The User agrees that you will not use, import or export the Services in any manner which would cause HATDeX or its affiliates to breach any applicable export control laws, rules, or regulations. The User agrees that they will not allow access to or use of the Services by any persons or organisation that is located in or is a national of any country that is embargoed or restricted under applicable export laws.
+## Cookies
 
-## Indemnification
+The Owner Services (when web based) uses cookies, including flash cookies.
 
-1. If HATDeX, its affiliates, suppliers and distributors or any of their employees, agents, or suppliers (the **"Indemnitees"**) face a legal claim by a third party arising out of the User&#39;s negligence, breach of Terms or any applicable law, breach of your agreement with your customers, the User will bear the costs associated with the claim and any damages award, fine, or any other amount that is imposed on the Indemnitees in relation to the claim.
-2. The obligation included in the previous paragraphs includes claims arising out of the acts or omissions of the User&#39;s employees or agents, any other person that the User authorised to access the Services, and any person who gains unauthorised access to the Services due to the User&#39;s failure to use reasonable security measures.
-3. HATDeX will choose legal counsel to defend the claim and will inform you on the choice. You agree to cooperate with HATDeX&#39;s in the defence of the claim. We may settle the claim only with the User&#39;s consent. However, the User cannot unreasonably withhold, delay, condition or withdraw such consent.
+Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site, such as Google Analytics
 
-## Governing law
+Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit  [www.aboutcookies.org](http://www.aboutcookies.org/) or  [www.allaboutcookies.org](http://www.allaboutcookies.org/).
 
-These Terms are governed by English law except for its conflicts of laws principles, unless otherwise required by a mandatory law of any other jurisdiction.
+**To opt out of being tracked by Google Analytics across all websites visit  [http://tools.google.com/dlpage/gaoptout](http://tools.google.com/dlpage/gaoptout).**
 
-## Dispute settlement
+## Disclosure of your personal data
 
-1. HATDeX wants to address the User&#39;s concerns without needing a formal legal case. If a dispute arises out of the Terms, before filing a claim against HATDeX, the User agrees to attempt to resolve the dispute informally by contacting info@HATDeX.org. HATDeX will make any effort to achieve an amicable solution to the dispute. If the dispute is not resolved informally within 15 days from the date of the first email concerning such a dispute, the User and HATDeX are entitled to start legal proceedings.
-2. Any dispute arising out of the Terms, which is not resolved amicably in accordance with the preceding paragraph, is subject to the exclusive jurisdiction of the competent English Court the User may only resolve disputes with us on an individual basis and may not bring a claim as a plaintiff or a class member in a class, consolidated or representative action. Class arbitrations, class actions, private attorney general actions and consolidation with other arbitrations are not allowed.
+In addition to the disclosure mentioned above for particular categories of users, you agree that we have the right to share your personal data with:
 
-## Waiver, severability and assignment
+- business partners, suppliers and sub-contractors for the performance of any contract we or a third party has entered into with you; and
+- analytics and search engine providers that assist us in the improvement and optimisation of our website.
 
-HATDeX&#39;s failure to enforce a provision of the Terms does not waive its right to do so later. If a provision is found unenforceable, the remaining provisions of the Terms will remain in full effect and an enforceable term will be substituted reflecting our intent as closely as possible. The User may not assign any of their rights under these Terms, and any such attempt will be void. HATDeX may assign its rights to any of its affiliates or subsidiaries, or to any successor in interest of any business associated with the Services.
+We may disclose your personal data or HAT personal data to third parties:
 
-## Modifications to the terms
+- If we or substantially all of our assets are acquired by a third party, in which case data held by us about our customers and users will be one of the transferred assets.
+- If we are under a duty to disclose or share your data in order to comply with any legal obligation, or in order to enforce or apply our terms of use and other agreements; or to protect the rights, property, or safety of us, our customers, or others. This includes exchanging data with other companies and organisations for the purposes of fraud protection and credit risk reduction.
 
-HATDeX may revise these Terms at any time, and will always post the most current version on its website. If a revision meaningfully reduces your rights, we will notify you (by, for example, sending a message to the email address associated with your account, posting on our blog or on this page). By continuing to use or access the Services after the revisions come into effect, the User agrees to be bound by the revised Terms.
+We shall not view or access your HAT personal data in your HAT Account for any commercial or administrative purpose of our own.
 
-## Entire agreement
+Stewardship of your data is critical to us and a responsibility that we embrace. We&#39;ll abide by the following principles when receiving, scrutinising and responding to government requests for our users&#39; data:
 
-These Terms constitute the entire agreement between you and HATDeX with respect to the subject matter of these Terms, and supersede and replace any other prior or contemporaneous agreements, or terms and conditions applicable to the subject matter of these Terms, except for what provided for under Article 3. These Terms create no third-party beneficiary rights.
+- be transparent,
+- fight blanket requests, and
+- protect all HAT owners.
+
+We will publish a transparency report as part of our commitment to informing users about when and how governments ask us for information. This report details the types and numbers of requests we receive from law enforcement agents.
+
+# 14.Where we store your personal data collected for the Owner Services
+
+The data that we collect from you will not be transferred to, and stored at, a destination outside the European Economic Area (&quot;EEA&quot;).
+
+All data you provide to us is stored on our secure servers. Any payment transactions will be encrypted. Where we have given you (or where you have chosen) a password which enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone.
+
+Note that the transmission of data via the internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to the Website; any transmission is at your own risk. Once we have received your data, we will use strict procedures and security features to try to prevent unauthorised access.
+
+## Your rights
+
+You have the right to ask us not to process your personal data for marketing purposes. We will inform you (before collecting your data) if we intend to use your data for such purposes or if we intend to disclose your data to any third party for such purposes. You can exercise your right to prevent such processing by checking certain boxes on the forms we use to collect your data. You can also exercise the right at any time by contacting us at contact@hatdex.org.
+
+The website may, from time to time, contain links to and from the websites of our partner networks, advertisers and affiliates. If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for these policies. Please check these policies before you submit any personal data to these websites.
+
+The Act gives you the right to access data held about you. Where you make a subject access request relating to data of which we are the data processor we will ask you whether you would like us to forward the request to the relevant data controller. If we are the data controller we will deal with that subject access request in accordance with the Act.
+
+## E-newsletter
+
+We use a third party provider, Mailchimp, to deliver our e-newsletter. We gather statistics around email opening and clicks using industry standard technologies including clear gifs to help us monitor and improve our e-newsletter. For more information, please see Mailchimp&#39;s privacy notice.
+
+## Changes to this privacy notice
+
+We keep our privacy notice under regular review. This privacy notice was last updated on 7 November 2017.
+
+## How to contact us
+
+If you have any questions or would like to comment on this privacy notice you can email us as at: [contact@hatdex.org](mailto:contact@hatdex.org)
