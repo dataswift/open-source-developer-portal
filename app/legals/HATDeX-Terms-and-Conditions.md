@@ -1,4 +1,4 @@
-**HAT Owner Agreement**
+# HAT Owner Agreement
 
 _[Note: this agreement applies to all owners of HATs, no matter which provider they obtained the HAT from]_
 
