@@ -4,6 +4,7 @@ title:  "Documentation Introduction"
 description: "Documentation Introduction"
 ---
 
+## Where to start
 
 The HAT is a privacy-preserving framework for transacting personal data between Internet apps and services and their users or customers. Applications that are built on the HAT store their users' personal data in containerised databases that are owned and controlled by the users themselves i.e. the HAT Private 'Microserver' Data Account (PMDA). Some of the key services relevant to many developers are:
 
