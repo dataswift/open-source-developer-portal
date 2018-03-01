@@ -15,11 +15,11 @@ dataplugId: DATAPLUG_ID
 
 DataPlugs are the microservices that bring data from other digital resources into HATs. However, to ensure users' privacy in the distributed ecosystem, DEX requires DataPlugs to be registered before they can be _plugged into_ a HAT.
 
-DEX records some basica data about every plug:
+DEX records some basic data about every plug:
 
 | Parameter       | Description                                                        | Required/Generated |
 |:----------------|:-------------------------------------------------------------------|:-------------------|
-| uuid            | UUID of the DataPlugem                                             | Generated          |
+| uuid            | UUID of the DataPlug                                               | Generated          |
 | providerId      | date when the field was created                                    | Generated          |
 | created         | date when the DataPlug was registered                              | Generated          |
 | name            | Alpha-numerical name of the Plug                                   | Required           |
