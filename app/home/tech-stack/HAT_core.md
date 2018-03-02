@@ -1,8 +1,8 @@
 ---
 layout: twoColumn
 section: home
-type: Tools
-title: HAT
+type: "Technology Stack"
+title: HAT Microserver
 description: HAT Core and APIs
 weight: 1
 ---
@@ -28,3 +28,5 @@ For those who would like to build an app to interact with HATs’ personal data,
 The access to data in any HAT is via Data Offers. Once a Data Offer is agreed, specified data points from a HAT will be prepared for the Data Buyer as Data Debit (all data is within one bundle of a Data Debit), and retrievable through an API endpoint on that HAT that has accepted the offer.
 
 A development free option for organisations who don’t want to commit to any development but still want to interact with customers via HATs is available. Organisations can become a Data Buyer to shop personal data, in a similar way one would shop at Amazon.
+
+

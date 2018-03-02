@@ -118,3 +118,8 @@ In both cases, HAT has the responsibility of checking:
 - whether the Data Debit has been setup, enabled and matches the currently required one
 - making an authenticated call to status URL, checking the status reported by the remote system
 
+
+<nav class="pager-nav">
+    <a href="/">Overview</a>
+    <a href="02-application-developers.html">Integration for App Developers</a>
+</nav>

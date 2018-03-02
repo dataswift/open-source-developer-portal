@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: home
-type: Knowing the HAT Tech Ecosystem
+type: Why the HAT?
 title:  "The Architecture Diagram"
 description: "The Architecture Diagram"
 weight: 6

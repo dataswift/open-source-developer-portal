@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: home
-type: Tools
+type: "Technology Stack"
 title:  "Off-the-shelf HATs"
 description: "Off-the-shelf HATs"
 weight: 9

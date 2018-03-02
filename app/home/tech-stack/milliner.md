@@ -1,10 +1,37 @@
 ---
 layout: twoColumn
-section: "HAT Service Provider"
-type: article
-title: Security Requirement Best Practice
-description: "Security Requirement Best Practice"
+section: home
+type: "Technology Stack"
+title: Milliner - Provisioning & Security
+description: "Milliner"
+weight: 4
 ---
+
+# Milliner
+
+- Provisions HAT PMDAs on different cloud infrastructure
+- Integration of other PDS onto HAT platform
+- Enabling brand owners to be the Private Data Account provider
+- Enable brand owners and organisations to own the relationships with their customers, both business and end users
+
+Milliner provisions HAT infrastructure based on industry's best practices. Currently its tooling is focused on the Amazon AWS capabilities as the most advanced ones in the industry, however it could be adapted to different cloud providers with necessary features.
+
+![infrastructure-overview](/images/milliner-architecture.png)
+
+The solution consists of a set of nested templates that deploy the following:
+
+ - A tiered VPC with public, private and database subnets, spanning an AWS region and two availability zones.
+ - Security groups controlling what services can be reached and from where
+ - A highly available ECS cluster deployed across two Availability Zones in an [Auto Scaling](https://aws.amazon.com/autoscaling/) group.
+ - A pair of [NAT gateways](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-nat-gateway.html) (one in each zone) to handle outbound traffic.
+ - Two interconnecting microservices deployed as [ECS services](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html) (HAT and Milliner).
+ - A set of RDS-based databases backing the microservices 
+ - An [Application Load Balancer (ALB)](https://aws.amazon.com/elasticloadbalancing/applicationloadbalancer/) to the public subnets to handle inbound traffic.
+ - ALB host-based routes for each ECS service to route the inbound traffic to the correct service.
+ - DNS routes set in Route53 pointing public domain names to the microservices
+ - Centralized container logging with [Amazon CloudWatch Logs](http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html).
+ - CloudTrail based logging for security-related events such as role and security group changes, root account activity, as well as changes to CloudTrail settings
+
 
 # Security Requirement Best Practice
 
@@ -33,7 +60,7 @@ HAT infrastructure uses industry-standard tiered network setup, segregated into 
 
 ### Is data ever stored in an unencrypted form
 
-Data in-use is stored in a PostgreSQL database. Such data is not encrypted client-side and is stored in its original form. Data may be cached by a HAT Application Server or a cluster-internal cache server in-memory for a short amount of time to enhance performance.	
+Data in-use is stored in a PostgreSQL database. Such data is not encrypted client-side and is stored in its original form. Data may be cached by a HAT Application Server or a cluster-internal cache server in-memory for a short amount of time to enhance performance.   
 
 ## Password Policy
 
@@ -132,7 +159,7 @@ Audit logs are grouped into four categories:
 - Access logs against AWS S3 buckets for platform file operations
 - System-level logs against VMs running Application Servers
 - Application logs (only tracking the fact of an operation, not the contents of requests, e.g. data or passwords)
-	
+    
 
 ### How long are audit logs kept for
 
@@ -192,3 +219,4 @@ All compute, storage and database resources are located within a single configur
 ## What are the recovery timescales
 
 Recovery and scaling is virtually instantaneous in case of partial underlying infrastructure failures, transparent to the users and done without technical staff involvement. Using infrastructure blueprints major outages can be recovered from within hours of the underlying infrastructure becoming available.
+

@@ -4,50 +4,32 @@ title:  "What is the HAT and why Build on It?"
 description: "What is the HAT and why Build on It?"
 ---
 
+
 <nav class="grid-nav">
-    <a href="tools/HAT_core.html" class="icon-logo-hat grid-nav__item">
-        <h3>HAT</h3>
-        <p>The Open-Source core for Personal Data containment</p>
-    </a>
-    <a href="tools/rumpel.html" class="icon-logo-rumpel grid-nav__item">
-        <h3>Rumpel</h3>
-        <p>The private dashboard for users' HAT data</p>
-    </a>
-    <a href="tools/rumpellite.html" class="icon-logo-rumpel grid-nav__item">
-        <h3>Rumpel Lite</h3>
-        <p>Rumpel goes mobile on iOS</p>
-    </a>
-    <a href="tools/milliner.html" class="icon-logo-milliner grid-nav__item">
-        <h3>Milliner</h3>
-        <p>Produciton-grade, certified HAT provisioning at scale</p>
-    </a>
-    <a href="tools/data_plugs.html" class="grid-nav__item">
-        <h3><i class="material-icons">settings_input_component</i> Data Plugs</h3>
-        <p>Tiny services loading data from online sources into HATs</p>
-    </a>
-    <a href="tools/dex.html" class="icon-logo-dex grid-nav__item">
-        <h3>DEX</h3>
-        <p>The Data Exchange</p>
-    </a>
-    <a href="tools/marketsquare.html" class="icon-logo-marketsquare grid-nav__item">
-        <h3>MarketSquare</h3>
-        <p>Where the community of developers, organisations and even users gather</p>
-    </a>
-    <a href="tools/databuyer.html" class="icon-logo-databuyer grid-nav__item">
-        <h3>DataBuyer</h3>
-        <p>Data Buyer's window into the ecosystem</p>
-    </a>
-    <a href="tools/off_the_shelf_hats.html" class="icon-logo-hatters grid-nav__item">
-        <h3>HATTERS</h3>
-        <p>Off the shelf HATs</p>
-    </a>
+    
+    <div class="icon-logo-hat-large grid-nav__item grid-nav__item--large">
+        <h3>Why build something on the HAT</h3>
+        <ul>
+        <li>Rich, horizontal data across a range of different sources</li>
+        <li>Industry-grade security out of the box</li>
+        <li>API-as-a-backend for fast prototyping and MVP creation</li>
+        <li>Build what cannot be built with data not available before</li>
+        <li>Customer acquisition support within the growing network</li>
+        <li>Robust and versatile middleware for your applications</li>
+        <li>Top-tier engineering and developers</li>
+        </ul>
+    </div>
+
+    {% for page in filteredPages %}
+        {% if page.guide.step == "overview" %}
+            {% capture expectedUrl %}/{{ section }}/{{ page.guide.name }}{% endcapture %}
+            <a href="{{expectedUrl}}" class="icon-logo-{{page.product}} grid-nav__item">
+                <h3>{{page.type}}</h3>
+                <p>{{page.description}}</p>
+            </a>
+        {% endif %}
+    {% endfor %}
 </nav>
-
-<p>The HAT is a privacy-preserving framework for transacting personal data between Internet apps and services and their users or customers. Applications that are built on the HAT store their users' personal data in containerised databases that are owned and controlled by the users themselves i.e. the HAT Private 'Microserver' Data Account (PMDA). HAT-enabled applications then access that data through 'data debits' that give them access in return for the services they provide. Applications can ask for just the right data (e.g. location from 7am - 9am) for the right purpose (e.g. to understand commuting patterns), without HAT users providing identifiers or other information that would compromise their privacy.</p>
-
-<p>The HAT code is publicly available on <a href="http://github.com/Hub-of-all-Things/HAT2.0">GitHub</a>.</p>
-
-<h1>Articles</h1>
 
 <ul class="article-list">
     <li>
@@ -55,29 +37,73 @@ description: "What is the HAT and why Build on It?"
         <p>Learn more about the Hub of All Things, and the technology behind it.</p>
     </li>
     <li>
-        <h3><a href="knowing/1_knowing_ecosystem.html">Know the HAT Tech Ecosystem</a></h3>
-        <p>Find general information about the API available on every HAT.</p>
+        <h3><a href="why/why_build_something_on_the_hat.html">Why the HAT?</a></h3>
+        <p>What are the benefits of bulding your business on the HAT?</p>
     </li>
     <li>
-        <h3><a href="tools/HAT_core.html">Tools Available</a></h3>
-        <p>The HAT API is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International.</p>
+        <h3><a href="why/hat_platform_process_architecture.html">HAT Architecture</a></h3>
+        <p>HAT Ecosystem Architecture and Processes - how the whole system ticks</p>
     </li>
 </ul>
 
-<h1>Support for HAT Applications and Service Providers</h1>
+# The technology stack
 
-<ul class="article-list">
-    <li>
-        <h3><a href="hat_applications/">HAT Applications</a></h3>
-        <p>Find out more about the HAT application rating and certification</p>
-    </li>
-    <li>
-        <h3><a href="hat_service_provider_hsp/">HAT Service Providers</a></h3>
-        <p>Find out more about the certification process and security requirement for HAT Service Providers</p>
-    </li>
-    <li>
-        <h3><a href="hat_service_provider_hsp/security_requirement_best_practice.html">Provisioning Best Practices</a></h3>
-        <p>Find out more about the certification process and security requirement for HAT Service Providers</p>
-    </li>
-</ul>
+The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for the various use cases of personal data, across all sectors of the economy. It is designed and built to reduce the complexity of handling personal data and yet agile enough to allow the easy integration of its products into existing services.
 
+<nav class="grid-nav">
+    <a href="tech-stack/HAT_core.html" class="icon-logo-hat grid-nav__item">
+
+<h3>HAT</h3>
+        
+<p>A Private ‘Microserver’ Data Account (PMDA)
+&diams; Provisioned and customisable by any brand owner
+&diams; Allows brand owner to have direct relationship with their customers and their data
+&diams; Containerised database legally owned by individuals
+&diams; Open-source core, built on the Internet and open standards, 
+&diams; Portable across cloud systems</p>
+
+    </a>
+    <a href="tech-stack/rumpel.html" class="icon-logo-rumpel grid-nav__item">
+
+<h3>Rumpel</h3>
+        
+<p> Generic dashboard for all HAT owners
+&diams; Open sourced, Mozilla-licensed
+&diams; White labelled provision for HAT providers to be integrated with their own app user accounts
+&diams; Rumpel is the control centre for the HAT owner’s personal data </p>
+
+    </a>
+    
+    <a href="tech-stack/milliner.html" class="icon-logo-milliner grid-nav__item">
+
+<h3>Milliner</h3>
+<p>Provisions HAT PMDAs on different cloud infrastructure
+&diams; Integration of other PDS onto HAT platform
+&diams; Enabling brand owners to be the Private Data Account provider
+&diams; Enable brand owners and organisations to own the relationships with their customers, both business and end users</p>
+
+    </a>
+    <a href="tech-stack/dex.html" class="icon-logo-dex grid-nav__item">
+
+<h3>DEX</h3>
+
+<p> Enables the sharing of data points between HATs and organisations through APIs
+&diams; Data Transaction Logging
+&diams; Reports statistics across the ecosystem
+&diams; HAT Access brokering for applications and developers</p>
+
+
+    </a>
+    <a href="tech-stack/databuyer.html" class="icon-logo-databuyer grid-nav__item">
+
+<h3>DataBuyer</h3>
+
+<p> Revolutionary way of exchanging and requesting for data
+&diams; Offer benefits for past data, streaming data, future data
+&diams; Insights for researchers, recommenders and marketing firms
+&diams; Direct relationship &amp; contract with HAT owner 
+&diams; Built on DEX</p>
+
+    </a>
+
+</nav>
