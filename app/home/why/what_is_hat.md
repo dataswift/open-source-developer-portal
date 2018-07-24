@@ -13,7 +13,7 @@ The HAT was developed through more than £3m RCUK Digital Economy-funded researc
 
 Legally owned, fully controlled by individuals:
 
-- The HAT private data account is a powerful ‘microserver’ with the individual’s own Personal HAT Address (PHATA) as a public profile e.g. https://andrius.hubofallthings.net
+- The HAT microserver is a powerful service with the individual’s own Personal HAT Address (PHATA) as a public profile e.g. https://andrius.hubofallthings.net
 - Legal ownership of the account database as property, and therefore part of the individual’s estate. Individuals can donate their data to research or be a guardian of their child's data as a minor 
 - Legally act as a data controller and processor of the data in their HATs, so they can request for data legally, instead of through a third party service
 - The HAT provider is an 'agent', and individuals can move their HAT database to other HAT Providers (or bring it into their own private PC)
@@ -46,7 +46,7 @@ Data offers and apps are rated by the HAT Community Foundation, so that individu
 
 ### What is the goal
 
-The goal is to create a new generation of services on the Internet running on private data accounts. 
+The goal is to create a new generation of services on the Internet running on private microservers. 
 
 ### How secure is the HAT
 
