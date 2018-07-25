@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.1
+- 2.2
 before_install:
 - wget https://raw.githubusercontent.com/creationix/nvm/v0.33.2/nvm.sh -O ~/.nvm/nvm.sh
 - source ~/.nvm/nvm.sh
