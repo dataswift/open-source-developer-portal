@@ -34,6 +34,36 @@ Similarly a function gets disabled by calling `/api/v2.6/she/function/:function-
 
 Most functions are expected to be executed automatically by the HAT, however it is still possible (with "owner" HAT permissions) to execute a function manually by calling GET `/api/v2.6/she/function/:function-id/trigger`
 
+### Function availability
+
+It is important to note that only SHE functions that have been registered with a HAT cluster will be available to use.
+
+It is achieved in the HAT's configuration (`application.conf`) and therefore new functions currently require the HAT to be redeployed with them included in the configuraiton:
+
+```
+she {
+  functions = [
+    {
+      id = "data-feed-counter"
+      version = "1.0.0"
+      baseUrl = "https://ociflwukh1.execute-api.eu-west-1.amazonaws.com/dev"
+      namespace = "she"
+      endpoint = "insights/activity-records"
+    }
+    {
+      id = "sentiment-tracker"
+      version = "1.0.0"
+      baseUrl = "https://ociflwukh1.execute-api.eu-west-1.amazonaws.com/dev"
+      namespace = "she"
+      endpoint = "insights/emotions"
+    }
+  ]
+}
+```
+
+The format of the configuration should be self-explanatory: the configuration provides a list of functions, each identified by an ID, the version to be used, `baseUrl` as the address of the API gateway, and finally - `namespace` and `endpoint` it is allowed to create the data in. The rest is done automatically by the HAT, including loading the full configuration, issuing the calls, saving the data, etc.
+
+
 <nav class="pager-nav">
 	<a href="02-function-testing.html">Testing your function</a>
 	<a href="https://documenter.getpostman.com/view/110376/RWTiveMe">API Reference</a>

@@ -11,4 +11,4 @@ product: she
 weight: 1
 ---
 
-Use the [Function Testing](https://documenter.getpostman.com/view/110376/RWTiveMe#3c27cfcc-c367-4b23-9788-0cd97a800ce8) postman collection we have prepared for this purpose!
+Use the [Function Testing](https://documenter.getpostman.com/view/110376/RWTiveWS) postman collection we have prepared for this purpose!
