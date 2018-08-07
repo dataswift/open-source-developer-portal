@@ -3,7 +3,7 @@ layout: twoColumn
 section: guides
 type: Smart HAT Engine
 guide: 
-    name: she
+    name: smart-hat-engine
     step: overview
 title: What is the Smart HAT Engine (SHE)
 description: What SHE is for and how it can be used

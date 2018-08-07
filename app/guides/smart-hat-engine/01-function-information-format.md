@@ -3,7 +3,7 @@ layout: twoColumn
 section: guides
 type: Smart HAT Engine
 guide: 
-    name: she
+    name: smart-hat-engine
     step: 01-function-information-format
 title: Function information reference
 description: Detailed description of the different aspects of function encoded within the structure
