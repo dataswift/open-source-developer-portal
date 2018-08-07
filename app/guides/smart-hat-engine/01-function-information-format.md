@@ -59,5 +59,5 @@ Each function publishes its configuration through a Lambda function handler, thi
 
 <nav class="pager-nav">
     <a href="/">Overview</a>
-    <a href="" style="display:none;"></a>
+    <a href="02-function-testing.html">Testing your function</a>
 </nav>
