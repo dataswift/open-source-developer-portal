@@ -8,7 +8,7 @@ description: "Retrieve Registered Bundle Data"
 
 ## GET - Retrieve registered bundle data 
 
-`https://testing.hubat.net/api/v2/data-bundle/localprofil`
+`https://testing.hubat.net/api/v2.6/data-bundle/localprofil`
 
 Data bundle gets retrieved as per registered bundle specification
 
@@ -23,7 +23,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data-bundle/localprofile",
+						"url": "https://{{hat}}/api/v2.6/data-bundle/localprofile",
 						"method": "GET",
 						"header": [
 							{

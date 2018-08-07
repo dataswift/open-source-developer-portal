@@ -21,7 +21,7 @@ Using previously covered examples of profile and location data, they are clearly
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data-bundle/localprofile",
+	"url": "https://{{page.hat}}/api/v2.6/data-bundle/localprofile",
 	"method": "POST",
 	"header": [
 		{

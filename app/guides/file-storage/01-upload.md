@@ -15,7 +15,7 @@ File upload happens in three steps:
 2. Directly uploading the file to the (securely signed) URL
 3. Marking the file complete at the HAT
 
-Uploading metadata is simple: call `POST /api/v2/files/upload` with the file details:
+Uploading metadata is simple: call `POST /api/v2.6/files/upload` with the file details:
 
 ```shellnoselect
    curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
@@ -27,7 +27,7 @@ Uploading metadata is simple: call `POST /api/v2/files/upload` with the file det
 			"title": "test Title",
 			"description": "a very interesting test file",
 		}' \
-		"https://${HAT_ADDRESS}/api/v2/files/upload"
+		"https://${HAT_ADDRESS}/api/v2.6/files/upload"
 ```
 
 Only `name` and `source` properties are mandatory - all others are optional. You can also attach `dateCreated` and `lastUpdated` fields with Unix timestamps to set them accordingly. If everything is successful, the HAT will respond with a copy of the metadata as well as additional information:
@@ -64,7 +64,7 @@ curl -v -T ${LOCAL_FILE} \
   "https://hat-storage-test.s3.amazonaws.com/HAT_ADDRESS/testtestfile-12.png?AWSAccessKeyId=AKIAJSOXH3FJPB43SWGQ&Expires=1487871442&Signature=CTRdDW8nKBqNcuwK0ssH77zjkec%3D"
 ```
 
-Finally, to mark the file "Completed", call `PUT /api/v2/files/file/:fileId/complete`. It will again respond with file metadata:
+Finally, to mark the file "Completed", call `PUT /api/v2.6/files/file/:fileId/complete`. It will again respond with file metadata:
 
 ```jsonnoselect
 {
@@ -92,7 +92,7 @@ Finally, to mark the file "Completed", call `PUT /api/v2/files/file/:fileId/comp
 
 File `status` has now been marked as `Completed` and also contains file size in bytes! The request will fail if the file doesn't exist, hasn't been fully uploaded or you do not have permissions to mark the file completed (you will if you started the upload in the first place).
 
-Finally, files can be deleted (by *owner* only!) by calling `DELETE /api/v2/files/file/:fileId`
+Finally, files can be deleted (by *owner* only!) by calling `DELETE /api/v2.6/files/file/:fileId`
 
 <nav class="pager-nav">
 <a href="./">Overview</a>

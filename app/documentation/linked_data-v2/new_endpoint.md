@@ -8,7 +8,7 @@ description: "New endpoint for linked data retrieval "
 
 ## POST - New endpoint for linked data retrieval 
 
-`https://testing.hubat.net/api/v2/combinator/notables`
+`https://testing.hubat.net/api/v2.6/combinator/notables`
 
 Endpoints queries need to explicitly list any potentially linked data they would want to retrieve
 
@@ -37,7 +37,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/combinator/notables",
+						"url": "https://{{hat}}/api/v2.6/combinator/notables",
 						"method": "POST",
 						"header": [
 							{

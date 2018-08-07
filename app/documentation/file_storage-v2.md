@@ -28,7 +28,7 @@ File upload happens in three steps:
 2. Directly uploading the file to the (securely signed) URL
 3. Marking the file complete at the HAT
 
-Uploading metadata is simple: call `POST /api/v2/files/upload` with the file details:
+Uploading metadata is simple: call `POST /api/v2.6/files/upload` with the file details:
 
 ```curl
    curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
@@ -40,7 +40,7 @@ Uploading metadata is simple: call `POST /api/v2/files/upload` with the file det
 			"title": "test Title",
 			"description": "a very interesting test file",
 		}' \
-		"https://${HAT_ADDRESS}/api/v2/files/upload"
+		"https://${HAT_ADDRESS}/api/v2.6/files/upload"
 ```
 
 Only `name` and `source` properties are mandatory - all others are optional. You can also attach `dateCreated` and `lastUpdated` fields with Unix timestamps to set them accordingly. If everything is successful, the HAT will respond with a copy of the metadata as well as additional information:
@@ -77,7 +77,7 @@ curl -v -T ${LOCAL_FILE} \
   "https://hat-storage-test.s3.amazonaws.com/HAT_ADDRESS/testtestfile-12.png?AWSAccessKeyId=AKIAJSOXH3FJPB43SWGQ&Expires=1487871442&Signature=CTRdDW8nKBqNcuwK0ssH77zjkec%3D"
 ```
 
-Finally, to mark the file "Completed", call `PUT /api/v2/files/file/:fileId/complete`. It will again respond with file metadata:
+Finally, to mark the file "Completed", call `PUT /api/v2.6/files/file/:fileId/complete`. It will again respond with file metadata:
 
 ```
 {
@@ -105,12 +105,12 @@ Finally, to mark the file "Completed", call `PUT /api/v2/files/file/:fileId/comp
 
 File `status` has now been marked as `Completed` and also contains file size in bytes! The request will fail if the file doesn't exist, hasn't been fully uploaded or you do not have permissions to mark the file completed (you will if you started the upload in the first place).
 
-Finally, files can be deleted (by *owner* only!) by calling `DELETE /api/v2/files/file/:fileId`
+Finally, files can be deleted (by *owner* only!) by calling `DELETE /api/v2.6/files/file/:fileId`
 
 ## Viewing contents
 
-- `GET api/v2/files/file/:fileId` to list metadata of a file, including `contentUrl` pointing to a pre-signed temporary URL for file contents if the user is permitted file access
-- `GET /api/v2/files/content/:fileId` to get contents of a file if file is marked publicly accessible or the client is permitted file content access. The endpoint redirects to the pre-signed temporary content URL or returns 404 error code (Not Found) if the file does not exist or is not accessible
+- `GET api/v2.6/files/file/:fileId` to list metadata of a file, including `contentUrl` pointing to a pre-signed temporary URL for file contents if the user is permitted file access
+- `GET /api/v2.6/files/content/:fileId` to get contents of a file if file is marked publicly accessible or the client is permitted file content access. The endpoint redirects to the pre-signed temporary content URL or returns 404 error code (Not Found) if the file does not exist or is not accessible
 
 ## Access Control
 
@@ -122,9 +122,9 @@ HAT owner can access all files, but otherwise there are three options for file a
 
 By default, the user who saved the file onto the HAT is allowed to see the file's metadata and contents, but only the `owner` can adjust file permissions by:
 
-- calling `GET /api/v2/files/allowAccess/:fileId/:userId` to allow a specific user (`:userId`) to access a specific file (`:fileId`), optionally setting `content` query parameter to `true`/`false` to control content access (`false` by default). Conversely, calling `GET /api/v2/files/restrictAccess/:fileId/:userId` to restrict access.
-- calling `POST /api/v2/files/allowAccess/:userId` sending file template to grant access to a set of files (same syntax as for file search!). Conversely, calling `POST /api/v2/files/restrictAccess/:userId` to restrict access.
-- calling `GET /api/v2/files/allowAccessPublic/:fileId` and `GET /api/v2/files/restrictAccessPublic/:fileId` to control public file access
+- calling `GET /api/v2.6/files/allowAccess/:fileId/:userId` to allow a specific user (`:userId`) to access a specific file (`:fileId`), optionally setting `content` query parameter to `true`/`false` to control content access (`false` by default). Conversely, calling `GET /api/v2.6/files/restrictAccess/:fileId/:userId` to restrict access.
+- calling `POST /api/v2.6/files/allowAccess/:userId` sending file template to grant access to a set of files (same syntax as for file search!). Conversely, calling `POST /api/v2.6/files/restrictAccess/:userId` to restrict access.
+- calling `GET /api/v2.6/files/allowAccessPublic/:fileId` and `GET /api/v2.6/files/restrictAccessPublic/:fileId` to control public file access
 
 ## Search
 
@@ -137,7 +137,7 @@ HAT files can be looked up by any part of metadata attached to them:
 - `title` and `description` for an approximate, text-based search matching the fields
 - `status` to filter e.g. only files that are marked `Completed`
 
-To search for files call `POST /api/v2/files/search` sending file template to match against. All calls must be authenticated with the user's token and only files the user is allowed to access are returned (all files for the HAT owner!):
+To search for files call `POST /api/v2.6/files/search` sending file template to match against. All calls must be authenticated with the user's token and only files the user is allowed to access are returned (all files for the HAT owner!):
 
 ```curl
     curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
@@ -150,5 +150,5 @@ To search for files call `POST /api/v2/files/search` sending file template to ma
 			"description": "a very interesting test file",
 			"status": { "status": "Completed", "size": 0}
 		}' \
-		"https://${HAT_ADDRESS}/api/v2/files/search"
+		"https://${HAT_ADDRESS}/api/v2.6/files/search"
 ```

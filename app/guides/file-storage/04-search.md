@@ -18,7 +18,7 @@ HAT files can be looked up by any part of metadata attached to them:
 - `title` and `description` for an approximate, text-based search matching the fields
 - `status` to filter e.g. only files that are marked `Completed`
 
-To search for files call `POST /api/v2/files/search` sending file template to match against. All calls must be authenticated with the user's token and only files the user is allowed to access are returned (all files for the HAT owner!):
+To search for files call `POST /api/v2.6/files/search` sending file template to match against. All calls must be authenticated with the user's token and only files the user is allowed to access are returned (all files for the HAT owner!):
 
 ```curlnoselect
     curl -X POST -H "Accept: application/json" -H "X-Auth-Token: ${HAT_AUTH_TOKEN}" \
@@ -31,7 +31,7 @@ To search for files call `POST /api/v2/files/search` sending file template to ma
 			"description": "a very interesting test file",
 			"status": { "status": "Completed", "size": 0}
 		}' \
-		"https://${HAT_ADDRESS}/api/v2/files/search"
+		"https://${HAT_ADDRESS}/api/v2.6/files/search"
 ```
 
 <nav class="pager-nav">

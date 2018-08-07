@@ -8,7 +8,7 @@ description: "Link up data records"
 
 ## POST - Link up data records 
    
-`https://testing.hubat.net/api/v2/data-link?records[]={{recordsParameter}}`
+`https://testing.hubat.net/api/v2.6/data-link?records[]={{recordsParameter}}`
 
 Links up data records for a notion of related data, e.g. a note associated with a specific nudge
 
@@ -22,7 +22,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data-link?records[]={{recordsParameter}}",
+						"url": "https://{{hat}}/api/v2.6/data-link?records[]={{recordsParameter}}",
 						"method": "POST",
 						"header": [
 							{

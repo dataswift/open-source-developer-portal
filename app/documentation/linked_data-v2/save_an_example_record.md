@@ -8,7 +8,7 @@ description: " Save an example notable record "
 
 ## POST -  Save an example notable record 
 
-`https://testing.hubat.net/api/v2/data/rumpel/notable`
+`https://testing.hubat.net/api/v2.6/data/rumpel/notable`
 
 Saves a notable, taking the saved record ID for later use
 
@@ -49,7 +49,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data/rumpel/notable",
+						"url": "https://{{hat}}/api/v2.6/data/rumpel/notable",
 						"method": "POST",
 						"header": [
 							{

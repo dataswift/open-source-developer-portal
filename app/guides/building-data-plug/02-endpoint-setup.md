@@ -45,7 +45,7 @@ Let's look at the configuration setup first.
 ```
 
 The `namespace` and `endpoint` parameters indicate where the information obtained from the API, should be stored
-on the HAT. The data synced by the example setup above will be available at `/api/v2/data/facebook/feed` path on the owner's 
+on the HAT. The data synced by the example setup above will be available at `/api/v2.6/data/facebook/feed` path on the owner's 
 HAT. Note that, due to HAT's namespacing rules, the `namespace` parameter must MATCH data plug's registration name.
 
 Refresh interval indicates how often API polling should be performed for that particular endpoint. Keep in mind, that if there

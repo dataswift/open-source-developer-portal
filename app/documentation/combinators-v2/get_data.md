@@ -8,7 +8,7 @@ description: "Propose Data Bundles"
 
 ## POST -  Propose data bundles
    
-`https://testing.hubat.net/api/v2/combinator/android/locations?take=5`
+`https://testing.hubat.net/api/v2.6/combinator/android/locations?take=5`
 
 Data for registered endpoints can be collected like with the plain data routes, but prefixing the path with endpoint/ instead of `data/, however using same filters such as the one for limiting the number of results returned
 
@@ -22,7 +22,7 @@ Data for registered endpoints can be collected like with the plain data routes, 
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/combinator/android/locations?take=5",
+						"url": "https://{{hat}}/api/v2.6/combinator/android/locations?take=5",
 						"method": "GET",
 						"header": [
 							{
@@ -42,7 +42,7 @@ Data for registered endpoints can be collected like with the plain data routes, 
 
 # Example - Get data for the morning commute 
 
-`https://testing.hubat.net/api/v2/combinator/locations/morningcommute`
+`https://testing.hubat.net/api/v2.6/combinator/locations/morningcommute`
 
 ### Headers
 
@@ -52,7 +52,7 @@ Data for registered endpoints can be collected like with the plain data routes, 
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/combinator/locations/morningcommute",
+						"url": "https://{{hat}}/api/v2.6/combinator/locations/morningcommute",
 						"method": "GET",
 						"header": [
 							{

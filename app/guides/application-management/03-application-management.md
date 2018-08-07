@@ -16,7 +16,7 @@ All HAT Application management is performed through the endpoints to list, setup
 
 ### Listing applications
 
-Applications are listed at `/api/v2/applications` - returns the full list of approved applications, wrapped in HAT application status
+Applications are listed at `/api/v2.6/applications` - returns the full list of approved applications, wrapped in HAT application status
 
 
 This method is the only one needed to call to get a comprehensive list of applications along with their status on the HAT:
@@ -38,11 +38,11 @@ The resulting list contains for each application:
 | needsUpdating  | Boolean, Optional                                                 | indicating whether application needs to be updated by calling the “setup” endpoint again and asking the user to review any permission changes. Only present if the application has previously been setup |
 | mostRecentData | Date, ISO-8601, Optional                                          | timestamp of the most recent data record available in the configured endpoint                                                                                                                            |
 
-An individual application information is accessible at `/api/v2/applications/:application-id` but this shouldn’t be needed in most cases. It will have exactly the same information and format as a single item in the list returned by `/api/v2/applications`.
+An individual application information is accessible at `/api/v2.6/applications/:application-id` but this shouldn’t be needed in most cases. It will have exactly the same information and format as a single item in the list returned by `/api/v2.6/applications`.
 
 ### Setting up
 
-Application is set up by calling GET `/api/v2/applications/:application/setup`
+Application is set up by calling GET `/api/v2.6/applications/:application/setup`
 
 Most of the steps of setting up an application with a HAT happen transparently after calling the `setup` endpoint, for both `Internal` and `External` applications:
 
@@ -54,12 +54,12 @@ It is up the the UI to display the onboarding screens and collect user preferenc
 
 If, on the other hand, the application is `External`, configuration may include a default (web) url, an iOS-specific or an Android-specific url identifying the application to be launched. In this case the url is chosen by the UI depending on where it is running, i.e. an iOS application should not choose to redirect the user to an Android-specific url. To log the user in, they should then be redirected to “hatname/hatlogin?name=app-id&redirect=url” address.
 
-Similarly an application gets disabled by calling `/api/v2/applications/:application/disable`. This takes care of recording the fact on the HAT, disabling any data debits and stops tokens issued to that application from working with the HAT.
+Similarly an application gets disabled by calling `/api/v2.6/applications/:application/disable`. This takes care of recording the fact on the HAT, disabling any data debits and stops tokens issued to that application from working with the HAT.
 
 
 ### Obtaining application token
 
-For some applications (services), especially those that have `External` setup flow, you may need the application’s token, which can be obtained by calling `/api/v2/applications/:application/access-token`. This endpoint is, however, very restricted and by default for any application, including those with “Owner” level access, will return “Forbidden” status.
+For some applications (services), especially those that have `External` setup flow, you may need the application’s token, which can be obtained by calling `/api/v2.6/applications/:application/access-token`. This endpoint is, however, very restricted and by default for any application, including those with “Owner” level access, will return “Forbidden” status.
 
 
 

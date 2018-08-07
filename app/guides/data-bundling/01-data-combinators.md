@@ -21,13 +21,13 @@ The API supports a notion of custom data "combinators", with the key feature bei
 
 ### Remapping JSON structures
 
-One of the simplest types of data manipulation is remapping of data structure. This is done by creating a *combinator* with a `POST` request to `/api/v2/combinator/COMBINATOR_NAME` having chosen a name for your data combinator. Combinator name can be any valid URL path, but must be unique - request will fail with an error otherwise.
+One of the simplest types of data manipulation is remapping of data structure. This is done by creating a *combinator* with a `POST` request to `/api/v2.6/combinator/COMBINATOR_NAME` having chosen a name for your data combinator. Combinator name can be any valid URL path, but must be unique - request will fail with an error otherwise.
 
 A simple example extracting two fields, `longitude` and `latitude` from a rumpel locations endpoint and unwrapping them to a top-level object:
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/combinator/locations",
+	"url": "https://{{page.hat}}/api/v2.6/combinator/locations",
 	"method": "POST",
 	"header": [
 		{
@@ -49,11 +49,11 @@ A simple example extracting two fields, `longitude` and `latitude` from a rumpel
 }
 ```
 
-The created combinator can be used by simply sending `GET` to `/api/v2/combinator/COMBINATOR_NAME` endpoint:
+The created combinator can be used by simply sending `GET` to `/api/v2.6/combinator/COMBINATOR_NAME` endpoint:
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/combinator/locations?take=5",
+	"url": "https://{{page.hat}}/api/v2.6/combinator/locations?take=5",
 	"method": "GET",
 	"header": [
 		{
@@ -94,7 +94,7 @@ Combinators are also very useful when you want to combine data from different en
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/combinator/locations",
+	"url": "https://{{page.hat}}/api/v2.6/combinator/locations",
 	"method": "POST",
 	"header": [
 		{
@@ -122,7 +122,7 @@ The guide on [raw data I/O](../raw_data_io) covered linked data entry, but did n
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/combinator/notables",
+	"url": "https://{{page.hat}}/api/v2.6/combinator/notables",
 	"method": "POST",
 	"header": [
 		{
@@ -168,11 +168,11 @@ A response to fetch data from this combinator results in something like:
 
 ### Data Filtering
 
-The combinators API allows for powerful filtering of data according to the recorded values. The combinator gets created by `POST`ing a request to `/api/v2/combinator/COMBINATOR_NAME` as previously, however for each source of data you may also define one or more `filters` in addition to the `endpoint` and `transformation` used to remap the data:
+The combinators API allows for powerful filtering of data according to the recorded values. The combinator gets created by `POST`ing a request to `/api/v2.6/combinator/COMBINATOR_NAME` as previously, however for each source of data you may also define one or more `filters` in addition to the `endpoint` and `transformation` used to remap the data:
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/combinator/locations/morningcommute",
+	"url": "https://{{page.hat}}/api/v2.6/combinator/locations/morningcommute",
 	"method": "POST",
 	"header": [
 		{

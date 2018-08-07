@@ -8,7 +8,7 @@ description: "Propose A New data Endpoint"
 
 ## POST -  Propose A New data Endpoint
    
-`https://testing.hubat.net/api/v2/combinator/android/locations`
+`https://testing.hubat.net/api/v2.6/combinator/android/locations`
 
 Data endpoints take data from existing datasets and combine multiple source, reformat data into different structures as per provided mapping, etc
 
@@ -43,7 +43,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data-bundle/localprofile",
+						"url": "https://{{hat}}/api/v2.6/data-bundle/localprofile",
 						"method": "POST",
 						"header": [
 							{
@@ -68,7 +68,7 @@ application/json
 
 #Example - Propose a new Data Endpoint - morning commute 
 
-`https://testing.hubat.net/api/v2/combinator/locations/morningcommute`
+`https://testing.hubat.net/api/v2.6/combinator/locations/morningcommute`
 
 ### Headers
 
@@ -109,7 +109,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/combinator/locations/morningcommute",
+						"url": "https://{{hat}}/api/v2.6/combinator/locations/morningcommute",
 						"method": "POST",
 						"header": [
 							{

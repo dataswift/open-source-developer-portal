@@ -24,7 +24,7 @@ Therefore, plain Data APIs consume any JSON:
 The v2 API loosely replaces the notion of data `source` and `table` from the previous API version with `namespace` and `endpoint`, where:
 
 - each application that is authorized to write any data into a HAT, can do so *only* within one or more `namespaces` designated for it, such as Rumpel only writing to the `rumpel` namespace. Applications are not authorized to write into each other's namespaces
-- `endpoints` are defined by the application developer as required. Data is grouped under a combination of a `namespace` and an `endpoint` where the two together identify a set of data accessible via a URL path `/api/v2/data/namespace/endpoint`. An example would be `/api/v2/data/rumpel/locations` for all locations saved into a HAT by the Rumpel app
+- `endpoints` are defined by the application developer as required. Data is grouped under a combination of a `namespace` and an `endpoint` where the two together identify a set of data accessible via a URL path `/api/v2.6/data/namespace/endpoint`. An example would be `/api/v2.6/data/rumpel/locations` for all locations saved into a HAT by the Rumpel app
 - data can thus be stored and retrieved using permitted credentials for the individual endpoints
 
 You will need to acquire an access_token before calling any data APIs. Please refer to the [guide on HAT login for details on authentication](../hat_login/).

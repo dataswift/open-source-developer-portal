@@ -8,7 +8,7 @@ description: "Retrieve linked data points as per registered endpoint "
 
 ## GET -  Retrieve linked data points as per registered endpoint 
    
-`https://testing.hubat.net/api/v2/combinator/notables`
+`https://testing.hubat.net/api/v2.6/combinator/notables`
 
 All requested linked objects are retrieved as specified in the endpoint query when registering it
 
@@ -22,7 +22,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/combinator/notables",
+						"url": "https://{{hat}}/api/v2.6/combinator/notables",
 						"method": "GET",
 						"header": [
 							{

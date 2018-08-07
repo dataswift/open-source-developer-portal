@@ -14,11 +14,11 @@ access_token: ACCESS_TOKEN
 
 ### Updating
 
-Data can be updated by sending a `PUT` request to the `/api/v2/data` endpoint with the complete Data Record structure in the request body:
+Data can be updated by sending a `PUT` request to the `/api/v2.6/data` endpoint with the complete Data Record structure in the request body:
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data",
+	"url": "https://{{page.hat}}/api/v2.6/data",
 	"method": "PUT",
 	"header": [
 		{
@@ -44,11 +44,11 @@ The above request is expected to effectively update only the `accuracy` field of
 
 ### Deleting
 
-Data is deleted by sending a `DELETE` request to the `/api/v2/data` endpoint with IDs of the records to be deleted in query parameters:
+Data is deleted by sending a `DELETE` request to the `/api/v2.6/data` endpoint with IDs of the records to be deleted in query parameters:
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data?records=3474369e-2317-4ea2-9bc8-198700a1f9cb&records=6dcff611-45cb-49a9-82ca-318b9e5a3c17",
+	"url": "https://{{page.hat}}/api/v2.6/data?records=3474369e-2317-4ea2-9bc8-198700a1f9cb&records=6dcff611-45cb-49a9-82ca-318b9e5a3c17",
 	"method": "DELETE",
 	"header": [
 		{

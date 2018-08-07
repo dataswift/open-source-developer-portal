@@ -8,7 +8,7 @@ description: "Batch data upload "
 
 ## POST - Batch data upload 
    
-`https://testing.hubat.net/api/v2/data-batch`
+`https://testing.hubat.net/api/v2.6/data-batch`
 
 Sending multiple records to the HAT simultaneously, potentially for separate "endpoints" as well as linked, all in one call
 
@@ -63,7 +63,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data-batch",
+						"url": "https://{{hat}}/api/v2.6/data-batch",
 						"method": "POST",
 						"header": [
 							{

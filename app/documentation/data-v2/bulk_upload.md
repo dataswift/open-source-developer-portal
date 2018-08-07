@@ -8,7 +8,7 @@ description: "Bulk-upload a large chunk of data to the same endpoint"
 
 ## POST -  Bulk-upload a large chunk of data to the same endpoint
    
-`https://testing.hubat.net/api/v2/data/rumpel/locations`
+`https://testing.hubat.net/api/v2.6/data/rumpel/locations`
 
 Storing a ist of data records (locations in the example) in one go
 
@@ -71,7 +71,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data/rumpel/locations",
+						"url": "https://{{hat}}/api/v2.6/data/rumpel/locations",
 						"method": "POST",
 						"header": [
 							{
@@ -96,7 +96,7 @@ application/json
 
 #Example - Save Different Data
 
-`https://testing.hubat.net/api/v2/data/rumpel/profile`
+`https://testing.hubat.net/api/v2.6/data/rumpel/profile`
 
 Using Rumpel profile as an exmaple, can save the whole object as a single API call
 
@@ -219,7 +219,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data/rumpel/profile",
+						"url": "https://{{hat}}/api/v2.6/data/rumpel/profile",
 						"method": "POST",
 						"header": [
 							{

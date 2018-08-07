@@ -8,7 +8,7 @@ description: "Save an example nudge"
 
 ## POST - Save an example nudge 
    
-`https://testing.hubat.net/api/v2/data/rumpel/nudge`
+`https://testing.hubat.net/api/v2.6/data/rumpel/nudge`
 
 An example of a nudge created separately, but to be attached to a note
 
@@ -35,7 +35,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data/rumpel/nudge",
+						"url": "https://{{hat}}/api/v2.6/data/rumpel/nudge",
 						"method": "POST",
 						"header": [
 							{

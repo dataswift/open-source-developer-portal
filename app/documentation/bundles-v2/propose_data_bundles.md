@@ -8,7 +8,7 @@ description: "Propose Data Bundles"
 
 ## POST -  Propose data bundles
    
-`https://testing.hubat.net/api/v2/data-bundle/localprofile`
+`https://testing.hubat.net/api/v2.6/data-bundle/localprofile`
 
 Data can be bundled together across different sources into a single object of interest - used for apps as well as the basis of reqesting data for Data Debits
 
@@ -53,7 +53,7 @@ application/json
 ```postman
 
 "request": {
-						"url": "https://{{hat}}/api/v2/data-bundle/localprofile",
+						"url": "https://{{hat}}/api/v2.6/data-bundle/localprofile",
 						"method": "POST",
 						"header": [
 							{

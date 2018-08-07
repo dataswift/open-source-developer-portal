@@ -14,7 +14,7 @@ access_token: ACCESS_TOKEN
 
 In this guide we only look at retrieving simple data that is only available to the owner of the HAT and hence usable only by certified dashboard applications. For other kinds of data access, jump to the [section on consented data exchange](03-data-retrieval.html) where you will find further pointers.
 
-In the simple case, data from the HAT is retrieved using a `GET` request to the `/api/v2/data/namespace/endpoint`.
+In the simple case, data from the HAT is retrieved using a `GET` request to the `/api/v2.6/data/namespace/endpoint`.
 
 The endpoint takes the following parameters:
 
@@ -28,7 +28,7 @@ recordId	|		| ID of the record when looking up data for one specific item
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data/hat/locations?take=3",
+	"url": "https://{{page.hat}}/api/v2.6/data/hat/locations?take=3",
 	"method": "GET",
 	"header": [
 		{

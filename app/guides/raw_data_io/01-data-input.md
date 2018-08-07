@@ -24,7 +24,7 @@ A data entry request for a single endpoint (`/hat/locations`), with multiple rec
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data/hat/locations",
+	"url": "https://{{page.hat}}/api/v2.6/data/hat/locations",
 	"method": "POST",
 	"header": [
 		{
@@ -97,7 +97,7 @@ To illustrate HAT's acceptance of _any valid JSON data_, here is another example
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data/rumpel/profile",
+	"url": "https://{{page.hat}}/api/v2.6/data/rumpel/profile",
 	"method": "POST",
 	"header": [
 		{
@@ -126,7 +126,7 @@ Heterogeneous data records can be inserted simultaneously using the batch-data A
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data-batch",
+	"url": "https://{{page.hat}}/api/v2.6/data-batch",
 	"method": "POST",
 	"header": [
 		{
@@ -154,7 +154,7 @@ Data records do not necessarily need to be linked up when being inserted. This c
 
 ```postman
 "request": {
-	"url": "https://{{page.hat}}/api/v2/data-link?records=6dcff611-45cb-49a9-82ca-318b9e5a3c17",
+	"url": "https://{{page.hat}}/api/v2.6/data-link?records=6dcff611-45cb-49a9-82ca-318b9e5a3c17",
 	"method": "POST",
 	"header": [
 		{
