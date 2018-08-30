@@ -11,7 +11,11 @@ description: Sign a user up with Milliner
 
 The final step is to register the HAT with the DEX to allow it to connect dataplugs, sign up for offers and otherwise become a member of the HAT ecosystem.
 
-The only parameter passed to DEX is `hatAddress` containing the fully-qualified address of the HAT - all other details (such as the HAT's public key) are fetched by DEX or registration fails if the HAT is not available.
+The 2 parameters passed to DEX are
+* `hatAddress` - containing the fully-qualified address of the HAT.
+* `applicationId` - the id of the application assigned to you during the onboarding process.
+
+All other details (such as the HAT's public key) are fetched by DEX or registration fails if the HAT is not available.
 
 ```postman
 	"request": {
@@ -26,7 +30,8 @@ The only parameter passed to DEX is `hatAddress` containing the fully-qualified 
 		],
 		"body": {
 			"mode": "raw",
-			"raw": "{\n\t\"hatAddress\": \"testhat.hubat.net\"\n}"
+			"raw": "{\n\t\"hatAddress\": \"testhat.hubat.net\",\n
+			\t\"applicationId\": \"myApplicationId\",\n}"
 		},
 		"description": "Register a HAT with MarketSquare to allow it to connect dataplugs, sign up for offers and otherwise become a member of the HAT ecosystem"
 	}

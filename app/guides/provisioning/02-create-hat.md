@@ -21,7 +21,7 @@ The three key parameters for creating a HAT include:
 
 ```postman
 	"request": {
-		"url": "https://cluster/api/manage/hat/create/HAT_ADDRESS",
+		"url": "https://<cluster>/api/manage/hat/create/<HAT_ADDRESS>",
 		"method": "GET",
 		"header": [
 			{

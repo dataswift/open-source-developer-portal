@@ -9,11 +9,11 @@ title: Step 1 - Sign user up with Milliner
 description: Sign a user up with Milliner
 ---
 
-To sign a user up, you should submit their details to *Milliner*. For testing you are welcome to use the development cluster at https://hubat.net, but becoming a HAT Service Provider you will be issued with a separate address.
+To sign a user up, you should submit their details to *Milliner*. For testing you are welcome to use the development cluster at `hubat.net`, but becoming a HAT Service Provider you will be issued with a separate address.
 
 ```postman
 	"request": {
-		"url": "https://hubat.net/api/signup",
+		"url": "https://<cluster>/api/signup",
 		"method": "POST",
 		"header": [
 			{
