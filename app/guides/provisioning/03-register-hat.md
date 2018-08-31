@@ -30,8 +30,7 @@ All other details (such as the HAT's public key) are fetched by DEX or registrat
 		],
 		"body": {
 			"mode": "raw",
-			"raw": "{\n\t\"hatAddress\": \"testhat.hubat.net\",\n
-			\t\"applicationId\": \"myApplicationId\",\n}"
+			"raw": "{\n\t\"hatAddress\": \"testhat.hubat.net\",\n\t\"applicationId\": \"myApplicationId\"\n}"
 		},
 		"description": "Register a HAT with MarketSquare to allow it to connect dataplugs, sign up for offers and otherwise become a member of the HAT ecosystem"
 	}
