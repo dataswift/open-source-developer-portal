@@ -23,6 +23,24 @@ To build and serve the site on localhost, do:
 grunt serve
 ```
 
+## Troubleshooting
+
+If you encounter the following error
+```
+Conversion error: Jekyll::Converters::Markdown encountered an error while converting 'guides/data-bundling/01-data-combinators.md':
+                    No such file or directory - httpsnippet
+```
+this means you do not have `httpsnippet` installed or in your path.
+
+Rectify with
+```
+npm install -global httpsnippet
+```
+You may also need to install `mkdirp`
+```
+npm install -global mkdirp
+```
+
 ## Deploying
 
 To deploy changes to the gh-pages branch, do:
