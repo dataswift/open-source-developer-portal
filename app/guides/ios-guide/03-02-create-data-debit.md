@@ -13,7 +13,7 @@ description: Guide to creating a data debit on the HAT on the iOS platform
 
 You can also create a `Data Debit` by using the function below:
 
-``` swift
+```javascriptnoselect
 let endpoint = DataOfferRequiredDataDefinitionBundleKeyEndpointsV2(endpoint: "rumpel/profile")
 let bundle = DataOfferRequiredDataDefinitionObjectV2(
   name: "test1",
@@ -49,7 +49,7 @@ let dataDebitToCreate = DataDebitCreationObject(
 
 A successful response will have `statusCode` 201 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "dataDebitKey": "test1",
     "dateCreated": "2018-11-14T23:51:40+0000",
@@ -141,7 +141,7 @@ For explanation of what the above structure means you can read [here](FetchDataD
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

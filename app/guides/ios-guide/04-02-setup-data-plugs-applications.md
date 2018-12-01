@@ -15,12 +15,12 @@ Setting up an application is similar to the log in process. First you have to ch
 
 In case of an `App` you first have to check if the app is already installed on user's device. To do that you have to check with
 
-``` swift
+```javascriptnoselect
 UIApplication.shared.canOpenURL(appURL)
 ```
 where `appURL` is the `iosUrl` from the `Application` -> `setup`. If user has the app installed, then you have to form a `URL` like this:
 
-``` swift
+```javascriptnoselect
 "https://\(hatAddress)/#/hatlogin?name=\(appID)&redirect=\(appURL)&fallback=\(fallback)"
 ```
 * `hatAddress` is the (fully qualified domain) address of the HAT, e.g. `test.hubofallthings.net`

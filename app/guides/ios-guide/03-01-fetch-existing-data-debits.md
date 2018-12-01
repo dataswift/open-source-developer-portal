@@ -12,7 +12,7 @@ description: Guide to getting existing data debits from the HAT on the iOS platf
 
 You can fetch the available `Data Debits` by using the next function:
 
-``` swift
+```javascriptnoselect
 HATDataDebitsService.getAvailableDataDebits(
             userToken: userToken,
             userDomain: userDomain,
@@ -27,7 +27,7 @@ HATDataDebitsService.getAvailableDataDebits(
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 [
     {
         "dataDebitKey": "97a0748f-bf81-4aaa-8f39-97ac2557d920",
@@ -205,7 +205,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

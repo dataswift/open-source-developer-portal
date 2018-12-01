@@ -13,7 +13,7 @@ description: Guide to approving a data debit on the HAT on the iOS platform
 
 Approving `Data Debits` is something that not all the apps can do directly. This has to do with the permissions of the apps. Currently only `HAT App` and web `Rumpel` cad approve `Data Debits`. Due to the restrictions this guide will explain how to use the generic way of doing it, that will work on all the apps. In order to approve a `Data Debit` you have to open in safari, if you aren't sure how to do it you can read [here](Step 1 - Send user to HAT Login.md) the `URL` below:
 
-``` swift
+```javascriptnoselect
 "https://\(hatAddress)/#/data-debit/\(dataDebitID)/quick-confirm?redirect=\(appScheme)://\(dataDebitHost)&fallback=\(appScheme)/dataDebitFailure"
 ```
 

@@ -12,7 +12,7 @@ description: Guide to Listing existing Tools on the HAT on the iOS platform
 
 You can easily fetch the available tools using the following function:
 
-``` swift
+```javascriptnoselect
 HATToolsService.getAvailableTools(
             userDomain: userDomain,
             userToken: userToken,
@@ -27,7 +27,7 @@ HATToolsService.getAvailableTools(
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 [
     {
         "id": "sentiment-tracker",
@@ -207,7 +207,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

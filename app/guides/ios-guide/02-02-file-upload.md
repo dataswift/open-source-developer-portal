@@ -22,7 +22,7 @@ The uploading of a file is a multi step process:
 
 To start a file upload you have to call the function below:
 
-``` swift
+```javascriptnoselect
 HATFileService.uploadFileToHAT(
            fileName: name,
            token: token,
@@ -42,7 +42,7 @@ HATFileService.uploadFileToHAT(
 
 So for the purpose of this example let's say that `fileName` is `testfile`, `tags` is just `test-tag`, `userDomain` is `test.hubofallthings.net` and `token` is token. That will translate to the request below:
 
-``` swift
+```javascriptnoselect
 HATFileService.uploadFileToHAT(
            fileName: "testfile",
            token: "token",
@@ -56,7 +56,7 @@ HATFileService.uploadFileToHAT(
 A successful request will result in a `status code` 200 and the response will look like the one below:
 
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -95,7 +95,7 @@ The above response is described by `FileUploadObject`. The values are explained 
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -111,7 +111,7 @@ The second step is to upload the actual file. There is no limitation on what typ
 
 In order to upload a file you can use the function below included in `Hat for iOS`:
 
-``` swift
+```javascriptnoselect
 HATNetworkHelper.uploadFile(
                     image: data,
                     url: contentURL,
@@ -127,7 +127,7 @@ HATNetworkHelper.uploadFile(
 
 A successful request will look like almost exactly the same as the original one:
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -155,7 +155,7 @@ The only thing that has now changed is the `lastUpdated` field.
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -166,7 +166,7 @@ A request that has failed will look like this:
 
 When the file has finished uploading it's required to mark the file as `completed`, else the file will be deleted. To do so you have to make another request. To achieve that you have to call the next function:
 
-``` swift
+```javascriptnoselect
 HATFileService.completeUploadFileToHAT(
                             fileID: fileObject.fileID,
                             token: token,
@@ -186,7 +186,7 @@ HATFileService.completeUploadFileToHAT(
 
 A successful request will look like almost exactly the same as the original one:
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -215,7 +215,7 @@ The only thing that has now changed is the `lastUpdated` field and the `status` 
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -229,7 +229,7 @@ A request that has failed will look like this:
 
 Be default the uploaded files are marked as `private`. You can change that by calling this function:
 
-``` swift
+```javascriptnoselect
 HATFileService.makeFilePublic(
               fileID: file.fileID,
               token: userToken,
@@ -246,7 +246,7 @@ HATFileService.makeFilePublic(
 
 A successful request will have a `statusCode` of 200 and look like almost exactly the same as the original one:
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -275,7 +275,7 @@ The only thing that has now changed is the `lastUpdated` field and the `contentP
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -289,7 +289,7 @@ A request that has failed will look like this:
 
 Be default the uploaded files are marked as `private`. You can change that by calling this function:
 
-``` swift
+```javascriptnoselect
 HATFileService.makeFilePrivate(
               fileID: file.fileID,
               token: userToken,
@@ -306,7 +306,7 @@ HATFileService.makeFilePrivate(
 
 A successful request will have a `statusCode` of 200 and look like almost exactly the same as the original one:
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -335,7 +335,7 @@ The only thing that has now changed is the `lastUpdated` field and the `contentP
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -349,7 +349,7 @@ A request that has failed will look like this:
 
 You can also search for files with `Hat for iOS`. To do so you can use the next function:
 
-``` swift
+```javascriptnoselect
 HATFileService.searchFiles(
             userDomain: userDomain,
             token: userToken,
@@ -370,7 +370,7 @@ HATFileService.searchFiles(
 
 A successful request will have a `statusCode` of 200 and look like this:
 
-``` JSON
+```jsonnoselect
 [
     {
         "fileId": "rumpel1532526508004.jpg",
@@ -424,7 +424,7 @@ A successful request will have a `statusCode` of 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -438,7 +438,7 @@ A request that has failed will look like this:
 
 You can also delete files from the `HAT` using the next function:
 
-``` swift
+```javascriptnoselect
 HATFileService.deleteFile(
             fileID: fileID,
             token: userToken,
@@ -455,7 +455,7 @@ HATFileService.deleteFile(
 
 A successful request will have a `statusCode` of 200 and look like almost exactly the same as the original one:
 
-``` JSON
+```jsonnoselect
 {
     "fileId": "testapptestfile",
     "name": "testfile",
@@ -483,7 +483,7 @@ The only thing that has now changed is the `status` to `Deleted`
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

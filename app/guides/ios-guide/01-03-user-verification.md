@@ -22,7 +22,7 @@ The token will decode to something like this:
 
 The Header:
 
-``` JSON
+```jsonnoselect
 {
   "typ": "JWT",
   "alg": "RS256"
@@ -31,7 +31,7 @@ The Header:
 
 The Payload:
 
-``` JSON
+```jsonnoselect
 {
   "applicationVersion": "1.2.7",
   "sub": "1-FgW7/lhAajlonnWAr7g3yB7eByYVkiV8O3UzsFPhEkoOYdr+bbeGeATwKyZUM6YenuUQb85G+PIijAxmP85GRnTIX6bdOdeJuuw=",
@@ -59,7 +59,7 @@ And the Signature, which is generated from the token and the private key of the 
 
 When you have received a successful redirect from `HAT` you can check with `HAT for iOS` and verity the user. To do so you simply have to call:
 
-``` swift
+```javascriptnoselect
 HATLoginService.loginToHATAuthorization(
             applicationName: Auth.serviceName,
             url: url,

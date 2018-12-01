@@ -12,7 +12,7 @@ description: Guide to Enabling/Disabling Tools on the HAT on the iOS platform
 
 You can easily enable a tool by using the function below:
 
-``` swift
+```javascriptnoselect
 HATToolsService.enableTool(
       toolName: selectedTool.id,
       userDomain: userDomain,
@@ -29,7 +29,7 @@ HATToolsService.enableTool(
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "id": "sentiment-tracker",
     "info": {
@@ -182,7 +182,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -194,7 +194,7 @@ A request that has failed will look like this:
 
 # Disable Tool
 
-``` swift
+```javascriptnoselect
 HATToolsService.disableTool(
       toolName: selectedTool.id,
       userDomain: userDomain,
@@ -211,7 +211,7 @@ HATToolsService.disableTool(
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "id": "sentiment-tracker",
     "info": {
@@ -366,7 +366,7 @@ You can read more about what the structure is [here](FetchTools.md).
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

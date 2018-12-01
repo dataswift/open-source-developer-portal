@@ -12,7 +12,7 @@ description: Guide to getting values of a data debit on the HAT on the iOS platf
 
 You can fetch the values of a specific `Data Debit` by using the next function:
 
-``` swift
+```javascriptnoselect
 HATDataDebitsService.getDataDebitValues(
   dataDebitKey: dataDebitKey,
   userToken: userToken,
@@ -29,7 +29,7 @@ HATDataDebitsService.getDataDebitValues(
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
   {
     "bundle": {
         "profile": [
@@ -73,7 +73,7 @@ Inside the `bundle` there are 2 different values. `profile` and `notables`. Thos
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

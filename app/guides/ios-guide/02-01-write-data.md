@@ -11,7 +11,7 @@ description: Guide to writing data to the HAT on the iOS platform
 
 `Hat for iOS` offers a general method to create network requests:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   url,
   method: .post,
@@ -46,7 +46,7 @@ When the request has failed the result type will include:
 
 Let's say we want to save the `randomStructure` below in our `HAT`:
 
-``` JSON
+```jsonnoselect
 {
   "value 1": "random",
   "Int value": 0
@@ -63,7 +63,7 @@ One more thing that we need in order to write data to the `HAT` is the user's to
 
 Using the function from `Hat-for-iOS` that will be
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   "https://test.hubofallthings.net/api/v2.6/data/testapp/randomdata",
   method: .post,
@@ -76,7 +76,7 @@ HATNetworkManager.asynchronousRequest(
 
 Based on the type of the `completionCallback` you might have gotten the data back or you might got an error. Your app should know how to react in both scenarios:
 
-``` swift
+```javascriptnoselect
 switch response {
 
 case .error(let error, let statusCode, let result):
@@ -90,7 +90,7 @@ case .isSuccess(let isSuccess, let statusCode, let result, let token):
 
 A successful response will have `statusCode` 201 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "endpoint": "randomdata",
     "recordId": "cf2c4ad5-bbb2-4a0e-8aaa-d3be8b76e115",
@@ -107,7 +107,7 @@ A successful response will have `statusCode` 201 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -121,7 +121,7 @@ A request that has failed will look like this:
 
 If we want to read data we are going to use the same request again but `method` will be `GET` instead of `POST`:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   url,
   method: .get,
@@ -134,7 +134,7 @@ HATNetworkManager.asynchronousRequest(
 
 If we make the same assumptions again, the `hatAddress` is `test.hubofallthings.net`, the `path` is `randomdata` and the `x-auth-token` in the headers includes the token then the call will look like below:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   "https://test.hubofallthings.net/api/v2.6/data/testapp/randomdata",
   method: .get,
@@ -150,7 +150,7 @@ Notice that since we want to read data and not write, we don't include any param
 
 Based on the type of the `completionCallback` you might have gotten the data back or you might got an error. Your app should know how to react in both scenarios:
 
-``` swift
+```javascriptnoselect
 switch response {
 
 case .error(let error, let statusCode, let result):
@@ -164,7 +164,7 @@ case .isSuccess(let isSuccess, let statusCode, let result, let token):
 
 A successful response will have `statusCode` 200 and look like that:
 
-``` JSON
+```jsonnoselect
 {
     "endpoint": "randomdata",
     "recordId": "cf2c4ad5-bbb2-4a0e-8aaa-d3be8b76e115",
@@ -181,7 +181,7 @@ A successful response will have `statusCode` 200 and look like that:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -195,7 +195,7 @@ A request that has failed will look like this:
 
 Let's say that we want to change our original example:
 
-``` JSON
+```jsonnoselect
 {
   "value 1": "random",
   "Int value": 0
@@ -204,7 +204,7 @@ Let's say that we want to change our original example:
 
 To something like this:
 
-``` JSON
+```jsonnoselect
 {
   "value 1": "random",
   "newValue": true,
@@ -214,7 +214,7 @@ To something like this:
 
 In order to update the data the HTTP `method` has to change to `PUT`:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   url,
   method: .put,
@@ -227,7 +227,7 @@ HATNetworkManager.asynchronousRequest(
 
 If we make the same assumptions again, the `hatAddress` is `test.hubofallthings.net` and request and the `x-auth-token` in the headers includes the token then the call will look like below:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   "https://test.hubofallthings.net/api/v2.6/data",
   method: .put,
@@ -242,7 +242,7 @@ Where `parameters` is an array of `Key-value pair` of type `[String: Any]` repre
 
 Based on the type of the `completionCallback` you might have gotten the data back or you might got an error. Your app should know how to react in both scenarios:
 
-``` swift
+```javascriptnoselect
 switch response {
 
 case .error(let error, let statusCode, let result):
@@ -256,7 +256,7 @@ case .isSuccess(let isSuccess, let statusCode, let result, let token):
 
 A successful response will have `statusCode` 201 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "endpoint": "randomdata",
     "recordId": "cf2c4ad5-bbb2-4a0e-8aaa-d3be8b76e115",
@@ -274,7 +274,7 @@ A successful response will have `statusCode` 201 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -288,7 +288,7 @@ A request that has failed will look like this:
 
 If now we want to delete the file we have just created we need to create a `DELETE` request:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   url,
   method: .delete,
@@ -301,7 +301,7 @@ HATNetworkManager.asynchronousRequest(
 
 If we make the same assumptions again, the `hatAddress` is `test.hubofallthings.net` and request and the `x-auth-token` in the headers includes the token then the call will look like below:
 
-``` swift
+```javascriptnoselect
 HATNetworkManager.asynchronousRequest(
   "https://test.hubofallthings.net/api/v2.6/data",
   method: .delete,
@@ -314,7 +314,7 @@ HATNetworkManager.asynchronousRequest(
 
 Where `parameters` in this case is the `recordId` of the entry we want to delete. We can also delete multiple entries with one request using more parameters. If the `recordId` is 5 then the `parameters` will be
 
-``` JSON
+```jsonnoselect
 {
   "records": 5
 }
@@ -322,7 +322,7 @@ Where `parameters` in this case is the `recordId` of the entry we want to delete
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "message": "All records deleted"
 }
@@ -330,7 +330,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

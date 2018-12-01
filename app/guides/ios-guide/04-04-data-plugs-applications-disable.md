@@ -12,7 +12,7 @@ description: Guide to disabling Data Plugs or Applications on the HAT on the iOS
 
 You can also disable a `Data Plug` or an `Application`. To do that you can call the next function:
 
-``` swift
+```javascriptnoselect
 HATExternalAppsService.disableApplication(
       appID: selectedApp.application.id,
       userDomain: hatAddress,
@@ -29,7 +29,7 @@ HATExternalAppsService.disableApplication(
 
 A successful response will have `statusCode` 201 and look like this:
 
-``` JSON
+```jsonnoselect
 {
     "application": {
         "id": "hatapp",
@@ -194,7 +194,7 @@ If you are not familiar with the structure you can read more [here](FetchDataPlu
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

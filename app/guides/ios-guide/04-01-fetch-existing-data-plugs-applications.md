@@ -12,7 +12,7 @@ description: Guide to Listing Data Plugs Applications on the HAT on the iOS plat
 
 `HAT for iOS` provides an API call for you to fetch all the available `Data Plugs`:
 
-``` swift
+```javascriptnoselect
 HATExternalAppsService.getExternalApps(
             userToken: userToken,
             userDomain: userDomain,
@@ -29,7 +29,7 @@ As you would have probably noticed, the function name is `getExternalApps`. `App
 
 A successful response will have `statusCode` 200 and look like this:
 
-``` JSON
+```jsonnoselect
 [
     {
         "application": {
@@ -241,7 +241,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-``` JSON
+```jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

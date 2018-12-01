@@ -12,7 +12,7 @@ description: Guide to states of Data Plugs and Applications on the HAT on the iO
 
 `Application` and `DataPlug` can be in multiple states. Setup, failing, need updating, disabled. In order for you to respond in state changes you can use the following snippet:
 
-``` swift
+```javascriptnoselect
 /**
      Returns a ApplicationConnectionState according to the application state
 
