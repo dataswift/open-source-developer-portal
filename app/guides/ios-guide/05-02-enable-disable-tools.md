@@ -4,7 +4,7 @@ section: guides
 type: iOS Developer's Guide
 guide: 
     name: ios-guide
-    step: 05-01-enable-disable-tools
+    step: 05-02-enable-disable-tools
 title: "- Enabling/Disabling Tools"
 description: Guide to Enabling/Disabling Tools on the HAT on the iOS platform
 ---
