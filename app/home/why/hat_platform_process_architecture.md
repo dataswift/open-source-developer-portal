@@ -3,7 +3,7 @@ layout: twoColumn
 section: home
 type: Why the HAT?
 title:  "The Architecture Diagram"
-description: "The Architecture Diagram"
+description: "The HAT Ecosystem Architecture Diagram"
 weight: 6
 ---
 
