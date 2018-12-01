@@ -4,7 +4,7 @@ section: guides
 type: iOS Developer's Guide
 guide: 
     name: ios-guide
-    step: 03-03-approving-data-debit
+    step: 03-03-approve-data-debit
 title: "- Approving a Data Debit"
 description: Guide to approving a data debit on the HAT on the iOS platform
 ---
