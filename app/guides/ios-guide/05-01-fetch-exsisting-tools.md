@@ -202,7 +202,7 @@ A successful response will have `statusCode` 200 and look like this:
   2. `enabled` indicates if the `Tool` is enabled by the user. Default value is false
   3. `lastExecution` is an ***optional*** `String` that has a date in an `ISO` format indicating the date that the `Tool` run for the last time.
   4. `executionStarted` is an ***optional*** `String` that has a date in an `ISO` format indicating the date that the `Tool` started running for the last time
-* `dataBundle` is the permissions needed in order for the `Tool` to run. You can read more [here](FetchDataDebits.md)
+* `dataBundle` is the permissions needed in order for the `Tool` to run. You can read more [here](03-01-fetch-existing-data-debits.html)
 * `trigger` describes the frequency that the `Tool` will be executed. `Tools` are not running all the time. The possible values are: `periodic`, `individual` and `manual`
 
 A request that has failed will look like this:

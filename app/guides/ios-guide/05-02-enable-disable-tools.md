@@ -362,7 +362,7 @@ A successful response will have `statusCode` 200 and look like this:
 }
 ```
 
-You can read more about what the structure is [here](FetchTools.md).
+You can read more about what the structure is [here](05-01-fetch-existing-tools.md).
 
 A request that has failed will look like this:
 

@@ -123,7 +123,7 @@ HATNetworkHelper.uploadFile(
 * `image` is type of `Data`. This function requires to convert your file into `Data` type first. You can convert a `JPEG` image to `Data` with `image.jpegData(compressionQuality: 1.0)`
 * `url` us the `URL` to upload the file. As we said earlier this `URL` is the `contentUrl` provided by the `HAT` in the first step
 * `progressUpdateHandler` is an optional function callback of type `((Double) -> Void)?`. It continuously reports the status of the upload from 0 to 1. for example 0.10 is 10%
-* `completion` is a callback function of type `@escaping (_ r: HATNetworkHelper.ResultType) -> Void)`. It can be either `isSuccess(isSuccess: Bool, statusCode: Int?, result: JSON, token: String?)` when the request was successful or `error(error: Error, statusCode: Int?, result: JSON?)` when the request failed for some reason. You can read more about it [here](Write Data.md)
+* `completion` is a callback function of type `@escaping (_ r: HATNetworkHelper.ResultType) -> Void)`. It can be either `isSuccess(isSuccess: Bool, statusCode: Int?, result: JSON, token: String?)` when the request was successful or `error(error: Error, statusCode: Int?, result: JSON?)` when the request failed for some reason. You can read more about it [here](02-01-write-data.html)
 
 A successful request will look like almost exactly the same as the original one:
 

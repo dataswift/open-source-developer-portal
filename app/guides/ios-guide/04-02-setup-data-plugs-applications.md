@@ -30,7 +30,7 @@ where `appURL` is the `iosUrl` from the `Application` -> `setup`. If user has th
 
 As you will probably have noticed this is exactly the same `URL` as the login `URL` and there is a reason for that. The setup process goes through web. So like during the login process, user will be asked to insert their password before continuing to the next step. The next step is accepting the `terms and conditions` and giving the `permissions` the app requires to function. After that if everything went smooth `HAT` will redirect back to the success `redirect`. The `redirect url` will now include a parameter which is the token for the particular app. `iOS` will ask user if they want to launch the particular app. If user selects yes then the app will be launched. If there was a problem `HAT` will redirect to the `fallback` url and you have to hide safari and show a message that something went wrong.
 
-In case you don't know how to handle `SFSafariViewController` you can read [here](Step 1 - Send user to HAT Login.md)
+In case you don't know how to handle `SFSafariViewController` you can read [here](01-01-hat-login.html)
 
 In case user does not have the app installed you first have to redirect them to the `App Store` in order for them to download the app. The `URL` that you have to use the `url` in `Application` -> `kind`. Again the only thing you have to do is open it using safari. When user has installed the app they may then tap again to set up the `Application`
 

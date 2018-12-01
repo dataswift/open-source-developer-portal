@@ -190,7 +190,7 @@ A successful response will have `statusCode` 201 and look like this:
 }
 ```
 
-If you are not familiar with the structure you can read more [here](FetchDataPlugs.md)
+If you are not familiar with the structure you can read more [here](04-01-fetch-existing-data-plugs-applications.html)
 
 A request that has failed will look like this:
 
