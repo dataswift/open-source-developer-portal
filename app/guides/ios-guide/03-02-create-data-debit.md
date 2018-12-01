@@ -4,7 +4,7 @@ section: guides
 type: iOS Developer's Guide
 guide: 
     name: ios-guide
-    step: 03-01-create-data-debit
+    step: 03-02-create-data-debit
 title: "- Creating a Data Debit"
 description: Guide to creating a data debit on the HAT on the iOS platform
 ---
@@ -137,7 +137,7 @@ A successful response will have `statusCode` 201 and look like this:
 }
 ```
 
-For explanation of what the above structure means you can read [here](FetchDataDebits.md).
+For explanation of what the above structure means you can read [here](03-01-fetch-existing-data-debits.html).
 
 A request that has failed will look like this:
 

@@ -4,7 +4,7 @@ section: guides
 type: iOS Developer's Guide
 guide: 
     name: ios-guide
-    step: 03-00-fetch-existing-data-debits
+    step: 03-01-fetch-existing-data-debits
 title: "- Fetching Existing Data Debits"
 description: Guide to getting existing data debits from the HAT on the iOS platform
 ---

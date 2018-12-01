@@ -221,10 +221,10 @@ A successful response will have `statusCode` 200 and look like this:
     1. `rolesGranted` which is an array of `role` and `detail`, ***optional***, describing the roles granted in the `Application`
     2. `dataRetrieved` which is a type of `DataOfferRequiredDataDefinitionObjectV2`. It describes the data that the `Application` will retrieve. ***optional***:
       1. `rolling` describes if the data have a rolling start date
-      2. `bundle` You can read more about it [here](FetchDataDebits,md)
+      2. `bundle` You can read more about it [here](FetchDataDebits.md)
       3. `startDate` the start date of the `bundle`. ***optional***
       4. `endDate` the end date of the `bundle`. ***optional***
-    3. `dataRequired` which is a type of `HATExternalAppsDataRequiredObject`. You can read more about it [here](FetchDataDebits,md). ***optional***
+    3. `dataRequired` which is a type of `HATExternalAppsDataRequiredObject`. You can read more about it [here](FetchDataDebits.md). ***optional***
   6. `setup` encapsulates all the urls that the `Application` needs in order to setup. The structure is the same as `kind` but the url's can be different
   7. `status` provides some info about the status of the application:
     1. `compatibility` The last version that is compatible with the current one

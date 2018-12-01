@@ -43,7 +43,7 @@ If you are **not** using cocoapods in your project you have to initialize pods f
 After initializing cocoapods there would be a new podfile file in your project. Open it and add `HatForIOS` pod in your main target like that:
 
 ```
-pod 'HatForIOS', :git => 'https://github.com/Hub-of-all-Things/HatForIOS.git'
+pod 'HAT-API-iOS'
 ```
 
 ###Step 4
