@@ -8,7 +8,7 @@ guide:
 title: Requesting Data from HAT users
 description: Requesting Data from HAT users using the Data Buyer service
 product: databuyer
-weight: 9
+weight: 11
 ---
 
 ### Coming Soon

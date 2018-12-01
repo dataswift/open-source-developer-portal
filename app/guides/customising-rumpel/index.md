@@ -8,7 +8,7 @@ guide:
 title: Customising Rumpel
 description: How to re-brand the Open Source Rumpel personal dashboard for your own users
 product: rumpel
-weight: 10
+weight: 12
 ---
 
 ### Coming Soon
