@@ -41,7 +41,7 @@ The HAT is built by some of the best technical developers and engineers in the w
 
 ### Middleware
 
-HAT PMDAs (Private Microservice Data  Accounts) also feature data and metadata analysis tools that can be leveraged by app developers for some specialised tasks, like machine learning and personalisation.
+HAT Microservers also feature data and metadata analysis tools that can be leveraged by app developers for some specialised tasks, like machine learning and personalisation.
 
 Businesses would otherwise have to plumb and combine all kinds of data sets from disparate sources to make personal data usable, and deal with issues of privacy and security as well. For more details, see the [ecosystem architecture](1_knowing_ecosystem.html), and the [tools available](HAT_core.html).
 

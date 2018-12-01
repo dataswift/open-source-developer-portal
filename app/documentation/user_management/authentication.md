@@ -8,7 +8,7 @@ description: "Authentication"
 
 # Authentication
 
-For both the Data import and export, the virtualised database will required permissions to ensure that a User has authorised certain API consumers to add or read the data from the various Tables within the database. For this, separate “Apps” that represent API User accounts will be present within each User’s PDS. Each App will own several permission sets within the database, which will determine which Tables the API consumers are able to access, in addition to the permissions the API consumers have on those Tables.
+For both the Data import and export, the virtualised database will required permissions to ensure that a User has authorised certain API consumers to add or read the data from the various Tables within the database. For this, separate “Apps” that represent API User accounts will be present within each User’s HAT Microserver. Each App will own several permission sets within the database, which will determine which Tables the API consumers are able to access, in addition to the permissions the API consumers have on those Tables.
 
 ### Acquiring Access Token
     

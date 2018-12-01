@@ -7,7 +7,7 @@ description: "What is the HAT?"
 weight: 1
 ---
 
-The HAT was developed through more than £3m RCUK Digital Economy-funded research projects involving six universities: Cambridge, Edinburgh, Nottingham, Surrey, Warwick, and UWE with the view of giving economic power and control back to individuals through Private ‘Microserver’ Data Accounts (PMDAs). These grant users the ability to analyse, use and combine their data. This data can be shared in a privacy-preserving manner, even without identifiers, for services that empower individuals to make better and more informed decisions in their lives, and allow companies to offer more personalised and customised services. 
+The HAT was developed through more than £3m RCUK Digital Economy-funded research projects involving six universities: Cambridge, Edinburgh, Nottingham, Surrey, Warwick, and UWE with the view of giving economic power and control back to individuals through HAT Microservers. These grant users the ability to analyse, use and combine their data. This data can be shared in a privacy-preserving manner, even without identifiers, for services that empower individuals to make better and more informed decisions in their lives, and allow companies to offer more personalised and customised services. 
 
 ### How HATs are different
 
@@ -54,7 +54,7 @@ Security is at the core of the HAT and HAT Platform Providers follow industry be
 
 ### Who is HATDeX
 
-HATDeX is the technology partner for the provisioning of HAT Private 'Microserver' Data Accounts (HAT PMDAs) and the facilitation of on-demand, real-time personal data and content exchanges (DEX) on the HAT Platform. We built the open sourced technology to enable the provisioning of HATs by partners and also built the secure data exchange (DEX) between businesses and their customers. This is fully GDPR-compliant. https://hatdex.org 
+HATDeX is the technology partner for the provisioning of HAT Microservers and the facilitation of on-demand, real-time personal data and content exchanges (DEX) on the HAT Platform. We built the open sourced technology to enable the provisioning of HATs by partners and also built the secure data exchange (DEX) between businesses and their customers. This is fully GDPR-compliant. https://hatdex.org 
 
 ### Who is HAT Community Foundation
 

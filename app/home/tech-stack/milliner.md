@@ -9,8 +9,8 @@ weight: 4
 
 # Milliner
 
-- Provisions HAT PMDAs on different cloud infrastructure
-- Integration of other PDS onto HAT platform
+- Provisions HAT Microservers on different cloud infrastructure
+- Integration of other Microservers onto HAT platform
 - Enabling brand owners to be the Private Data Account provider
 - Enable brand owners and organisations to own the relationships with their customers, both business and end users
 
