@@ -2,7 +2,7 @@
 layout: twoColumn
 section: guides
 type: iOS Developer's Guide
-guide: 
+guide:
     name: ios-guide
     step: 04-04-data-plugs-applications-disable
 title: "- Disabling Data Plugs and Applications"
@@ -206,5 +206,5 @@ A request that has failed will look like this:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="04-02-setup-data-plugs-applications.html">Next Step: Setting Up Data Plugs and Applications</a>
+<a href="04-02-setup-data-plugs-applications.html">Next Chapter: Tools</a>
 </nav>

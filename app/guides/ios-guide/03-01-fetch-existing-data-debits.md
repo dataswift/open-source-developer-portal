@@ -2,7 +2,7 @@
 layout: twoColumn
 section: guides
 type: iOS Developer's Guide
-guide: 
+guide:
     name: ios-guide
     step: 03-01-fetch-existing-data-debits
 title: "- Fetching Existing Data Debits"
@@ -217,5 +217,5 @@ A request that has failed will look like this:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="03-02-creating-data-debit.html">Next Step: Creating a Data Debit</a>
+<a href="03-02-create-data-debit.html">Next Step: Creating a Data Debit</a>
 </nav>
