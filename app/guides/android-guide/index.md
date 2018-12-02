@@ -34,7 +34,8 @@ In order to manually install the library you have to download the repo from gith
 **Step 1**
 
 In the top level gradle file , add the jitpack repository link
-```shellnoselect
+
+```javascriptnoselect
 allprojects {
   repositories{
     maven { url "https://jitpack.io" }
