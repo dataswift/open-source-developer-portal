@@ -1,19 +1,19 @@
 ---
 layout: twoColumn
 section: guides
-type: iOS Developer's Guide
+type: Android Developer's Guide
 guide:
-    name: ios-guide
+    name: android-guide
     step: 03-01-fetch-existing-data-debits
 title: "- Fetching Existing Data Debits"
-description: Guide to getting existing data debits from the HAT on the iOS platform
+description: Guide to getting existing data debits from the HAT on the Android platform
 ---
 # Fetch Data Debits
 
 You can fetch the available `Data Debits` by using the next function:
 
-```javascriptnoselect
-HATDataDebitsService.getAvailableDataDebits(
+``` javascriptnoselect
+HATDataDebitsService().getAvailableDataDebits(
             userToken: userToken,
             userDomain: userDomain,
             succesfulCallBack: gotDataDebits,
@@ -22,12 +22,12 @@ HATDataDebitsService.getAvailableDataDebits(
 
 * `userToken` is the user's token in order to authenticate with the `HAT`.
 * `userDomain` is the user's `HAT address` in order to form the url to fetch the available `Data Debits`.
-* `succesfulCallBack` is a callback. Is called when the request was successful with a type of `@escaping (([DataDebitObject], String?) -> Void)`. The first parameter is an array of `DataDebitObject`. This is the structure of `Data Debits`. More on that in the next section. The second parameter is an optional `String`, the refreshed user token that the `HAT` returns.
-* `failCallBack` is callback that is called when the request has failed. They type of the function is `@escaping ((DataPlugError) -> Void)`. `DataPlugError` is custom object describing the errors that have occurred during the querying of the `DataPlugs`.
+* `succesfulCallBack` is a callback. Is called when the request was successful with a type of `(List<DataDebitObject>, String?) -> Unit)`. The first parameter is a list of `DataDebitObject`. This is the structure of `Data Debits`. More on that in the next section. The second parameter is an optional `String`, the refreshed user token that the `HAT` returns.
+* `failCallBack` is callback that is called when the request has failed. They type of the function is `((HATError) -> Unit)`. `HATError` is custom object describing the errors that have occurred during the querying of the `HAT`.
 
 A successful response will have `statusCode` 200 and look like this:
 
-```jsonnoselect
+``` jsonnoselect
 [
     {
         "dataDebitKey": "97a0748f-bf81-4aaa-8f39-97ac2557d920",
@@ -205,7 +205,7 @@ A successful response will have `statusCode` 200 and look like this:
 
 A request that has failed will look like this:
 
-```jsonnoselect
+``` jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"

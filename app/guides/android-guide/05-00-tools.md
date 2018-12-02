@@ -1,12 +1,12 @@
 ---
 layout: twoColumn
 section: guides
-type: iOS Developer's Guide
+type: Android Developer's Guide
 guide:
-    name: ios-guide
+    name: android-guide
     step: 05-00-tools
 title: "Tools"
-description: Guide to Tools on the HAT on the iOS platform
+description: Guide to Tools on the HAT on the Android platform
 ---
 
 # Tools

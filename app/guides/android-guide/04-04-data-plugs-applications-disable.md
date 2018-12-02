@@ -1,22 +1,22 @@
 ---
 layout: twoColumn
 section: guides
-type: iOS Developer's Guide
+type: Android Developer's Guide
 guide:
-    name: ios-guide
+    name: android-guide
     step: 04-04-data-plugs-applications-disable
 title: "- Disabling Data Plugs and Applications"
-description: Guide to disabling Data Plugs or Applications on the HAT on the iOS platform
+description: Guide to disabling Data Plugs or Applications on the HAT on the Android platform
 ---
 # Disable Data Plug or Application
 
 You can also disable a `Data Plug` or an `Application`. To do that you can call the next function:
 
-```javascriptnoselect
-HATExternalAppsService.disableApplication(
-      appID: selectedApp.application.id,
-      userDomain: hatAddress,
+``` javascriptnoselect
+HATExternalAppsService().disableApplication(
       userToken: userToken,
+      userDomain: hatAddress,
+      appID: selectedApp.application.id,
       completion: appDisabled,
       failCallBack: errorDisablingApp)
 ```
@@ -24,12 +24,12 @@ HATExternalAppsService.disableApplication(
 * `appID` is the id, in `Application` structure, of the `Application` or `DataPlug`
 * `userDomain` is the user's `HAT address` in order to form the url to disable the `Data Plug` or `Application`
 * `userToken` is the user's token in order to authenticate with the `HAT`.
-* `completion` is a callback function that is called when the request was successful with a type of `@escaping @escaping ((HATApplicationObject, String?) -> Void)`. The first parameter is the disabled `HATApplicationObject`. The second parameter is an optional `String`, the refreshed user token that the `HAT` returns.
-* `failCallBack` is callback that is called when the request has failed. They type of the function is `@escaping ((HATTableError) -> Void)`. `HATTableError` is custom object describing the errors that have occurred during the querying of the tables in the database.
+* `completion` is a callback function that is called when the request was successful with a type of ` ((HATApplicationObject, String?) -> Unit)`. The first parameter is the disabled `HATApplicationObject`. The second parameter is an optional `String`, the refreshed user token that the `HAT` returns.
+* `failCallBack` is callback that is called when the request has failed. They type of the function is ` ((HATError) -> Unit)`. `HATError` is custom object describing the errors that have occurred during the querying of the tables in the database.
 
 A successful response will have `statusCode` 201 and look like this:
 
-```jsonnoselect
+``` jsonnoselect
 {
     "application": {
         "id": "hatapp",
@@ -190,11 +190,11 @@ A successful response will have `statusCode` 201 and look like this:
 }
 ```
 
-If you are not familiar with the structure you can read more [here](04-01-fetch-existing-data-plugs-applications.html)
+If you are not familiar with the structure you can read more [here](FetchDataPlugs.md)
 
 A request that has failed will look like this:
 
-```jsonnoselect
+``` jsonnoselect
 {
   "error": "Not Authenticated",
   "message": "Not Authenticated"
@@ -204,7 +204,8 @@ A request that has failed will look like this:
 * `error` is the error that has occurred.
 * `message` a more descriptive message about the `error` that has occurred
 
+
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="04-02-setup-data-plugs-applications.html">Next Chapter: Tools</a>
+<a href="05-00-tools.html">Next Chapter: Data Plugs and Applications</a>
 </nav>
