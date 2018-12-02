@@ -29,7 +29,7 @@ In an `Android` application, in order to redirect the user to an existing `HAT a
 
 To achieve this with `WebView` you have to create an xml file with `WebView` element and an activity with the login address described above, `"https://$hatAddress/#/hatlogin?name=$applicationName&redirect=$redirectURL&fallback=$fallbackRedirectURL"`, and then via a `Activity` present the WebView layout. e.g.:
 
-``` rawnoselect
+``` shellnoselect
 <WebView xmlns:android="http://schemas.android.com/apk/res/android"
          android:layout_width="match_parent"
          android:layout_height="match_parent"

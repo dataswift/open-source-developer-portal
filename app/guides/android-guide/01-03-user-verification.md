@@ -82,7 +82,7 @@ In case the authentication failed, you will redirected to the fallback url. In t
 
 In order to dismiss the browser you do it from the viewController that presented originally the `Activity`, like this:
 
-``` rawnoselect
+``` shellnoselect
 finish()
 ```
 

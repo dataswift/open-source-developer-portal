@@ -34,7 +34,7 @@ In order to manually install the library you have to download the repo from gith
 **Step 1**
 
 In the top level gradle file , add the jitpack repository link
-```Javascriptnoselect
+```javascriptnoselect
 allprojects {
   repositories{
     maven { url "https://jitpack.io" }
@@ -46,7 +46,7 @@ allprojects {
 
 In your app level gradle file , implement the library dependency
 
-```Javascriptnoselect
+```javascriptnoselect
 implementation 'com.hubofallthings.android.hatApi:hat:<latest-version>'
 ```
 
@@ -58,7 +58,7 @@ Now you have to sync the project to download the library.
 
 Add internet permission into the AndroidManifest
 
-```rawnoselect
+```shellnoselect
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hubofallthings.myProject">
 <uses-permission android:name="android.permission.INTERNET" />

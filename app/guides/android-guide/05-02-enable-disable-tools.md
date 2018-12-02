@@ -1,7 +1,7 @@
 ---
 layout: twoColumn
 section: guides
-type: Anroid Developer's Guide
+type: Android Developer's Guide
 guide:
     name: android-guide
     step: 05-02-enable-disable-tools
