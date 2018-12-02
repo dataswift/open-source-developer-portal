@@ -23,6 +23,7 @@ By tapping `LOGIN` the authentication process will begin. `HAT` will use one of 
 In order to achieve that we have to add the `success redirect` and `fallbackRedirectURL` to the `AndroidManifest` file in the project.
 
 In order to add them to the `AndroidManifest` file you have to add the **Key** `URL Types` as a data.
+
 ```shellnoselect
 <activity name="MainActivity" >
   <intent-filter>
@@ -31,7 +32,6 @@ In order to add them to the `AndroidManifest` file you have to add the **Key** `
         android:scheme="hatapp" />
   </intent-filter>
 </activity>
-
 ```
  This will be the url scheme of the your app. That means every time `Android` intercepts a URL starting with this value, like `test://host` will hand the process to your app and your app will be responsible to either launch or not.
 

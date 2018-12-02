@@ -15,5 +15,5 @@ Tools are services that run on your `Data`. Like the `Sentiment Analysis` tool t
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="05-01-fetching-existing-tools.html">Next Step: Getting Existing Tools</a>
+<a href="05-01-fetch-existing-tools.html">Next Step: Getting Existing Tools</a>
 </nav>

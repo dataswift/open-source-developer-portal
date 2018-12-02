@@ -207,5 +207,5 @@ A request that has failed will look like this:
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="04-02-setup-data-plugs-applications.html">Next Step: Setting Up Data Plugs and Applications</a>
+<a href="05-00-tools.html">Next Chapter: Data Plugs and Applications</a>
 </nav>

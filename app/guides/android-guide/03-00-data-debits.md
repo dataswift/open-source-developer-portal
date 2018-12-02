@@ -15,5 +15,5 @@ HAT `Data Debits` are the cornerstone of consented data exchange. It is the only
 
 <nav class="pager-nav">
 <a href="" style="display:none;"></a>
-<a href="03-01-fetching-existing-data-debits.html">Next Step: Fetching Existing Data Debits</a>
+<a href="03-01-fetch-existing-data-debits.html">Next Step: Fetching Existing Data Debits</a>
 </nav>
