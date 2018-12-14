@@ -7,7 +7,7 @@ description: "Data Buyer Service"
 weight: 8
 ---
 
-# DataBuyer - in public beta
+# DataBuyer Engine - in public beta
 
 - Revolutionary way of exchanging and requesting for data
 - Offer benefits for past data, streaming data, future data (digital labour/digital action)
@@ -16,18 +16,18 @@ weight: 8
 - Built on DEX
 
 
-DataBuyer is MarketSquare’s own data mall, built on trust, transparency and user-privacy. Brands, government departments, organisations and faculties can all use DataBuyer to set up ‘Data Offers’ requesting specific data from users in return for services, rewards, discounts or even cash. The data exchange framework on which DataBuyer is built means you only receive the exact data values you ask for, allowing HAT owners to be in control, and, if they choose to, remain completely anonymous. DataBuyer is a market place for data, where HAT owners can discover offers created by various organisations, claim the benefits they offer by sharing their data, and actively contribute to the data exchange economy.
+DataBuyer Engine is a service that enable applications built on HAT Microservers to request for data from multiple HAT Owners. Brands, government departments, organisations and faculties can use DataBuyer Engine to create a service for requesting specific data from many HAT Owners in return for services, rewards, discounts or even cash. The data exchange framework on which DataBuyer Engine is built means you only receive the exact data values you ask for, allowing HAT owners to be in control, and, if they choose to, remain completely anonymous. DataBuyer Engine enable a a marketplace to be formed for HAT Owners data, where HAT owners can discover offers created by various organisations, claim the benefits they offer by sharing their data, and actively contribute to the data exchange economy.
 
-Use DataBuyer to:
+Use DataBuyer Engine to:
 
-- Create offers, giving a reward or service to users in exchange for specific data
-- Closely target those offers according to age, location, gender or profile data, and request specific data values contained within users’ HAT databases
+- Create new applications/websites that give a reward or service to users in exchange for specific data or combinations of data
+- Create conditions and filters to request data according to age, location, gender or profile data, and request specific data values contained within users’ HAT databases
 - As well as data values, offers can request survey or questionnaire answers from users
-- Use a clear, easy to use form to set up the offer you want
 
-DataBuyers can influence or buy digital action by buying future data e.g. reviews, tweets, posts, watching ads and videos. HAT owners that accept these offers will exchange the data that was generated as evidence of the digital action.
 
-With connected IoT devices sending data to HATs, DataBuyer can influence or buy physical action by buying future data from physical devices e.g. purchasing actions (use public transport twice this week), consumption actions (consume less water this week) and other experiential, interaction or depletion actions evidenced by data generated through IoT devices and wearables.
+DataBuyers can also nudge or buy digital action through requests for future data e.g. reviews, tweets, posts, watching ads and videos. HAT owners that accept these offers will exchange the data that was generated as evidence of the digital action.
 
-DataBuyer is built on DEX and HATs. Clients can build an equivalent of DataBuyer on their own system calling on DEX and HAT APIs, or they can license a white labelled DataBuyer to be integrated into their own system.
+With connected IoT devices sending data to HATs, DataBuyer Engine can be used for services that seek to influence or buy physical action by requesting for future data from physical devices e.g. purchasing actions (use public transport twice this week), consumption actions (consume less water this week) and other experiential, interaction or depletion actions evidenced by data generated through IoT devices and wearables.
+
+DataBuyer is built on DEX and HATs. 
 
