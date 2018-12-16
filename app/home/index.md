@@ -55,10 +55,10 @@ The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for
 
 <h3>HAT</h3>
         
-<p>A Private ‘Microserver’ Data Account (PMDA)
-&diams; Provisioned and customisable by any brand owner
-&diams; Allows brand owner to have direct relationship with their customers and their data
-&diams; Containerised database legally owned by individuals
+<p>A Personal ‘Microserver’
+&diams; Organisations can issue HATs or vend HATs (send their customers a link to get a HAT)
+&diams; Allow organisations to have direct relationship with their customers and their data
+&diams; Containerised database with data rights legally belonging to HAT owners
 &diams; Open-source core, built on the Internet and open standards, 
 &diams; Portable across cloud systems</p>
 
@@ -69,18 +69,18 @@ The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for
         
 <p> Generic dashboard for all HAT owners
 &diams; Open sourced, Mozilla-licensed
-&diams; White labelled provision for HAT providers to be integrated with their own app user accounts
-&diams; Rumpel is the control centre for the HAT owner’s personal data </p>
+&diams; White labelled provision for HAT platform providers to be integrated with their own app user accounts
+&diams; Rumpel is the control centre for the HAT Microserver, and is the service that powers the HAT app </p>
 
     </a>
     
     <a href="tech-stack/milliner.html" class="icon-logo-milliner grid-nav__item">
 
 <h3>Milliner</h3>
-<p>Provisions HAT PMDAs on different cloud infrastructure
+<p>Provisions HAT Microservers on different cloud infrastructure
 &diams; Integration of other PDS onto HAT platform
-&diams; Enabling brand owners to be the Private Data Account provider
-&diams; Enable brand owners and organisations to own the relationships with their customers, both business and end users</p>
+&diams; Enabling organisations to be an issuer of HAT Microservers
+&diams; Enable organisations to own the relationships with their customers </p>
 
     </a>
     <a href="tech-stack/dex.html" class="icon-logo-dex grid-nav__item">
