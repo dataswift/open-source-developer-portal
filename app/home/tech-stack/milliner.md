@@ -11,8 +11,6 @@ weight: 4
 
 - Provisions HAT Microservers on different cloud infrastructure
 - Integration of other Microservers onto HAT platform
-- Enabling brand owners to be the Private Data Account provider
-- Enable brand owners and organisations to own the relationships with their customers, both business and end users
 
 Milliner provisions HAT infrastructure based on industry's best practices. Currently its tooling is focused on the Amazon AWS capabilities as the most advanced ones in the industry, however it could be adapted to different cloud providers with necessary features.
 
