@@ -11,7 +11,7 @@ product: hat
 weight: 4
 ---
 
-HAT Data Debits are the cornerstone of the data exchange platform. Since the HAT database rights are fully owned by the HAT owner, acquiring any data from the database would require permission (which is therefore not the same as consent). Once permission is given, Data Debits are _the only_ way data can be retrieved from the HAT by anyone else than the owner and enforces a strictly-defined format defining the specific data requested for the user to review and approve.
+HAT Data Debits are the cornerstone of the permission-based data exchange platform. Since, the rights to the HAT database are fully owned by the HAT owner, any data acquisition from the database would require permission. This is not the same as consent. The HAT Data Debit process flow enforces a strictly-defined format defining the specific data requested for the user to review and approve. Once the data-sharing permissions are given, the Data Debits becomes the _only_ way data can be retrieved from the HAT by anyone other than the owner.
 
 The general process of retrieving data using a Data Debit is:
 
