@@ -1,17 +1,17 @@
 ---
 layout: twoColumn
 section: guides
-type: Data Debits for consented data sharing
+type: Data Debits for data sharing permissions
 guide: 
     name: data-debits
     step: overview
 title: Overview
-description: Data Debits for consented data sharing
+description: Data Debits for data sharing permissions
 product: hat
 weight: 4
 ---
 
-HAT Data Debits are the cornerstone of consented data exchange. It is _the only_ way data can be retrieved from the HAT by anyone else than the owner and enforces a strictly-defined format defining the specific data requested for the user to review and approve.
+HAT Data Debits are the cornerstone of the data exchange platform. Since the HAT database rights are fully owned by the HAT owner, acquiring any data from the database would require permission (which is therefore not the same as consent). Once permission is given, Data Debits are _the only_ way data can be retrieved from the HAT by anyone else than the owner and enforces a strictly-defined format defining the specific data requested for the user to review and approve.
 
 The general process of retrieving data using a Data Debit is:
 
