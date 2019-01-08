@@ -2,13 +2,13 @@
 layout: twoColumn
 section: home
 type: "Technology Stack"
-title:  "Off-the-shelf HATs"
-description: "Off-the-shelf HATs"
+title:  "Vending HATs"
+description: "Vend HATs"
 weight: 9
 ---
 
-# HATs on Demand
+# Vending or Issuing HATs
 
-If you are an organisation needing to issue HATs for your application/website, start by filling in the partner enrolment form  at the [HATLAB sandbox](https://www.hat-lab.org/sandbox/).
+If you are an organisation wanting personal data from your customers, you can [vend or issue HATs](https://www.hubofallthings.com/vend-a-hat/) from your application/website to your customers. Start by filling in the partner enrolment form  at the [HATLAB sandbox](https://www.hat-lab.org/sandbox/).
 
-HATs can also be available to purchase 'off-the-shelf' at [HATTERS](https://hatters.hubofallthings.com).
+HATs can also be available to purchase 'off-the-shelf' at [HATStore](https://hatdex.org/hatstore/).
