@@ -9,6 +9,6 @@ weight: 9
 
 # Vending or Issuing HATs
 
-If you are an organisation wanting personal data from your customers, you can [vend or issue HATs](https://www.hubofallthings.com/vend-a-hat/) from your application/website to your customers. Start by filling in the partner enrolment form  at the [HATLAB sandbox](https://www.hat-lab.org/sandbox/).
+If you are an organisation wanting personal data from your customers, or if you want to monetise the data you hold of your customers, you can [be a HAT Issuer or a HAT Merchant](https://www.hubofallthings.com/econmodel/). Start by filling in the partner enrolment form  at the [HATLAB sandbox](https://www.hat-lab.org/sandbox/).
 
-HATs can also be available to purchase 'off-the-shelf' at [HATStore](https://hatdex.org/hatstore/).
+Free HATs can also be available at [HATStore](https://hatdex.org/hatstore/).
