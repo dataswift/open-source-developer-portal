@@ -2,8 +2,8 @@
 layout: twoColumn
 section: home
 type: "Technology Stack"
-title:  "Vending HATs"
-description: "Vend HATs"
+title:  "HAT Issuers and Merchants"
+description: "Issuing HATs and Accepting HAT data"
 weight: 9
 ---
 
