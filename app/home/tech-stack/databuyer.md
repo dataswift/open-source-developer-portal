@@ -2,17 +2,17 @@
 layout: twoColumn
 section: home
 type: "Technology Stack"
-title: Data Buyer - for Business
-description: "Data Buyer Service"
+title: DataBuyer Engine
+description: "DataBuyer Service"
 weight: 8
 ---
 
 # DataBuyer Engine - in public beta
 
-- Revolutionary way of exchanging and requesting for data
+- Ability to request data from decentralised HAT owners while preserving privacy
 - Offer benefits for past data, streaming data, future data (digital labour/digital action)
 - Insights for researchers, recommenders and marketing firms
-- Direct relationship & contract with HAT owner 
+- Direct relationship & contract with HAT owner for the license and use of data
 - Built on DEX
 
 
