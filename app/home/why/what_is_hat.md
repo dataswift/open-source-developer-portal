@@ -18,16 +18,17 @@ Legally owned, fully controlled by individuals:
 - The HAT microserver is a powerful software device and an Internet server with the individual’s own URL e.g. https://andrius.hubofallthings.net
 - Legal ownership of the HAT Microserver database rights, with full rights to its content and therefore part of the individual’s estate. Individuals can donate their data to research or be a guardian of their child's database as a minor 
 - Legally act as a data controller and processor of the data in their HATs, so they can request for data legally, instead of through a third party service
-- The HAT Platform provider enable HATs to be issued by vendors and partners, and individuals can move their HAT Microserver to other HAT Platform Providers (or bring it into their own private PC)
+- The HAT Platform provider enable HATs to be issued by HAT Issuers, and for HAT data to be used by HAT Merchants.
 
 A revolutionary way of conducting data exchanges on the Internet:
 
 - Accept a data exchange of any kind, and of any size, be it a single location point, a tweet, or a review of a product through a note
 - Accept a data exchange without revealing identity, e.g. shopping list or location, to get personalised recommendations while remaining private
+- Data exchange contract is logged and the license to use the data is given by individuals themselves
 
 ### What problem does the HAT solve
 
-- Economic power. Being in control of their own data, individuals can collectively bargain for how and where the data is used
+- Economic power back to individuals so that they can reward organisations that use data ethically, transparently and create valuable services with the data
 - Efficiency for individuals. The ability to use their data again and again to fill in forms, or get personalised recommendations
 - Private by default. Organisations that ask HAT Owners for data can choose to INQUIRE data in real time and on demand, instead of ACQUIRING it.
 - Reduce privacy risks. Exchange data for as long as individuals want to, e.g. to check into a hotel, or to post a notice on social media, and stop exchanging when the other party no longer needs it.
@@ -40,7 +41,7 @@ A revolutionary way of conducting data exchanges on the Internet:
 
 ### What is the goal
 
-The goal is to create a new generation of services on the Internet running on private microservers. 
+The goal is to create a new generation of services on the Internet running on HAT microservers. 
 
 ### How secure is the HAT
 
@@ -48,7 +49,7 @@ Security is at the core of the HAT and HAT Platform Providers follow industry be
 
 ### Who is HATDeX
 
-HATDeX is the operator of the HAT platform. It built all the infrastructure services for the provisioning of HAT Microservers and the facilitation of on-demand, real-time personal data and content exchanges on the HAT Platform. https://hatdex.org 
+HATDeX is the operator of the HAT trust framework. It built all the infrastructure services for the provisioning of HAT Microservers and the facilitation of on-demand, real-time personal data and content exchanges. The HATDeX platform is the technology, legal and economic infrastructure for data sharing between HAT Microservers and HAT enabled applications https://hatdex.org 
 
 ### Who is HAT Community Foundation
 
