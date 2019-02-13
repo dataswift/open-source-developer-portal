@@ -48,15 +48,15 @@ description: "What is the HAT and why Build on It?"
 
 # The technology stack
 
-The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for the various use cases of personal data, across all sectors of the economy. It is designed and built to reduce the complexity of handling personal data and yet agile enough to allow the easy integration of its products into existing services.
+The HATDeX Technology Suite ensures the HATDeX Platform is fully reconfigurable for the various use cases of personal data, across all sectors of the economy. It is designed and built to reduce the complexity of handling personal data and yet agile enough to allow the easy integration of its products into existing services.
 
 <nav class="grid-nav">
     <a href="tech-stack/HAT_core.html" class="icon-logo-hat grid-nav__item">
 
 <h3>HAT</h3>
         
-<p>A Personal ‘Microserver’
-&diams; Organisations can issue HATs or vend HATs (send their customers a link to get a HAT)
+<p>A Personal Data Account in the form of a HAT ‘Microserver’
+&diams; Organisations can issue HATs (HAT Issuers) accept data from HATs (HAT Merchants)
 &diams; Allow organisations to have direct relationship with their customers and their data
 &diams; Containerised database with data rights legally belonging to HAT owners
 &diams; Open-source core, built on the Internet and open standards, 
@@ -69,7 +69,7 @@ The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for
         
 <p> Generic dashboard for all HAT owners
 &diams; Open sourced, Mozilla-licensed
-&diams; White labelled provision for HAT platform providers to be integrated with their own app user accounts
+&diams; White labelled provision for HAT Issuers to be integrated with their own app user accounts
 &diams; Rumpel is the control centre for the HAT Microserver, and is the service that powers the HAT app </p>
 
     </a>
@@ -79,7 +79,7 @@ The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for
 <h3>Milliner</h3>
 <p>Provisions HAT Microservers on different cloud infrastructure
 &diams; Integration of other PDS onto HAT platform
-&diams; Enabling organisations to be an issuer of HAT Microservers
+&diams; Enable organisations to be an issuer of HAT Microservers
 &diams; Enable organisations to own the relationships with their customers </p>
 
     </a>
@@ -87,18 +87,18 @@ The HATDeX Technology Suite ensures the HAT Platform is fully reconfigurable for
 
 <h3>DEX</h3>
 
-<p> Enables the sharing of data points between HATs and organisations through APIs
+<p> Enables the sharing of data between HATs and organisations through APIs
 &diams; Data Transaction Logging
 &diams; Reports statistics across the ecosystem
-&diams; HAT Access brokering for applications and developers</p>
+&diams; HAT Access brokering for applications and developers with legal data contracts</p>
 
 
     </a>
     <a href="tech-stack/databuyer.html" class="icon-logo-databuyer grid-nav__item">
 
-<h3>DataBuyer</h3>
+<h3>DataBuyer Engine</h3>
 
-<p> Revolutionary way of exchanging and requesting for data
+<p> Enable exchanging and requesting for data from multiple HAT Owners
 &diams; Offer benefits for past data, streaming data, future data
 &diams; Insights for researchers, recommenders and marketing firms
 &diams; Direct relationship &amp; contract with HAT owner 
