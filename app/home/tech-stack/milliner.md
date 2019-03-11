@@ -14,7 +14,7 @@ weight: 4
 
 Milliner provisions HAT infrastructure based on industry's best practices. Currently its tooling is focused on the Amazon AWS capabilities as the most advanced ones in the industry, however it could be adapted to different cloud providers with necessary features.
 
-![infrastructure-overview](/images/milliner-architecture.png)
+![infrastructure-overview](https://raw.githubusercontent.com/Hub-of-all-Things/open-source-developer-portal/master/app/images/milliner-architecture.png)
 
 The solution consists of a set of nested templates that deploy the following:
 
